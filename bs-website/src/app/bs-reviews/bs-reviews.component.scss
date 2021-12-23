@@ -1,0 +1,47 @@
+.review-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  margin: 2em;
+}
+
+.addReview {
+  margin-left: 2%;
+}
+
+.rating-card {
+  max-width: 90%;
+  margin: 2% 5%;
+}
+
+.grade {
+  margin-bottom: 1%;
+  margin-right: 3%;
+  clickable: false;
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.rating-item {
+  flex-flow: column wrap;
+}
+
+.rating-number {
+  color: gold;
+}
+
+mat-card-content {
+  margin-top: 4%;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,74 @@
+<video autoplay loop>
+  <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4">
+</video>
+
+<div class="halfboard">
+  <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Half-Board</h1>
+  <pdf-viewer [src]="doc" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+</div>
+
+<div class="menu">
+  <h1 class="sectionTitle" i18n="restaurant-title2 | Notre carte title">Our Menu</h1>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Starters">
+      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
+        <mat-grid-tile *ngFor="let menu of starters" colspan="3" rowspan="2">
+          <mat-card class="menu-item">
+            <mat-card-header>
+              <h2>{{menu.title}}</h2>
+            </mat-card-header>
+            <img src="{{menu.image}}" alt="{{menu.title}}" style="height:50%; width:100%;">
+            <mat-card-content>
+              <p>{{menu.description}}</p>
+            </mat-card-content>
+            <mat-card-footer>
+              <p style="margin right:4%;">{{menu.price | currency}}</p>
+            </mat-card-footer>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+    <mat-tab label="Main Course">
+      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
+        <mat-grid-tile *ngFor="let menu of mains" colspan="3" rowspan="2">
+          <mat-card class="menu-item">
+            <mat-card-header>
+              <h2>{{menu.title}}</h2>
+            </mat-card-header>
+            <img src="{{menu.image}}" alt="{{menu.title}}" style="height:50%; width:100%;">
+            <mat-card-content>
+              <p>{{menu.description}}</p>
+            </mat-card-content>
+            <mat-card-footer>
+              <p style="margin right:4%;">{{menu.price | currency}}</p>
+            </mat-card-footer>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+    <mat-tab label="Desserts">
+      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
+        <mat-grid-tile *ngFor="let menu of desserts" colspan="3" rowspan="2">
+          <mat-card class="menu-item">
+            <mat-card-header>
+              <h2>{{menu.title}}</h2>
+            </mat-card-header>
+            <img src="{{menu.image}}" alt="{{menu.title}}" style="height:50%; width:100%;">
+            <mat-card-content>
+              <p>{{menu.description}}</p>
+            </mat-card-content>
+            <mat-card-footer>
+              <p style="margin right:4%;">{{menu.price | currency}}</p>
+            </mat-card-footer>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+
+<div class="book">
+  <h1 class="sectionTitle" i18n="restaurant-reservation | réservation">Reservations: 078/685 45 54</h1>
+</div>

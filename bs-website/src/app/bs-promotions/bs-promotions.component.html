@@ -1,0 +1,16 @@
+<div class="promotions">
+  <mat-card class="promotion-card" *ngFor="let promotion of promotions">
+    <mat-card-header>
+      <mat-card-title>{{promotion.title | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{promotion.subtitle | lowercase}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{promotion.image}}">
+    <mat-card-content>
+      <p>{{promotion.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="{{promotion._id}}"><button mat-stroked-button i18n="promotions-btn | more button" color="accent">More informations</button></a>
+    </mat-card-actions>
+  </mat-card>
+  <h1 *ngIf="!promotions?.length" i18n="promotions-msg | no proms msg">No promotion are actually available.</h1>
+</div>

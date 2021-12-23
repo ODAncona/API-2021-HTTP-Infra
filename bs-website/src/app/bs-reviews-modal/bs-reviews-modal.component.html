@@ -1,0 +1,35 @@
+<h1 class="mainTitle" i18n="modal-title | titre donnez votre avis">Give your feedback</h1>
+<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="reviewForm">
+  <div class="text">
+    <label i18n="modal-name | champs nom prénom">
+      Firstname Lastname
+      <mat-form-field appearance="outline">
+        <input required matInput type="text" formControlName="author" placeholder="Nom, Prénom">
+      </mat-form-field>
+    </label>
+    <label i18n="modal-description | champs description">
+      Description
+      <mat-form-field appearance="outline">
+        <textarea required matInput cdkTextareaAutosize cdkAutosizeMinRows="5" i18n-placeholder="modal-placeholder | donner envie d'écrire" placeholder="My sojourn at Beausite was ..." formControlName="description"></textarea>
+        <mat-error *ngIf="reviewForm.invalid">tell us more</mat-error>
+      </mat-form-field>
+    </label>
+  </div>
+  <label class="score">
+    <p i18n="modal-clean | critère clean">clean</p>
+    <mat-slider required thumbLabel formControlName="clean" min="1" max="10" step="1" value="10"></mat-slider>
+    <p i18n="modal-service | critère service">service</p>
+    <mat-slider required thumbLabel formControlName="service" min="1" max="10" step="1" value="10"></mat-slider>
+    <p i18n="modal-comfort | critère comfort">comfort</p>
+    <mat-slider required thumbLabel formControlName="comfort" min="1" max="10" step="1" value="10"></mat-slider>
+    <p i18n="modal-spot | critère spot">spot</p>
+    <mat-slider required thumbLabel formControlName="spot" min="1" max="10" step="1" value="10"></mat-slider>
+    <p i18n="modal-amenity | critère amenity">amenity</p>
+    <mat-slider required thumbLabel formControlName="amenity" min="1" max="10" step="1" value="10"></mat-slider>
+    <p i18n="modal-breakfast | critère breakfast">breakfast</p>
+    <mat-slider required thumbLabel formControlName="breakfast" min="1" max="10" step="1" value="10"></mat-slider>
+  </label>
+  <button mat-fab color="primary" aria-label="Submit review" [disabled]="!reviewForm.valid">
+    <mat-icon>input</mat-icon>
+  </button>
+</form>

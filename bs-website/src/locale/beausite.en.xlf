@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/alert/alert.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getValue() / max | percent}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/progressbar/progressbar.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/toast/toast.d.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8519653b428a4b0a1f69c20bdbd24c28127dee40" datatype="html">
+        <source>SPEND AN UNFORGETTABLE HOLIDAY IN A CHALET- HOTEL IN SWITZERLAND</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-home/bs-home.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description"> Accroche principale</note>
+        <note priority="1" from="meaning">home-title </note>
+      </trans-unit>
+      <trans-unit id="bb49d49086c5e6de3700b7babf132fb11fd269b9" datatype="html">
+        <source>
+Surrounded by the Alps , green meadows , towering cliffs and amidst the ancient tradition and genuine Swiss culture is romantic Adelboden Hotel Beau Boutique This luxury boutique hotel has 36 rooms, a beautiful restaurant with traditional cuisine and a spa and fitness area.
+In recent years it has become one of the best hotels in Adelboden , and even in the Bernese Oberland. The hotel offers a very special combination of traditional chalet spirit and modern comforts of a four star country house style.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-home/bs-home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description"> description de l&apos;hôtel</note>
+        <note priority="1" from="meaning">home-description </note>
+      </trans-unit>
+      <trans-unit id="8d32cf2d1aae4c4684c984fd7e9b9402334c9379" datatype="html">
+        <source>ARE YOU READY TO BE SEDUCED ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-home/bs-home.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> Accroche pour le booking</note>
+        <note priority="1" from="meaning">home-title2 </note>
+      </trans-unit>
+      <trans-unit id="b77e4ac36404eda7bfbabd38482f13fca9b10fe9" datatype="html">
+        <source>More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-promotions/bs-promotions.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> more button</note>
+        <note priority="1" from="meaning">promotions-btn </note>
+      </trans-unit>
+      <trans-unit id="cf1f7cbb7ec68719a2632ddfc5da9b59a8ad31f3" datatype="html">
+        <source>
+              Services
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-rooms/bs-rooms.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">rooms-title</note>
+      </trans-unit>
+      <trans-unit id="e5600f1b06bd96c8b36895e1eff04b85ed2a991b" datatype="html">
+        <source>
+              description
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-rooms/bs-rooms.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">rooms-description</note>
+      </trans-unit>
+      <trans-unit id="6c53f529f6bbf5f57ead8fb2997c605dd2122a3c" datatype="html">
+        <source>Book Now</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-rooms/bs-rooms.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description"> réserver mtn</note>
+        <note priority="1" from="meaning">rooms-book </note>
+      </trans-unit>
+      <trans-unit id="e1d0cd10fa09b95188f4e5e7bdc88f9e5969ed7e" datatype="html">
+        <source>Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-services/bs-services.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> titre principal</note>
+        <note priority="1" from="meaning">services-title </note>
+      </trans-unit>
+      <trans-unit id="d065d60b479206dfd28e072e1358136b5b4073e4" datatype="html">
+        <source>The hotel features a wide range of services and you will feel like being at home. From 7 am to 23pm our staff will be there for anything you need. The hotel provides car rental and parking.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-services/bs-services.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description"> la description de tous les services</note>
+        <note priority="1" from="meaning">services-description </note>
+      </trans-unit>
+      <trans-unit id="cff0e67f92e8f0d73460f52ef06d63d7db390de6" datatype="html">
+        <source>Half-Board</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-restaurant/bs-restaurant.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> Demi-Pension title</note>
+        <note priority="1" from="meaning">restaurant-title </note>
+      </trans-unit>
+      <trans-unit id="3e4f77f78960ea44f39846d76db3180d9b9352de" datatype="html">
+        <source>sadfsadfsadkjfhsakdhfk</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-restaurant/bs-restaurant.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description"> Description de la demi-pension</note>
+        <note priority="1" from="meaning">restaurant-description </note>
+      </trans-unit>
+      <trans-unit id="cb819bd9f1e76d3cb4951034586ebd9c1cc62473" datatype="html">
+        <source>Our Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-restaurant/bs-restaurant.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> Notre carte title</note>
+        <note priority="1" from="meaning">restaurant-title2 </note>
+      </trans-unit>
+      <trans-unit id="6f9c744cb3fd4aa803aac433af9f92a493e44dea" datatype="html">
+        <source>Reservations: 078/685 45 54</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-restaurant/bs-restaurant.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description"> réservation</note>
+        <note priority="1" from="meaning">restaurant-reservation </note>
+      </trans-unit>
+      <trans-unit id="8f4c41c296d6222af912982776e1ee0990225283" datatype="html">
+        <source>Give your feedback</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> titre donnez votre avis</note>
+        <note priority="1" from="meaning">modal-title </note>
+      </trans-unit>
+      <trans-unit id="eb9d11781142f041fc771a7ad0e7042ab3288c29" datatype="html">
+        <source>
+      Firstname Lastname
+      <x id="START_TAG_MAT-FORM-FIELD" ctype="x-mat-form-field" equiv-text="&lt;mat-form-field&gt;"/>
+        <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
+      <x id="CLOSE_TAG_MAT-FORM-FIELD" ctype="x-mat-form-field" equiv-text="&lt;/mat-form-field&gt;"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> champs nom prénom</note>
+        <note priority="1" from="meaning">modal-name </note>
+      </trans-unit>
+      <trans-unit id="a946b0959a7e3e625299427a5013266e9c0b155b" datatype="html">
+        <source>
+      Description
+      <x id="START_TAG_MAT-FORM-FIELD" ctype="x-mat-form-field" equiv-text="&lt;mat-form-field&gt;"/>
+        <x id="START_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;textarea&gt;"/><x id="CLOSE_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;/textarea&gt;"/>
+      <x id="CLOSE_TAG_MAT-FORM-FIELD" ctype="x-mat-form-field" equiv-text="&lt;/mat-form-field&gt;"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> champs description</note>
+        <note priority="1" from="meaning">modal-description </note>
+      </trans-unit>
+      <trans-unit id="60eb37a8ca09e62f1d4e491fa5d38894d2430787" datatype="html">
+        <source>My sojourn at Beausite was ...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> donner envie d&apos;écrire</note>
+        <note priority="1" from="meaning">modal-placeholder </note>
+      </trans-unit>
+      <trans-unit id="d68d4cecf2866bccefc512ba277b1c9c1287af1f" datatype="html">
+        <source>clean</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> critère clean</note>
+        <note priority="1" from="meaning">modal-clean </note>
+      </trans-unit>
+      <trans-unit id="77556263f4ddbd8c06daf1d29d3bf088298e99d5" datatype="html">
+        <source>service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description"> critère service</note>
+        <note priority="1" from="meaning">modal-service </note>
+      </trans-unit>
+      <trans-unit id="3096772f1b5c1ed719fcd75c4748cb17ad667ab2" datatype="html">
+        <source>comfort</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description"> critère comfort</note>
+        <note priority="1" from="meaning">modal-comfort </note>
+      </trans-unit>
+      <trans-unit id="ba0b9fbac3599325175286d9087b65642865f4f3" datatype="html">
+        <source>spot</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description"> critère spot</note>
+        <note priority="1" from="meaning">modal-spot </note>
+      </trans-unit>
+      <trans-unit id="f244dee436a6ea1f657253914c9e874f2ba9bc5f" datatype="html">
+        <source>amenity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description"> critère amenity</note>
+        <note priority="1" from="meaning">modal-amenity </note>
+      </trans-unit>
+      <trans-unit id="364133d4236d113f7ca8dbcddec6100e593f6c02" datatype="html">
+        <source>breakfast</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews-modal/bs-reviews-modal.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description"> critère breakfast</note>
+        <note priority="1" from="meaning">modal-breakfast </note>
+      </trans-unit>
+      <trans-unit id="b1531587baab5874becb5b89f6f0bb7ad8409157" datatype="html">
+        <source>Write your own review</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-reviews/bs-reviews.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description"> titre pour écrire son propre review</note>
+        <note priority="1" from="meaning">review-title </note>
+      </trans-unit>
+      <trans-unit id="fec127577f5a5a23bb962186681241a73a845d80" datatype="html">
+        <source>Back to promotions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/website/bs-promotions-details/bs-promotions-details.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> bouton retour</note>
+        <note priority="1" from="meaning">promotions-back </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

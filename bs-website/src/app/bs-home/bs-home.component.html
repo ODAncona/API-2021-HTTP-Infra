@@ -1,0 +1,42 @@
+<ngb-carousel *ngIf="images" [showNavigationIndicators]="false" [pauseOnHover]="true" [interval]="3000" class="carousel">
+  <ng-template *ngFor="let image of images" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="{{image}}" alt="Random first slide">
+    </div>
+  </ng-template>
+</ngb-carousel>
+<h1 class="mainTitle"> Hôtel Beausite </h1>
+<app-bs-book class="booking"></app-bs-book>
+<video autoplay loop>
+  <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4">
+  </video>
+<h1 class="mainTitle" i18n="home-title | Accroche principale">SPEND AN UNFORGETTABLE HOLIDAY IN A CHALET-HOTEL IN SWITZERLAND</h1>
+<mat-card i18n="home-description | description de l'hôtel" class="description">
+  Surrounded by the Alps , green meadows , towering cliffs and amidst the ancient tradition and genuine Swiss culture is romantic Adelboden Hotel Beau Boutique This luxury boutique hotel has 36 rooms, a beautiful restaurant with traditional cuisine
+  and a spa and fitness area.
+  In recent years it has become one of the best hotels in Adelboden , and even in the Bernese Oberland. The hotel offers a very special combination of traditional chalet spirit and modern comforts of a four star country house style.
+</mat-card>
+<div class="fan">
+  <a class="flex-item-left" href="https://adelboden.ch/de/" target="_blank">
+    <img src="../../assets/images/photos/home_village.jpg" alt="sauna">
+  </a>
+  <div class="flex-item-right">
+    <h3>Adelboden's region</h3>
+  </div>
+</div>
+<div class="fan">
+  <div class="flex-item-left">
+    <h3>Wellness & Fitness</h3>
+  </div>
+  <a class="flex-item-right" href="/wellness" target="_blank">
+    <img src="../../assets/images/photos/fitness_machines.jpg" alt="sauna">
+  </a>
+</div>
+<div class="fan">
+  <a class="flex-item-left" href="https://www.myswitzerland.com/en-ch/destinations/adelboden/" target="_blank">
+    <img src="../../assets/images/photos/home_mountain.jpg" alt="activities">
+  </a>
+  <div class="flex-item-right">
+    <h3>Activities</h3>
+  </div>
+</div>

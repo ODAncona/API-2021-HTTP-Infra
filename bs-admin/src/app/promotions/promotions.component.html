@@ -1,0 +1,65 @@
+<mat-toolbar class="toolbar">
+  <mat-form-field appearance="fill">
+    <mat-label>Language</mat-label>
+    <mat-select [(value)]="language" (selectionChange)="displayPromotion()">
+      <mat-option *ngFor="let language of languages" [value]="language.value">
+        {{language.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="btn-group">
+    <button mat-button style="width:25%" color="warning" (click)="createPromotion()">Add</button>
+    <button mat-button style="width:25%" color="warning" (click)="deletePromotions()">Delete</button>
+    <button mat-button style="width:25%" (click)="updatePromotions()"> Save </button>
+    <button mat-button style="width:25%" id="allButton" (click)="selectAll()">Select All </button>
+    <button mat-button style="width:4%" id="allButton" (click)="getAllPromotions()"><i class="fas fa-sync fa-2x"></i></button>
+  </div>
+</mat-toolbar>
+
+<div class="promotions">
+  <ng-container *ngFor="let promotion of promotions">
+    <div class="card" *ngIf="promotion.displayed">
+      <div (click)="promotion.selected = true;">
+        <h2>Title</h2>
+        <input matInput [(ngModel)]="promotion.title" />
+      </div>
+      <div (click)="promotion.selected = true;">
+        <h2>Subtitle</h2>
+        <input matInput [(ngModel)]="promotion.subtitle" />
+      </div>
+      <div (click)="promotion.selected = true;">
+        <h2>Language</h2>
+        <mat-select [(value)]="promotion.language">
+          <mat-option value="en">English</mat-option>
+          <mat-option value="fr">Français</mat-option>
+          <mat-option value="de">Deutsch</mat-option>
+        </mat-select>
+      </div>
+      <div class="description" (click)="promotion.selected = true;">
+        <h2>Description</h2>
+        <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="promotion.description"></textarea>
+      </div>
+      <div class="img">
+        <div class="container">
+          <h2>Image</h2>
+          <mat-form-field (click)="promotion.selected = true;">
+            <ngx-mat-file-input [formControl]="imageControl" [multiple]="false" accept="image/webp, image/jpeg">
+              <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+            </ngx-mat-file-input>
+          </mat-form-field>
+        </div>
+        <img src="{{promotion.image}}">
+      </div>
+      <div class="pdf">
+        <h2>PDF</h2>
+        <input matInput [(ngModel)]="promotion.pdf" />
+        <mat-form-field (click)="promotion.selected = true;">
+          <ngx-mat-file-input [multiple]="false" accept="application/pdf">
+            <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+          </ngx-mat-file-input>
+        </mat-form-field>
+      </div>
+      <mat-checkbox class="checkbox" [checked]="promotion.selected"></mat-checkbox>
+    </div>
+  </ng-container>
+</div>

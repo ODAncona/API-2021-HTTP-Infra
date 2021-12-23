@@ -1,0 +1,64 @@
+.dailyMenu {
+  height: 20%;
+  background-color: rgba(213,191,134,0.9);
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  justify-content: space-around;
+  h1 {
+    font-size: 3em;
+  }
+  .link {
+    font-style: italic;
+    color: rgba(141,119,95,0.9);
+    font-size: 3em;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  align-items: baseline;
+  padding: .5em;
+}
+
+.btn-group {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  align-items: baseline;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.checkbox {
+  pointer-events: none;
+  margin: 1em;
+  transform: scale(1.5);
+}
+
+img {
+  margin: 0.2em;
+  max-width: 100%;
+  height: 300px;
+}
+
+.img {
+  width: 48%;
+  border-style: solid;
+  border-radius: 1em;
+  border-width: 1px;
+  padding: 0.2em;
+}

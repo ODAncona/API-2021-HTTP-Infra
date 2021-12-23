@@ -1,0 +1,39 @@
+<mat-toolbar class="toolbar">
+  <mat-form-field class="">
+    <input type="text" placeholder="By description" matInput [formControl]="search" [matAutocomplete]="auto" [(ngModel)]="searchField">
+    <button mat-button mat-icon-button aria-label="Clear" matSuffix *ngIf="searchField" (click)="searchField=''">×</button>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <div class="btn-group">
+    <button mat-button style="width:25%" color="warning" (click)="deleteReviews()">Delete</button>
+    <button mat-button style="width:25%" (click)="updateReviews()"> Active </button>
+    <button mat-button style="width:25%" id="allButton" (click)="selectAll()">Select All </button>
+    <button mat-button style="width:4%" id="allButton" (click)="getAllReviews()"><i class="fas fa-sync fa-2x"></i></button>
+  </div>
+</mat-toolbar>
+
+<div class="reviews">
+  <ng-container *ngFor="let review of reviews">
+    <mat-card class="card" [class.active]="review.active" [class.inactive]="!review.active" *ngIf="review.displayed" (click)="review.selected=!review.selected">
+      <div>
+        <mat-card-title>
+          {{review.author}}
+          {{1/6*(review.rating.clean+review.rating.service+review.rating.amenity+review.rating.spot+review.rating.comfort+review.rating.breakfast)|number:'1.1-1'}}
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{review.date}}
+        </mat-card-subtitle>
+        <mat-card-content>
+          {{review.description}}
+        </mat-card-content>
+      </div>
+      <div>
+        <mat-checkbox class="checkbox" [checked]="review.selected"></mat-checkbox>
+      </div>
+    </mat-card>
+  </ng-container>
+</div>

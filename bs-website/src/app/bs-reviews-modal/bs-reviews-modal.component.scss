@@ -1,0 +1,22 @@
+.reviewForm {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: auto;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+label {
+  width: 40%;
+}

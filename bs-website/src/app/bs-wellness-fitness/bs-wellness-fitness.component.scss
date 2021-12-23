@@ -1,0 +1,62 @@
+video {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: rgba(237, 206, 47, 0.9);
+}
+
+.fitTitle {
+  font-size: 4.3em;
+  font-family: fantasy;
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  text-align: center;
+  margin: 7% 5% 5%;
+}
+
+.fitSubtitle {
+  font-size: 3.4em;
+  text-align: center;
+  margin: 5% 1em 1em;
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15%;
+  margin-left: 15%;
+
+  .offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.orderButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.benefits {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.benefit-card {
+  margin-top: 1%;
+  width: 31%;
+  //max-width: 400px;
+  min-width: 300px;
+}

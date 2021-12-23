@@ -1,0 +1,22 @@
+<h1 class="mainTitle">Contact</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+  <div class="contact">
+    <mat-form-field appearance="standard">
+      <input required matInput type="text" formControlName="name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <input required matInput type="email" formControlName="email" placeholder="Email">
+      <mat-error *ngIf="contactForm.invalid">invalid email</mat-error>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="fill" class="textarea">
+    <textarea required matInput formControlName="content" placeholder="Ex. It makes me feel..."></textarea>
+    <mat-error *ngIf="contactForm.invalid">tell us more</mat-error>
+  </mat-form-field>
+
+  <button mat-fab color="primary" aria-label="Submit review" [disabled]="!contactForm.valid">
+    <mat-icon>input</mat-icon>
+  </button>
+</form>
+<h1 class="mainTitle">Map</h1>
+<img src="../../assets/images/photos/contact_map.png" alt="map" style="width:100%">

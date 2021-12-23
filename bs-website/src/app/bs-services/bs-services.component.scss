@@ -1,0 +1,24 @@
+.service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 25%;
+  justify-content: flex-start;
+  margin-top: 1%;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2% 2% 2% 10%;
+}
+
+i {
+  margin-right: 3%;
+  font-size: 2rem;
+}
+
+.name {
+  overflow: hidden;
+}

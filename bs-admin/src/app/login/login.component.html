@@ -1,0 +1,18 @@
+<div class="centered-content">
+  <h1>Content Management</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="logUserIn()">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput class="input has-background-light" type="text" placeholder="Username" formControlName="username">
+      <i matSuffix class="fas fa-user"></i>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput class="input has-background-light" type="password" placeholder="Password" formControlName="password">
+      <i matSuffix class="fas fa-key"></i>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid">
+      <i class="fas fa-sign-in-alt"></i>
+    </button>
+  </form>
+</div>

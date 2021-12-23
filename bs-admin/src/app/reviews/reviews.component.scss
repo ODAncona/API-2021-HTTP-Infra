@@ -1,0 +1,38 @@
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  align-items: baseline;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  align-items: baseline;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.btn-group {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.active {
+  background-color: rgba(50,255,150,0.5);
+}
+
+.inactive {
+  background-color: rgba(240,100,50,0.5);
+}
+
+.checkbox {
+  pointer-events: none;
+  margin: 1em;
+  transform: scale(1.5);
+}

@@ -1,0 +1,35 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$) ? 'over' : 'push'">
+    <mat-toolbar>
+      Hôtel Beausite
+      <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
+    </mat-toolbar>
+    <mat-nav-list *ngFor="let nav of navs" (click)="handleClick(nav)">
+      <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content id="sidenav">
+    <mat-toolbar color="primary">
+      <div class="toolbar">
+        <div>
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>{{activeLink | titlecase}}</span>
+        </div>
+        <a href="/home" class="logo">
+          <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
+        </a>
+        <mat-form-field appearance="outline" class="ils">
+          <mat-label><i class="fas fa-globe"></i></mat-label>
+          <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
+            <mat-option [value]="l.value" *ngFor="let l of locale">{{l.viewValue}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    <app-bs-footer></app-bs-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

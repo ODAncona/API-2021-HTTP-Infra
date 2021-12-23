@@ -1,0 +1,44 @@
+.well {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 50%;
+}
+
+.well :hover {
+  cursor: pointer;
+}
+
+.wellness {
+  width: 50%;
+  background-image: url("../../assets/images/photos/wellness_repos.jpg");
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.fitness {
+  width: 50%;
+  background-image: url("../../assets/images/photos/fitness_machines.jpg");
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  margin: 1em;
+}
+
+.title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  top: 50%;
+  position: relative;
+}
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 850px) {
+  .well {
+    height: 200px;
+  }
+}

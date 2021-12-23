@@ -1,0 +1,73 @@
+<div class="dailyMenu">
+  <h1>Daily Menu </h1>
+  <mat-form-field>
+    <ngx-mat-file-input [multiple]="false" accept="application/pdf">
+      <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+    </ngx-mat-file-input>
+  </mat-form-field>
+  <p class="link">../../assets/documents/menu.pdf</p>
+</div>
+
+<mat-toolbar class="toolbar">
+  <mat-form-field appearance="fill">
+    <mat-label>Language</mat-label>
+    <mat-select [(value)]="language" (selectionChange)="displayMenu()">
+      <mat-option *ngFor="let language of languages" [value]="language.value">
+        {{language.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip selectable="true" (click)="category='starter'; displayMenu();"> Starter</mat-chip>
+    <mat-chip selectable="true" (click)="category='main'; displayMenu();"> Main Course</mat-chip>
+    <mat-chip selectable="true" (click)="category='dessert'; displayMenu();"> Dessert</mat-chip>
+  </mat-chip-list>
+  <div class="btn-group">
+    <button mat-button style="width:25%" color="warning" (click)="createMenu()">Add</button>
+    <button mat-button style="width:25%" color="warning" (click)="deleteMenus()">Delete</button>
+    <button mat-button style="width:25%" (click)="updateMenus()"> Save </button>
+    <button mat-button style="width:25%" id="allButton" (click)="selectAll()">Select All </button>
+    <button mat-button style="width:4%" id="allButton" (click)="getAllMenus()"><i class="fas fa-sync fa-2x"></i></button>
+  </div>
+</mat-toolbar>
+
+<div class="menus">
+  <ng-container *ngFor="let menu of menus">
+    <div class="card" *ngIf="menu.displayed" (click)="menu.selected=!menu.selected">
+      <div>
+        <h2>Title</h2>
+        <input matInput [(ngModel)]="menu.title" />
+      </div>
+      <div>
+        <h2>Price</h2>
+        <input matInput [(ngModel)]="menu.price" />
+      </div>
+      <div>
+        <h2>Language</h2>
+        <mat-select [(value)]="menu.language">
+          <mat-option value="en">English</mat-option>
+          <mat-option value="de">Deutsch</mat-option>
+          <mat-option value="fr">Français</mat-option>
+        </mat-select>
+      </div>
+      <div>
+        <h2>Category</h2>
+        <mat-select [(value)]="menu.category">
+          <mat-option value="starter">Starter</mat-option>
+          <mat-option value="main">Main Course</mat-option>
+          <mat-option value="dessert">Dessert</mat-option>
+        </mat-select>
+      </div>
+      <div style="width:40%;">
+        <h2>Description</h2>
+        <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="menu.description"></textarea>
+      </div>
+      <div class="img">
+        <h2>Image</h2>
+        <input matInput [(ngModel)]="menu.image" />
+        <img src="{{menu.image}}">
+      </div>
+      <mat-checkbox class="checkbox" [checked]="menu.selected"></mat-checkbox>
+    </div>
+  </ng-container>
+</div>

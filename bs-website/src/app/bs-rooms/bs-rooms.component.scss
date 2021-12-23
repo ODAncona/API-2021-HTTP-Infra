@@ -1,0 +1,42 @@
+.rooms {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-card {
+  margin: 1em;
+  width: 80%;
+}
+
+.service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 1%;
+  width: 50%;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2%;
+}
+
+i {
+  margin-right: 3%;
+  font-size: 2rem;
+}
+
+.description-detail {
+  margin: 1em;
+}
+
+img {
+  width: 100%;
+  max-height: 500px;
+}

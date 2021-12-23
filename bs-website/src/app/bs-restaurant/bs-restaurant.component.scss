@@ -1,0 +1,24 @@
+video {
+  margin: 0;
+  width: 100%;
+}
+
+.halfboard {
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+}
+
+mat-grid-list {
+  margin: 1em;
+}
+
+img:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
