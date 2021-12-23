@@ -27,7 +27,7 @@
           <p class="description-detail">{{room.description}}</p>
           <div class="services">
             <div *ngFor="let service of room.services" class="service">
-              <i class="fas {{service.icon}}"></i>
+              <mat-icon> {{service.icon}} </mat-icon>
               <div mat-line class="name">{{service.name}}</div>
             </div>
           </div>

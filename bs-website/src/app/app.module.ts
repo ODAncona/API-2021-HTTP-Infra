@@ -41,7 +41,6 @@ import { BsHomeComponent } from './bs-home/bs-home.component';
 import { BsPromotionsComponent } from './bs-promotions/bs-promotions.component';
 import { BsPhotosComponent } from './bs-photos/bs-photos.component';
 import { BsRoomsComponent } from './bs-rooms/bs-rooms.component';
-import { BsServicesComponent } from './bs-services/bs-services.component';
 import { BsRestaurantComponent } from './bs-restaurant/bs-restaurant.component';
 import { BsWellnessComponent } from './bs-wellness/bs-wellness.component';
 import { BsWellnessFitnessComponent } from './bs-wellness-fitness/bs-wellness-fitness.component';
@@ -65,7 +64,6 @@ import { BsBookComponent } from './bs-book/bs-book.component';
     BsPromotionsComponent,
     BsPhotosComponent,
     BsRoomsComponent,
-    BsServicesComponent,
     BsRestaurantComponent,
     BsWellnessComponent,
     BsWellnessFitnessComponent,

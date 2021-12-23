@@ -5,7 +5,9 @@
       <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
     </mat-nav-list>
     <mat-nav-list>
-      <a mat-list-item (click)="logUserOut()"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+      <a mat-list-item (click)="logUserOut()">
+        <mat-icon aria-hidden="false" aria-label="Login">input</mat-icon>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

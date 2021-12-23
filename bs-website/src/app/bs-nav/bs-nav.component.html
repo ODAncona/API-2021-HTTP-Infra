@@ -21,7 +21,9 @@
           <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
         </a>
         <mat-form-field appearance="outline" class="ils">
-          <mat-label><i class="fas fa-globe"></i></mat-label>
+          <mat-label>
+            <mat-icon>language</mat-icon>
+          </mat-label>
           <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
             <mat-option [value]="l.value" *ngFor="let l of locale">{{l.viewValue}}</mat-option>
           </mat-select>

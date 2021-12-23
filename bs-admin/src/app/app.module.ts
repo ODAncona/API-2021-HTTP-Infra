@@ -1,16 +1,83 @@
-import { NgModule } from '@angular/core';
+/* ANGULAR */
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
 
-import { AppRoutingModule } from './app-routing.module';
+/* ANGULAR MATERIAL */
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+/* EXTERN MODULES */
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+
+/* ADMIN MODULES */
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
+import { PromotionsComponent } from './promotions/promotions.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    NavComponent,
+    PromotionsComponent,
+    RestaurantComponent,
+    ReviewsComponent,
+    StatisticsComponent,
   ],
   imports: [
+    AppRoutingModule,
+    ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    FormsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatCardModule,
+    MatDividerModule,
+    MatInputModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatTabsModule,
+    MatStepperModule,
+    MatSnackBarModule,
+    NgxMatFileInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

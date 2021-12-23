@@ -3,8 +3,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
-import { RestaurantService } from '../../restaurant.service';
-import { Menu, Language } from '../../interface';
+import { RestaurantService } from '../restaurant.service';
+import { Menu, Language } from '../interface';
 
 @Component({
   selector: 'app-restaurant',
@@ -41,7 +41,7 @@ export class RestaurantComponent implements OnInit {
     let m = {
       title: "Titre",
       price: 10,
-      image: "../../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
+      image: "../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
       description: "Description",
       language: "fr",
       category: "main",

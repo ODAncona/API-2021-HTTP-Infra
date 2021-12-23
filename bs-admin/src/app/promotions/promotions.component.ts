@@ -3,8 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
-import { PromotionService } from '../../promotion.service';
-import { Promotion, Language } from '../../interface';
+import { PromotionService } from '../promotion.service';
+import { Promotion, Language } from '../interface';
 import { AcceptValidator, MaxSizeValidator } from '@angular-material-components/file-input';
 
 @Component({
@@ -46,7 +46,7 @@ export class PromotionsComponent implements OnInit {
     let promotion = {
       title: "Titre",
       subtitle: "Sous-titre",
-      image: "../../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
+      image: "../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
       description: "Description",
       language: "fr",
       pdf: ""

@@ -3,8 +3,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
-import { ReviewService } from '../../review.service';
-import { Review } from '../../interface';
+import { ReviewService } from '../review.service';
+import { Review } from '../interface';
 
 @Component({
   selector: 'app-reviews',
