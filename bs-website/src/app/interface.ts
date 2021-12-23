@@ -64,3 +64,4 @@ export interface Mail {
 }
 
 const API_URL = "http://bs-api:1470/api/"
+export { API_URL };

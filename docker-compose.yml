@@ -6,7 +6,7 @@ services:
     restart:        always
 
   bs-api:
-    container_name: bs-api
+    image:          bs-api
     build:
       context:      ./bs-api/
       dockerfile:   bs-api.dockerfile
@@ -16,7 +16,7 @@ services:
       - 1470:1470
 
   bs-website:
-    container_name: bs-website
+    image:          bs-website
     build:
       context:      ./bs-website/
       dockerfile:   bs-website.dockerfile
@@ -26,11 +26,17 @@ services:
       - 4200:80
 
   bs-admin:
-    container_name: bs-admin
+    image:          bs-admin
     build:
       context:      ./bs-admin/
-      dockerfile:   bs-website.dockerfile
+      dockerfile:   bs-admin.dockerfile
     depends_on:
       - bs-database
     ports:
       - 5200:80
+      
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
