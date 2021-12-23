@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Review } from './interface';
+import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ReviewService {
-  private apiUrl = 'http://localhost:1470/api/review';
+  private apiUrl = API_URL + 'review';
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({

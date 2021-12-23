@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Menu } from './interface';
+import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class RestaurantService {
-  private apiUrl = 'http://localhost:1470/api/menu';
+  private apiUrl = API_URL + 'menu';
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({

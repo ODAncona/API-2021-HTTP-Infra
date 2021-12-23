@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Promotion } from './interface';
+import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PromotionService {
-  private apiUrl = 'http://localhost:1470/api/promotion';
+  private apiUrl = API_URL + 'promotion';
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({

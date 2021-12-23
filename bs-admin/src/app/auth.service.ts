@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private loginUrl = "http://localhost:1470/api/auth/login";
-  private verifyTokenUrl = "http://localhost:1470/api/auth/verifyToken";
+  private loginUrl = API_URL + 'auth/login';
+  private verifyTokenUrl = API_URL + "auth/verifyToken";
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({

@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Mail } from './interface';
+import { API_URL } from './interface';
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class MailService {
-  private apiUrl = 'http://localhost:1470/api/mail';
+  private apiUrl = API_URL + 'mail';
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({

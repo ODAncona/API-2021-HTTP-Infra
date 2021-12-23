@@ -62,3 +62,5 @@ export interface Mail {
   subject: string;
   html: any;
 }
+
+const API_URL = "http://bs-api:1470/api/"
