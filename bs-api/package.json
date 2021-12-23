@@ -1,5 +1,5 @@
 {
-  "name": "beausite-api",
+  "name": "bs-api",
   "version": "1.0.0",
   "description": "This is the backend API for Hôtel Beausite",
   "main": "server.js",

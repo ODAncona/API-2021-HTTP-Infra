@@ -17,6 +17,7 @@ exports.sendMail = (payload) => {
       console.log("email envoyé", s);
       resolve();
     }).catch((e) => {
+      console.log(e);
       reject(e)
     });
   });
