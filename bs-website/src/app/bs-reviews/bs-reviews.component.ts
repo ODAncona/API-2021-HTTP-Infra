@@ -31,7 +31,9 @@ export class BsReviewsComponent implements OnInit {
 
   addReview() {
     let dialogRef = this.dialog.open(BsReviewsModalComponent, { data: "test" });
-    dialogRef.afterClosed().subscribe();
+    dialogRef.afterClosed().subscribe(() => {
+      window.location.reload()
+    });
   }
 
   getAllActiveReviews(): any {

@@ -51,12 +51,11 @@ export class BsReviewsModalComponent implements OnInit {
     }
     if (this.reviewForm.valid) {
       this.reviewService.createReview(this.review).subscribe();
+      if (!active) {
+        alert("Your review has been registered and will be checked before publication.");
+      }
+      this.dialogRef.close();
     }
-    if (!active) {
-      alert("Your review has been registered and will be checked before publication.")
-    }
-    this.dialogRef.close(this.review);
-    window.location.reload();
   }
 
 
