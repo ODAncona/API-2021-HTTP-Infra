@@ -78,5 +78,4 @@ export class PromotionsComponent implements OnInit {
     this.promotions.filter(p => { return (p.language === this.language || this.language === undefined) }).map(p => p.displayed = true);
   }
 
-
 }

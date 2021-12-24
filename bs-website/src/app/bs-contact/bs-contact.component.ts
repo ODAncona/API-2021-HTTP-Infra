@@ -27,7 +27,9 @@ export class BsContactComponent implements OnInit {
       html: this.contactForm.value.content,
     };
     this.mailService.sendMail(m).subscribe(
-      (err) => this._snackBar.open(err, "close")
+      result => this._snackBar.open(result, "close"),
+      error => this._snackBar.open("Unable to send mail, please use directly our adresse info@beausite.ch", "close")
+
     );
 
   }

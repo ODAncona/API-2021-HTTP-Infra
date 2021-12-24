@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "5f54f71eb639d21864d183f9"
+  },
+  "title": "Three Spring Rolls",
+  "price": 13,
+  "image": "../../../assets/images/restaurant/spring-rolls-new.jpg",
+  "description": "carrots, vermicelli, leek, soy sauce",
+  "language": "en",
+  "category": "starter"
+},{
+  "_id": {
+    "$oid": "5f54f720b639d21864d183fc"
+  },
+  "title": "Three Satay Chickens",
+  "price": 15,
+  "image": "../../../assets/images/restaurant/Poulet_satay.jpg",
+  "description": "chicken, marinade: curry, peanut butter, coconut milk",
+  "language": "en",
+  "category": "starter"
+},{
+  "_id": {
+    "$oid": "5f54f721b639d21864d183fd"
+  },
+  "title": "Beignet aux pommes",
+  "price": 15,
+  "image": "../../../assets/images/restaurant/Beignet aux pommes.jpg",
+  "description": "le meilleur beignet de tout Adelboden!",
+  "language": "fr",
+  "category": "dessert"
+},{
+  "_id": {
+    "$oid": "5f55181eb639d21864d18400"
+  },
+  "title": "Suppe thai ko po",
+  "price": 14,
+  "image": "../../../assets/images/restaurant/Curry_rouge_poulet_ou_boeuf.jpg",
+  "description": "Piquant demande à Daryl",
+  "language": "de",
+  "category": "main"
+},{
+  "_id": {
+    "$oid": "5f551d34b639d21864d18401"
+  },
+  "title": "Poulet saté",
+  "price": 10,
+  "image": "../../../assets/images/restaurant/poulet_aigre doux.jpg",
+  "description": "Je te saute comme un poulet",
+  "language": "fr",
+  "category": "main"
+},{
+  "_id": {
+    "$oid": "5f551d35b639d21864d18402"
+  },
+  "title": "Rouleaux de printemps",
+  "price": 10,
+  "image": "../../../assets/images/restaurant/Spring_rolls.jpg",
+  "description": "Description",
+  "language": "fr",
+  "category": "starter"
+},{
+  "_id": {
+    "$oid": "5f551d35b639d21864d18403"
+  },
+  "title": "Tako",
+  "price": 10,
+  "image": "../../../assets/images/restaurant/tako.jpg",
+  "description": "Le meilleur du thaï",
+  "language": "fr",
+  "category": "dessert"
+},{
+  "_id": {
+    "$oid": "5ff20a444a07620e701976f3"
+  },
+  "title": "Brochettes Satay",
+  "price": 14,
+  "image": "../../../assets/images/restaurant/Poulet_satay.jpg",
+  "description": "WOWOWOWOWO",
+  "language": "fr",
+  "category": "starter"
+}]

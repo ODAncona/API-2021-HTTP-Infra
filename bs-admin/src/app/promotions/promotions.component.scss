@@ -21,13 +21,18 @@
   justify-content: space-between;
   height: auto;
   align-items: baseline;
-  margin: 1.5em 1em 1em;
+  margin: 1em;
+  margin-bottom: .3em;
+  padding: 0.7em;
+  background-color: rgba(237, 224, 212,0.5);
+  border-radius: 1em;
   padding: 0.7em;
 }
 
 .checkbox {
   margin: 2em;
   transform: scale(2);
+  pointer-events: none;
 }
 
 .description {
@@ -45,15 +50,16 @@
 
   img {
     width: 100%;
-    max-height: 400px;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+    max-height: 375px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0em 1em 0em 1em;
   }
 }
 
