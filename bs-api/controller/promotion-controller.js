@@ -9,20 +9,20 @@ exports.createPromotion = (req, res) => {
     ...req.body
   };
   action.createPromotion(payload)
-    .then(() => res.status(200).json("Success"))
-    .catch((err) => res.status(400).json("Failure " + err))
+    .then(() => res.status(201).json("Success"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.getAllPromotions = (req, res) => {
   action.getAllPromotions()
     .then((reviews) => res.status(200).json(reviews))
-    .catch(() => res.status(400).json("Failure"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.getAPromotion = (req, res) => {
   action.getAPromotion(req.params.promotionId)
     .then((reviews) => res.status(200).json(reviews))
-    .catch(() => res.status(400).json("Failure"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.updatePromotion = (req, res) => {
@@ -34,11 +34,11 @@ exports.updatePromotion = (req, res) => {
   };
   action.updatePromotion(payload)
     .then(() => res.status(200).json("Success"))
-    .catch((error) => res.status(400).json("Failure " + error))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.deletePromotion = (req, res) => {
   action.deletePromotion(req.params.promotionId)
-    .then(() => res.status(200).json())
-    .catch(() => res.status(400).json())
+    .then(() => res.status(204).json("Success"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }

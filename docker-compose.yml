@@ -1,42 +1,32 @@
-version:            '3.8'
+version:          '3.8'
 services:
 
   bs-database:
-    image:          mongo
-    restart:        always
+    image:        mongo
+    restart:      always
 
   bs-api:
-    image:          bs-api
+    image:        bs-api
     build:
-      context:      ./bs-api/
-      dockerfile:   bs-api.dockerfile
+      context:    ./bs-api/
+      dockerfile: bs-api.dockerfile
     environment:
       - NODE_ENV=production
     ports:
       - 1470:1470
 
   bs-website:
-    image:          bs-website
+    image:        bs-website
     build:
-      context:      ./bs-website/
-      dockerfile:   bs-website.dockerfile
-    depends_on:
-      - bs-database
+      context:    ./bs-website/
+      dockerfile: bs-website.dockerfile
     ports:
       - 4200:80
 
   bs-admin:
-    image:          bs-admin
+    image:        bs-admin
     build:
-      context:      ./bs-admin/
-      dockerfile:   bs-admin.dockerfile
-    depends_on:
-      - bs-database
+      context:    ./bs-admin/
+      dockerfile: bs-admin.dockerfile
     ports:
       - 5200:80
-      
-  mongo-express:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8081:8081

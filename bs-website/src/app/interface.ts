@@ -63,5 +63,7 @@ export interface Mail {
   html: any;
 }
 
-const API_URL = "http://bs-api:1470/api/"
+//const API_URL = "bs-api:1470/api/"
+const API_URL = "http://localhost:1470/api/"
+
 export { API_URL };

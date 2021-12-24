@@ -1,31 +1,41 @@
-const action = require('../action/action');
+const Review = require('../data-schematic/review-schematic');
 
 exports.createReview = (req, res) => {
-  action.createReview(req.body)
-    .then(() => res.status(200))
-    .catch((err) => res.status(400))
+  new Review({
+      ...req.body
+    }).save()
+    .then(() => res.status(201).json("Succes"))
+    .catch(err => res.status(500).json("Failure: " + error))
 }
 
 exports.getAllReviews = (req, res) => {
-  action.getAllReviews()
+  Review.find()
     .then((reviews) => res.status(200).json(reviews))
-    .catch(() => res.status(400).json("Failure"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.getAllActiveReviews = (req, res) => {
-  action.getAllActiveReviews(req.params.isActive)
+  Review.find({
+      active: req.params.isActive
+    })
     .then((reviews) => res.status(200).json(reviews))
-    .catch(() => res.status(400).json("Failure"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.updateReview = (req, res) => {
-  action.updateReview(req.body.reviewId)
+  Review.findByIdAndUpdate(req.body.reviewId, [{
+      $set: {
+        active: {
+          $eq: [false, "$active"]
+        }
+      }
+    }])
     .then(() => res.status(200).json("Success"))
-    .catch((error) => res.status(400).json("no" + error))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }
 
 exports.deleteReview = (req, res) => {
-  action.deleteReview(req.params.reviewId)
-    .then(() => res.status(200).json())
-    .catch(() => res.status(400).json())
+  Review.findByIdAndRemove(req.params.reviewId)
+    .then(() => res.status(204).json("Success"))
+    .catch((err) => res.status(500).json("Failure: " + error))
 }

@@ -74,14 +74,14 @@ exports.verifyToken = (req, res, next) => {
         if (user) {
           res.status(200).send('true');
         } else {
-          res.status(400).send('false');
+          res.status(401).send('false');
         }
       })
       .catch(
-        error => res.status(200).send('false')
+        error => res.status(401).send('false')
       );
   } catch (e) {
-    res.status(200).send('false');
+    res.status(401).send('false');
   }
 }
 
@@ -106,8 +106,8 @@ exports.updatePassword = (req, res, next) => {
         "Impossible de mettre le mot de passe à jour dans la base de donnée <= " +
         error));
   } catch {
-    res.status(401).json({
-      error: new Error('Invalid request!')
+    res.status(400).json({
+      error: new Error('Bad request!')
     });
   }
 }

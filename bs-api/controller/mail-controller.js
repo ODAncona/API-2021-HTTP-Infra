@@ -7,6 +7,6 @@ exports.sendMail = (req, res) => {
         "Your email has been sent. Confirmation will follow.")
     )
     .catch(
-      error => res.status(200).json("Unable to send mail <= " + error)
+      error => res.status(500).json("Unable to send mail <= " + error)
     )
 }
