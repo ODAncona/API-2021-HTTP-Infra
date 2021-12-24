@@ -18,7 +18,6 @@ export class BsNavComponent implements OnInit {
     { link: "promotions", name: "Promotions" },
     { link: "photos", name: "Photos" },
     { link: "rooms", name: "Rooms" },
-    { link: "services", name: "Services" },
     { link: "restaurant", name: "Restaurant" },
     { link: "wellness", name: "Wellness - Fitness" },
     { link: "reviews", name: "Reviews" },
