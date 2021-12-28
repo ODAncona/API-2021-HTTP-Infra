@@ -30,27 +30,26 @@ export class ReviewsComponent implements OnInit {
       .subscribe(
         (reviews: any) => {
           this.reviews = reviews.reverse();
-          for (let review of this.reviews) {
-            review['selected'] = false;
-            review['displayed'] = true;
-          }
+          this.reviews.map(r => {
+            r.selected = false;
+            r.displayed = true;
+          })
           this.autocompleteFill();
-          this.filteredOptions = this.search.valueChanges
-            .pipe(
-              startWith(''),
-              map((value) => {
-                this.reviews.forEach(review => { review.displayed = false; });
-                let descriptions = this._filter(value);
-                descriptions.forEach((description) => {
-                  for (let review of this.reviews) {
-                    if (review.description == description) {
-                      review.displayed = true;
-                    }
+          this.filteredOptions = this.search.valueChanges.pipe(
+            startWith(''),
+            map((value) => {
+              this.reviews.forEach(review => { review.displayed = false; });
+              let descriptions = this._filter(value);
+              descriptions.forEach((description) => {
+                for (let review of this.reviews) {
+                  if (review.description == description) {
+                    review.displayed = true;
                   }
-                });
-                return descriptions;
-              })
-            )
+                }
+              });
+              return descriptions;
+            })
+          )
         }
       );
   }
@@ -75,8 +74,7 @@ export class ReviewsComponent implements OnInit {
 
   updateReviews() {
     let toUpdate$ = this.reviews.filter(r => r.selected).map(r => { return this.reviewService.updateReview(r._id) });
-    forkJoin(toUpdate$)
-      .subscribe(() => this.getAllReviews());
+    forkJoin(toUpdate$).subscribe(() => this.getAllReviews());
   }
 
   selectAll() {

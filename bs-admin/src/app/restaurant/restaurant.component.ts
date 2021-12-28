@@ -31,10 +31,10 @@ export class RestaurantComponent implements OnInit {
     this.restaurantService.getAllMenus()
       .subscribe(menus => {
         this.menus = menus;
-        for (let menu of this.menus) {
-          menu['selected'] = false;
-          menu['displayed'] = true;
-        }
+        this.menus.map(m => {
+          m.selected = false;
+          m.displayed = true;
+        });
       })
   }
   createMenu() {

@@ -1,15 +1,15 @@
 const Promotion = require('../data-schematic/promotion-schematic');
 
 exports.createPromotion = (req, res) => {
-  let payload = req.file ? {
+  /*let payload = req.file ? {
     ...req.body,
     pdf: req.protocol + "://" + req.get('host') + "/uploads/document/" + req.file.filename,
     image: req.protocol + "://" + req.get('host') + "/uploads/image/" + req.file.filename,
   } : {
     ...req.body
-  };
+  };*/
   let promotion = new Promotion({
-      ...payload
+      ...req.body
     }).save()
     .then(() => res.status(201).json("Success"))
     .catch((error) => res.status(500).json("Failure: " + error))
