@@ -39,11 +39,11 @@ export class PromotionsComponent implements OnInit {
   getAllPromotions() {
     this.promotionService.getAllPromotions()
       .subscribe(promotions => {
-        this.promotions = promotions;
-        for (let promotion of this.promotions) {
-          promotion['selected'] = false;
-          promotion['displayed'] = true;
-        }
+        this.promotions = promotions.reverse();
+        this.promotions.map(p => {
+          p.selected = false;
+          p.displayed = true;
+        })
       })
   }
 
