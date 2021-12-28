@@ -23,7 +23,7 @@ api.use((req, res, next) => {
   next();
 });
 api.use(bodyParser.json());
-api.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+api.use('/upload', express.static(path.join(__dirname, 'upload')));
 api.use('/api/server', serverRoute);
 api.use('/api/auth', authRoute);
 api.use('/api/review', reviewRoute);

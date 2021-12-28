@@ -12,7 +12,7 @@ const promotionSchema = mongoose.Schema({
   },
   image: {
     type: String,
-    required: true
+    required: false
   },
   description: {
     type: String,
@@ -20,7 +20,7 @@ const promotionSchema = mongoose.Schema({
   },
   language: {
     type: String,
-    required: true
+    required: false
   },
   pdf: {
     type: String,

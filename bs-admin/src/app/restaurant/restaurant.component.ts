@@ -41,7 +41,7 @@ export class RestaurantComponent implements OnInit {
     let m = {
       title: "Titre",
       price: 10,
-      image: "../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
+      image: "",
       description: "Description",
       language: "fr",
       category: "main",

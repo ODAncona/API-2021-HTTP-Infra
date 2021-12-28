@@ -20,16 +20,20 @@ export class PromotionsComponent implements OnInit {
     { value: 'en', viewValue: 'English' }
   ];
   promotions: Promotion[] = [];
-  maxSize = 1; //Mo
-  imageControl: FormControl;
-  public image;
-  constructor(private promotionService: PromotionService) {
-    this.imageControl = new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]);
-  }
+  maxSize = 2; //Mo
+  fileForm = new FormGroup({
+    image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]),
+    pdf: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
+  });
+  image: any | undefined;
+  pdf: any | undefined;
+
+  constructor(private promotionService: PromotionService) { }
 
   ngOnInit(): void {
     this.getAllPromotions();
-    this.imageControl.valueChanges.subscribe((image: any) => this.image = image);
+    //this.fileForm.imageControl.valueChanges.subscribe((image: any) => this.image = image);
+    //this.fileForm.pdfControl.valueChanges.subscribe((pdf: any) => this.pdf = pdf);
   }
 
   getAllPromotions() {
@@ -42,15 +46,18 @@ export class PromotionsComponent implements OnInit {
         }
       })
   }
+
   createPromotion() {
     let promotion = {
-      title: "Titre",
-      subtitle: "Sous-titre",
-      image: "../../assets/images/restaurant/Thai-Red-Curry_1-1097x1536.jpg",
-      description: "Description",
-      language: "fr",
-      pdf: ""
+      title: "EDIT",
+      subtitle: "EDIT",
+      image: "",
+      description: "EDIT",
+      language: undefined,
+      pdf: "",
+      displayed: true
     };
+    //this.promotions.push(promotion);
     this.promotionService.createPromotion(promotion).subscribe(() => this.getAllPromotions());
   }
 

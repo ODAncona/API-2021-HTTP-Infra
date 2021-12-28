@@ -21,7 +21,7 @@ export class BsPromotionsDetailsComponent implements OnInit {
 
   getAPromotion() {
     let id: any = this.route.snapshot.paramMap.get('title');
-    this.promotionService.getAPromotion(id).subscribe(promotion => this.promotion = promotion[0]);
+    this.promotionService.getAPromotion(id).subscribe(promotion => this.promotion = promotion);
   }
 
   book(): void {

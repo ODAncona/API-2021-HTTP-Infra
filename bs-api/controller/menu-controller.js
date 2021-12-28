@@ -5,7 +5,7 @@ exports.createMenu = (req, res) => {
       ...req.body
     }).save()
     .then(() => res.status(201).json("Success"))
-    .catch((err) => res.status(500).json("Failure: " + error))
+    .catch((error) => res.status(500).json("Failure: " + error))
 }
 
 exports.getAllMenus = (req, res) => {

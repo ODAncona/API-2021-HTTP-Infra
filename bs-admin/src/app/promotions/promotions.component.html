@@ -19,15 +19,15 @@
 </mat-toolbar>
 
 <div class="promotions">
-  <ng-container *ngFor="let promotion of promotions">
+  <form [formGroup]="fileForm" *ngFor="let promotion of promotions">
     <div class="card" *ngIf="promotion.displayed" (click)="promotion.selected = !promotion.selected;">
       <div>
         <h2>Title</h2>
-        <input matInput [(ngModel)]="promotion.title" />
+        <input matInput [(ngModel)]="promotion.title" [ngModelOptions]="{standalone: true}"/>
       </div>
       <div>
         <h2>Subtitle</h2>
-        <input matInput [(ngModel)]="promotion.subtitle" />
+        <input matInput [(ngModel)]="promotion.subtitle" [ngModelOptions]="{standalone: true}"/>
       </div>
       <div>
         <h2>Language</h2>
@@ -39,13 +39,13 @@
       </div>
       <div class="description">
         <h2>Description</h2>
-        <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="promotion.description"></textarea>
+        <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="promotion.description" [ngModelOptions]="{standalone: true}"></textarea>
       </div>
       <div class="img">
         <div class="container">
           <h2>Image</h2>
           <mat-form-field>
-            <ngx-mat-file-input [formControl]="imageControl" [multiple]="false" accept="image/webp, image/jpeg, image/png">
+            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png">
               <mat-icon ngxMatFileInputIcon>folder</mat-icon>
             </ngx-mat-file-input>
           </mat-form-field>
@@ -54,14 +54,13 @@
       </div>
       <div class="pdf">
         <h2>PDF</h2>
-        <input matInput [(ngModel)]="promotion.pdf"/>
         <mat-form-field>
-          <ngx-mat-file-input [multiple]="false" accept="application/pdf">
+          <ngx-mat-file-input formControlName="pdf" [multiple]="false" accept="application/pdf">
             <mat-icon ngxMatFileInputIcon>folder</mat-icon>
           </ngx-mat-file-input>
         </mat-form-field>
       </div>
       <mat-checkbox class="checkbox" [checked]="promotion.selected"></mat-checkbox>
     </div>
-  </ng-container>
+  </form>
 </div>
