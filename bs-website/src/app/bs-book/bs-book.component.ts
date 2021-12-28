@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './bs-book.component.html',
   styleUrls: ['./bs-book.component.scss']
 })
-export class BsBookComponent implements OnInit {
+export class BsBookComponent {
   stepperOrientation: Observable<StepperOrientation>;
   range = new FormGroup({
     start: new FormControl(),
@@ -29,9 +29,6 @@ export class BsBookComponent implements OnInit {
     this.stepperOrientation = breakpointObserver.observe('(min-width: 800px)').pipe(
       map(({ matches }) => matches ? 'horizontal' : 'vertical')
     );
-  }
-
-  ngOnInit(): void {
   }
 
 }

@@ -5,7 +5,7 @@ import { Room } from '../interface';
   templateUrl: './bs-rooms.component.html',
   styleUrls: ['./bs-rooms.component.scss']
 })
-export class BsRoomsComponent implements OnInit {
+export class BsRoomsComponent {
   rooms: Room[] = [
     {
       title: 'Standard ',
@@ -99,8 +99,4 @@ export class BsRoomsComponent implements OnInit {
     },
   ];
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -9,7 +9,7 @@ import { Review } from '../interface';
   templateUrl: './bs-reviews-modal.component.html',
   styleUrls: ['./bs-reviews-modal.component.scss']
 })
-export class BsReviewsModalComponent implements OnInit {
+export class BsReviewsModalComponent {
   reviewForm = new FormGroup({
     author: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required, Validators.minLength(40)]),
@@ -26,9 +26,6 @@ export class BsReviewsModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private reviewService: ReviewService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
     let date = new Date();

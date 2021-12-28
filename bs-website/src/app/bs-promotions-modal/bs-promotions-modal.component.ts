@@ -10,7 +10,7 @@ import { Mail } from '../interface';
   templateUrl: './bs-promotions-modal.component.html',
   styleUrls: ['./bs-promotions-modal.component.scss']
 })
-export class BsPromotionsModalComponent implements OnInit {
+export class BsPromotionsModalComponent {
   promotionForm = new FormGroup({
     promotion: new FormControl(''),
     participant: new FormControl('', [Validators.required]),
@@ -24,9 +24,6 @@ export class BsPromotionsModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private mailService: MailService,
     private _snackBar: MatSnackBar) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
     let content: any = "<html><p>A customer ordered an offer: </p><p>" +

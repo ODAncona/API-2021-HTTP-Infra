@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bs-photos.component.html',
   styleUrls: ['./bs-photos.component.scss']
 })
-export class BsPhotosComponent implements OnInit {
+export class BsPhotosComponent {
   images: any[] = [
     { url: "../../assets/images/photos/Hotel_Beau_Doble_clasica.jpg", description: "Description incroyable" },
     { url: "../../assets/images/photos/Hotel_Beau_Doble_Superior.jpg", description: "Description incroyable" },
@@ -19,8 +19,5 @@ export class BsPhotosComponent implements OnInit {
   ]
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

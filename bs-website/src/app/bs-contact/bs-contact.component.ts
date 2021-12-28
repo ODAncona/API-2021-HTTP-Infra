@@ -8,16 +8,13 @@ import { Mail } from '../interface';
   templateUrl: './bs-contact.component.html',
   styleUrls: ['./bs-contact.component.scss']
 })
-export class BsContactComponent implements OnInit {
+export class BsContactComponent {
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     content: new FormControl('', [Validators.required, Validators.minLength(40)]),
   });
   constructor(private mailService: MailService, private _snackBar: MatSnackBar) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
     let m: Mail = {

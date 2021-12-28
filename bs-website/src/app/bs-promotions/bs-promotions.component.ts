@@ -7,12 +7,10 @@ import { Promotion } from '../interface';
   templateUrl: './bs-promotions.component.html',
   styleUrls: ['./bs-promotions.component.scss']
 })
-export class BsPromotionsComponent implements OnInit {
+export class BsPromotionsComponent {
   promotions: Promotion[] = [];
   selectedLocale: any;
-  constructor(private promotionService: PromotionService) { }
-
-  ngOnInit(): void {
+  constructor(private promotionService: PromotionService) {
     this.selectedLocale = localStorage.getItem('locale');
     this.getAllPromotions();
   }

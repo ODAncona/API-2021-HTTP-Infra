@@ -10,12 +10,10 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './bs-promotions-details.component.html',
   styleUrls: ['./bs-promotions-details.component.scss']
 })
-export class BsPromotionsDetailsComponent implements OnInit {
+export class BsPromotionsDetailsComponent {
   doc: string = "../../assets/document/promotion_musique.pdf";
   promotion?: Promotion;
-  constructor(private promotionService: PromotionService, private route: ActivatedRoute, public dialog: MatDialog) { }
-
-  ngOnInit(): void {
+  constructor(private promotionService: PromotionService, private route: ActivatedRoute, public dialog: MatDialog) {
     this.getAPromotion();
   }
 

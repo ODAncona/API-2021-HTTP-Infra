@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './bs-wellness-fitness.component.html',
   styleUrls: ['./bs-wellness-fitness.component.scss']
 })
-export class BsWellnessFitnessComponent implements OnInit {
+export class BsWellnessFitnessComponent {
   benefits: any[] = [
     { title: "Suspension", description: "Suspend your subscription for free (from 7 to 90 days/year)" },
     { title: "Reduction", description: "Special 50% price for Student/AVS/AI/Apprentice" },
@@ -23,9 +23,6 @@ export class BsWellnessFitnessComponent implements OnInit {
   ];
 
   constructor(public dialog: MatDialog) { }
-
-  ngOnInit(): void {
-  }
 
   orderSubscription() {
     let dialogRef = this.dialog.open(BsWellnessFitnessModalComponent, { data: "test" });

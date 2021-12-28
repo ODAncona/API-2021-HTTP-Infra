@@ -20,11 +20,9 @@ export class BsRestaurantComponent implements OnInit {
   desserts: Menu[] = [];
   selectedLocale: any;
 
-  constructor(private restaurantService: RestaurantService) { }
-
-  ngOnInit(): void {
+  constructor(private restaurantService: RestaurantService) {
     this.selectedLocale = localStorage.getItem('locale');
-    this.getAllMenus()
+    this.getAllMenus();
   }
 
   getAllMenus() {

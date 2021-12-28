@@ -11,7 +11,7 @@ import { Locale } from '../interface';
   templateUrl: './bs-nav.component.html',
   styleUrls: ['./bs-nav.component.scss']
 })
-export class BsNavComponent implements OnInit {
+export class BsNavComponent {
   activeLink: string = "Menu";
   navs = [
     { link: "home", name: "Home" },
@@ -37,7 +37,13 @@ export class BsNavComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+    this.activeLink = this.navs.filter(nav => nav.link === this.router.url.slice(1).split("/")[0])[0].name;
+
+    if (localStorage.getItem('locale')) {
+      this.selectedLocale = localStorage.getItem('locale');
+    }
+  }
 
   handleClick(nav: any) {
     this.activeLink = this.navs.filter(nav => nav.link === this.router.url.slice(1))[0].name;
@@ -46,14 +52,6 @@ export class BsNavComponent implements OnInit {
   handleIls() {
     localStorage.setItem("locale", this.selectedLocale);
     window.location.reload();
-  }
-
-  ngOnInit(): void {
-    this.activeLink = this.navs.filter(nav => nav.link === this.router.url.slice(1).split("/")[0])[0].name;
-
-    if (localStorage.getItem('locale')) {
-      this.selectedLocale = localStorage.getItem('locale');
-    }
   }
 
 }

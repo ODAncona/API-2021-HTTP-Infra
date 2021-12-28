@@ -10,7 +10,7 @@ import { Review } from '../interface';
   styleUrls: ['./bs-reviews.component.scss']
 })
 
-export class BsReviewsComponent implements OnInit {
+export class BsReviewsComponent {
   criterions: any[] = [
     { name: "clean", description: "a" },
     { name: "service", description: "b" },
@@ -22,10 +22,7 @@ export class BsReviewsComponent implements OnInit {
   reviews: Review[] = [];
   average: number = 0;
 
-
-  constructor(public dialog: MatDialog, private reviewService: ReviewService) { }
-
-  ngOnInit(): void {
+  constructor(public dialog: MatDialog, private reviewService: ReviewService) {
     this.getAllActiveReviews();
   }
 

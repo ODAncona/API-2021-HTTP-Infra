@@ -10,7 +10,7 @@ import { Mail } from '../interface';
   templateUrl: './bs-wellness-fitness-modal.component.html',
   styleUrls: ['./bs-wellness-fitness-modal.component.scss']
 })
-export class BsWellnessFitnessModalComponent implements OnInit {
+export class BsWellnessFitnessModalComponent {
   fitnessForm = new FormGroup({
     offers: new FormControl([], [Validators.required]),
     firstname: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -35,9 +35,6 @@ export class BsWellnessFitnessModalComponent implements OnInit {
     private mailService: MailService,
     private _snackBar: MatSnackBar
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
     //console.log(this.fitnessForm.value);
