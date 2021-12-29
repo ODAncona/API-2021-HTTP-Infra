@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./bs-promotions-details.component.scss']
 })
 export class BsPromotionsDetailsComponent {
-  doc: string = "../../assets/document/promotion_musique.pdf";
+  doc: string = "";
   promotion?: Promotion;
   constructor(private promotionService: PromotionService, private route: ActivatedRoute, public dialog: MatDialog) {
     this.getAPromotion();
@@ -19,7 +19,10 @@ export class BsPromotionsDetailsComponent {
 
   getAPromotion() {
     let id: any = this.route.snapshot.paramMap.get('title');
-    this.promotionService.getAPromotion(id).subscribe(promotion => this.promotion = promotion);
+    this.promotionService.getAPromotion(id).subscribe(promotion => {
+    this.promotion = promotion;
+    this.doc = promotion.pdf;
+    });
   }
 
   book(): void {

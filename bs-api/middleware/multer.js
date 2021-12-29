@@ -8,20 +8,25 @@ const MIME_TYPES = {
 };
 
 const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    callback(null, 'uploads');
-  },
-  filename: (req, file, callback) => {
-    const name = file.originalname.split(' ').join('_');
+  destination: (req, file, cb) => {
     const extension = MIME_TYPES[file.mimetype];
-    callback(null, name + Date.now() + '.' + extension);
+    if (extension == 'pdf')
+      // Upload a document
+      cb(null, 'upload/document');
+    else
+      // Upload an image
+      cb(null, 'upload/image');
+  },
+  filename: (req, file, cb) => {
+    const extension = MIME_TYPES[file.mimetype];
+    const name = file.originalname.split('.')[0].replaceAll(' ', '_') + '_' + Date.now() + '.' + extension;
+    cb(null, name);
   }
 });
 
 module.exports = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
-    console.log(file);
     if (MIME_TYPES[file.mimetype]) {
       cb(null, true);
     } else {
@@ -31,5 +36,6 @@ module.exports = multer({
   },
   limits: {
     fileSize: 1024 * 1024 * 4
-  }
-}).single('upload');
+  },
+  onFileSizeLimit: file => fs.unlinkSync('./' + file.path)
+});

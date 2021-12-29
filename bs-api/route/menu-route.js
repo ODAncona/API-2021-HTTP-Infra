@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const auth = require('../middleware/auth');
+const multer = require('../middleware/multer');
 const menuController = require('../controller/menu-controller');
 
 //Routes

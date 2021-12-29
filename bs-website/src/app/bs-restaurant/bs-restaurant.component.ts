@@ -7,7 +7,7 @@ import { Menu } from '../interface';
   templateUrl: './bs-restaurant.component.html',
   styleUrls: ['./bs-restaurant.component.scss']
 })
-export class BsRestaurantComponent implements OnInit {
+export class BsRestaurantComponent {
   doc: string = "../../assets/document/Menu.pdf";
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
