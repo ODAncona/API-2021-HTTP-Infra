@@ -8,7 +8,7 @@ import { Menu } from '../interface';
   styleUrls: ['./bs-restaurant.component.scss']
 })
 export class BsRestaurantComponent {
-  doc: string = "../../assets/document/Menu.pdf";
+  doc: string = "http://localhost:1470/upload/document/Menu_1640780004362.pdf";
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
