@@ -8,7 +8,7 @@ import { Menu } from '../interface';
   styleUrls: ['./bs-restaurant.component.scss']
 })
 export class BsRestaurantComponent {
-  doc: string = "http://localhost:1470/upload/document/Menu_1640780004362.pdf";
+  doc: string = "";
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
@@ -29,24 +29,23 @@ export class BsRestaurantComponent {
     this.restaurantService.getAllMenus()
       .subscribe((menus: Menu[]) => {
         this.menus = menus;
-        this.starters = [];
-        this.mains = [];
-        this.desserts = [];
-        for (let menu of this.menus) {
-          switch (menu.category) {
+        this.menus.map(m => {
+          switch (m.category) {
             case "starter":
-              this.starters.push(menu);
+              this.starters.push(m);
               break;
             case "main":
-              this.mains.push(menu);
+              this.mains.push(m);
               break;
             case "dessert":
-              this.desserts.push(menu);
+              this.desserts.push(m);
               break;
             default:
               break;
           }
-        }
+        })
+        console.log(this.menus);
+
       }
       );
   }

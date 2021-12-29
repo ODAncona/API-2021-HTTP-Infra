@@ -9,7 +9,6 @@ exports.createPromotion = (req, res) => {
   if (req.files) {
     payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
     payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
-    console.log(payload);
   }
 
   // Save to database
@@ -41,9 +40,9 @@ exports.updatePromotion = (req, res) => {
   if (req.files) {
     payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
     payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
-    console.log(payload);
   }
-  
+
+  // Update database
   Promotion.findByIdAndUpdate(payload._id, payload)
     .then(() => res.status(200).json("Success"))
     .catch((error) => res.status(500).json("Failure: " + error))

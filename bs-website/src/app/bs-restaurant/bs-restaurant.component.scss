@@ -11,7 +11,7 @@ video {
 .menu-item {
   display: flex;
   flex-direction: column;
-  height: 95%;
+  min-height: 300px;
 }
 
 mat-grid-list {
