@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
 import { RestaurantService } from '../restaurant.service';
-import { Menu, Language } from '../interface';
+import { Menu, Language, DailyMenu } from '../interface';
 
 @Component({
   selector: 'app-restaurant',
@@ -21,10 +21,13 @@ export class RestaurantComponent implements OnInit {
     { value: 'en', viewValue: 'English' }
   ];
   menus: Menu[] = [];
+  dailyMenu: DailyMenu;
+  
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit(): void {
     this.getAllMenus()
+    this.getDailyMenu()
   }
 
   getAllMenus() {
@@ -37,6 +40,13 @@ export class RestaurantComponent implements OnInit {
         });
       })
   }
+
+  getDailyMenu() {
+    this.restaurantService.getDailyMenu().subscribe(
+      dailyMenu => this.dailyMenu = dailyMenu[0]
+    )
+  }
+
   createMenu() {
     let m = {
       title: "Titre",

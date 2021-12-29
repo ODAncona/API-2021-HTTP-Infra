@@ -63,6 +63,11 @@ export interface Mail {
   html: any;
 }
 
+export interface DailyMenu {
+    _id?: string;
+    title: string;
+    image: string;
+}
 //const API_URL = "bs-api:1470/api/"
 const API_URL = "http://localhost:1470/api/"
 export { API_URL };

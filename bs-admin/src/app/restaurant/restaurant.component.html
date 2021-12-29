@@ -5,7 +5,7 @@
       <mat-icon ngxMatFileInputIcon>folder</mat-icon>
     </ngx-mat-file-input>
   </mat-form-field>
-  <p class="link">../../assets/documents/menu.pdf</p>
+  <p class="link">{{dailyMenu.title}}</p>
 </div>
 
 <mat-toolbar class="toolbar">
@@ -65,8 +65,14 @@
         <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="menu.description"></textarea>
       </div>
       <div class="img">
-        <h2>Image</h2>
-        <input matInput [(ngModel)]="menu.image" />
+        <div class="container">
+          <h2>Image</h2>
+          <mat-form-field>
+            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png">
+              <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+            </ngx-mat-file-input>
+          </mat-form-field>
+        </div>
         <img src="{{menu.image}}">
       </div>
       <mat-checkbox class="checkbox" [checked]="menu.selected"></mat-checkbox>

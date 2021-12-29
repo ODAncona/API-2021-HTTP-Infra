@@ -27,6 +27,10 @@ export class RestaurantService {
     return this.http.get<any>(this.apiUrl, this.httpOptions);
   }
 
+  getDailyMenu() {
+    return this.http.get<any>(this.apiUrl + "/dailyMenu", this.httpOptions);
+  }
+
   updateMenu(menu: Menu) {
     return this.http.put<any>(this.apiUrl, menu, this.httpOptions);
   }
