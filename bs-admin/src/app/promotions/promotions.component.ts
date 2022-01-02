@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
 import { PromotionService } from '../promotion.service';
 import { Promotion, Language } from '../interface';
 import { AcceptValidator, MaxSizeValidator } from '@angular-material-components/file-input';
+import * as cloneDeep from 'lodash/cloneDeep';
 
 @Component({
   selector: 'app-promotions',
@@ -21,19 +22,20 @@ export class PromotionsComponent implements OnInit {
   ];
   promotions: Promotion[] = [];
   maxSize = 2; //Mo
-  fileForm = new FormGroup({
-    image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]),
-    pdf: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
-  });
-  image: any | undefined;
-  pdf: any | undefined;
+  files = new FormArray([]);
 
   constructor(private promotionService: PromotionService) { }
 
   ngOnInit(): void {
     this.getAllPromotions();
-    //this.fileForm.imageControl.valueChanges.subscribe((image: any) => this.image = image);
-    //this.fileForm.pdfControl.valueChanges.subscribe((pdf: any) => this.pdf = pdf);
+  }
+
+  addPromotionFileForm() {
+    const fileForm = new FormGroup({
+      image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]),
+      pdf: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
+    });
+    return fileForm as FormGroup;
   }
 
   getAllPromotions() {
@@ -43,6 +45,7 @@ export class PromotionsComponent implements OnInit {
         this.promotions.map(p => {
           p.selected = false;
           p.displayed = true;
+          p.filesForm = this.addPromotionFileForm();
         })
       })
   }
@@ -54,10 +57,8 @@ export class PromotionsComponent implements OnInit {
       image: "",
       description: "EDIT",
       language: undefined,
-      pdf: "",
-      displayed: true
+      pdf: ""
     };
-    //this.promotions.push(promotion);
     this.promotionService.createPromotion(promotion).subscribe(() => this.getAllPromotions());
   }
 
@@ -67,9 +68,14 @@ export class PromotionsComponent implements OnInit {
   }
 
   updatePromotions() {
-    let toUpdate$ = this.promotions.filter(p => p.selected).map(p => { return this.promotionService.updatePromotion(p) });
-    forkJoin(toUpdate$)
-      .subscribe(() => this.getAllPromotions());
+    let payload = cloneDeep(this.promotions);
+    payload.map(p => {
+      p.image = p.filesForm.value.image;
+      p.pdf = p.filesForm.value.pdf;
+      delete p.filesForm;
+    });
+    let toUpdate$ = payload.filter(p => p.selected).map(p => { return this.promotionService.updatePromotion(p) });
+    forkJoin(toUpdate$).subscribe(() => this.getAllPromotions());
   }
 
   selectAll() {

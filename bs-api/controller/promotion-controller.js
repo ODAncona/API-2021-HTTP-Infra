@@ -7,8 +7,12 @@ exports.createPromotion = (req, res) => {
 
   // If req contains files
   if (req.files) {
-    payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
-    payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+    if(req.files['pdf']){
+      payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+    }
+    if(req.files['image']){
+      payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+    }
   }
 
   // Save to database
@@ -38,8 +42,12 @@ exports.updatePromotion = (req, res) => {
 
   // If req contains files
   if (req.files) {
-    payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
-    payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+    if(req.files['pdf']){
+      payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+    }
+    if(req.files['image']){
+      payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+    }
   }
 
   // Update database

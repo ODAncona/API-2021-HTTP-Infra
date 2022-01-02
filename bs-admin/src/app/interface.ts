@@ -18,6 +18,7 @@ export interface Promotion {
   pdf: string;
   selected?: boolean;
   displayed?: boolean;
+  filesForm?: any;
 }
 
 export interface Menu {

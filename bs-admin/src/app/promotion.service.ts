@@ -33,7 +33,18 @@ export class PromotionService {
   }
 
   updatePromotion(promotion: Promotion) {
-    return this.http.put<any>(this.apiUrl, promotion, this.httpOptions);
+    console.log(promotion);
+
+    var formData: any = new FormData();
+    formData.append('_id', promotion._id);
+    formData.append('title', promotion.title);
+    formData.append('subtitle', promotion.subtitle);
+    formData.append('description', promotion.description);
+    formData.append('language', promotion.language);
+    formData.append('image', promotion.image);
+    formData.append('pdf', promotion.pdf);
+
+    return this.http.put<any>(this.apiUrl, formData, this.httpOptions);
   }
 
   deletePromotion(promotionId: string) {
