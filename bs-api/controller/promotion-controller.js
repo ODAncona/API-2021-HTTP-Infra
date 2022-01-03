@@ -7,10 +7,10 @@ exports.createPromotion = (req, res) => {
 
   // If req contains files
   if (req.files) {
-    if(req.files['pdf']){
+    if (req.files['pdf']) {
       payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
     }
-    if(req.files['image']){
+    if (req.files['image']) {
       payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
     }
   }
@@ -42,10 +42,10 @@ exports.updatePromotion = (req, res) => {
 
   // If req contains files
   if (req.files) {
-    if(req.files['pdf']){
+    if (req.files['pdf']) {
       payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
     }
-    if(req.files['image']){
+    if (req.files['image']) {
       payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
     }
   }

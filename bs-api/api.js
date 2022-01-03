@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const database = require('./database/database');
@@ -15,14 +14,18 @@ const api = express();
 
 api.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization'
-  );
-  res.setHeader('Access-Control-Allow-Methods',
-    'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization, enctype');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
 });
-api.use(bodyParser.json());
+//api.use(bodyParser.urlencoded());
+api.use(express.json({
+  limit: '50mb'
+}));
+api.use(express.urlencoded({
+  limit: '50mb',
+  extended: true,
+}))
 api.use('/upload', express.static(path.join(__dirname, 'upload')));
 api.use('/api/server', serverRoute);
 api.use('/api/auth', authRoute);

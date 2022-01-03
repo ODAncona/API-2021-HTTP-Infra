@@ -51,7 +51,7 @@
           <div class="container">
             <h2>Image</h2>
             <mat-form-field>
-              <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png">
+              <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png" (change)="promotion.image=''">
                 <mat-icon ngxMatFileInputIcon>folder</mat-icon>
               </ngx-mat-file-input>
             </mat-form-field>
@@ -65,6 +65,7 @@
               <mat-icon ngxMatFileInputIcon>folder</mat-icon>
             </ngx-mat-file-input>
           </mat-form-field>
+          <a href="{{promotion.pdf}}">Flyer</a>
         </div>
       </ng-container>
 
