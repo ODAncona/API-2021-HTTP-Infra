@@ -24,6 +24,8 @@ export class RestaurantComponent implements OnInit {
   ];
   menus: Menu[] = [];
   dailyMenu: DailyMenu | undefined;
+  dailyMenuFile = new FormControl('');
+  dailyMenuName = new FormControl('');
   maxSize = 2; //Mo
 
   constructor(private restaurantService: RestaurantService) { }
@@ -33,6 +35,7 @@ export class RestaurantComponent implements OnInit {
     this.getAllMenus()
   }
 
+  // Menu
   addMenuFileForm() {
     const fileForm = new FormGroup({
       image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
@@ -50,12 +53,6 @@ export class RestaurantComponent implements OnInit {
           m.fileForm = this.addMenuFileForm();
         });
       })
-  }
-
-  getDailyMenu() {
-    this.restaurantService.getDailyMenu().subscribe(
-      dailyMenu => this.dailyMenu = dailyMenu[0]
-    )
   }
 
   createMenu() {
@@ -85,6 +82,26 @@ export class RestaurantComponent implements OnInit {
     });
     let toUpdate$ = payload.filter(m => m.selected).map(m => { return this.restaurantService.updateMenu(m) });
     forkJoin(toUpdate$).subscribe(() => this.getAllMenus());
+  }
+
+  // Daily Menu
+  createDailyMenu() {
+    let m = {
+      title: this.dailyMenuName.value,
+      file: this.dailyMenuFile.value,
+      active: true
+    };
+    this.restaurantService.createDailyMenu(m).subscribe(() => this.ngOnInit());
+  }
+
+  getDailyMenu() {
+    this.restaurantService.getDailyMenu().subscribe(
+      dailyMenu => this.dailyMenu = dailyMenu[0]
+    )
+  }
+
+  updateDailyMenu(d: DailyMenu) {
+    this.restaurantService.updateDailyMenu(d).subscribe();
   }
 
   selectAll() {

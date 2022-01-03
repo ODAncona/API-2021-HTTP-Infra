@@ -4,8 +4,8 @@ export interface Locale {
 }
 
 export interface Service {
-  icon:string;
-  name:string;
+  icon: string;
+  name: string;
 }
 
 export interface Promotion {
@@ -18,6 +18,7 @@ export interface Promotion {
   pdf: string;
   selected?: boolean;
   displayed?: boolean;
+  filesForm?: any;
 }
 
 export interface Menu {
@@ -30,6 +31,7 @@ export interface Menu {
   category: string;
   selected?: boolean;
   displayed?: boolean;
+  fileForm?: any;
 }
 
 export interface Review {
@@ -63,7 +65,11 @@ export interface Mail {
   html: any;
 }
 
+export interface DailyMenu {
+  _id?: string;
+  title: string;
+  pdf: string;
+}
 //const API_URL = "bs-api:1470/api/"
 const API_URL = "http://localhost:1470/api/"
-
 export { API_URL };

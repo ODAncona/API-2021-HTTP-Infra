@@ -25,7 +25,7 @@ api.use(express.json({
 api.use(express.urlencoded({
   limit: '50mb',
   extended: true,
-}))
+}));
 api.use('/upload', express.static(path.join(__dirname, 'upload')));
 api.use('/api/server', serverRoute);
 api.use('/api/auth', authRoute);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
-import { Menu } from '../interface';
+import { Menu, DailyMenu } from '../interface';
 
 @Component({
   selector: 'app-bs-restaurant',
@@ -8,7 +8,7 @@ import { Menu } from '../interface';
   styleUrls: ['./bs-restaurant.component.scss']
 })
 export class BsRestaurantComponent {
-  doc: string = "";
+  dailyMenu: any = "";
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
@@ -22,6 +22,7 @@ export class BsRestaurantComponent {
 
   constructor(private restaurantService: RestaurantService) {
     this.selectedLocale = localStorage.getItem('locale');
+    this.getDailyMenu();
     this.getAllMenus();
   }
 
@@ -46,6 +47,11 @@ export class BsRestaurantComponent {
         })
       }
       );
+  }
+
+  getDailyMenu() {
+    this.restaurantService.getDailyMenu().subscribe(
+      dailyMenu => this.dailyMenu = dailyMenu[0])
   }
 
 }

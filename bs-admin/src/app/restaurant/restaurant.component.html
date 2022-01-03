@@ -1,11 +1,16 @@
-<div class="dailyMenu" *ngIf="dailyMenu">
-  <h1>Daily Menu </h1>
+<div class="dailyMenu">
+  <h1>Current Menu: </h1>
+  <h2 *ngIf="dailyMenu">{{dailyMenu.title}}</h2>
   <mat-form-field>
-    <ngx-mat-file-input [multiple]="false" accept="application/pdf">
+    <ngx-mat-file-input [formControl]="dailyMenuFile" [multiple]="false" accept="application/pdf">
       <mat-icon ngxMatFileInputIcon>folder</mat-icon>
     </ngx-mat-file-input>
   </mat-form-field>
-  <p class="link">{{dailyMenu.title}}</p>
+  <mat-form-field appearance="fill">
+    <mat-label>DailyMenu Name</mat-label>
+    <input matInput [formControl]="dailyMenuName" />
+  </mat-form-field>
+  <button mat-button style="width:25%" color="warning" (click)="createDailyMenu()">Add</button>
 </div>
 
 <mat-toolbar class="toolbar">

@@ -7,10 +7,12 @@ exports.createDailyMenu = (req, res) => {
     active: true
   };
 
-  // If req contains files
+  // If req contains file
   if (req.file) {
-    payload.image = req.protocol + "://" + req.get('host') + "/" + req.file.path;
+    payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.file.path;
   }
+
+  console.log(payload);
 
   // Save to database
   DailyMenu.findOneAndUpdate({
@@ -35,6 +37,29 @@ exports.createDailyMenu = (req, res) => {
     )
 }
 
+exports.getDailyMenu = (req, res) => {
+  DailyMenu.find({
+      active: 1
+    })
+    .then((menus) => res.status(200).json(menus))
+    .catch((error) => res.status(500).json("Failure: " + error))
+}
+
+exports.updateDailyMenu = (req, res) => {
+  let payload = {
+    ...req.body
+  };
+
+  // If req contains files
+  if (req.file) {
+    payload.image = req.protocol + "://" + req.get('host') + "/" + req.file.path;
+  }
+  // Update database
+  DailyMenu.findByIdAndUpdate(payload._id, payload)
+    .then(() => res.status(200).json("Success"))
+    .catch((error) => res.status(500).json("Failure: " + error))
+}
+
 exports.createMenu = (req, res) => {
   let payload = {
     ...req.body
@@ -52,17 +77,11 @@ exports.createMenu = (req, res) => {
     .then(() => res.status(201).json("Success"))
     .catch((error) => res.status(500).json("Failure: " + error))
 }
-exports.getDailyMenu = (req, res) => {
-  DailyMenu.find({
-      active: 1
-    })
-    .then((menus) => res.status(200).json(menus))
-    .catch(() => res.status(500).json("Failure: " + error))
-}
+
 exports.getAllMenus = (req, res) => {
   Menu.find()
     .then((menus) => res.status(200).json(menus))
-    .catch(() => res.status(500).json("Failure: " + error))
+    .catch((error) => res.status(500).json("Failure: " + error))
 }
 
 exports.updateMenu = (req, res) => {
@@ -74,8 +93,6 @@ exports.updateMenu = (req, res) => {
   if (req.file) {
     payload.image = req.protocol + "://" + req.get('host') + "/" + req.file.path;
   }
-  console.log(payload);
-
   // Update database
   Menu.findByIdAndUpdate(payload._id, payload)
     .then(() => res.status(200).json("Success"))

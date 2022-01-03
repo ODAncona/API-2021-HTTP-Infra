@@ -11,8 +11,6 @@
     </mat-card-content>
     <mat-card-subtitle>Details & Informations</mat-card-subtitle>
     <div class="pdf" *ngIf="promotion.pdf">
-      <p> You can have a look at <a href="{{promotion.pdf}}">the official flyer</a>.
-      </p>
       <pdf-viewer [src]="promotion.pdf" [render-text]="true" [original-size]="true" [fit-to-page]="true" [show-borders]="true" [show-all]="false">
       </pdf-viewer>
     </div>

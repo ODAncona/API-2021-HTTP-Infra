@@ -27,8 +27,20 @@ export class RestaurantService {
     return this.http.get<any>(this.apiUrl, this.httpOptions);
   }
 
-  updateMenu(menu: Menu) {
-    return this.http.put<any>(this.apiUrl, menu, this.httpOptions);
+  getDailyMenu() {
+    return this.http.get<any>(this.apiUrl + "/dailyMenu", this.httpOptions);
+  }
+
+  updateMenu(menu: any) {
+    const formData = new FormData();
+    Object.keys(menu).forEach((key) => formData.append(key, menu[key]));
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'enctype': 'multipart/form-data',
+        'Authorization': this.auth
+      })
+    };
+    return this.http.put<any>(this.apiUrl, formData, httpOptions);
   }
 
   deleteMenu(menuId: string) {

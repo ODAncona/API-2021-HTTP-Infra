@@ -6,7 +6,7 @@ const dailyMenuSchema = mongoose.Schema({
     type: String,
     required: false
   },
-  image: {
+  pdf: {
     type: String,
     required: false
   },

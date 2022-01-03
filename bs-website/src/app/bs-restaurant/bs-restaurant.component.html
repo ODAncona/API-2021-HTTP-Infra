@@ -1,10 +1,13 @@
-<video autoplay loop>
+<video autoplay loop muted>
   <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4">
 </video>
 
 <div class="halfboard">
-  <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Half-Board</h1>
-  <pdf-viewer [src]="doc" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+  <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Daily Menu</h1>
+  <pdf-viewer *ngIf="dailyMenu; else noPdf" [src]="dailyMenu.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+  <ng-template #noPdf>
+    <h2 style="text-align:center;">No Menu today</h2>
+  </ng-template>
 </div>
 
 <div class="menu">
