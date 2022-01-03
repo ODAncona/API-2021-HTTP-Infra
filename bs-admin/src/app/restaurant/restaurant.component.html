@@ -1,4 +1,4 @@
-<div class="dailyMenu">
+<div class="dailyMenu" *ngIf="dailyMenu">
   <h1>Daily Menu </h1>
   <mat-form-field>
     <ngx-mat-file-input [multiple]="false" accept="application/pdf">
@@ -64,17 +64,19 @@
         <h2>Description</h2>
         <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="menu.description"></textarea>
       </div>
-      <div class="img">
+
+      <div class="img" [formGroup]="menu.fileForm">
         <div class="container">
           <h2>Image</h2>
           <mat-form-field>
-            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png">
+            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png" (change)="menu.image=''">
               <mat-icon ngxMatFileInputIcon>folder</mat-icon>
             </ngx-mat-file-input>
           </mat-form-field>
         </div>
         <img src="{{menu.image}}">
       </div>
+
       <mat-checkbox class="checkbox" [checked]="menu.selected"></mat-checkbox>
     </div>
   </ng-container>

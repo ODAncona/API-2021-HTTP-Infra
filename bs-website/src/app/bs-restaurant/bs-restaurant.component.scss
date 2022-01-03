@@ -12,13 +12,26 @@ video {
   display: flex;
   flex-direction: column;
   min-height: 300px;
+  align-items: start;
 }
 
 mat-grid-list {
   margin: 1em;
 }
 
-img:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease-in-out;
+mat-card {
+  img {
+    margin: .2em;
+    width: 250px;
+    height: 300px;
+  }
+
+  img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in-out;
+  }
+
+  mat-card-footer {
+    margin-left: 0.2em;
+  }
 }

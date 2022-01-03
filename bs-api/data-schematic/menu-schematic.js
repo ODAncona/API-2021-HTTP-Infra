@@ -20,11 +20,11 @@ const menuSchema = mongoose.Schema({
   },
   language: {
     type: String,
-    required: true
+    required: false
   },
   category: {
     type: String,
-    required: true
+    required: false
   },
 });
 

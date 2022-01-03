@@ -31,6 +31,7 @@ export interface Menu {
   category: string;
   selected?: boolean;
   displayed?: boolean;
+  fileForm?: any;
 }
 
 export interface Review {

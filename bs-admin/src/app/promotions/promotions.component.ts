@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
@@ -22,7 +22,6 @@ export class PromotionsComponent implements OnInit {
   ];
   promotions: Promotion[] = [];
   maxSize = 2; //Mo
-  files = new FormArray([]);
 
   constructor(private promotionService: PromotionService) { }
 

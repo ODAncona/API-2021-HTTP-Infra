@@ -74,6 +74,7 @@ exports.updateMenu = (req, res) => {
   if (req.file) {
     payload.image = req.protocol + "://" + req.get('host') + "/" + req.file.path;
   }
+  console.log(payload);
 
   // Update database
   Menu.findByIdAndUpdate(payload._id, payload)

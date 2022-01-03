@@ -44,8 +44,6 @@ export class BsRestaurantComponent {
               break;
           }
         })
-        console.log(this.menus);
-
       }
       );
   }

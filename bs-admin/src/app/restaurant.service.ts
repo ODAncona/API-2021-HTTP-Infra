@@ -32,7 +32,15 @@ export class RestaurantService {
   }
 
   updateMenu(menu: Menu) {
-    return this.http.put<any>(this.apiUrl, menu, this.httpOptions);
+    const formData = new FormData();
+    Object.keys(menu).forEach(key => formData.append(key, menu[key]));
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'enctype': 'multipart/form-data',
+        'Authorization': this.auth
+      })
+    };
+    return this.http.put<any>(this.apiUrl, formData, httpOptions);
   }
 
   deleteMenu(menuId: string) {
