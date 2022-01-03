@@ -70,8 +70,12 @@ export class PromotionsComponent implements OnInit {
   updatePromotions() {
     let payload = cloneDeep(this.promotions);
     payload.map(p => {
-      p.image = p.filesForm.value.image;
-      p.pdf = p.filesForm.value.pdf;
+      if(p.filesForm.value.image){
+        p.image = p.filesForm.value.image;
+      }
+      if(p.filesForm.value.pdf){
+        p.pdf = p.filesForm.value.pdf;
+      }
       delete p.filesForm;
     });
     let toUpdate$ = payload.filter(p => p.selected).map(p => { return this.promotionService.updatePromotion(p) });

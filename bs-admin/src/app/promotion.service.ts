@@ -33,37 +33,15 @@ export class PromotionService {
   }
 
   updatePromotion(promotion: any) {
-    /*
     const formData = new FormData();
     Object.keys(promotion).forEach(key => formData.append(key, promotion[key]));
-    return this.http.put<any>(this.apiUrl, formData, this.httpOptions);*/
-    let formData: any = new FormData();
-    formData.append('_id', promotion._id);
-    formData.append('title', promotion.title);
-    formData.append('subtitle', promotion.subtitle);
-    formData.append('description', promotion.description);
-    formData.append('language', promotion.language);
-    if (promotion.image) {
-      formData.append('image', promotion.image, promotion.image.name);
-    }
-    if (promotion.pdf) {
-      formData.append('pdf', promotion.pdf, promotion.pdf.name);
-    }
-
     const httpOptions = {
       headers: new HttpHeaders({
         'enctype': 'multipart/form-data',
         'Authorization': this.auth
       })
     };
-
     return this.http.put<any>(this.apiUrl, formData, httpOptions);
-
-    /*fetch(this.apiUrl, requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));*/
-
   }
 
   deletePromotion(promotionId: string) {
