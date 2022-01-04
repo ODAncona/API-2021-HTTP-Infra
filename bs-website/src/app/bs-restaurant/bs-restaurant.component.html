@@ -14,58 +14,52 @@
   <h1 class="sectionTitle" i18n="restaurant-title2 | Notre carte title">Our Menu</h1>
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Starters">
-      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
-        <mat-grid-tile *ngFor="let menu of starters" colspan="3" rowspan="2">
-          <mat-card class="menu-item">
-            <mat-card-header>
-              <h2>{{menu.title}}</h2>
-            </mat-card-header>
-            <img src="{{menu.image}}" alt="{{menu.title}}">
-            <mat-card-content>
-              <p>{{menu.description}}</p>
-            </mat-card-content>
-            <mat-card-footer>
-              <p style="margin left:4%;">{{menu.price | currency}}</p>
-            </mat-card-footer>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
+      <div class="menus">
+        <mat-card class="menu-item" *ngFor="let menu of starters">
+          <mat-card-header>
+            <h2>{{menu.title}}</h2>
+          </mat-card-header>
+          <img mat-card-image src="{{menu.image}}" alt="{{menu.title}}">
+          <mat-card-content>
+            <p>{{menu.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <p>{{menu.price | currency}}</p>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </mat-tab>
     <mat-tab label="Main Course">
-      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
-        <mat-grid-tile *ngFor="let menu of mains" colspan="3" rowspan="2">
-          <mat-card class="menu-item">
-            <mat-card-header>
-              <h2>{{menu.title}}</h2>
-            </mat-card-header>
-            <img src="{{menu.image}}" alt="{{menu.title}}" style="height:50%; width:100%;">
-            <mat-card-content>
-              <p>{{menu.description}}</p>
-            </mat-card-content>
-            <mat-card-footer>
-              <p style="margin left:4%;">{{menu.price | currency}}</p>
-            </mat-card-footer>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
+      <div class="menus">
+        <mat-card class="menu-item" *ngFor="let menu of mains">
+          <mat-card-header>
+            <h2>{{menu.title}}</h2>
+          </mat-card-header>
+          <img mat-card-image src="{{menu.image}}" alt="{{menu.title}}">
+          <mat-card-content>
+            <p>{{menu.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <p>{{menu.price | currency}}</p>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </mat-tab>
     <mat-tab label="Desserts">
-      <mat-grid-list cols="12" rowHeight="1:2" gutterSize="1rem">
-        <mat-grid-tile *ngFor="let menu of desserts" colspan="3" rowspan="2">
-          <mat-card class="menu-item">
-            <mat-card-header>
-              <h2>{{menu.title}}</h2>
-            </mat-card-header>
-            <img src="{{menu.image}}" alt="{{menu.title}}" style="height:50%; width:100%;">
-            <mat-card-content>
-              <p>{{menu.description}}</p>
-            </mat-card-content>
-            <mat-card-footer>
-              <p style="margin left:4%;">{{menu.price | currency}}</p>
-            </mat-card-footer>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
+      <div class="menus">
+        <mat-card class="menu-item" *ngFor="let menu of desserts">
+          <mat-card-header>
+            <h2>{{menu.title}}</h2>
+          </mat-card-header>
+          <img mat-card-image src="{{menu.image}}" alt="{{menu.title}}">
+          <mat-card-content>
+            <p>{{menu.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <p>{{menu.price | currency}}</p>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </mat-tab>
   </mat-tab-group>
 </div>

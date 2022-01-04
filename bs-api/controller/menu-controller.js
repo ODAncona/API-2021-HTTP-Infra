@@ -12,8 +12,6 @@ exports.createDailyMenu = (req, res) => {
     payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.file.path;
   }
 
-  console.log(payload);
-
   // Save to database
   DailyMenu.findOneAndUpdate({
       active: true

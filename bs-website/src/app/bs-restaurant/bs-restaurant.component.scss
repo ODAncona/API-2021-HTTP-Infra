@@ -7,26 +7,28 @@ video {
   overflow: hidden;
 }
 
-.menu-item {
+.menu {
+  margin: 2%;
+}
+
+.menus {
   display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  align-items: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-mat-grid-list {
-  margin: 1em;
-}
+.menu-item {
+  margin-top: 1%;
+  max-width: 20%;
+  min-width: 300px;
 
-mat-card {
   img {
-    margin: .2em;
-    width: 250px;
-    height: 300px;
+    max-height: 300px;
   }
 
   img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: 0.3s ease-in-out;
   }
 
