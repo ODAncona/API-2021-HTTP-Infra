@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "61d2b4b4eacf05e1e9d4e57a"
+  },
+  "title": "New Year Fondue",
+  "subtitle": "In the postal bus",
+  "image": "http://localhost:1470/upload/image/promotion_fondue_1641198942771.jpg",
+  "description": "You can enjoy our fondue in a brand new stemper.",
+  "pdf": "",
+  "language": "en"
+},{
+  "_id": {
+    "$oid": "61d2b561eacf05e1e9d4e581"
+  },
+  "title": "Luge ",
+  "subtitle": "adelboden/lenk",
+  "image": "http://localhost:1470/upload/image/promotion_luge_1641198993725.jpg",
+  "description": "Come to feel the speed of the winter sports!",
+  "pdf": "",
+  "language": "en"
+},{
+  "_id": {
+    "$oid": "61d2b5aceacf05e1e9d4e588"
+  },
+  "title": "New Year Bar",
+  "subtitle": "The truck",
+  "image": "http://localhost:1470/upload/image/promotion_bar_1641199060782.jpg",
+  "description": "Discover our new year's bar!",
+  "pdf": "http://localhost:1470/upload/document/Menu_1641208245826.pdf",
+  "language": "en"
+},{
+  "_id": {
+    "$oid": "61d2b62beacf05e1e9d4e596"
+  },
+  "title": "Ski World Cup",
+  "subtitle": "Chuenis",
+  "image": "http://localhost:1470/upload/image/promotion_weltskicup_1641199189479.jpg",
+  "description": "This is the time to support your national team for the ski competition",
+  "pdf": "",
+  "language": "en"
+}]

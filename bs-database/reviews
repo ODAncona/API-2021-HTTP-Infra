@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "5f513d62c7b37b396cd16b57"
+  },
+  "rating": {
+    "clean": 9,
+    "service": 7,
+    "comfort": 8,
+    "spot": 8,
+    "amenity": 3,
+    "breakfast": 8
+  },
+  "active": false,
+  "description": "Ceci est un article à garder car j'ai passé du temps dessus. J'ai adoré faire du bob dans cet endroit magnifique.",
+  "author": "Irène D'Ancona",
+  "date": "3/9/2020"
+},{
+  "_id": {
+    "$oid": "5f51fb088345741e80c63115"
+  },
+  "rating": {
+    "clean": 9,
+    "service": 9,
+    "comfort": 10,
+    "spot": 10,
+    "amenity": 6,
+    "breakfast": 10
+  },
+  "active": true,
+  "description": "Je me suis toujours demandé pourquoi je ne monterai pas plus souvent à l'hôtel BeauSite. l'endroit est si bucolique. J'adore le schnaps des campagnes qu'ils servent dans les égouts juste à côté",
+  "author": "Géraldine Cuennet",
+  "date": "4/9/2020"
+},{
+  "_id": {
+    "$oid": "611bfe308032f102784bed61"
+  },
+  "rating": {
+    "clean": 8,
+    "service": 10,
+    "comfort": 10,
+    "spot": 10,
+    "amenity": 9,
+    "breakfast": 10
+  },
+  "active": true,
+  "description": "C'était un séjour très agréable. J'ai adoré promener Tara",
+  "author": "Hanna Luniakina",
+  "date": "17/8/2021"
+},{
+  "_id": {
+    "$oid": "611e924e93b9d05b7ceba4f8"
+  },
+  "rating": {
+    "clean": 9,
+    "service": 6,
+    "comfort": 6,
+    "spot": 7,
+    "amenity": 5,
+    "breakfast": 7
+  },
+  "active": false,
+  "description": "J'ai vraiment trouvé la forêt à Adelboden féérique. J'ai presque envie de me détendre mon arc.",
+  "author": "Miya Anderson",
+  "date": "19/8/2021"
+},{
+  "_id": {
+    "$oid": "61226902fce619831008578d"
+  },
+  "rating": {
+    "clean": 3,
+    "service": 10,
+    "comfort": 5,
+    "spot": 10,
+    "amenity": 10,
+    "breakfast": 4
+  },
+  "active": true,
+  "description": "Hey everyone! I have just returned from Hotel Beausite in Adelboden, spending 4 days with my wife and the kids. But after I fucked the janitor and the masseuse and also the owner's dog, my wife absolutely want to divorce. Beside of that, I would rate 10/10 this Hotel. Peace and love.\n\n",
+  "author": "Daniel Gronokh",
+  "date": "22/8/2021"
+}]
