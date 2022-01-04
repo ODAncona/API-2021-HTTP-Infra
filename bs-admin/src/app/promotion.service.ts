@@ -9,7 +9,7 @@ import { API_URL } from './interface';
 })
 
 export class PromotionService {
-  private apiUrl = API_URL + 'promotion';
+  private apiUrl = API_URL + 'promotion/';
   private auth = 'Bearer ' + localStorage.getItem("token");
   private httpOptions = {
     headers: new HttpHeaders({
@@ -45,7 +45,7 @@ export class PromotionService {
   }
 
   deletePromotion(promotionId: string) {
-    let url = this.apiUrl + "/" + promotionId;
+    let url = this.apiUrl + promotionId;
     return this.http.delete<any>(url, this.httpOptions);
   }
 }

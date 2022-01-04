@@ -9,7 +9,7 @@ import { API_URL } from './interface';
 })
 
 export class RestaurantService {
-  private apiUrl = API_URL + 'menu';
+  private apiUrl = API_URL + 'menu/';
   private auth = 'Bearer ' + localStorage.getItem('token');
   private httpOptions = {
     headers: new HttpHeaders({
@@ -22,7 +22,6 @@ export class RestaurantService {
   createMenu(menu: Menu) {
     return this.http.post<Menu>(this.apiUrl, menu, this.httpOptions);
   }
-
 
   // Menu
   getAllMenus() {
@@ -42,7 +41,7 @@ export class RestaurantService {
   }
 
   deleteMenu(menuId: string) {
-    let url = this.apiUrl + 'menu/' + menuId;
+    let url = this.apiUrl + menuId;
     return this.http.delete<any>(url, this.httpOptions);
   }
 
