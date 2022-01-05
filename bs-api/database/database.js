@@ -2,8 +2,8 @@ const express = require('express');
 const database = express();
 
 const mongoose = require('mongoose');
-//mongodb://bs-database:27017/bs
-mongoose.connect('mongodb://localhost:27017/bs', {
+//mongoose.connect('mongodb://localhost:27017/bs', {
+mongoose.connect('mongodb://bs-database:27017/bs', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

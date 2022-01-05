@@ -1,32 +1,42 @@
-version:          '3.8'
+version:                               '3.8'
 services:
 
   bs-database:
-    image:        mongo
-    restart:      always
+    image:                             mongo:latest
+    restart:                           always
+    build:
+      context:                         ./bs-database/
+      dockerfile:                      bs-database.dockerfile
+    environment:
+      MONGO_INITDB_DATABASE:           bs
+    ports:
+      - 27017:27017
 
   bs-api:
-    image:        bs-api
+    image:                             bs-api
+    restart:                           always
     build:
-      context:    ./bs-api/
-      dockerfile: bs-api.dockerfile
+      context:                         ./bs-api/
+      dockerfile:                      bs-api.dockerfile
     environment:
-      - NODE_ENV=production
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL:           mongodb://root:example@mongo:27017/
     ports:
       - 1470:1470
 
   bs-website:
-    image:        bs-website
+    image:                             bs-website
     build:
-      context:    ./bs-website/
-      dockerfile: bs-website.dockerfile
+      context:                         ./bs-website/
+      dockerfile:                      bs-website.dockerfile
     ports:
       - 4200:80
 
   bs-admin:
-    image:        bs-admin
+    image:                             bs-admin
     build:
-      context:    ./bs-admin/
-      dockerfile: bs-admin.dockerfile
+      context:                         ./bs-admin/
+      dockerfile:                      bs-admin.dockerfile
     ports:
       - 5200:80

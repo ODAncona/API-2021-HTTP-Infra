@@ -1,5 +1,5 @@
 #### Stage 0, Build admin app from a node image
-FROM node:alpine as build
+FROM node:lts-alpine as build
 LABEL author="Olivier D'Ancona"
 RUN npm i npm@latest -g
 WORKDIR /app
