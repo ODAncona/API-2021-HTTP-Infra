@@ -15,7 +15,7 @@ L'Hôtel Beausite est un hôtel 4 étoiles situé à Adelboden dans le canton de
 -   page accueil: présente l'hôtel et permet de réserver une chambre
 -   promotions: présente les différentes offres actuelles
 -   restaurant: présente le menu du jour et la carte
--   images: affiche une gallerie photo
+-   images: affiche une galerie photo
 -   wellness: présente le spa
 -   fitness: présente l'offre du fitness et le matériel
 -   reviews: récolte les avis des utilisateurs
@@ -46,7 +46,7 @@ L'application comporte 5 composants:
 
 ### Déploiement de l'application
 
-Cette application sera déployée en utilisant la technologie de containerisation docker. Chaque service sera porté sur un container et le tout sera orchestré à l'aide d'un fichier `docker-compose.yml`. Chaque container sera un service qui se relancera automatiquement à chaque fois qu'ils seront down.
+Cette application sera déployée en utilisant la technologie de containerisation docker. Chaque service sera porté sur un container et le tout sera orchestré à l'aide d'un fichier `docker-compose.yml`. Chaque container sera un service qui se relancera automatiquement à chaque fois qu'ils sera éteint.
 
 ## Configuration des services
 
@@ -60,6 +60,8 @@ Cette application sera déployée en utilisant la technologie de containerisatio
     COPY populate.sh /docker-entrypoint-initdb.d/
     COPY \*.json /docker-entrypoint-initdb.d/
     EXPOSE 27017
+
+Ce docker file place le script de peuplement dans le container dans le dossier d'exécution afin de charger un état basique de la base de donnée.
 
 **Configuration traefik**
 
@@ -86,6 +88,8 @@ Etant donné que la base de donnée doit être uniquement disponible dans le ré
     COPY --from=build /app/dist/bs-website /usr/share/nginx/html
     COPY nginx.conf /etc/nginx/conf.d/default.conf
     EXPOSE 80
+
+Ce dockerfile commence par installer toutes les dépendances nécessaires pour compiler l'application dans le container et ensuite sert l'application à l'intérieur de celui ci à l'aide de Nginx. Le fichier de configuration redirige toutes les requêtes sur le fichier index.html car le routage est géré du côté client avec Angular.
 
 **Configuration traefik**
 
@@ -117,6 +121,8 @@ Si le nom de domaine est localhost, on aimerait servir le site web sur le port 8
     COPY nginx.conf /etc/nginx/conf.d/default.conf
     EXPOSE 80
 
+Ce dockerfile commence par installer toutes les dépendances nécessaires pour compiler l'application dans le container et ensuite sert l'application à l'intérieur de celui ci à l'aide de Nginx. Le fichier de configuration redirige toutes les requêtes sur le fichier index.html car le routage est géré du côté client avec Angular.
+
 **Configuration traefik**
 
 Si le nom de domaine est admin.localhost, on aimerait servir l'interface admin sur le port 80. De plus, on aimerait garantir l'utilisation de stickySession.
@@ -140,6 +146,8 @@ Si le nom de domaine est admin.localhost, on aimerait servir l'interface admin s
     COPY . .
     EXPOSE 1470
     CMD ["node","server.js"]
+
+Ce fichier installe toutes les dépendances nécessaires depuis le package.json dans le container.
 
 **Configuration traefik**
 
