@@ -4,6 +4,8 @@ Ce document décrit la documentation, le développement, la mise en marche de l'
 
 ## Description générale
 
+![Mes amis devant le car postal fondue de l'hôtel](bs-api/upload/image/promotion_fondue_1641198942771.jpg)
+
 ### Origine du projet
 
 Afin de rendre service à un ami d'enfance, j'ai décidé de lui apprendre à coder une application web de fond en comble. Dans un premier temps, il était convenu que je l'aide à réaliser la tâche. Et progressivement, j'ai complètement pris le relais. Le projet a débuté pendant le premier confinement de la pandémie de COVID-19. Je suis monté à la montagne plusieurs fois où j'ai pu prendre des images avec mon drone, avancer le site, passer du temps avec mon ami et prendre l'air alpin.
@@ -36,11 +38,11 @@ Ensuite afin de traiter toutes ces données, il a fallu créer une API avec node
 
 L'application comporte 5 composants:
 
--   bs-Website: le site web décrit ci-dessus (Angular 13)
--   bs-Admin: l'interface de gestion de contenu (Angular 13)
--   bs-API: l'API de traitement des données (Nodejs 16, Express, ...)
--   bs-Database: la base de donnée nosql (mongo)
--   bs-Rproxy: le point d'entrée de l'application (traefik)
+-   bs-website: le site web décrit ci-dessus (Angular 13)
+-   bs-admin: l'interface de gestion de contenu (Angular 13)
+-   bs-api: l'API de traitement des données (Nodejs 16, Express, ...)
+-   bs-database: la base de donnée nosql (mongo)
+-   bs-rproxy: le point d'entrée de l'application (traefik)
 
 ![Architecture de l'application](BS_Architecture.jpg)
 
@@ -61,7 +63,7 @@ Cette application sera déployée en utilisant la technologie de containerisatio
     COPY \*.json /docker-entrypoint-initdb.d/
     EXPOSE 27017
 
-Ce docker file place le script de peuplement dans le container dans le dossier d'exécution afin de charger un état basique de la base de donnée.
+Ce dockerfile place le script de peuplement dans le container dans le dossier d'exécution afin de charger un état basique de la base de donnée.
 
 **Configuration traefik**
 
