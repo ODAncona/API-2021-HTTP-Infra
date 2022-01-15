@@ -10,6 +10,10 @@ Ce document décrit la documentation, le développement, la mise en marche de l'
 
 Afin de rendre service à un ami d'enfance, j'ai décidé de lui apprendre à coder une application web de fond en comble. Dans un premier temps, il était convenu que je l'aide à réaliser la tâche. Et progressivement, j'ai complètement pris le relais. Le projet a débuté pendant le premier confinement de la pandémie de COVID-19. Je suis monté à la montagne plusieurs fois où j'ai pu prendre des images avec mon drone, avancer le site, passer du temps avec mon ami et prendre l'air alpin.
 
+### Travail pour la HEIG-VD
+
+Dans le cadre d'un projet de laboratoire HTTP Infrastructure, nous devions réaliser une application web. J'ai alors demandé au professeur si je pouvais utiliser mon site web et le terminer et déployer dans le cadre du cours. Comme ça correspondait suffisament au cahier des charges, j'ai pu entreprendre ce travail dans le cadre de l'école!
+
 ### Portée du projet et Hôtel Beausite
 
 L'Hôtel Beausite est un hôtel 4 étoiles situé à Adelboden dans le canton de Berne. Il comporte un fitness, un spa/wellness, un parking, un local de ski, un restaurant et plusieurs chambres. L'ancien site web n'était pas responsive et complètement statique. C'est pourquoi il vise a être remplacé par ce projet. L'idée était d'avoir un site web reprenant les rubriques de l'autre site en ajoutant du contenu dynamique. Les rubriques sont:
