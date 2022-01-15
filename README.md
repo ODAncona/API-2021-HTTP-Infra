@@ -170,3 +170,7 @@ Si le nom de domaine est localhost/api, on aimerait rediriger les requêtes sur 
 ## Configuration finale
 
 La configuration finale se trouve dans le fichier [docker-compose](docker-compose.yml).
+
+## Getting started
+
+Afin de lancer l'application, de cloner le repository et de taper la commande `docker-compose build` puis `docker-compose up` et normalement l'application devrait tourner.
