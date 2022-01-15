@@ -53,13 +53,16 @@ Cette application sera déployée en utilisant la technologie de containerisatio
 ### Bs-Database
 
 **Dockerfile**
+
     FROM mongo:latest
     WORKDIR .
     COPY . .
     COPY populate.sh /docker-entrypoint-initdb.d/
     COPY \*.json /docker-entrypoint-initdb.d/
     EXPOSE 27017
+
 **Configuration traefik**
+
 Etant donné que la base de donnée doit être uniquement disponible
 
 ### Bs-Website
@@ -84,6 +87,12 @@ Etant donné que la base de donnée doit être uniquement disponible
 
 **Configuration traefik**
 
+    - traefik.enable=true
+    - traefik.http.routers.bs-website.rule=Host(`localhost`)
+    - traefik.port=80
+    - traefik.http.services.bs-website.loadbalancer.sticky=true
+    - traefik.http.services.bs-website.loadbalancer.sticky.cookie.name=StickyCookie
+
 ### Bs-Admin
 
 **Dockerfile**
@@ -106,6 +115,12 @@ Etant donné que la base de donnée doit être uniquement disponible
 
 **Configuration traefik**
 
+    - traefik.enable=true
+    - traefik.http.routers.bs-admin.rule=Host(`admin.localhost`)
+    - traefik.port=80
+    - traefik.http.services.bs-admin.loadbalancer.sticky=true
+    - traefik.http.services.bs-admin.loadbalancer.sticky.cookie.name=StickyCookie
+
 ### Bs-API
 
 **Dockerfile**
@@ -121,5 +136,13 @@ Etant donné que la base de donnée doit être uniquement disponible
     CMD ["node","server.js"]
 
 **Configuration traefik**
+
+    - traefik.enable=true
+    - traefik.http.routers.bs-api.rule=Host(`localhost`) && PathPrefix(`/api`)
+    - traefik.http.middlewares.bs-api-strip.stripprefix.prefixes=/api
+    - traefik.http.routers.bs-api.middlewares=bs-api-strip@docker
+    - traefik.port=80
+    - traefik.http.services.bs-api.loadbalancer.sticky=true
+    - traefik.http.services.bs-api.loadbalancer.sticky.cookie.name=StickyCookie
 
 ### Bs-Rproxy
