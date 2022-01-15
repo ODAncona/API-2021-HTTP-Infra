@@ -13,10 +13,10 @@ import { map, shareReplay } from 'rxjs/operators';
 export class NavComponent implements OnInit {
   activeLink: string = "Statistiques";
   navs = [
-    { link: "/admin/statistics", name: "Statistiques" },
-    { link: "/admin/promotions", name: "Promotions" },
-    { link: "/admin/restaurant", name: "Restaurant" },
-    { link: "/admin/reviews", name: "Reviews" },
+    { link: "/statistics", name: "Statistiques" },
+    { link: "/promotions", name: "Promotions" },
+    { link: "/restaurant", name: "Restaurant" },
+    { link: "/reviews", name: "Reviews" },
   ];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

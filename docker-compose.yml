@@ -1,42 +1,89 @@
-version:                               '3.8'
+version:                     '3.8'
+
 services:
-
-  bs-database:
-    image:                             mongo:latest
-    restart:                           always
+  bs-rproxy:
+    restart:                 always
+    image:                   bs-rproxy
     build:
-      context:                         ./bs-database/
-      dockerfile:                      bs-database.dockerfile
-    environment:
-      MONGO_INITDB_DATABASE:           bs
+      context:               ./bs-rproxy/
+      dockerfile:            bs-rproxy.dockerfile
     ports:
-      - 27017:27017
-
-  bs-api:
-    image:                             bs-api
-    restart:                           always
-    build:
-      context:                         ./bs-api/
-      dockerfile:                      bs-api.dockerfile
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL:           mongodb://root:example@mongo:27017/
-    ports:
-      - 1470:1470
+      - 80:80
+      - 8080:8080
+      - 443:443
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - app
 
   bs-website:
-    image:                             bs-website
+    restart:                 always
+    image:                   bs-website
     build:
-      context:                         ./bs-website/
-      dockerfile:                      bs-website.dockerfile
-    ports:
-      - 4200:80
+      context:               ./bs-website/
+      dockerfile:            bs-website.dockerfile
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bs-website.rule=Host(`localhost`)
+      - traefik.port=80
+      - traefik.http.services.bs-website.loadbalancer.sticky=true
+      - traefik.http.services.bs-website.loadbalancer.sticky.cookie.name=StickyCookie
+    networks:
+      - app
 
   bs-admin:
-    image:                             bs-admin
+    restart:                 always
+    image:                   bs-admin
     build:
-      context:                         ./bs-admin/
-      dockerfile:                      bs-admin.dockerfile
-    ports:
-      - 5200:80
+      context:               ./bs-admin/
+      dockerfile:            bs-admin.dockerfile
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bs-admin.rule=Host(`admin.localhost`)
+      - traefik.port=80
+      - traefik.http.services.bs-admin.loadbalancer.sticky=true
+      - traefik.http.services.bs-admin.loadbalancer.sticky.cookie.name=StickyCookie
+    networks:
+      - app
+
+  bs-database:
+    restart:                 always
+    image:                   mongo:latest
+    build:
+      context:               ./bs-database/
+      dockerfile:            bs-database.dockerfile
+    environment:
+      MONGO_INITDB_DATABASE: bs
+    labels:
+      - traefik.enabled=false
+    networks:
+      - db
+
+  bs-api:
+    restart:                 always
+    image:                   bs-api
+    build:
+      context:               ./bs-api/
+      dockerfile:            bs-api.dockerfile
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bs-api.rule=Host(`localhost`) && PathPrefix(`/api`)
+      - traefik.http.middlewares.bs-api-strip.stripprefix.prefixes=/api
+      - traefik.http.routers.bs-api.middlewares=bs-api-strip@docker
+      - traefik.port=80
+      - traefik.http.services.bs-api.loadbalancer.sticky=true
+      - traefik.http.services.bs-api.loadbalancer.sticky.cookie.name=StickyCookie
+
+    networks:
+      - app
+      - db
+
+networks:
+  app:
+    name:                    app
+  db:
+    name:                    internal

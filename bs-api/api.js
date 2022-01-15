@@ -27,12 +27,12 @@ api.use(express.urlencoded({
   extended: true,
 }));
 api.use('/upload', express.static(path.join(__dirname, 'upload')));
-api.use('/api/server', serverRoute);
-api.use('/api/auth', authRoute);
-api.use('/api/review', reviewRoute);
-api.use('/api/menu', menuRoute);
-api.use('/api/promotion', promotionRoute);
-api.use('/api/mail', mailRoute);
+api.use('/server', serverRoute);
+api.use('/auth', authRoute);
+api.use('/review', reviewRoute);
+api.use('/menu', menuRoute);
+api.use('/promotion', promotionRoute);
+api.use('/mail', mailRoute);
 
 
 module.exports = api;

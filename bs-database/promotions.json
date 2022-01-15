@@ -4,7 +4,7 @@
   },
   "title": "New Year Fondue",
   "subtitle": "In the postal bus",
-  "image": "http://localhost:1470/upload/image/promotion_fondue_1641198942771.jpg",
+  "image": "http://localhost/api/upload/image/promotion_fondue_1641198942771.jpg",
   "description": "You can enjoy our fondue in a brand new stemper.",
   "pdf": "",
   "language": "en"
@@ -14,7 +14,7 @@
   },
   "title": "Luge ",
   "subtitle": "adelboden/lenk",
-  "image": "http://localhost:1470/upload/image/promotion_luge_1641198993725.jpg",
+  "image": "http://localhost/api/upload/image/promotion_luge_1641198993725.jpg",
   "description": "Come to feel the speed of the winter sports!",
   "pdf": "",
   "language": "en"
@@ -24,9 +24,9 @@
   },
   "title": "New Year Bar",
   "subtitle": "The truck",
-  "image": "http://localhost:1470/upload/image/promotion_bar_1641199060782.jpg",
+  "image": "http://localhost/api/upload/image/promotion_bar_1641199060782.jpg",
   "description": "Discover our new year's bar!",
-  "pdf": "http://localhost:1470/upload/document/Menu_1641208245826.pdf",
+  "pdf": "http://localhost/api/upload/document/Menu_1641208245826.pdf",
   "language": "en"
 },{
   "_id": {
@@ -34,7 +34,7 @@
   },
   "title": "Ski World Cup",
   "subtitle": "Chuenis",
-  "image": "http://localhost:1470/upload/image/promotion_weltskicup_1641199189479.jpg",
+  "image": "http://localhost/api/upload/image/promotion_weltskicup_1641199189479.jpg",
   "description": "This is the time to support your national team for the ski competition",
   "pdf": "",
   "language": "en"

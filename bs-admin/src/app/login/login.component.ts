@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if (localStorage.getItem('token')) {
       if (this.authService.isAuthenticated()) {
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/']);
       }
     }
   }
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         err => {
           console.log('error!!!!!', err);
         },
-        () => { this.router.navigate(['/admin']) }
+        () => { this.router.navigate(['/']) }
       )
   }
 

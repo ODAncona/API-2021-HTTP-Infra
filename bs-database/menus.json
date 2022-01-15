@@ -7,14 +7,14 @@
   "description": "Le repas préféré d'Hanna",
   "language": "en",
   "category": "main",
-  "image": "http://localhost:1470/upload/image/restaurant_vegetarien_1641221143733.jpg"
+  "image": "http://localhost/api/upload/image/restaurant_vegetarien_1641221143733.jpg"
 },{
   "_id": {
     "$oid": "61d3035f5295a1f0e3932234"
   },
   "title": "Poulet aigre-doux",
   "price": 3,
-  "image": "http://localhost:1470/upload/image/restaurant_aigredoux_1641221143729.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_aigredoux_1641221143729.jpg",
   "description": "Poulet légèrement piquant",
   "category": "main",
   "language": "en"
@@ -24,7 +24,7 @@
   },
   "title": "Poulet Cajou",
   "price": 19,
-  "image": "http://localhost:1470/upload/image/restaurant_cajou_1641221143725.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_cajou_1641221143725.jpg",
   "description": "What an awesome meal",
   "language": "en",
   "category": "main"
@@ -34,7 +34,7 @@
   },
   "title": "Tako",
   "price": 12,
-  "image": "http://localhost:1470/upload/image/restaurant_tako_1641283880350.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_tako_1641283880350.jpg",
   "description": "This is an awesome rice dessert",
   "category": "dessert",
   "language": "en"
@@ -44,7 +44,7 @@
   },
   "title": "Poulet Satay",
   "price": 12,
-  "image": "http://localhost:1470/upload/image/restaurant_satay_1641283910221.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_satay_1641283910221.jpg",
   "description": "Satay chicken breast skewer",
   "category": "starter",
   "language": "en"
@@ -54,7 +54,7 @@
   },
   "title": "Spring Rolls",
   "price": 9,
-  "image": "http://localhost:1470/upload/image/restaurant_printemps_1641284016553.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_printemps_1641284016553.jpg",
   "description": "Delicious spring roll served with hot sauce",
   "category": "starter",
   "language": "en"
@@ -64,7 +64,7 @@
   },
   "title": "Apple Donut",
   "price": 9,
-  "image": "http://localhost:1470/upload/image/restaurant_pomme_1641284057868.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_pomme_1641284057868.jpg",
   "description": "This is a speciality of the chef",
   "category": "dessert",
   "language": "en"
@@ -74,7 +74,7 @@
   },
   "title": "Red Curry",
   "price": 25,
-  "image": "http://localhost:1470/upload/image/restaurant_curryrouge2_1641284131703.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_curryrouge2_1641284131703.jpg",
   "description": "This is a hot curry with chicken or beef",
   "category": "main",
   "language": "en"
@@ -84,7 +84,7 @@
   },
   "title": "Tom Yun Kun soup",
   "price": 13,
-  "image": "http://localhost:1470/upload/image/restaurant_soup_1641284222032.jpg",
+  "image": "http://localhost/api/upload/image/restaurant_soup_1641284222032.jpg",
   "description": "The famous Thaï soup with chicken",
   "category": "starter",
   "language": "en"
