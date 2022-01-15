@@ -63,7 +63,9 @@ Cette application sera déployée en utilisant la technologie de containerisatio
 
 **Configuration traefik**
 
-Etant donné que la base de donnée doit être uniquement disponible
+Etant donné que la base de donnée doit être uniquement disponible dans le réseau interne:
+
+      - traefik.enabled=false
 
 ### Bs-Website
 
@@ -86,6 +88,8 @@ Etant donné que la base de donnée doit être uniquement disponible
     EXPOSE 80
 
 **Configuration traefik**
+
+Si le nom de domaine est localhost, on aimerait servir le site web sur le port 80. De plus, on aimerait garantir l'utilisation de stickySession.
 
     - traefik.enable=true
     - traefik.http.routers.bs-website.rule=Host(`localhost`)
@@ -115,6 +119,8 @@ Etant donné que la base de donnée doit être uniquement disponible
 
 **Configuration traefik**
 
+Si le nom de domaine est admin.localhost, on aimerait servir l'interface admin sur le port 80. De plus, on aimerait garantir l'utilisation de stickySession.
+
     - traefik.enable=true
     - traefik.http.routers.bs-admin.rule=Host(`admin.localhost`)
     - traefik.port=80
@@ -137,6 +143,8 @@ Etant donné que la base de donnée doit être uniquement disponible
 
 **Configuration traefik**
 
+Si le nom de domaine est localhost/api, on aimerait rediriger les requêtes sur le container bs-api sans le suffixe /api. De plus, on aimerait garantir l'utilisation de stickySession.
+
     - traefik.enable=true
     - traefik.http.routers.bs-api.rule=Host(`localhost`) && PathPrefix(`/api`)
     - traefik.http.middlewares.bs-api-strip.stripprefix.prefixes=/api
@@ -145,4 +153,6 @@ Etant donné que la base de donnée doit être uniquement disponible
     - traefik.http.services.bs-api.loadbalancer.sticky=true
     - traefik.http.services.bs-api.loadbalancer.sticky.cookie.name=StickyCookie
 
-### Bs-Rproxy
+## Configuration finale
+
+La configuration finale se trouve dans le fichier [docker-compose](docker-compose.yml).
