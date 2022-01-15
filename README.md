@@ -46,20 +46,25 @@ L'application comporte 5 composants:
 
 ### Déploiement de l'application
 
-Cette application sera déployée en utilisant la technologie de containerisation docker. Chaque service sera porté sur un container et le tout sera orchestré à l'aide d'un fichier `docker-compose.yml`
+Cette application sera déployée en utilisant la technologie de containerisation docker. Chaque service sera porté sur un container et le tout sera orchestré à l'aide d'un fichier `docker-compose.yml`. Chaque container sera un service qui se relancera automatiquement à chaque fois qu'ils seront down.
 
 ## Configuration des services
 
 ### Bs-Database
 
+**Dockerfile**
     FROM mongo:latest
     WORKDIR .
     COPY . .
     COPY populate.sh /docker-entrypoint-initdb.d/
-    COPY *.json /docker-entrypoint-initdb.d/
+    COPY \*.json /docker-entrypoint-initdb.d/
     EXPOSE 27017
+**Configuration traefik**
+Etant donné que la base de donnée doit être uniquement disponible
 
 ### Bs-Website
+
+**Dockerfile**
 
     #### Stage 0, Build website from a node image
     FROM node:lts-alpine as build
@@ -77,7 +82,11 @@ Cette application sera déployée en utilisant la technologie de containerisatio
     COPY nginx.conf /etc/nginx/conf.d/default.conf
     EXPOSE 80
 
+**Configuration traefik**
+
 ### Bs-Admin
+
+**Dockerfile**
 
     #### Stage 0, Build admin app from a node image
     FROM node:lts-alpine as build
@@ -95,7 +104,11 @@ Cette application sera déployée en utilisant la technologie de containerisatio
     COPY nginx.conf /etc/nginx/conf.d/default.conf
     EXPOSE 80
 
+**Configuration traefik**
+
 ### Bs-API
+
+**Dockerfile**
 
     #### Stage 0, Build Beausite API
     FROM node:alpine
@@ -107,8 +120,6 @@ Cette application sera déployée en utilisant la technologie de containerisatio
     EXPOSE 1470
     CMD ["node","server.js"]
 
+**Configuration traefik**
+
 ### Bs-Rproxy
-
-```
-
-```
