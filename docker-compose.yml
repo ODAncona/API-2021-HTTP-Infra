@@ -82,6 +82,14 @@ services:
       - app
       - db
 
+  portainer:
+    image: portainer/portainer-ce
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+
 networks:
   app:
     name:                    app
