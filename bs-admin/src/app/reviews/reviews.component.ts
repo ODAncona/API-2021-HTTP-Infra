@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, UntypedFormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { Review } from '../interface';
 })
 export class ReviewsComponent implements OnInit {
   reviews: Review[] = [];
-  search = new FormControl();
+  search = new UntypedFormControl();
   options: string[] = [];
   filteredOptions: Observable<string[]> | undefined;
   searchField = '';

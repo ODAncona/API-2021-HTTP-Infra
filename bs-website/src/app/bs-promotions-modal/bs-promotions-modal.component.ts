@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
@@ -11,14 +11,14 @@ import { Mail } from '../interface';
   styleUrls: ['./bs-promotions-modal.component.scss']
 })
 export class BsPromotionsModalComponent {
-  promotionForm = new FormGroup({
-    promotion: new FormControl(''),
-    participant: new FormControl('', [Validators.required]),
-    date: new FormControl('', [Validators.required]),
-    firstname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    lastname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    telephone: new FormControl('', [Validators.pattern('(^[0-9]{10}$)|(41[0-9]{9}$)')]),
+  promotionForm = new UntypedFormGroup({
+    promotion: new UntypedFormControl(''),
+    participant: new UntypedFormControl('', [Validators.required]),
+    date: new UntypedFormControl('', [Validators.required]),
+    firstname: new UntypedFormControl('', [Validators.required, Validators.minLength(2)]),
+    lastname: new UntypedFormControl('', [Validators.required, Validators.minLength(2)]),
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    telephone: new UntypedFormControl('', [Validators.pattern('(^[0-9]{10}$)|(41[0-9]{9}$)')]),
   });
   constructor(public dialogRef: MatDialogRef<BsPromotionsModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,

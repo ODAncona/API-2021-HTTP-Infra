@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReviewService } from '../review.service';
 import { Review } from '../interface';
@@ -10,15 +10,15 @@ import { Review } from '../interface';
   styleUrls: ['./bs-reviews-modal.component.scss']
 })
 export class BsReviewsModalComponent {
-  reviewForm = new FormGroup({
-    author: new FormControl('', [Validators.required]),
-    description: new FormControl('', [Validators.required, Validators.minLength(40)]),
-    clean: new FormControl('', [Validators.required]),
-    service: new FormControl('', [Validators.required]),
-    comfort: new FormControl('', [Validators.required]),
-    spot: new FormControl('', [Validators.required]),
-    amenity: new FormControl('', [Validators.required]),
-    breakfast: new FormControl('', [Validators.required]),
+  reviewForm = new UntypedFormGroup({
+    author: new UntypedFormControl('', [Validators.required]),
+    description: new UntypedFormControl('', [Validators.required, Validators.minLength(40)]),
+    clean: new UntypedFormControl('', [Validators.required]),
+    service: new UntypedFormControl('', [Validators.required]),
+    comfort: new UntypedFormControl('', [Validators.required]),
+    spot: new UntypedFormControl('', [Validators.required]),
+    amenity: new UntypedFormControl('', [Validators.required]),
+    breakfast: new UntypedFormControl('', [Validators.required]),
   });
   review: Review | undefined;
   constructor(

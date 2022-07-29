@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
@@ -11,14 +11,14 @@ import { Mail } from '../interface';
   styleUrls: ['./bs-wellness-fitness-modal.component.scss']
 })
 export class BsWellnessFitnessModalComponent {
-  fitnessForm = new FormGroup({
-    offers: new FormControl([], [Validators.required]),
-    firstname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    lastname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    birthdate: new FormControl('', [Validators.required]),
-    address: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
+  fitnessForm = new UntypedFormGroup({
+    offers: new UntypedFormControl([], [Validators.required]),
+    firstname: new UntypedFormControl('', [Validators.required, Validators.minLength(2)]),
+    lastname: new UntypedFormControl('', [Validators.required, Validators.minLength(2)]),
+    birthdate: new UntypedFormControl('', [Validators.required]),
+    address: new UntypedFormControl('', [Validators.required]),
+    city: new UntypedFormControl('', [Validators.required]),
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
   });
   offers: any[] = [
     { description: "1 month", price: "110" },

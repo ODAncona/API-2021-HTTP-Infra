@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
@@ -30,11 +30,11 @@ export class PromotionsComponent implements OnInit {
   }
 
   addPromotionFileForm() {
-    const fileForm = new FormGroup({
-      image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]),
-      pdf: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
+    const fileForm = new UntypedFormGroup({
+      image: new UntypedFormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)]),
+      pdf: new UntypedFormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
     });
-    return fileForm as FormGroup;
+    return fileForm as UntypedFormGroup;
   }
 
   getAllPromotions() {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
 import { Mail } from '../interface';
@@ -9,10 +9,10 @@ import { Mail } from '../interface';
   styleUrls: ['./bs-contact.component.scss']
 })
 export class BsContactComponent {
-  contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    content: new FormControl('', [Validators.required, Validators.minLength(40)]),
+  contactForm = new UntypedFormGroup({
+    name: new UntypedFormControl('', [Validators.required]),
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    content: new UntypedFormControl('', [Validators.required, Validators.minLength(40)]),
   });
   constructor(private mailService: MailService, private _snackBar: MatSnackBar) { }
 

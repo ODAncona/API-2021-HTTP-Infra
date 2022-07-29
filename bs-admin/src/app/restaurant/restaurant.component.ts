@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { forkJoin, of, throwError } from 'rxjs';
 import { map, startWith, catchError } from 'rxjs/operators';
@@ -24,8 +24,8 @@ export class RestaurantComponent implements OnInit {
   ];
   menus: Menu[] = [];
   dailyMenu: DailyMenu | undefined;
-  dailyMenuFile = new FormControl('');
-  dailyMenuName = new FormControl('');
+  dailyMenuFile = new UntypedFormControl('');
+  dailyMenuName = new UntypedFormControl('');
   maxSize = 2; //Mo
 
   constructor(private restaurantService: RestaurantService) { }
@@ -37,10 +37,10 @@ export class RestaurantComponent implements OnInit {
 
   // Menu
   addMenuFileForm() {
-    const fileForm = new FormGroup({
-      image: new FormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
+    const fileForm = new UntypedFormGroup({
+      image: new UntypedFormControl('', [MaxSizeValidator(this.maxSize * 1024 * 1024)])
     });
-    return fileForm as FormGroup;
+    return fileForm as UntypedFormGroup;
   }
 
   getAllMenus() {
