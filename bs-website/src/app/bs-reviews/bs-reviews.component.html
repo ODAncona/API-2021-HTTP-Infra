@@ -13,7 +13,7 @@
 <mat-card class="rating-card" *ngFor="let review of reviews">
   <mat-card-header>
     <mat-card-title>{{review.author}}</mat-card-title>
-    <mat-card-subtitle>{{review.date}}</mat-card-subtitle>
+    <mat-card-subtitle>{{review.date | date: 'short'}}</mat-card-subtitle>
     <button mat-fab color="accent" class="grade">{{(review.rating.clean+review.rating.service+review.rating.comfort+review.rating.spot+review.rating.amenity+review.rating.breakfast)/6 | number:'1.1-1'}}</button>
   </mat-card-header>
   <mat-divider></mat-divider>

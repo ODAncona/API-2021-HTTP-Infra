@@ -72,5 +72,7 @@ export interface DailyMenu {
 }
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
-const API_URL = "http://localhost/api/"
+//const API_URL = "http://localhost/api/"
+const API_URL = "http://localhost:1470/"
+
 export { API_URL };

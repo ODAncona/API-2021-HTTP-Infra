@@ -27,7 +27,7 @@
           {{1/6*(review.rating.clean+review.rating.service+review.rating.amenity+review.rating.spot+review.rating.comfort+review.rating.breakfast)|number:'1.1-1'}}
         </mat-card-title>
         <mat-card-subtitle>
-          {{review.date}}
+          {{review.date | date}}
         </mat-card-subtitle>
         <mat-card-content>
           {{review.description}}

@@ -28,8 +28,7 @@ export class BsReviewsModalComponent {
   ) { }
 
   onSubmit() {
-    let date = new Date();
-    let today = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+    let today = Date.now().toString();
     let grade = 1 / 6 * (this.reviewForm.value.clean + this.reviewForm.value.service + this.reviewForm.value.comfort + this.reviewForm.value.spot + this.reviewForm.value.amenity + this.reviewForm.value.breakfast);
     let active = (grade >= 6) ? true : false;
     this.review = {
