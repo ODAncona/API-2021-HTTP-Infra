@@ -25,7 +25,11 @@
             <mat-icon>language</mat-icon>
           </mat-label>
           <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
-            <mat-option [value]="l.value" *ngFor="let l of locale">{{l.viewValue}}</mat-option>
+            <mat-option [value]="l.code" *ngFor="let l of localesList">
+              <a href="/{{l.code}}/">
+                {{l.label}}
+              </a>
+            </mat-option>
           </mat-select>
         </mat-form-field>
       </div>

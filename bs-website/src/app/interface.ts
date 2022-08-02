@@ -1,6 +1,6 @@
 export interface Locale {
-  value: string;
-  viewValue: string;
+  code: string;
+  label: string;
 }
 
 export interface Service {

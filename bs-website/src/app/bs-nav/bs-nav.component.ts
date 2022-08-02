@@ -24,11 +24,14 @@ export class BsNavComponent {
     { link: "contact", name: "Contact - Map" },
   ];
   selectedLocale: any = "en";
-  locale: Locale[] = [
-    { value: 'en', viewValue: 'EN' },
-    { value: 'fr', viewValue: 'FR' },
-    { value: 'de', viewValue: 'DE' },
-  ]
+  localesList: Locale[] = [
+    { code: 'de-CH', label: 'Deutsch' },
+    { code: 'en-US', label: 'English' },
+    { code: 'fr-CH', label: 'Français' },
+    { code: 'it-CH', label: 'Italiano'},
+    { code: 'zh-CH', label: '中文'},
+    { code: 'ar-CH', label: 'العربية'}
+  ];
 
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

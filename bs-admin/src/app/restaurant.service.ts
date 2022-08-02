@@ -5,7 +5,7 @@ import { Menu, DailyMenu } from './interface';
 import { API_URL } from './interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 export class RestaurantService {
@@ -14,10 +14,10 @@ export class RestaurantService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': this.auth
-    })
+      Authorization: this.auth,
+    }),
   };
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   createMenu(menu: Menu) {
     return this.http.post<Menu>(this.apiUrl, menu, this.httpOptions);
@@ -30,12 +30,14 @@ export class RestaurantService {
 
   updateMenu(menu: Menu) {
     const formData = new FormData();
-    Object.keys(menu).forEach(key => formData.append(key, menu[key]));
+    Object.keys(menu).forEach((key) =>
+      formData.append(key, menu[key as keyof Menu])
+    );
     const httpOptions = {
       headers: new HttpHeaders({
-        'enctype': 'multipart/form-data',
-        'Authorization': this.auth
-      })
+        enctype: 'multipart/form-data',
+        Authorization: this.auth,
+      }),
     };
     return this.http.put<any>(this.apiUrl, formData, httpOptions);
   }
@@ -51,14 +53,18 @@ export class RestaurantService {
     formData.append('title', dailyMenu.title);
     formData.append('file', dailyMenu.file);
     formData.append('active', dailyMenu.active);
-    formData.append('pdf', "");
+    formData.append('pdf', '');
     const httpOptions = {
       headers: new HttpHeaders({
-        'enctype': 'multipart/form-data',
-        'Authorization': this.auth
-      })
+        enctype: 'multipart/form-data',
+        Authorization: this.auth,
+      }),
     };
-    return this.http.post<any>(this.apiUrl + '/dailyMenu', formData, httpOptions);
+    return this.http.post<any>(
+      this.apiUrl + '/dailyMenu',
+      formData,
+      httpOptions
+    );
   }
 
   getDailyMenu() {
@@ -67,14 +73,19 @@ export class RestaurantService {
 
   updateDailyMenu(dailyMenu: DailyMenu) {
     const formData = new FormData();
-    Object.keys(dailyMenu).forEach(key => formData.append(key, dailyMenu[key]));
+    console.log(dailyMenu);
+
+    //Object.keys(dailyMenu).forEach(key => formData.append(key, dailyMenu[key]));
     const httpOptions = {
       headers: new HttpHeaders({
-        'enctype': 'multipart/form-data',
-        'Authorization': this.auth
-      })
+        enctype: 'multipart/form-data',
+        Authorization: this.auth,
+      }),
     };
-    return this.http.put<any>(this.apiUrl + '/dailyMenu', formData, httpOptions);
+    return this.http.put<any>(
+      this.apiUrl + '/dailyMenu',
+      formData,
+      httpOptions
+    );
   }
-
 }

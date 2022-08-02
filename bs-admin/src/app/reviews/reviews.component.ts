@@ -68,12 +68,12 @@ export class ReviewsComponent implements OnInit {
   }
 
   deleteReviews() {
-    let toDelete$ = this.reviews.filter(r => r.selected).map(r => { return this.reviewService.deleteReview(r._id) });
+    let toDelete$ = this.reviews.filter(r => r.selected).map(r => { return this.reviewService.deleteReview(r._id!) });
     forkJoin(toDelete$).subscribe(() => this.getAllReviews());
   }
 
   updateReviews() {
-    let toUpdate$ = this.reviews.filter(r => r.selected).map(r => { return this.reviewService.updateReview(r._id) });
+    let toUpdate$ = this.reviews.filter(r => r.selected).map(r => { return this.reviewService.updateReview(r._id!) });
     forkJoin(toUpdate$).subscribe(() => this.getAllReviews());
   }
 

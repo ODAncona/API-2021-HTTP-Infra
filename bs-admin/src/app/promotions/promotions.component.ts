@@ -6,7 +6,8 @@ import { map, startWith, catchError } from 'rxjs/operators';
 import { PromotionService } from '../promotion.service';
 import { Promotion, Language } from '../interface';
 import { AcceptValidator, MaxSizeValidator } from '@angular-material-components/file-input';
-import * as cloneDeep from 'lodash/cloneDeep';
+import cloneDeep from 'lodash/cloneDeep'
+
 
 @Component({
   selector: 'app-promotions',
@@ -50,19 +51,18 @@ export class PromotionsComponent implements OnInit {
   }
 
   createPromotion() {
-    let promotion = {
+    let promotion: Promotion = {
       title: "EDIT",
       subtitle: "EDIT",
       image: "",
       description: "EDIT",
-      language: undefined,
       pdf: ""
     };
     this.promotionService.createPromotion(promotion).subscribe(() => this.getAllPromotions());
   }
 
   deletePromotions() {
-    let toDelete$ = this.promotions.filter(p => p.selected).map(p => { return this.promotionService.deletePromotion(p._id) });
+    let toDelete$ = this.promotions.filter(p => p.selected).map(p => { return this.promotionService.deletePromotion(p._id!) });
     forkJoin(toDelete$).subscribe(() => this.getAllPromotions());
   }
 

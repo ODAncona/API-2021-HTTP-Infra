@@ -6,7 +6,7 @@ import { map, startWith, catchError } from 'rxjs/operators';
 import { RestaurantService } from '../restaurant.service';
 import { Menu, Language, DailyMenu } from '../interface';
 import { AcceptValidator, MaxSizeValidator } from '@angular-material-components/file-input';
-import * as cloneDeep from 'lodash/cloneDeep';
+import cloneDeep from 'lodash/cloneDeep'
 
 @Component({
   selector: 'app-restaurant',
@@ -60,15 +60,13 @@ export class RestaurantComponent implements OnInit {
       title: "EDIT_TITLE",
       price: 0,
       image: "",
-      description: "EDIT_DESCRIPTION",
-      language: undefined,
-      category: undefined,
+      description: "EDIT_DESCRIPTION"
     };
     this.restaurantService.createMenu(m).subscribe(() => this.getAllMenus());
   }
 
   deleteMenus() {
-    let toDelete$ = this.menus.filter(m => m.selected).map(m => { return this.restaurantService.deleteMenu(m._id) });
+    let toDelete$ = this.menus.filter(m => m.selected).map(m => { return this.restaurantService.deleteMenu(m._id!) });
     forkJoin(toDelete$).subscribe(() => this.getAllMenus());
   }
 
