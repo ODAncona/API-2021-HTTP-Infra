@@ -1,50 +1,75 @@
+/**
+ * This interface describes a locale for language selection the code refers to:
+ * -en for english
+ * -fr for french
+ * -de for german
+ * -it for italian
+ * -zh for chinese
+ * -ar for arabic
+ */
 export interface Locale {
   code: string;
   label: string;
 }
 
-export interface Service {
-  icon: string;
-  name: string;
-}
-
+/**
+ * This interface describes a promotion for the hotel.
+ */
 export interface Promotion {
-  _id?: string;
   title: string;
   subtitle: string;
   image: string;
   description: string;
   language: string;
   pdf: string;
+  _id?: string;
   selected?: boolean;
   displayed?: boolean;
   filesForm?: any;
 }
 
+/**
+ * This interface describes a Menu entry for the restaurant.
+ */
 export interface Menu {
-  _id?: string;
   title: string;
   price: number;
   image: string;
   description: string;
   language: string;
   category: string;
+  _id?: string;
   selected?: boolean;
   displayed?: boolean;
   fileForm?: any;
 }
 
-export interface Review {
+/**
+ * This interface describes a dailyMenu for the restaurant
+ */
+export interface DailyMenu {
   _id?: string;
+  title: string;
+  pdf: string;
+}
+
+/**
+ * This interface describes a user review for the hôtel
+ */
+export interface Review {
   description: string;
   author: string;
   date: string;
   rating: any;
   active: boolean;
+  _id?: string;
   selected?: boolean;
   displayed?: boolean;
 }
 
+/**
+ * This interface describes a Room
+ */
 export interface Room {
   title: string;
   subtitle: string;
@@ -53,11 +78,17 @@ export interface Room {
   description: string;
 }
 
-export interface Language {
-  value: string;
-  viewValue: string;
+/**
+ * This interface describes a service. It can have an angular material icon
+ */
+export interface Service {
+  icon: string;
+  name: string;
 }
 
+/**
+ * This interface describes a mail
+ */
 export interface Mail {
   replyTo: string;
   to: string;
@@ -65,14 +96,10 @@ export interface Mail {
   html: any;
 }
 
-export interface DailyMenu {
-  _id?: string;
-  title: string;
-  pdf: string;
-}
+/* This constant refers to the api URI location */
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
 //const API_URL = "http://localhost/api/"
-const API_URL = "http://localhost:1470/"
+const API_URL = 'http://localhost:1470/';
 
 export { API_URL };
