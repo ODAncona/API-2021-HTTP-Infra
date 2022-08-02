@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-material-components/file-input": "^7.0.1",
+    "@angular-material-components/file-input": "^8.0.0",
     "@angular/animations": "^14.1.0",
     "@angular/cdk": "^14.1.0",
     "@angular/common": "^14.1.0",
@@ -22,10 +22,9 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "lodash": "^4.17.21",
-    "ngx-material-file-input": "^3.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "^0.11.7"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.1.0",
@@ -33,7 +32,7 @@
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/lodash": "^4.14.182",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.20.55",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
