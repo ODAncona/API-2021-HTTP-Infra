@@ -1,7 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$) ? 'over' : 'push'">
     <mat-toolbar>
-      Hôtel Beausite
+      Hôtel Beau-Site
       <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
     </mat-toolbar>
     <mat-nav-list *ngFor="let nav of navs" (click)="handleClick(nav)">

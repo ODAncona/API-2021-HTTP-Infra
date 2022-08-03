@@ -3,13 +3,24 @@
 </video>
 
 <div class="halfboard">
-  <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Daily Menu</h1>
+  <h1 class="sectionTitle">Menu</h1>
+  <p>A la carte menu</p>
+</div>
+
+<div class="halfboard">
+  <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Halfboard</h1>
   <pdf-viewer *ngIf="dailyMenu; else noPdf" [src]="dailyMenu.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noPdf>
-    <h2 style="text-align:center;">No Menu today</h2>
+    <h2 style="text-align:center;">The halfboard is only available on demand</h2>
   </ng-template>
 </div>
 
+<div class="halfboard">
+  <h1 class="sectionTitle">Banquet Menus</h1>
+</div>
+
+
+<!--> 
 <div class="menu">
   <h1 class="sectionTitle" i18n="restaurant-title2 | Notre carte title">Our Menu</h1>
   <mat-tab-group mat-align-tabs="center">
@@ -63,7 +74,7 @@
     </mat-tab>
   </mat-tab-group>
 </div>
-
+</!-->
 
 
 <div class="book">

@@ -12,7 +12,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
         <source>Previous</source>
-        <target>Précédant</target>
+        <target>Précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
           <context context-type="linenumber">13</context>
@@ -28,7 +28,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
         <source>Previous month</source>
-        <target>Mois précédant</target>
+        <target>Mois précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
           <context context-type="linenumber">4</context>
@@ -116,7 +116,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
         <source>Previous</source>
-        <target>Précédant</target>
+        <target>Précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
           <context context-type="linenumber">24</context>

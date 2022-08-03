@@ -21,6 +21,7 @@ export class BsNavComponent {
     { link: 'wellness', name: 'Wellness - Fitness' },
     { link: 'reviews', name: 'Reviews' },
     { link: 'contact', name: 'Contact - Map' },
+    { link: 'team', name: 'Team' },
   ];
   selectedLocale: any = 'en';
   localesList: Locale[] = [

@@ -54,6 +54,8 @@ import { BsFooterComponent } from './bs-footer/bs-footer.component';
 import { BsReviewsModalComponent } from './bs-reviews-modal/bs-reviews-modal.component';
 import { BsPromotionsModalComponent } from './bs-promotions-modal/bs-promotions-modal.component';
 import { BsBookComponent } from './bs-book/bs-book.component';
+import { BsPhotosSlideshowComponent } from './bs-photos-slideshow/bs-photos-slideshow.component';
+import { BsTeamComponent } from './bs-team/bs-team.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { BsBookComponent } from './bs-book/bs-book.component';
     BsPromotionsDetailsComponent,
     BsPromotionsModalComponent,
     BsBookComponent,
+    BsPhotosSlideshowComponent,
+    BsTeamComponent,
   ],
   imports: [
     BrowserModule,

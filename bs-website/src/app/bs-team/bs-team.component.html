@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <h1 class="mainTitle">Team</h1>
+    <p>We are an engaged team at your service</p>
+</div>
+    
+<div class="team-photo">
+    <div *ngFor="let w of workers" class="worker">
+        <img class="worker-photo"  src="{{w.url}}" alt="{{w.description}}">
+        <p class="worker-description">{{w.name}},{{w.work}}</p>
+    </div>
+</div>
+

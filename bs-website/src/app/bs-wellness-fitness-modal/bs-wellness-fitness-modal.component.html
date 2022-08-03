@@ -26,6 +26,11 @@
       <input required matInput type="email" formControlName="email" placeholder="Email">
       <mat-error *ngIf="fitnessForm.invalid">Invalid email</mat-error>
     </mat-form-field>
+    <mat-form-field appearance="standard">
+      <input matInput type="text" formControlName="telephone" placeholder="Telephone">
+      <mat-hint>+41xxyyyzzzz</mat-hint>
+      <mat-error *ngIf="fitnessForm.invalid">Invalid number</mat-error>
+    </mat-form-field>
   </div>
 
   <button mat-raised-button color="warning" aria-label="Submit review" class="orderButton" [disabled]="!fitnessForm.valid">
