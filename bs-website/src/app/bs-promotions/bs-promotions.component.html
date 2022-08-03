@@ -12,5 +12,5 @@
       <a routerLink="{{promotion._id}}"><button mat-stroked-button i18n="promotions-btn | more button" color="accent">More informations</button></a>
     </mat-card-actions>
   </mat-card>
-  <h1 *ngIf="!promotions?.length" i18n="promotions-msg | no proms msg">No promotion are actually available.</h1>
+  <h2 *ngIf="!promotions?.length" i18n="promotions-msg | no proms msg">No promotion are actually available.</h2>
 </div>

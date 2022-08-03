@@ -8,6 +8,7 @@
       <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
     </mat-nav-list>
   </mat-sidenav>
+  
   <mat-sidenav-content id="sidenav">
     <mat-toolbar color="primary">
       <div class="toolbar">
@@ -34,8 +35,10 @@
         </mat-form-field>
       </div>
     </mat-toolbar>
-    <!-- Add Content Here -->
+
+    <!-- Application -->
     <router-outlet></router-outlet>
     <app-bs-footer></app-bs-footer>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
