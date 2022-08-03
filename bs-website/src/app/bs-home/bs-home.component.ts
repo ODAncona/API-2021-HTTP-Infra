@@ -17,7 +17,7 @@ export class BsHomeComponent {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
     config.interval = 3000;
-    config.wrap = false;
+    config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = true;
   }

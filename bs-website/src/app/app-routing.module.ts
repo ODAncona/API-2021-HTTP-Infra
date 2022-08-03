@@ -4,6 +4,7 @@ import { BsNavComponent } from './bs-nav/bs-nav.component';
 import { BsContactComponent } from './bs-contact/bs-contact.component';
 import { BsHomeComponent } from './bs-home/bs-home.component';
 import { BsPhotosComponent } from './bs-photos/bs-photos.component';
+import { BsPhotosSlideshowComponent } from './bs-photos-slideshow/bs-photos-slideshow.component';
 import { BsPromotionsComponent } from './bs-promotions/bs-promotions.component';
 import { BsPromotionsDetailsComponent } from './bs-promotions-details/bs-promotions-details.component';
 import { BsRoomsComponent } from './bs-rooms/bs-rooms.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: "", component: BsNavComponent, children: [
     { path: "home", component: BsHomeComponent },
     { path: "contact", component: BsContactComponent },
-    { path: "photos", component: BsPhotosComponent },
+    { path: "photos", component: BsPhotosSlideshowComponent },
     { path: "promotions", component: BsPromotionsComponent },
     { path: 'promotions/:title', component: BsPromotionsDetailsComponent },
     { path: "rooms", component: BsRoomsComponent },
