@@ -9,19 +9,24 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
-  { path: "", redirectTo:"/statistics", pathMatch:"full"},
-  { path: "", component: NavComponent, canActivate: [AuthGuard] ,children: [
-      { path: "statistics", component: StatisticsComponent },
-      { path: "promotions", component: PromotionsComponent },
-      { path: "restaurant", component: RestaurantComponent },
-      { path: "reviews", component: ReviewsComponent },
-  ] },
-  { path: "**", redirectTo: "/login" },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/statistics', pathMatch: 'full' },
+  {
+    path: '',
+    component: NavComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'statistics', component: StatisticsComponent },
+      { path: 'promotions', component: PromotionsComponent },
+      { path: 'restaurant', component: RestaurantComponent },
+      { path: 'reviews', component: ReviewsComponent },
+    ],
+  },
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
