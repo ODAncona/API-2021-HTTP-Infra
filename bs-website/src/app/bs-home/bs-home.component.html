@@ -1,5 +1,5 @@
-<ngb-carousel *ngIf="images" [showNavigationIndicators]="false" [pauseOnHover]="true" [interval]="3000" class="carousel">
-  <ng-template *ngFor="let image of images" ngbSlide>
+<ngb-carousel *ngIf="images" class="carousel">
+  <ng-template ngbSlide *ngFor="let image of images" >
     <div class="picsum-img-wrapper">
       <img src="{{image}}" alt="Random first slide">
     </div>
