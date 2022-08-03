@@ -55,6 +55,7 @@ import { BsReviewsModalComponent } from './bs-reviews-modal/bs-reviews-modal.com
 import { BsPromotionsModalComponent } from './bs-promotions-modal/bs-promotions-modal.component';
 import { BsBookComponent } from './bs-book/bs-book.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,6 +111,6 @@ import { BsBookComponent } from './bs-book/bs-book.component';
     NgxMatFileInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

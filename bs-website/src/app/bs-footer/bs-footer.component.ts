@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bs-footer',
   templateUrl: './bs-footer.component.html',
-  styleUrls: ['./bs-footer.component.scss'],
+  styleUrls: ['./bs-footer.component.scss']
 })
 export class BsFooterComponent {
-  constructor() {}
+
+  constructor() { }
+
 }

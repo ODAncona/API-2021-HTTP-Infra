@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
 import { Menu, DailyMenu } from '../interface';
 
 @Component({
   selector: 'app-bs-restaurant',
   templateUrl: './bs-restaurant.component.html',
-  styleUrls: ['./bs-restaurant.component.scss'],
+  styleUrls: ['./bs-restaurant.component.scss']
 })
 export class BsRestaurantComponent {
-  dailyMenu: any = '';
+  dailyMenu: any = "";
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
-    { value: 'dessert', viewValue: 'Desserts' },
+    { value: 'dessert', viewValue: 'Desserts' }
   ];
   menus: Menu[] = [];
   starters: Menu[] = [];
@@ -26,38 +26,32 @@ export class BsRestaurantComponent {
     this.getAllMenus();
   }
 
-  /**
-   * Gather all menu from database and sort them by category.
-   */
   getAllMenus() {
-    this.restaurantService.getAllMenus().subscribe((menus: Menu[]) => {
-      this.menus = menus.filter(
-        (m: Menu) => m.language === this.selectedLocale
+    this.restaurantService.getAllMenus()
+      .subscribe((menus: Menu[]) => {
+        this.menus = menus;
+        this.menus.map(m => {
+          switch (m.category) {
+            case "starter":
+              this.starters.push(m);
+              break;
+            case "main":
+              this.mains.push(m);
+              break;
+            case "dessert":
+              this.desserts.push(m);
+              break;
+            default:
+              break;
+          }
+        })
+      }
       );
-      this.menus.forEach((m) => {
-        switch (m.category) {
-          case 'starter':
-            this.starters.push(m);
-            break;
-          case 'main':
-            this.mains.push(m);
-            break;
-          case 'dessert':
-            this.desserts.push(m);
-            break;
-          default:
-            break;
-        }
-      });
-    });
   }
 
-  /**
-   * Retrieves Daily menu from database.
-   */
   getDailyMenu() {
-    this.restaurantService
-      .getDailyMenu()
-      .subscribe((dailyMenu: DailyMenu[]) => (this.dailyMenu = dailyMenu[0]));
+    this.restaurantService.getDailyMenu().subscribe(
+      dailyMenu => this.dailyMenu = dailyMenu[0])
   }
+
 }

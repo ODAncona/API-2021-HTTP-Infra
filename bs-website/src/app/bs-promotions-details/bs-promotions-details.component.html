@@ -1,4 +1,4 @@
-<div *ngIf="promotion; else noPromotion">
+<div *ngIf="promotion">
   <mat-card>
     <div>
       <h1 class="mainTitle">{{promotion.title | uppercase}}</h1>
@@ -19,7 +19,4 @@
     </mat-card-actions>
   </mat-card>
 </div>
-<ng-template #noPromotion>
-  <h2>This promotion doesn't exist.</h2>
-</ng-template>
 <a routerLink="/promotions"><button mat-button i18n="promotions-back | bouton retour">Back to promotions</button></a>

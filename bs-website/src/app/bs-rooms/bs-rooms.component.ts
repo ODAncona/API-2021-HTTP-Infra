@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Room } from '../interface';
 @Component({
   selector: 'app-bs-rooms',
   templateUrl: './bs-rooms.component.html',
-  styleUrls: ['./bs-rooms.component.scss'],
+  styleUrls: ['./bs-rooms.component.scss']
 })
 export class BsRoomsComponent {
   rooms: Room[] = [
@@ -18,10 +18,8 @@ export class BsRoomsComponent {
       services: [
         { icon: 'home', name: 'Bar-Cafétéria' },
         { icon: 'home', name: 'Conciergerie' },
-        { icon: 'home', name: 'Parking couvert' },
-      ],
-      description:
-        '7 nuits dans chambre double charme, petit déjeuner, demi-pension, 1 soirée fondue chinoise, le centre bien-être, la salle de musculation ,baignoire.',
+        { icon: 'home', name: 'Parking couvert' }],
+      description: '7 nuits dans chambre double charme, petit déjeuner, demi-pension, 1 soirée fondue chinoise, le centre bien-être, la salle de musculation ,baignoire.'
     },
     {
       title: 'classic',
@@ -40,7 +38,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Coffre-fort' },
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
-      description: 'Small double budget room with shower.',
+      description: 'Small double budget room with shower.'
     },
     {
       title: 'Superior',
@@ -59,8 +57,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Coffre-fort' },
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
-      description:
-        'Family suite with 1 double with bath/wc on the south side and a connecting small room for two children with shower.',
+      description: 'Family suite with 1 double with bath/wc on the south side and a connecting small room for two children with shower.'
     },
     {
       title: 'Premium',
@@ -79,8 +76,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Coffre-fort' },
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
-      description:
-        'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.',
+      description: 'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.'
     },
     {
       title: 'Junior Suite',
@@ -99,9 +95,8 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Coffre-fort' },
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
-      description:
-        'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.',
+      description: 'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.'
     },
   ];
-  constructor() {}
+  constructor() { }
 }

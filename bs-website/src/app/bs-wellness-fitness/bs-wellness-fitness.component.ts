@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsWellnessFitnessModalComponent } from '../bs-wellness-fitness-modal/bs-wellness-fitness-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -24,9 +24,6 @@ export class BsWellnessFitnessComponent {
 
   constructor(public dialog: MatDialog) { }
 
-  /**
-   * Open the dialog box to order a fitness subscription.
-   */
   orderSubscription() {
     let dialogRef = this.dialog.open(BsWellnessFitnessModalComponent, { data: "test" });
     dialogRef.afterClosed().subscribe();

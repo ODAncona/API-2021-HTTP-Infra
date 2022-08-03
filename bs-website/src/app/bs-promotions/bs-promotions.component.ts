@@ -5,7 +5,7 @@ import { Promotion } from '../interface';
 @Component({
   selector: 'app-bs-promotions',
   templateUrl: './bs-promotions.component.html',
-  styleUrls: ['./bs-promotions.component.scss'],
+  styleUrls: ['./bs-promotions.component.scss']
 })
 export class BsPromotionsComponent {
   promotions: Promotion[] = [];
@@ -15,14 +15,11 @@ export class BsPromotionsComponent {
     this.getAllPromotions();
   }
 
-  /**
-   * Get all promotion in respect to the locale
-   */
   getAllPromotions() {
-    this.promotionService.getAllPromotions().subscribe((promotions) => {
-      this.promotions = promotions.filter(
-        (prom: Promotion) => prom.language === this.selectedLocale
-      );
-    });
+    this.promotionService.getAllPromotions().subscribe(
+      promotions => {
+        this.promotions = promotions.filter((prom: Promotion) => prom.language === this.selectedLocale);
+      });
   }
+
 }

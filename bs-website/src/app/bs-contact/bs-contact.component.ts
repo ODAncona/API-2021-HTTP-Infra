@@ -1,51 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  UntypedFormGroup,
-  UntypedFormControl,
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
 import { Mail } from '../interface';
-
 @Component({
   selector: 'app-bs-contact',
   templateUrl: './bs-contact.component.html',
-  styleUrls: ['./bs-contact.component.scss'],
+  styleUrls: ['./bs-contact.component.scss']
 })
 export class BsContactComponent {
   contactForm = new UntypedFormGroup({
     name: new UntypedFormControl('', [Validators.required]),
     email: new UntypedFormControl('', [Validators.required, Validators.email]),
-    content: new UntypedFormControl('', [
-      Validators.required,
-      Validators.minLength(40),
-    ]),
+    content: new UntypedFormControl('', [Validators.required, Validators.minLength(40)]),
   });
-  constructor(
-    private mailService: MailService,
-    private _snackBar: MatSnackBar
-  ) {}
+  constructor(private mailService: MailService, private _snackBar: MatSnackBar) { }
 
-  /**
-   * This method send the contact form with email
-   */
   onSubmit() {
-    const to = 'olivier_dancona@hotmail.com';
     let m: Mail = {
       replyTo: this.contactForm.value.email,
-      to: to,
-      subject: 'Demande de client: ' + this.contactForm.value.name,
+      to: "olivier_dancona@hotmail.com",
+      subject: "Demande de client: " + this.contactForm.value.name,
       html: this.contactForm.value.content,
     };
     this.mailService.sendMail(m).subscribe(
-      (result) => this._snackBar.open(result, 'close'),
-      (error) =>
-        this._snackBar.open(
-          'Unable to send contact informations, please send us an email directly to info@beausite.ch',
-          'close'
-        )
+      result => this._snackBar.open(result, "close"),
+      error => this._snackBar.open("Unable to send mail, please use directly our adresse info@beausite.ch", "close")
+
     );
+
   }
+
 }
