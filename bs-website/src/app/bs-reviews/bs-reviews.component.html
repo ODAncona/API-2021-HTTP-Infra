@@ -1,50 +1,39 @@
 <div class="review-header">
   <div class="review-header">
-    <h1 class="sectionTitle" i18n="review-title | titre pour écrire son propre review">Write your own review</h1>
+    <h1
+      class="sectionTitle"
+      i18n="review-title | titre pour écrire son propre review"
+    >
+      Write a review
+    </h1>
     <button mat-fab color="primary" class="addReview" (click)="addReview()">
       <mat-icon>add</mat-icon>
     </button>
   </div>
   <div class="review-header">
     <h1>Mean</h1>
-    <button mat-fab color="accent" class="grade">{{average| number:'1.1-1'}}</button>
+    <button mat-fab color="accent" class="grade">
+      {{ average | number: "1.1-1" }}
+    </button>
   </div>
 </div>
 <mat-card class="rating-card" *ngFor="let review of reviews">
   <mat-card-header>
-    <mat-card-title>{{review.author}}</mat-card-title>
-    <mat-card-subtitle>{{review.date | date: 'short'}}</mat-card-subtitle>
-    <button mat-fab color="accent" class="grade">{{(review.rating.clean+review.rating.service+review.rating.comfort+review.rating.spot+review.rating.amenity+review.rating.breakfast)/6 | number:'1.1-1'}}</button>
+    <mat-card-title>{{ review.author }}</mat-card-title>
+    <mat-card-subtitle>{{ review.date | date: "short" }}</mat-card-subtitle>
+    <button mat-fab color="accent" class="grade">
+      {{ averageRating(review.rating) | number: "1.1-1" }}
+    </button>
   </mat-card-header>
   <mat-divider></mat-divider>
   <div class="rating">
-    <div class="rating-item">
-      <p>clean</p>
-      <p class="rating-number">{{review.rating.clean}}/10</p>
-    </div>
-    <div class="rating-item">
-      <p>service</p>
-      <p class="rating-number">{{review.rating.service}}/10</p>
-    </div>
-    <div class="rating-item">
-      <p>comfort</p>
-      <p class="rating-number">{{review.rating.comfort}}/10</p>
-    </div>
-    <div class="rating-item">
-      <p>spot</p>
-      <p class="rating-number">{{review.rating.spot}}/10</p>
-    </div>
-    <div class="rating-item">
-      <p>amenity</p>
-      <p class="rating-number">{{review.rating.amenity}}/10</p>
-    </div>
-    <div class="rating-item">
-      <p>breakfast</p>
-      <p class="rating-number">{{review.rating.breakfast}}/10</p>
+    <div class="rating-item" *ngFor="let r of review.rating | keyvalue">
+      <p>{{ r.key }}</p>
+      <p class="rating-number">{{ r.value }}/10</p>
     </div>
   </div>
   <mat-divider></mat-divider>
   <mat-card-content>
-    <p>{{review.description}}</p>
+    <p>{{ review.description }}</p>
   </mat-card-content>
 </mat-card>

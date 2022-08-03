@@ -10,14 +10,6 @@ import { Review } from '../interface';
   styleUrls: ['./bs-reviews.component.scss'],
 })
 export class BsReviewsComponent {
-  criterions: any[] = [
-    { name: 'clean', description: 'a' },
-    { name: 'service', description: 'b' },
-    { name: 'comfort', description: 'c' },
-    { name: 'spot', description: 'd' },
-    { name: 'amenity', description: 'e' },
-    { name: 'breakfast', description: 'f' },
-  ];
   reviews: Review[] = [];
   average: number = 0;
 
@@ -41,18 +33,18 @@ export class BsReviewsComponent {
   getAllActiveReviews(): any {
     this.reviewService.getAllActiveReviews(true).subscribe((reviews) => {
       this.reviews = reviews.reverse();
+      this.average = 0;
       reviews.forEach(
-        (review: Review) =>
-          (this.average +=
-            (review.rating.clean +
-              review.rating.service +
-              review.rating.comfort +
-              review.rating.spot +
-              review.rating.amenity +
-              review.rating.breakfast) /
-            6)
+        (r: Review) => (this.average += this.averageRating(r.rating))
       );
       this.average /= reviews.length;
     });
   }
+
+  /**
+   * @param rating
+   * @returns the average of rating
+   */
+  averageRating = (r: Object): number =>
+    Object.values(r).reduce((a, b) => a + b) / 6;
 }
