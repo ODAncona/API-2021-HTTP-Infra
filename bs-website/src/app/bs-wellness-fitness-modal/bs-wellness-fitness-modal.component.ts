@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import {
   UntypedFormGroup,
   UntypedFormControl,
@@ -7,7 +7,7 @@ import {
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
-import { Mail } from '../interface';
+import { Mail, BS_EMAIL } from '../interface';
 
 @Component({
   selector: 'app-bs-wellness-fitness-modal',
@@ -29,6 +29,7 @@ export class BsWellnessFitnessModalComponent {
     address: new UntypedFormControl('', [Validators.required]),
     city: new UntypedFormControl('', [Validators.required]),
     email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    telephone: new UntypedFormControl('', [Validators.required]),
   });
   offers: any[] = [
     { description: '1 month', price: '110' },
@@ -50,7 +51,6 @@ export class BsWellnessFitnessModalComponent {
    * Send an email to confirm the fitness subscription
    */
   onSubmit() {
-    const to = 'olivier_dancona@hotmail.com';
     let content: any =
       '<html><p>A customer ordered a fitness offer: </p><p>' +
       this.htmlLine('firstname', this.fitnessForm.value.firstname) +
@@ -58,11 +58,12 @@ export class BsWellnessFitnessModalComponent {
       this.htmlLine('birthdate', this.fitnessForm.value.birthdate) +
       this.htmlLine('address', this.fitnessForm.value.address) +
       this.htmlLine('city', this.fitnessForm.value.city) +
+      this.htmlLine('telephone', this.fitnessForm.value.telephone) +
       '</p></html>';
 
     let m: Mail = {
       replyTo: this.fitnessForm.value.email,
-      to: to,
+      to: BS_EMAIL,
       subject: 'Fitness subscription: ' + this.fitnessForm.value.firstname,
       html: content,
     };

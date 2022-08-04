@@ -7,7 +7,7 @@ import {
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
-import { Mail } from '../interface';
+import { BS_EMAIL, Mail } from '../interface';
 
 @Component({
   selector: 'app-bs-promotions-modal',
@@ -60,7 +60,7 @@ export class BsPromotionsModalComponent {
 
     let m: Mail = {
       replyTo: this.promotionForm.value.email,
-      to: to,
+      to: BS_EMAIL,
       subject: 'Promotion request: ' + this.promotionForm.value.firstname,
       html: content,
     };

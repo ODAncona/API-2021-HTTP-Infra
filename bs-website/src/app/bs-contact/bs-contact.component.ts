@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {
   UntypedFormGroup,
   UntypedFormControl,
-  FormBuilder,
   Validators,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MailService } from '../mail.service';
-import { Mail } from '../interface';
+import { BS_EMAIL, Mail } from '../interface';
 
 @Component({
   selector: 'app-bs-contact',
@@ -32,10 +31,9 @@ export class BsContactComponent {
    * This method send the contact form with email
    */
   onSubmit() {
-    const to = 'olivier_dancona@hotmail.com';
     let m: Mail = {
       replyTo: this.contactForm.value.email,
-      to: to,
+      to: BS_EMAIL,
       subject: 'Demande de client: ' + this.contactForm.value.name,
       html: this.contactForm.value.content,
     };
