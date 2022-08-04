@@ -1,3 +1,5 @@
+<h1 class="mainTitle">Beau-Site Reviews</h1>
+
 <div class="review-header">
   <div class="review-header">
     <h1
@@ -37,3 +39,13 @@
     <p>{{ review.description }}</p>
   </mat-card-content>
 </mat-card>
+
+<mat-divider></mat-divider>
+
+<h1 class="mainTitle">Reviews us on</h1>
+
+<div class="benefits">
+  <div class="benefit-card" *ngFor="let benefit of benefits">
+    <a href="{{ benefit.url }}"><img div src="{{ benefit.img }}" /></a>
+  </div>
+</div>

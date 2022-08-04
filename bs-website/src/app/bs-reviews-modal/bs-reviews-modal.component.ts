@@ -25,7 +25,7 @@ export class BsReviewsModalComponent {
     rating: new UntypedFormGroup({
       Staff: new UntypedFormControl(7, this.toCheck),
       Clean: new UntypedFormControl(7, this.toCheck),
-      Spot: new UntypedFormControl(7, this.toCheck),
+      Location: new UntypedFormControl(7, this.toCheck),
       Comfort: new UntypedFormControl(7, this.toCheck),
       Breakfast: new UntypedFormControl(7, this.toCheck),
       ValueForMoney: new UntypedFormControl(7, this.toCheck),
