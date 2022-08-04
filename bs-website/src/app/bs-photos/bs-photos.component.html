@@ -1,3 +1,45 @@
-<mat-grid-list cols="3" rowHeight="1.4:1">
-  <mat-grid-tile *ngFor="let image of images"><img src="{{image.url}}" alt="{{image.description}}"></mat-grid-tile>
-</mat-grid-list>
+<div class="gallery-lightbox-container">
+  <div class="gallery">
+    <div *ngFor="let data of galleryData; let i = index" class="gallery-img">
+      <img
+        (click)="onPreviewImage(i)"
+        [src]="data.url"
+        [alt]="data.description"
+      />
+    </div>
+  </div>
+  <div *ngIf="showMask" class="lightbox" @animation2>
+    <span *ngIf="showCount" class="count">
+      {{ currentIndex + 1 }}/{{ totalImageCount }}
+    </span>
+    <button  class="close-btn">
+      <mat-icon *ngIf="previewImage" class="btn-close"  (click)="onClosePreview()">close</mat-icon>
+    </button>
+    <button
+      *ngIf="controls"
+      class="btn-lightbox-carousel btn-prev"
+      (click)="prev()"
+    >
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+    <button
+      *ngIf="controls"
+      class="btn-lightbox-carousel btn-next"
+      (click)="next()"
+    >
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+
+    <div
+      *ngIf="previewImage"
+      [@animation]="{ value: 'visible' }"
+      (@animation.done)="onAnimationEnd($event)"
+      class="lightbox-img"
+    >
+      <img
+        [src]="currentLightboxImage.url"
+        [alt]="currentLightboxImage.description"
+      />
+    </div>
+  </div>
+</div>
