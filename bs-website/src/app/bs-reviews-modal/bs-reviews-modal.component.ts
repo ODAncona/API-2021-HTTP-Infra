@@ -3,6 +3,7 @@ import {
   UntypedFormGroup,
   UntypedFormControl,
   Validators,
+  ValidatorFn,
 } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReviewService } from '../review.service';
@@ -14,6 +15,7 @@ import { Review } from '../interface';
   styleUrls: ['./bs-reviews-modal.component.scss'],
 })
 export class BsReviewsModalComponent {
+  toCheck: ValidatorFn[] = [Validators.required, Validators.max(10), Validators.min(1)];
   reviewForm = new UntypedFormGroup({
     author: new UntypedFormControl('', [Validators.required]),
     description: new UntypedFormControl('', [
@@ -21,13 +23,13 @@ export class BsReviewsModalComponent {
       Validators.minLength(40),
     ]),
     rating: new UntypedFormGroup({
-      Staff: new UntypedFormControl('7', [Validators.required]),
-      Clean: new UntypedFormControl('7', [Validators.required]),
-      Spot: new UntypedFormControl('7', [Validators.required]),
-      Comfort: new UntypedFormControl('7', [Validators.required]),
-      Breakfast: new UntypedFormControl('7', [Validators.required]),
-      ValueForMoney: new UntypedFormControl('7', [Validators.required]),
-      Service: new UntypedFormControl('7', [Validators.required]),
+      Staff: new UntypedFormControl(7, this.toCheck),
+      Clean: new UntypedFormControl(7, this.toCheck),
+      Spot: new UntypedFormControl(7, this.toCheck),
+      Comfort: new UntypedFormControl(7, this.toCheck),
+      Breakfast: new UntypedFormControl(7, this.toCheck),
+      ValueForMoney: new UntypedFormControl(7, this.toCheck),
+      Service: new UntypedFormControl(7, this.toCheck),
     }),
   });
   review: Review | undefined;
@@ -70,5 +72,5 @@ export class BsReviewsModalComponent {
    * @returns the average of rating
    */
   averageRating = (r: Object): number =>
-    Object.values(r).reduce((a, b) => a + b) / 6;
+    Object.values(r).reduce((a, b) => a + b) / Object.keys(r).length;
 }

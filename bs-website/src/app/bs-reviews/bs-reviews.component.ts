@@ -46,5 +46,5 @@ export class BsReviewsComponent {
    * @returns the average of rating
    */
   averageRating = (r: Object): number =>
-    Object.values(r).reduce((a, b) => a + b) / 6;
+    Object.values(r).reduce((a, b) => a + b) / Object.keys(r).length;
 }
