@@ -21,4 +21,31 @@ export class BsHomeComponent {
     config.keyboard = true;
     config.pauseOnHover = true;
   }
+
+  cards:any[] = [
+    {
+      title: "Rooms",
+      url:"/rooms"
+    },
+    {
+      title: "Restaurant",
+      url:"/restaurant"
+    },
+    {
+      title: "Promotions",
+      url:"/promotion"
+    },
+    {
+      title: "Wellness-Fitness",
+      url:"/wellness"
+    },
+    {
+      title: "Region",
+      url:"/region"
+    },
+    {
+      title: "Team",
+      url:"/team"
+    },
+  ]
 }

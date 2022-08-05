@@ -18,29 +18,31 @@ mat-card {
   margin: 1em;
 }
 
-video {
-  width: 100%;
-}
-
-.fan {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  overflow: hidden;
-  background-color: rgba(62, 28, 34, 0.8);
-
-  h3 {
-    color: white;
+.dream {
+  position: relative;
+  video {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+  h2 {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 20%;
     font-family: cursive;
+    width: 60%;
+    font-size: xx-large;
+    font-weight: 400;
+    text-shadow: 1em;
+    text-align: center;
     font-size: 4em;
     line-height: 1em;
-    text-align: center;
-    margin: 0.9em;
-  }
-
-  img {
-    width: 100%;
-    max-height: 600px;
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 0.2em;
+    color: black;
+    padding: 0.15em;
+    padding-top: 20px;
   }
 }
 
@@ -64,5 +66,22 @@ video {
   .flex-item-left,
   .flex-item-right {
     flex: 100%;
+  }
+}
+
+.cards {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin-top: 1%;
+  max-width: 48%;
+  min-width: 300px;
+
+  img {
+    max-height: 600px;
   }
 }
