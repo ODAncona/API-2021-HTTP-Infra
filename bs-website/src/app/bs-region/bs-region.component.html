@@ -1,4 +1,4 @@
-<h1 class="mainTitle"> Discover the Region</h1>
+<h1 class="mainTitle">Discover the Region</h1>
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
     <h2 class="text">{{ benefit.title }}</h2>
@@ -9,7 +9,12 @@
 <mat-divider></mat-divider>
 
 <div class="season">
-  <h1>Summer</h1>
+  <div class="dream">
+    <video autoplay loop muted>
+      <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4" />
+    </video>
+    <h2>Summer</h2>
+  </div>
   <div class="activites" *ngFor="let a of summer">
     <a href="{{ a.link }}">
       <h2>{{ a.title }}</h2>

@@ -32,6 +32,11 @@
       </div>
 
       <div>
+        <h2>Voucher</h2>
+        <input matInput [(ngModel)]="promotion.voucher" [ngModelOptions]="{standalone: true}" />
+      </div>
+
+      <div>
         <h2>Language</h2>
         <mat-select [(value)]="promotion.language">
           <mat-option value="en">English</mat-option>
@@ -45,7 +50,9 @@
         <textarea matInput cdkAutosizeMinRows="5" [(ngModel)]="promotion.description" [ngModelOptions]="{standalone: true}"></textarea>
       </div>
 
-      <!--> File Input <!-->
+
+
+      <!-- File Input !-->
       <ng-container [formGroup]="promotion.filesForm">
         <div class="img">
           <div class="container">
@@ -65,8 +72,9 @@
               <mat-icon ngxMatFileInputIcon>folder</mat-icon>
             </ngx-mat-file-input>
           </mat-form-field>
+          <a href="{{promotion.pdf}}">Flyer</a>
         </div>
-        <a href="{{promotion.pdf}}">Flyer</a>
+
       </ng-container>
 
       <mat-checkbox class="checkbox" [checked]="promotion.selected"></mat-checkbox>

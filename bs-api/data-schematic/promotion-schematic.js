@@ -1,33 +1,37 @@
-const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
+const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const promotionSchema = mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   subtitle: {
     type: String,
-    required: true
+    required: true,
   },
   image: {
     type: String,
-    required: false
+    required: false,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   language: {
     type: String,
-    required: false
+    required: false,
   },
   pdf: {
     type: String,
-    required: false
-  }
+    required: false,
+  },
+  voucher: {
+    type: String,
+    required: false,
+  },
 });
 
 promotionSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model('Promotion', promotionSchema);
+module.exports = mongoose.model("Promotion", promotionSchema);

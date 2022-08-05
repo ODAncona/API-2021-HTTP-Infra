@@ -5,6 +5,7 @@ export interface Promotion {
   description: string;
   pdf: string;
   _id?: string;
+  voucher?: string;
   language?: string;
   selected?: boolean;
   displayed?: boolean;

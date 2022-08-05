@@ -22,6 +22,7 @@ export interface Promotion {
   description: string;
   language: string;
   pdf: string;
+  voucher?: string;
   _id?: string;
   selected?: boolean;
   displayed?: boolean;
