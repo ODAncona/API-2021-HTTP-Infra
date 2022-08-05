@@ -8,8 +8,7 @@ import { Room } from '../interface';
 export class BsRoomsComponent {
   rooms: Room[] = [
     {
-      title: 'Standard ',
-      subtitle: 'Budget',
+      title: 'Basic Double Room',
       images: [
         '../../assets/images/photos/rooms/rooms_standard1.jpg',
         '../../assets/images/photos/rooms/rooms_standard2.jpg',
@@ -21,11 +20,11 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Parking couvert' },
       ],
       description:
-        '7 nuits dans chambre double charme, petit déjeuner, demi-pension, 1 soirée fondue chinoise, le centre bien-être, la salle de musculation ,baignoire.',
+        'The Basic double rooms have a small terrace, some with a view of the mountains.',
+      roomSize: '20',
     },
     {
-      title: 'classic',
-      subtitle: 'Familia',
+      title: 'Classic Double Room',
       images: [
         '../../assets/images/photos/rooms/rooms_classic1.jpg',
         '../../assets/images/photos/rooms/rooms_classic2.jpg',
@@ -40,11 +39,12 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Coffre-fort' },
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
-      description: 'Small double budget room with shower.',
+      description:
+        'These rooms have a balcony facing the village street, with a view of the Tschentenalp.',
+      roomSize: '20',
     },
     {
-      title: 'Superior',
-      subtitle: 'Easy',
+      title: 'Superior Double Room',
       images: [
         '../../assets/images/photos/rooms/rooms_superior1.jpg',
         '../../assets/images/photos/rooms/rooms_superior2.jpg',
@@ -60,11 +60,11 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'Family suite with 1 double with bath/wc on the south side and a connecting small room for two children with shower.',
+        'These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.',
+      roomSize: '28',
     },
     {
-      title: 'Premium',
-      subtitle: 'Charme',
+      title: 'Premium Double Room',
       images: [
         '../../assets/images/photos/rooms/rooms_premium1.jpg',
         '../../assets/images/photos/rooms/rooms_premium2.jpg',
@@ -80,11 +80,11 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.',
+        'These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.',
+      roomSize: '28',
     },
     {
       title: 'Junior Suite',
-      subtitle: 'Charme',
       images: [
         '../../assets/images/photos/rooms/rooms_junior_suite1.jpg',
         '../../assets/images/photos/rooms/rooms_junior_suite2.jpg',
@@ -100,7 +100,8 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'Chambre individuelle avec bain/douche/WC, sèche cheveux, lit jumaux ou grand lit, machine pour faire du café et du thé, coffre, minibar et balcon côté nord.',
+        'These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.',
+      roomSize: '32, 39',
     },
   ];
   constructor() {}

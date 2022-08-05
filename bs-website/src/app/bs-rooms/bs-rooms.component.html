@@ -2,41 +2,49 @@
   <mat-card class="room-card" *ngFor="let room of rooms">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{room.title | uppercase}}</mat-card-title>
-      <mat-card-subtitle>{{room.subtitle | titlecase}}</mat-card-subtitle>
+      <mat-card-title>{{ room.title | uppercase }}</mat-card-title>
     </mat-card-header>
-    <ngb-carousel *ngIf="room.images" [showNavigationIndicators]="true" [pauseOnHover]="true" [interval]="3000" class="carousel">
+
+    <ngb-carousel
+      *ngIf="room.images"
+      [showNavigationIndicators]="true"
+      [pauseOnHover]="true"
+      [interval]="3000"
+      class="carousel"
+    >
       <ng-template *ngFor="let image of room.images" ngbSlide>
         <div class="picsum-img-wrapper">
-          <img mat-card-image src="{{image}}" alt="Random first slide">
+          <img mat-card-image src="{{ image }}" alt="Random first slide" />
         </div>
       </ng-template>
     </ngb-carousel>
+
     <mat-card-content class="description">
-      <p>{{room.description}}</p>
+      <p class="description-detail">{{ room.description }}</p>
+      <p class="description-detail">room size: {{ room.roomSize }}m²</p>
       <mat-accordion>
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>
-            <mat-panel-title i18n="rooms-title">
-              Services
-            </mat-panel-title>
+            <mat-panel-title i18n="rooms-title"> Services </mat-panel-title>
             <mat-panel-description i18n="rooms-description">
-              description
+              Summary
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p class="description-detail">{{room.description}}</p>
           <div class="services">
             <div *ngFor="let service of room.services" class="service">
-              <mat-icon> {{service.icon}} </mat-icon>
-              <div mat-line class="name">{{service.name}}</div>
+              <mat-icon> {{ service.icon }} </mat-icon>
+              <div mat-line class="name">{{ service.name }}</div>
             </div>
           </div>
           <mat-divider></mat-divider>
         </mat-expansion-panel>
       </mat-accordion>
     </mat-card-content>
+
     <mat-card-actions>
-      <button mat-raised-button i18n="rooms-book | réserver mtn" type="button">Book Now</button>
+      <button mat-raised-button i18n="rooms-book | réserver mtn" type="button">
+        Book Now
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

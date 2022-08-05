@@ -72,10 +72,10 @@ export interface Review {
  */
 export interface Room {
   title: string;
-  subtitle: string;
   images: string[];
   services: Service[];
   description: string;
+  roomSize: string;
 }
 
 /**
