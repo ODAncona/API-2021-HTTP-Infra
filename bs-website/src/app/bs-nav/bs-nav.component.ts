@@ -14,14 +14,15 @@ export class BsNavComponent {
   activeLink: string = 'Menu';
   navs = [
     { link: 'home', name: 'Home' },
-    { link: 'promotions', name: 'Promotions' },
-    { link: 'photos', name: 'Photos' },
     { link: 'rooms', name: 'Rooms' },
+    { link: 'promotions', name: 'Promotions' },
     { link: 'restaurant', name: 'Restaurant' },
+    { link: 'photos', name: 'Photos' },
     { link: 'wellness', name: 'Wellness - Fitness' },
     { link: 'reviews', name: 'Reviews' },
-    { link: 'contact', name: 'Contact - Map' },
     { link: 'team', name: 'Team' },
+    { link: 'region', name: 'Region' },
+    { link: 'contact', name: 'Contact - Map' }
   ];
   selectedLocale: any = 'en';
   localesList: Locale[] = [

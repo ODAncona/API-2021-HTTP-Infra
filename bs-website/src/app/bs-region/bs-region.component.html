@@ -1,0 +1,15 @@
+<div class="season">
+  <h1>Winter</h1>
+  <div class="activites">
+    ski snow freeride luge rando raquette cascade glace
+  </div>
+</div>
+<div class="season">
+  <h1>Summer</h1>
+  <div class="activites" *ngFor="let a of summer">
+    <h2>{{ a.title }}</h2>
+    <p>
+      {{ a.description }}
+    </p>
+  </div>
+</div>

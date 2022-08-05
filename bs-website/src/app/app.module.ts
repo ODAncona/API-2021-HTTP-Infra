@@ -55,6 +55,7 @@ import { BsReviewsModalComponent } from './bs-reviews-modal/bs-reviews-modal.com
 import { BsPromotionsModalComponent } from './bs-promotions-modal/bs-promotions-modal.component';
 import { BsBookComponent } from './bs-book/bs-book.component';
 import { BsTeamComponent } from './bs-team/bs-team.component';
+import { BsRegionComponent } from './bs-region/bs-region.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { BsTeamComponent } from './bs-team/bs-team.component';
     BsPromotionsModalComponent,
     BsBookComponent,
     BsTeamComponent,
+    BsRegionComponent,
   ],
   imports: [
     BrowserModule,

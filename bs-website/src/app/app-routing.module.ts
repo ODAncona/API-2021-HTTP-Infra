@@ -13,6 +13,7 @@ import { BsWellnessFitnessComponent } from './bs-wellness-fitness/bs-wellness-fi
 import { BsWellnessWellnessComponent } from './bs-wellness-wellness/bs-wellness-wellness.component';
 import { BsReviewsComponent } from './bs-reviews/bs-reviews.component';
 import { BsTeamComponent } from './bs-team/bs-team.component';
+import { BsRegionComponent } from './bs-region/bs-region.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "/home" },
@@ -29,7 +30,9 @@ const routes: Routes = [
         { path: "wellness", component: BsWellnessWellnessComponent },
       ] },
     { path: "reviews", component: BsReviewsComponent },
-    { path: "team", component: BsTeamComponent }
+    { path: "team", component: BsTeamComponent },
+    { path: "region", component: BsRegionComponent },
+
   ] },
   { path: "**", redirectTo: "/home" },
 ];
