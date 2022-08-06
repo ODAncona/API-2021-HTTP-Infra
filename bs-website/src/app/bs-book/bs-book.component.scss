@@ -1,3 +1,19 @@
-mat-card {
+.reservation {
+  background-color: #c8c0b4;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1em;
+  padding: 1em;
+
+  .datepicker {
+    margin:1em;
+    transform: scale(1);
+  }
+
+  .book-btn {
+    margin:1em;
+    transform: scale(1.3);
+  }
 }
