@@ -27,9 +27,9 @@
           </mat-label>
           <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
             <mat-option [value]="l.code" *ngFor="let l of localesList">
-              <a href="/{{l.code}}/">
+              <p>
                 {{l.label}}
-              </a>
+              </p>
             </mat-option>
           </mat-select>
         </mat-form-field>
