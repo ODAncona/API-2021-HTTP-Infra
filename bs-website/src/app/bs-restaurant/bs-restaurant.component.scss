@@ -1,6 +1,12 @@
-video {
-  margin: 0;
-  width: 100%;
+.dream {
+  position: relative;
+  height: 85%;
+  overflow: hidden;
+  video {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
 }
 
 .display-menu {
