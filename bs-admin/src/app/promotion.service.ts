@@ -36,7 +36,7 @@ export class PromotionService {
 
   /**
    * Get a promotion by his
-   * @param promotionId 
+   * @param promotionId
    * @returns an observable
    */
   getAPromotion(promotionId: string) {
@@ -46,7 +46,7 @@ export class PromotionService {
 
   /**
    * Update the promotion
-   * @param promotion 
+   * @param promotion
    * @returns an observable
    */
   updatePromotion(promotion: any) {
@@ -65,7 +65,7 @@ export class PromotionService {
 
   /**
    * Delete a promotion defined by her
-   * @param promotionId 
+   * @param promotionId
    * @returns an observable
    */
   deletePromotion(promotionId: string) {

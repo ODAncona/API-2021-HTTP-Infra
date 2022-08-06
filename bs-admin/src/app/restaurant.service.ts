@@ -96,7 +96,6 @@ export class RestaurantService {
    */
   updateMenu(menu: any) {
     const formData = new FormData();
-
     Object.keys(menu).forEach((key) => formData.append(key, menu[key]));
     const httpOptions = {
       headers: new HttpHeaders({
@@ -115,7 +114,7 @@ export class RestaurantService {
   deleteMenu(menuId: string) {
     let url = this.apiUrl + 'menu/' + menuId;
     console.log(url);
-        
+
     return this.http.delete<any>(url, this.httpOptions);
   }
 }

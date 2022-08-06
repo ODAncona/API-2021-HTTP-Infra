@@ -84,8 +84,8 @@ export class MenusComponent implements OnInit {
   updateMenus() {
     let payload = cloneDeep(this.menus);
     payload.map((m) => {
-      if (m.fileForm.value.image) {
-        m.file = m.fileForm.value.image;
+      if (m.fileForm.value.pdf) {
+        m.file = m.fileForm.value.pdf;       
       }
       delete m.fileForm;
     });

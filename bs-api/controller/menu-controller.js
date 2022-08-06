@@ -59,7 +59,7 @@ exports.updateMenu = (req, res) => {
 
   // If req contains files
   if (req.file) {
-    payload.image =
+    payload.pdf =
       req.protocol + "://" + req.get("host") + "/" + req.file.path;
   }
   // Update database
