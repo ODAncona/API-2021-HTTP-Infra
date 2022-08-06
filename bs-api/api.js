@@ -7,7 +7,7 @@ const path = require('path');
 const authRoute = require('./route/auth-route');
 const serverRoute = require('./route/server-route');
 const reviewRoute = require('./route/review-route');
-const menuRoute = require('./route/menu-route');
+const restaurantRoute = require('./route/restaurant-route');
 const promotionRoute = require('./route/promotion-route');
 const mailRoute = require('./route/mail-route');
 const api = express();
@@ -30,7 +30,7 @@ api.use('/upload', express.static(path.join(__dirname, 'upload')));
 api.use('/server', serverRoute);
 api.use('/auth', authRoute);
 api.use('/review', reviewRoute);
-api.use('/menu', menuRoute);
+api.use('/restaurant', restaurantRoute);
 api.use('/promotion', promotionRoute);
 api.use('/mail', mailRoute);
 

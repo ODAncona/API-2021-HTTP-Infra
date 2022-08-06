@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { RestaurantService } from '../restaurant.service';
-import { Menu, Language, DailyMenu } from '../interface';
+import { Meal, Language, Menu } from '../interface';
 import { MaxSizeValidator } from '@angular-material-components/file-input';
 import cloneDeep from 'lodash/cloneDeep';
 
@@ -19,17 +19,17 @@ export class RestaurantComponent implements OnInit {
     { value: 'de', viewValue: 'Deutsch' },
     { value: 'en', viewValue: 'English' },
   ];
-  menus: Menu[] = [];
-  dailyMenu: DailyMenu | undefined;
-  dailyMenuFile = new UntypedFormControl('');
-  dailyMenuName = new UntypedFormControl('');
+  meals: Meal[] = [];
+  menu: Menu | undefined;
+  menuFile = new UntypedFormControl('');
+  menuName = new UntypedFormControl('');
   maxSize = 2; //Mo
 
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
-    this.getDailyMenu();
-    this.getAllMenus();
+    this.getMenu();
+    this.getAllMeals();
   }
 
   /**
@@ -45,12 +45,12 @@ export class RestaurantComponent implements OnInit {
   }
 
   /**
-   * Retrieves all menus from database
+   * Retrieves all meals from database
    */
-  getAllMenus() {
-    this.restaurantService.getAllMenus().subscribe((menus) => {
-      this.menus = menus.reverse();
-      this.menus.map((m) => {
+  getAllMeals() {
+    this.restaurantService.getAllMeals().subscribe((meals) => {
+      this.meals = meals.reverse();
+      this.meals.map((m) => {
         m.selected = false;
         m.displayed = true;
         m.fileForm = this.addMenuFileForm();
@@ -59,95 +59,96 @@ export class RestaurantComponent implements OnInit {
   }
 
   /**
-   * Create a menu and send it to database
+   * Create a meal and send it to database
    */
-  createMenu() {
+  createMeal() {
     let m = {
       title: 'EDIT_TITLE',
       price: 0,
       image: '',
       description: 'EDIT_DESCRIPTION',
     };
-    this.restaurantService.createMenu(m).subscribe(() => this.getAllMenus());
+    this.restaurantService.createMeal(m).subscribe(() => this.getAllMeals());
   }
 
   /**
-   * Delete the selected menus in database
+   * Delete the selected meals in database
    */
-  deleteMenus() {
-    let toDelete$ = this.menus
+  deleteMeals() {
+    let toDelete$ = this.meals
       .filter((m) => m.selected)
       .map((m) => {
-        return this.restaurantService.deleteMenu(m._id!);
+        return this.restaurantService.deleteMeal(m._id!);
       });
-    forkJoin(toDelete$).subscribe(() => this.getAllMenus());
+    forkJoin(toDelete$).subscribe(() => this.getAllMeals());
   }
 
   /**
-   * Update the currently selected menus to the database
+   * Update the currently selected meals to the database
    */
-  updateMenus() {
-    let payload = cloneDeep(this.menus);
+  updateMeals() {   
+    let payload = cloneDeep(this.meals);
     payload.map((m) => {
       if (m.fileForm.value.image) {
         m.file = m.fileForm.value.image;
       }
       delete m.fileForm;
     });
+    
     let toUpdate$ = payload
       .filter((m) => m.selected)
       .map((m) => {
-        return this.restaurantService.updateMenu(m);
+        return this.restaurantService.updateMeal(m);
       });
-    forkJoin(toUpdate$).subscribe(() => this.getAllMenus());
+    forkJoin(toUpdate$).subscribe(() => this.getAllMeals());
   }
 
   /**
-   * Create a daily menu and send it to database
+   * Create a menu and send it to database
    */
-  createDailyMenu() {
+  createMenu() {
     let m = {
-      title: this.dailyMenuName.value,
-      file: this.dailyMenuFile.value,
+      title: this.menuName.value,
+      file: this.menuFile.value,
       active: true,
     };
-    this.restaurantService.createDailyMenu(m).subscribe(() => this.ngOnInit());
+    this.restaurantService.createMenu(m).subscribe(() => this.ngOnInit());
   }
 
   /**
    * Retrieves the daily menu from database
    */
-  getDailyMenu() {
+  getMenu() {
     this.restaurantService
-      .getDailyMenu()
-      .subscribe((dailyMenu) => (this.dailyMenu = dailyMenu[0]));
+      .getMenu()
+      .subscribe((menu) => (this.menu = menu[0]));
   }
 
   /**
    * Update the current dailyMenu in database
    * @param d DailyMenu
    */
-  updateDailyMenu(d: DailyMenu) {
-    this.restaurantService.updateDailyMenu(d).subscribe();
+  updateMenu(d: Menu) {
+    this.restaurantService.updateMenu(d).subscribe();
   }
 
   /**
    * Select all displayed menu depending on criteria
    */
   selectAll() {
-    if (this.menus.filter((m) => m.displayed).every((m) => m.selected)) {
-      this.menus.map((m) => (m.selected = false));
+    if (this.meals.filter((m) => m.displayed).every((m) => m.selected)) {
+      this.meals.map((m) => (m.selected = false));
     } else {
-      this.menus.filter((m) => m.displayed).map((m) => (m.selected = true));
+      this.meals.filter((m) => m.displayed).map((m) => (m.selected = true));
     }
   }
 
   /**
    * Display all menus who satisfies criterias
    */
-  displayMenu() {
-    this.menus.map((m) => (m.displayed = false));
-    this.menus
+  displayMeals() {
+    this.meals.map((m) => (m.displayed = false));
+    this.meals
       .filter((m) => {
         return (
           m.language === this.language ||

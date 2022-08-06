@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Menu, DailyMenu } from './interface';
+import { Meal, Menu } from './interface';
 import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RestaurantService {
-  private apiUrl = API_URL + 'menu/';
+  private apiUrl = API_URL + 'restaurant/';
   private auth = 'Bearer ' + localStorage.getItem('token');
   private httpOptions = {
     headers: new HttpHeaders({
@@ -19,29 +19,29 @@ export class RestaurantService {
 
   /**
    * Create a
-   * @param menu to the database
+   * @param meal to the database
    * @returns an observable
    */
-  createMenu(menu: Menu) {
-    return this.http.post<Menu>(this.apiUrl, menu, this.httpOptions);
+  createMeal(meal: Meal) {  
+    return this.http.post<Meal>(this.apiUrl, meal, this.httpOptions);
   }
 
   /**
-   * @returns an observable containing all menus[]
+   * @returns an observable containing all meal[]
    */
-  getAllMenus() {
-    return this.http.get<Menu[]>(this.apiUrl, this.httpOptions);
+  getAllMeals() {
+    return this.http.get<Meal[]>(this.apiUrl, this.httpOptions);
   }
 
   /**
    * Update the current
-   * @param menu to the database
+   * @param meal to the database
    * @returns an observable
    */
-  updateMenu(menu: Menu) {
+  updateMeal(meal: Meal) {
     const formData = new FormData();
-    Object.keys(menu).forEach((key) =>
-      formData.append(key, menu[key as keyof Menu])
+    Object.keys(meal).forEach((key) =>
+      formData.append(key, meal[key as keyof Meal])
     );
     const httpOptions = {
       headers: new HttpHeaders({
@@ -53,25 +53,25 @@ export class RestaurantService {
   }
 
   /**
-   * Delete the menu defined by his
-   * @param menuId
+   * Delete the meal defined by his
+   * @param mealId
    * @returns an observable
    */
-  deleteMenu(menuId: string) {
-    let url = this.apiUrl + menuId;
+  deleteMeal(mealId: string) {
+    let url = this.apiUrl + mealId;
     return this.http.delete<any>(url, this.httpOptions);
   }
 
   /**
    * Create a
-   * @param dailyMenu to the database
+   * @param menu to the database
    * @returns an observable
    */
-  createDailyMenu(dailyMenu: any) {
+  createMenu(menu: any) {
     const formData = new FormData();
-    formData.append('title', dailyMenu.title);
-    formData.append('file', dailyMenu.file);
-    formData.append('active', dailyMenu.active);
+    formData.append('title', menu.title);
+    formData.append('file', menu.file);
+    formData.append('active', menu.active);
     formData.append('pdf', '');
     const httpOptions = {
       headers: new HttpHeaders({
@@ -79,45 +79,31 @@ export class RestaurantService {
         Authorization: this.auth,
       }),
     };
-    return this.http.post<any>(
-      this.apiUrl + '/dailyMenu',
-      formData,
-      httpOptions
-    );
+    return this.http.post<any>(this.apiUrl + 'menu', formData, httpOptions);
   }
 
   /**
-   * @returns the dailyMenu from the database
+   * @returns the menu from the database
    */
-  getDailyMenu() {
-    return this.http.get<DailyMenu[]>(
-      this.apiUrl + '/dailyMenu',
-      this.httpOptions
-    );
+  getMenu() {
+    return this.http.get<Menu[]>(this.apiUrl + 'menu', this.httpOptions);
   }
 
   /**
    * Update the
-   * @param dailyMenu
+   * @param menu
    * @returns an observable
    */
-  updateDailyMenu(dailyMenu: any) {
+  updateMenu(menu: any) {
     const formData = new FormData();
-    console.log(dailyMenu);
 
-    Object.keys(dailyMenu).forEach((key) =>
-      formData.append(key, dailyMenu[key])
-    );
+    Object.keys(menu).forEach((key) => formData.append(key, menu[key]));
     const httpOptions = {
       headers: new HttpHeaders({
         enctype: 'multipart/form-data',
         Authorization: this.auth,
       }),
     };
-    return this.http.put<any>(
-      this.apiUrl + '/dailyMenu',
-      formData,
-      httpOptions
-    );
+    return this.http.put<any>(this.apiUrl + 'menu', formData, httpOptions);
   }
 }

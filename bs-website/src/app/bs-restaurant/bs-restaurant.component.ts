@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
-import { Menu, DailyMenu } from '../interface';
+import { Meal, Menu } from '../interface';
 
 @Component({
   selector: 'app-bs-restaurant',
@@ -14,27 +14,27 @@ export class BsRestaurantComponent {
     { value: 'main', viewValue: 'Plats' },
     { value: 'dessert', viewValue: 'Desserts' },
   ];
-  menus: Menu[] = [];
-  starters: Menu[] = [];
-  mains: Menu[] = [];
-  desserts: Menu[] = [];
+  meals: Meal[] = [];
+  starters: Meal[] = [];
+  mains: Meal[] = [];
+  desserts: Meal[] = [];
   selectedLocale: any;
 
   constructor(private restaurantService: RestaurantService) {
     this.selectedLocale = localStorage.getItem('locale');
     this.getDailyMenu();
-    this.getAllMenus();
+    this.getAllMeals();
   }
 
   /**
    * Gather all menu from database and sort them by category.
    */
-  getAllMenus() {
-    this.restaurantService.getAllMenus().subscribe((menus: Menu[]) => {
-      this.menus = menus.filter(
-        (m: Menu) => m.language === this.selectedLocale
+  getAllMeals() {
+    this.restaurantService.getAllMeals().subscribe((meals: Meal[]) => {
+      this.meals = meals.filter(
+        (m: Meal) => m.language === this.selectedLocale
       );
-      this.menus.forEach((m) => {
+      this.meals.forEach((m) => {
         switch (m.category) {
           case 'starter':
             this.starters.push(m);
@@ -57,7 +57,7 @@ export class BsRestaurantComponent {
    */
   getDailyMenu() {
     this.restaurantService
-      .getDailyMenu()
-      .subscribe((dailyMenu: DailyMenu[]) => (this.dailyMenu = dailyMenu[0]));
+      .getMenu()
+      .subscribe((dailyMenu: Menu[]) => (this.dailyMenu = dailyMenu[0]));
   }
 }

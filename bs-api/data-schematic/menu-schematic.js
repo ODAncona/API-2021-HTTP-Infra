@@ -4,28 +4,20 @@ const uniqueValidator = require('mongoose-unique-validator');
 const menuSchema = mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: false
   },
-  price: {
-    type: Number,
-    required: true
-  },
-  image: {
+  pdf: {
     type: String,
     required: false
   },
-  description: {
-    type: String,
-    required: true
-  },
-  language: {
-    type: String,
+  date: {
+    type: Date,
     required: false
   },
-  category: {
-    type: String,
-    required: false
-  },
+  active: {
+    type: Boolean,
+    required: true,
+  }
 });
 
 menuSchema.plugin(uniqueValidator);

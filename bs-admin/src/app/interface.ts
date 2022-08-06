@@ -12,7 +12,7 @@ export interface Promotion {
   filesForm?: any;
 }
 
-export interface Menu {
+export interface Meal {
   title: string;
   price: number;
   image: string;
@@ -62,7 +62,7 @@ export interface Mail {
   html: any;
 }
 
-export interface DailyMenu {
+export interface Menu {
   title: string;
   pdf: string;
   _id?: string;

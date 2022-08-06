@@ -30,9 +30,9 @@ export interface Promotion {
 }
 
 /**
- * This interface describes a Menu entry for the restaurant.
+ * This interface describes a Meal entry for the restaurant.
  */
-export interface Menu {
+export interface Meal {
   title: string;
   price: number;
   image: string;
@@ -46,9 +46,9 @@ export interface Menu {
 }
 
 /**
- * This interface describes a dailyMenu for the restaurant
+ * This interface describes a menu for the restaurant
  */
-export interface DailyMenu {
+export interface Menu {
   _id?: string;
   title: string;
   pdf: string;

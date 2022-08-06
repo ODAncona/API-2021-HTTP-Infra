@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Menu } from './interface';
+import { Meal } from './interface';
 import { API_URL } from './interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RestaurantService {
-  private apiUrl = API_URL + 'menu';
+  private apiUrl = API_URL + 'restaurant';
   private auth = 'Bearer ' + localStorage.getItem('token');
   private httpOptions = {
     headers: new HttpHeaders({
@@ -20,36 +19,36 @@ export class RestaurantService {
 
   /**
    * Create a
-   * @param menu in the database and
+   * @param meal in the database and
    * @returns an observable of the response
    */
-  createMenu(menu: Menu) {
-    return this.http.post<Menu>(this.apiUrl, menu, this.httpOptions);
+  createMeal(meal: Meal) {
+    return this.http.post<Meal>(this.apiUrl, meal, this.httpOptions);
   }
 
   /**
-   * Read all menus from the database and
+   * Read all meals from the database and
    * @returns an observable of the response with a Menu[] body
    */
-  getAllMenus() {
-    return this.http.get<any>(this.apiUrl, this.httpOptions);
+  getAllMeals() {
+    return this.http.get<Meal[]>(this.apiUrl, this.httpOptions);
   }
 
   /**
-   * @returns the Daily menu in the database
+   * @returns the menu in the database
    */
-  getDailyMenu() {
-    return this.http.get<any>(this.apiUrl + '/dailyMenu', this.httpOptions);
+  getMenu() {
+    return this.http.get<any>(this.apiUrl + '/menu', this.httpOptions);
   }
 
   /**
    * Update the
-   * @param menu in the database and
+   * @param meal in the database and
    * @returns an observable of the response
    */
-  updateMenu(menu: any) {
+  updateMeal(meal: any) {
     const formData = new FormData();
-    Object.keys(menu).forEach((key) => formData.append(key, menu[key]));
+    Object.keys(meal).forEach((key) => formData.append(key, meal[key]));
     const httpOptions = {
       headers: new HttpHeaders({
         enctype: 'multipart/form-data',
@@ -60,12 +59,12 @@ export class RestaurantService {
   }
 
   /**
-   * Delete in the database a menu defined by his
-   * @param menuId and
+   * Delete in the database a meal defined by his
+   * @param mealId and
    * @returns an observable of the response
    */
-  deleteMenu(menuId: string) {
-    let url = this.apiUrl + '/' + menuId;
+  deleteMeal(mealId: string) {
+    let url = this.apiUrl + '/' + mealId;
     return this.http.delete<any>(url, this.httpOptions);
   }
 }

@@ -7,18 +7,18 @@ video {
   overflow: hidden;
 }
 
-.menu {
+.meal {
   margin: 2%;
 }
 
-.menus {
+.meals {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.menu-item {
+.meal-item {
   margin-top: 1%;
   max-width: 20%;
   min-width: 300px;
