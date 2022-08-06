@@ -1,33 +1,42 @@
 <div class="wrapper">
-  <video autoplay loop>
-    <source src="../../../assets/vidéos/fitness.mp4" type="video/mp4">
-  </video>
+  
+  <div class="dream">
+    <video autoplay loop>
+      <source src="../../../assets/vidéos/fitness.mp4" type="video/mp4" />
+    </video>
+  </div>
+
   <h1 class="fitTitle">A Fitness for Adelboden</h1>
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Offers
-      </mat-panel-title>
+      <mat-panel-title> Offers </mat-panel-title>
       <mat-panel-description>
         Choose the plan that fits your needs.
       </mat-panel-description>
     </mat-expansion-panel-header>
     <div class="offers">
       <div class="offer" *ngFor="let o of offers">
-        <p>{{o.description}}</p>
-        <p>{{o.price}}.-</p>
+        <p>{{ o.description }}</p>
+        <p>{{ o.price }}.-</p>
       </div>
     </div>
-    <button mat-raised-button color="accent" class="orderButton" (click)="orderSubscription()">Suscribe / Renew</button>
+    <button
+      mat-raised-button
+      color="accent"
+      class="orderButton"
+      (click)="orderSubscription()"
+    >
+      Suscribe / Renew
+    </button>
   </mat-expansion-panel>
   <h1 class="fitSubtitle">Benefits</h1>
   <div class="benefits">
     <mat-card class="benefit-card" *ngFor="let benefit of benefits">
       <mat-card-header>
-        <mat-card-title>{{benefit.title | uppercase}}</mat-card-title>
+        <mat-card-title>{{ benefit.title | uppercase }}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>{{benefit.description}}</p>
+        <p>{{ benefit.description }}</p>
       </mat-card-content>
     </mat-card>
   </div>
