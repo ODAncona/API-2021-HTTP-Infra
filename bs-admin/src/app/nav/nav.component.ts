@@ -15,7 +15,8 @@ export class NavComponent implements OnInit {
   navs = [
     { link: '/statistics', name: 'Statistiques' },
     { link: '/promotions', name: 'Promotions' },
-    { link: '/restaurant', name: 'Restaurant' },
+    { link: '/restaurant', name: 'Restaurant-meals' },
+    { link: '/menus', name: 'Restaurant-menus'},
     { link: '/reviews', name: 'Reviews' },
   ];
   isHandset$: Observable<boolean> = this.breakpointObserver

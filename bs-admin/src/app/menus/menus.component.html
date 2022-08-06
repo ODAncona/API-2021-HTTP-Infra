@@ -1,0 +1,71 @@
+<mat-toolbar class="toolbar">
+    <mat-form-field appearance="fill">
+      <mat-label>Language</mat-label>
+      <mat-select [(value)]="language" (selectionChange)="displayMenus()">
+        <mat-option *ngFor="let language of languages" [value]="language.value">
+          {{language.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-button-toggle-group aria-label="Category selection">
+      <mat-button-toggle selectable="true" (click)="category='carte'; displayMenus();"> Carte</mat-button-toggle>
+      <mat-button-toggle selectable="true" (click)="category='halfboard'; displayMenus();"> Halfboard</mat-button-toggle>
+      <mat-button-toggle selectable="true" (click)="category='banquet'; displayMenus();"> Banquet</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="btn-group">
+      <button mat-button style="width:25%" color="warning" (click)="createMenu()">Add</button>
+      <button mat-button style="width:25%" color="warning" (click)="deleteMenus()">Delete</button>
+      <button mat-button style="width:25%" (click)="updateMenus()"> Save </button>
+      <button mat-button style="width:25%" id="allButton" (click)="selectAll()">Select All </button>
+      <button mat-button style="width:4%" id="allButton" (click)="getAllMenus()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+  
+  <div class="menus">
+    <ng-container *ngFor="let menu of menus">
+      <div class="card" *ngIf="menu.displayed" (click)="menu.selected=!menu.selected">
+        <div>
+          <h2>Title</h2>
+          <input matInput [(ngModel)]="menu.title" />
+        </div>
+        <div>
+          <h2>Active</h2>
+          <mat-slide-toggle matInput [(ngModel)]="menu.active"></mat-slide-toggle>
+        </div>
+        <div>
+          <h2>Language</h2>
+          <mat-select [(value)]="menu.language">
+            <mat-option value="en">English</mat-option>
+            <mat-option value="de">Deutsch</mat-option>
+            <mat-option value="fr">Français</mat-option>
+          </mat-select>
+        </div>
+        <div>
+          <h2>Category</h2>
+          <mat-select [(value)]="menu.category">
+            <mat-option value="carte">Carte</mat-option>
+            <mat-option value="halfboard">Halfboard</mat-option>
+            <mat-option value="banquet">Banquet</mat-option>
+          </mat-select>
+        </div>
+
+              <!-- File Input !-->
+      <ng-container [formGroup]="menu.fileForm">
+        <div class="pdf">
+          <h2>PDF</h2>
+          <mat-form-field>
+            <ngx-mat-file-input formControlName="pdf" [multiple]="false" accept="application/pdf">
+              <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+            </ngx-mat-file-input>
+          </mat-form-field>
+          <a href="{{menu.pdf}}">Flyer</a>
+        </div>
+        </ng-container>
+  
+        <mat-checkbox class="checkbox" [checked]="menu.selected"></mat-checkbox>
+      </div>
+    </ng-container>
+  </div>
+  

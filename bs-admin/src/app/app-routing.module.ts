@@ -5,6 +5,7 @@ import { NavComponent } from './nav/nav.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { MenusComponent } from './menus/menus.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AuthGuard } from './auth.guard';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'statistics', component: StatisticsComponent },
       { path: 'promotions', component: PromotionsComponent },
       { path: 'restaurant', component: RestaurantComponent },
+      { path: 'menus', component: MenusComponent },
       { path: 'reviews', component: ReviewsComponent },
     ],
   },

@@ -22,7 +22,7 @@ export class RestaurantService {
    * @param meal to the database
    * @returns an observable
    */
-  createMeal(meal: Meal) {  
+  createMeal(meal: Meal) {
     return this.http.post<Meal>(this.apiUrl, meal, this.httpOptions);
   }
 
@@ -83,9 +83,9 @@ export class RestaurantService {
   }
 
   /**
-   * @returns the menu from the database
+   * @returns all menus from the database
    */
-  getMenu() {
+  getAllMenus() {
     return this.http.get<Menu[]>(this.apiUrl + 'menu', this.httpOptions);
   }
 
@@ -105,5 +105,17 @@ export class RestaurantService {
       }),
     };
     return this.http.put<any>(this.apiUrl + 'menu', formData, httpOptions);
+  }
+
+  /**
+   * Delete the menu defined by his
+   * @param menuId
+   * @returns an observable
+   */
+  deleteMenu(menuId: string) {
+    let url = this.apiUrl + 'menu/' + menuId;
+    console.log(url);
+        
+    return this.http.delete<any>(url, this.httpOptions);
   }
 }

@@ -17,7 +17,15 @@ const menuSchema = mongoose.Schema({
   active: {
     type: Boolean,
     required: true,
-  }
+  },
+  language: {
+    type: String,
+    required: false
+  },
+  category: {
+    type: String,
+    required: false
+  },
 });
 
 menuSchema.plugin(uniqueValidator);

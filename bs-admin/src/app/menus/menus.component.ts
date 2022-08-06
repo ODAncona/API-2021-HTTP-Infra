@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { RestaurantService } from '../restaurant.service';
-import { Meal, Language, MAX_SIZE } from '../interface';
+import { Language, Menu, MAX_SIZE } from '../interface';
 import { MaxSizeValidator } from '@angular-material-components/file-input';
 import cloneDeep from 'lodash/cloneDeep';
 
 @Component({
-  selector: 'app-restaurant',
-  templateUrl: './restaurant.component.html',
-  styleUrls: ['./restaurant.component.scss'],
+  selector: 'app-menus',
+  templateUrl: './menus.component.html',
+  styleUrls: ['./menus.component.scss'],
 })
-export class RestaurantComponent implements OnInit {
+export class MenusComponent implements OnInit {
   category: string | undefined;
   language: string | undefined;
   languages: Language[] = [
@@ -19,20 +19,20 @@ export class RestaurantComponent implements OnInit {
     { value: 'de', viewValue: 'Deutsch' },
     { value: 'en', viewValue: 'English' },
   ];
-  meals: Meal[] = [];
+  menus: Menu[] = [];
 
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
-    this.getAllMeals();
+    this.getAllMenus();
   }
 
   /**
-   * @returns meal fileForm
+   * @returns menu fileForm
    */
-  addMealFileForm() {
+  addMenuFileForm() {
     const fileForm = new UntypedFormGroup({
-      image: new UntypedFormControl('', [
+      pdf: new UntypedFormControl('', [
         MaxSizeValidator(MAX_SIZE * 1024 * 1024),
       ]),
     });
@@ -40,49 +40,49 @@ export class RestaurantComponent implements OnInit {
   }
 
   /**
-   * Retrieves all meals from database
+   * Retrieves all menus from database
    */
-  getAllMeals() {
-    this.restaurantService.getAllMeals().subscribe((meals) => {
-      this.meals = meals.reverse();
-      this.meals.map((m) => {
+  getAllMenus() {
+    this.restaurantService.getAllMenus().subscribe((menus) => {
+      this.menus = menus.reverse();
+      this.menus.forEach((m) => {
         m.selected = false;
         m.displayed = true;
-        m.fileForm = this.addMealFileForm();
+        m.fileForm = this.addMenuFileForm();
       });
     });
   }
 
   /**
-   * Create a meal and send it to database
+   * Create a menu and send it to database
    */
-  createMeal() {
+  createMenu() {
     let m = {
       title: 'EDIT_TITLE',
       price: 0,
       image: '',
       description: 'EDIT_DESCRIPTION',
     };
-    this.restaurantService.createMeal(m).subscribe(() => this.getAllMeals());
+    this.restaurantService.createMenu(m).subscribe(() => this.getAllMenus());
   }
 
   /**
-   * Delete the selected meals in database
+   * Delete the selected menus in database
    */
-  deleteMeals() {
-    let toDelete$ = this.meals
+  deleteMenus() {
+    let toDelete$ = this.menus
       .filter((m) => m.selected)
       .map((m) => {
-        return this.restaurantService.deleteMeal(m._id!);
+        return this.restaurantService.deleteMenu(m._id!);
       });
-    forkJoin(toDelete$).subscribe(() => this.getAllMeals());
+    forkJoin(toDelete$).subscribe(() => this.getAllMenus());
   }
 
   /**
-   * Update the currently selected meals to the database
+   * Update the currently selected menus to the database
    */
-  updateMeals() {
-    let payload = cloneDeep(this.meals);
+  updateMenus() {
+    let payload = cloneDeep(this.menus);
     payload.map((m) => {
       if (m.fileForm.value.image) {
         m.file = m.fileForm.value.image;
@@ -93,28 +93,28 @@ export class RestaurantComponent implements OnInit {
     let toUpdate$ = payload
       .filter((m) => m.selected)
       .map((m) => {
-        return this.restaurantService.updateMeal(m);
+        return this.restaurantService.updateMenu(m);
       });
-    forkJoin(toUpdate$).subscribe(() => this.getAllMeals());
+    forkJoin(toUpdate$).subscribe(() => this.getAllMenus());
   }
 
   /**
    * Select all displayed menu depending on criteria
    */
   selectAll() {
-    if (this.meals.filter((m) => m.displayed).every((m) => m.selected)) {
-      this.meals.map((m) => (m.selected = false));
+    if (this.menus.filter((m) => m.displayed).every((m) => m.selected)) {
+      this.menus.map((m) => (m.selected = false));
     } else {
-      this.meals.filter((m) => m.displayed).map((m) => (m.selected = true));
+      this.menus.filter((m) => m.displayed).map((m) => (m.selected = true));
     }
   }
 
   /**
    * Display all menus who satisfies criterias
    */
-  displayMeals() {
-    this.meals.map((m) => (m.displayed = false));
-    this.meals
+  displayMenus() {
+    this.menus.forEach((m) => (m.displayed = false));
+    this.menus
       .filter((m) => {
         return (
           m.language === this.language ||
@@ -123,6 +123,7 @@ export class RestaurantComponent implements OnInit {
           m.category == undefined
         );
       })
-      .map((m) => (m.displayed = true));
+      .forEach((m) => (m.displayed = true));
+    this.menus.sort((a, b) => (a.active === b.active ? 0 : a.active ? -1 : 1));
   }
 }

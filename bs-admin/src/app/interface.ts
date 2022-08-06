@@ -65,12 +65,21 @@ export interface Mail {
 export interface Menu {
   title: string;
   pdf: string;
+  active: boolean;
   _id?: string;
+  file?: any;
+  language?: string;
+  category?: string;
+  selected?: boolean;
+  displayed?: boolean;
+  fileForm?: any;
 }
 
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
 //const API_URL = "http://localhost/api/"
 const API_URL = 'http://localhost:1470/';
+const MAX_SIZE = 2; //Mo
 
-export { API_URL };
+
+export { API_URL, MAX_SIZE };

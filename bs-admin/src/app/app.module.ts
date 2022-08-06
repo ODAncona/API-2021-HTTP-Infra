@@ -26,6 +26,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 /* EXTERN MODULES */
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
@@ -39,6 +41,7 @@ import { PromotionsComponent } from './promotions/promotions.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { MenusComponent } from './menus/menus.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
     RestaurantComponent,
     ReviewsComponent,
     StatisticsComponent,
+    MenusComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -77,9 +81,11 @@ import { StatisticsComponent } from './statistics/statistics.component';
     MatTabsModule,
     MatStepperModule,
     MatSnackBarModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule,
     NgxMatFileInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

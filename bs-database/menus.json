@@ -4,5 +4,5 @@
   },
   "title": "Menu du jour",
   "active": true,
-  "pdf": "http://localhost/api/upload/document/Menu_1641246290792.pdf"
+  "pdf": "http://localhost:1470/upload/document/Menu_1641246290792.pdf"
 }]
