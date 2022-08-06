@@ -8,7 +8,10 @@ import { Meal, Menu } from '../interface';
   styleUrls: ['./bs-restaurant.component.scss'],
 })
 export class BsRestaurantComponent {
-  dailyMenu: any = '';
+  menus: Menu[] = [];
+  carteMenu: any;
+  halfboard: any;
+  banquet: any;
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
@@ -22,7 +25,7 @@ export class BsRestaurantComponent {
 
   constructor(private restaurantService: RestaurantService) {
     this.selectedLocale = localStorage.getItem('locale');
-    this.getDailyMenu();
+    this.getAllMenus();
     this.getAllMeals();
   }
 
@@ -53,11 +56,26 @@ export class BsRestaurantComponent {
   }
 
   /**
-   * Retrieves Daily menu from database.
+   * Retrieves all menus from database.
    */
-  getDailyMenu() {
-    this.restaurantService
-      .getMenu()
-      .subscribe((dailyMenu: Menu[]) => (this.dailyMenu = dailyMenu[0]));
+  getAllMenus() {
+    this.restaurantService.getAllMenus().subscribe((menus) => {
+      this.menus = menus.reverse();
+      this.menus.forEach((m) => {       
+        switch (m.category) {
+          case 'carte':
+            this.carteMenu = m;
+            break;
+          case 'halfboard':
+            this.halfboard = m;
+            break;
+          case 'banquet':
+            this.banquet = m;
+            break;
+          default:
+            break;
+        }
+      });
+    });
   }
 }

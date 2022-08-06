@@ -49,9 +49,15 @@ export interface Meal {
  * This interface describes a menu for the restaurant
  */
 export interface Menu {
-  _id?: string;
   title: string;
   pdf: string;
+  active: boolean;
+  _id?: string;
+  file?: any;
+  language?: string;
+  category?: string;
+  selected?: boolean;
+  displayed?: boolean;
 }
 
 /**

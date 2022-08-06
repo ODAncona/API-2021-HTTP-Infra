@@ -38,7 +38,7 @@ exports.createMenu = (req, res) => {
     .catch((error) => res.status(500).json("Failure: " + error));
 };
 
-exports.getMenu = (req, res) => {
+exports.getAllActiveMenus = (req, res) => {
   Menu.find({
     active: 1,
   })
