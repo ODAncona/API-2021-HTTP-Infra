@@ -22,30 +22,36 @@ export class BsHomeComponent {
     config.pauseOnHover = true;
   }
 
-  cards:any[] = [
+  cards: any[] = [
     {
-      title: "Rooms",
-      url:"/rooms"
+      title: 'Rooms',
+      url: '/rooms',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
     {
-      title: "Restaurant",
-      url:"/restaurant"
+      title: 'Restaurant',
+      url: '/restaurant',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
     {
-      title: "Promotions",
-      url:"/promotion"
+      title: 'Promotions',
+      url: '/promotion',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
     {
-      title: "Wellness-Fitness",
-      url:"/wellness"
+      title: 'Wellness-Fitness',
+      url: '/wellness',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
     {
-      title: "Region",
-      url:"/region"
+      title: 'Region',
+      url: '/region',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
     {
-      title: "Team",
-      url:"/team"
+      title: 'Team',
+      url: '/team',
+      img: '../../assets/images/photos/slide_home1.jpg',
     },
-  ]
+  ];
 }
