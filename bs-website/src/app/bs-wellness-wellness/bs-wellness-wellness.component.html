@@ -1,62 +1,62 @@
 <div class="fan">
   <div class="big">
     <h1 class="title">Spa</h1>
-    <div class="text">
-      <p>Our Spa is the ultimate relaxation space. You’ll be feeling rejuvenated, revitalised and more laid-back than a cat in a pool of sunlight.</p>
-    </div>
+    <p class="text text-left">
+      Enjoy various offers in our small wellness oasis. Our spa has a sauna, a
+      sanarium, a steam bath, an infrared sauna and a spacious relaxation room
+      with a wonderful mountain view where you can relax.
+    </p>
   </div>
-  <div class="small">
-    <img src="../../assets/images/photos/wellness_SPA.jpg" alt="spa" style="width:100%">
+  <div class="small right">
+    <img src="../../assets/images/photos/wellness_SPA.jpg" alt="spa" />
   </div>
 </div>
 
 <div class="fan">
-  <div class="small">
-    <img src="../../assets/images/photos/wellness_outdoor_sauna.jpg" alt="sauna" style="width:100%">
+  <div class="small left">
+    <img
+      src="../../assets/images/photos/wellness_outdoor_sauna.jpg"
+      alt="sauna"
+    />
   </div>
   <div class="big">
     <h1 class="title">Outdoor Wellness</h1>
-    <div class="text">
-      <p>Gardensauna with cold water Hotwater pot (Fr. 45.00 / only on request)</p>
-    </div>
+    <p class="text">
+      Take a sauna in our cosy barrel sauna, which is located in the outdoor
+      area. After a dip in the cold water pool or the cold water shower, you can
+      enjoy the peace and quiet in the adjacent relaxation room.
+    </p>
   </div>
 </div>
 
-<div class="fan">
+<div class="fan-massage">
   <div class="big">
     <h1 class="title">Massages</h1>
+    <p class="text">
+      Book a soothing massage and let our masseuses pamper you. Book the
+      appointment early enough, so that it also works out safely with us.
+    </p>
     <div class="tarif">
-      <div class="massage">
-        <p>Back Massage</p>
-        <p>30'/50.- , 60'/90.-</p>
-      </div>
-      <div class="massage">
-        <p>Foot Massage</p>
-        <p>30'/50.- , 60'/90.-</p>
-      </div>
-      <div class="massage">
-        <p>Full Body Massage</p>
-        <p>30'/50.- , 60'/90.-</p>
-      </div>
-      <div class="massage">
-        <p>Oil Massage</p>
-        <p>30'/50.- , 60'/90.-</p>
+      <div *ngFor="let m of massages" class="massage">
+        <p>{{ m.name }}</p>
+        <p>{{ m.price }}</p>
       </div>
     </div>
   </div>
-  <div class="small">
-    <img src="../../assets/images/photos/wellness_massage.jpg" alt="sauna" style="width:100%">
+  <div class="small right">
+    <img src="../../assets/images/photos/wellness_massage.jpg" alt="sauna" />
   </div>
 </div>
 
 <div class="fan">
-  <div class="small">
-    <img src="../../assets/images/photos/wellness_repos.jpg" alt="sauna" style="width:100%">
+  <div class="small left">
+    <img src="../../assets/images/photos/wellness_repos.jpg" alt="sauna" />
   </div>
   <div class="big">
-    <h1 class="title">Salle de repos</h1>
-    <div class="text">
-      <p>The perfect place to rest, or read a book</p>
-    </div>
+    <h1 class="title">Lounge room</h1>
+    <p class="text">
+      In the spacious relaxation room you can relax, read a book or enjoy the
+      view of the wonderful Adelboden mountain panorama.
+    </p>
   </div>
 </div>

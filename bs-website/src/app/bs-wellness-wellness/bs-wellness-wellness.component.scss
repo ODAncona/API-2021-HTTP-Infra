@@ -3,52 +3,86 @@
   flex-wrap: wrap;
   align-items: stretch;
   align-content: stretch;
-  background-color: rgba(62,28,34,0.9);
+  background-color: rgba(62, 28, 34, 0.9);
+}
 
-  .big {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-basis: 60%;
-    color: white;
-    flex-flow: column;
-    justify-content: center;
-    width: 100%;
-  }
+.big {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  color: white;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+}
 
-  .small {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-basis: 40%;
-    height: 100%;
-  }
+.small {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.title {
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: cursive;
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.text {
+  justify-content: center;
+  text-align: justify;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+}
+
+p {
+  text-align: justify;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.left {
+  justify-content: left;
+}
+
+.right {
+  justify-content: right;
+}
+
+.fan-massage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: rgba(62, 28, 34, 0.9);
+}
+
+.massage {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: space-between;
+  align-items: flex-start;
 
   .title {
-    margin: 1em;
     text-align: center;
+    font-family: cursive;
+    font-size: 2em;
   }
+}
 
-  .tarif {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .text {
-    justify-content: center;
-    text-align: justify;
-    margin: 10% 2em 2em;
-  }
-
-  .massage {
-    display: flex;
-    flex-direction: row;
-    margin-left: 15%;
-    margin-right: 15%;
-    height: 4em;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.tarif {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
 }
