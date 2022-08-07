@@ -23,7 +23,7 @@ export class PromotionsComponent implements OnInit {
 
   constructor(private promotionService: PromotionService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
     this.getAllPromotions();
   }
 

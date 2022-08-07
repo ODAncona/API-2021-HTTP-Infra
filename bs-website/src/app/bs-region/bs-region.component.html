@@ -9,12 +9,14 @@
 <mat-divider></mat-divider>
 
 <div class="season">
-  <div class="dream">
-    <video autoplay loop muted>
-      <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4" />
-    </video>
-    <h2>Summer</h2>
-  </div>
+  <!--
+    <div class="dream">
+      <video autoplay loop muted>
+        <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4" />
+      </video>
+      <h2>Summer</h2>
+    </div>
+  -->
   <div class="activites" *ngFor="let a of summer">
     <a href="{{ a.link }}">
       <h2>{{ a.title }}</h2>

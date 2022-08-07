@@ -69,6 +69,27 @@ mat-card {
   .flex-item-right {
     flex: 100%;
   }
+  .dream {
+    height: 35%;
+    h2{
+      position: absolute;
+      z-index: 1;
+      top: 12%;
+      left: 20%;
+      font-family: cursive;
+      width: 60%;
+      font-size: 2em;
+      text-shadow: 1em;
+      text-align: center;
+      font-size: 4em;
+      line-height: 1em;
+      background-color: rgba(255, 255, 255, 0.56);
+      border-radius: 0.2em;
+      color: black;
+      padding: 0.15em;
+      padding-top: 20px;
+    }
+  }
 }
 
 .cards {

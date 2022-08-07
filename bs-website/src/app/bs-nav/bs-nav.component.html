@@ -2,7 +2,7 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$) ? 'over' : 'push'">
     <mat-toolbar>
       Hôtel Beau-Site
-      <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
+      <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
     </mat-toolbar>
     <mat-nav-list *ngFor="let nav of navs" (click)="handleClick(nav)">
       <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
@@ -19,12 +19,9 @@
           <span>{{activeLink | titlecase}}</span>
         </div>
         <a href="/home" class="logo">
-          <img src="../../../assets/images/logo/Beausite logo.svg" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
+          <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite" style="height:80%; margin: 10px;" />
         </a>
-        <mat-form-field appearance="outline" class="ils">
-          <mat-label>
-            <mat-icon>language</mat-icon>
-          </mat-label>
+        <mat-form-field appearance="outline" class="ils" id="ils">
           <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
             <mat-option [value]="l.code" *ngFor="let l of localesList">
               <p>

@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class BsRegionComponent implements OnInit {
   benefits: any[] = [
     {
-      title: 'MySwitzerland',
+      title: 'MySwitzerland.com',
       url: 'https://www.myswitzerland.com/en-ch/destinations/adelboden/',
       img: '../../assets/images/photos/home_mountain.jpg',
     },
     {
-      title: 'Adelboden',
+      title: 'Adelboden.ch',
       url: 'https://adelboden.ch/de/',
       img: '../../assets/images/photos/home_village.jpg',
     },
     {
-      title: 'MyBerge',
+      title: 'Meine-Berge.ch',
       url: 'https://meine-berge.ch/en/',
       img: '../../assets/images/photos/home_village.jpg',
     },

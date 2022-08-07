@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class BsWellnessFitnessComponent {
   benefits: any[] = [
     { title: "Suspension", description: "Suspend your subscription for free (from 7 to 90 days/year)" },
-    { title: "Reduction", description: "Special 50% price for Student/AVS/AI/Apprentice" },
+    { title: "Reduction", description: "Special reduction with guest card. 15 CHF instead of 20 CHF" },
     { title: "Sponsorship", description: "Are you recommanding us? Get a free month for each new subscriber" },
   ];
   offers: any[] = [
@@ -18,7 +18,7 @@ export class BsWellnessFitnessComponent {
     { description: "3 months", price: "300" },
     { description: "6 months", price: "450" },
     { description: "12 months", price: "550" },
-    { description: "Renew 12 months", price: "510" },
+    { description: "Renew 12 months", price: "490" },
     { description: "Sauna access", price: "150" },
   ];
 
