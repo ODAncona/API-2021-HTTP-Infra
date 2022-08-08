@@ -34,17 +34,17 @@ mat-card {
     left: 20%;
     font-family: cursive;
     width: 60%;
-    font-size: xx-large;
     font-weight: 400;
     text-shadow: 1em;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1em;
     background-color: rgba(255, 255, 255, 0.56);
     border-radius: 0.2em;
     color: black;
     padding: 0.15em;
     padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -78,7 +78,6 @@ mat-card {
       left: 20%;
       font-family: cursive;
       width: 60%;
-      font-size: 2em;
       text-shadow: 1em;
       text-align: center;
       font-size: 4em;
@@ -105,5 +104,40 @@ mat-card {
 
   img {
     max-height: 600px;
+  }
+}
+
+@media (max-width: 465px) {
+  .flex-item-left,
+  .flex-item-right {
+    flex: 100%;
+  }
+  .dream {
+    height: 25%;
+    h2{
+      position: absolute;
+      z-index: 1;
+      top: 12%;
+      left: 20%;
+      font-family: cursive;
+      width: 60%;
+      text-align: center;
+      font-size: 3em;
+      line-height: 1em;
+      background-color: rgba(255, 255, 255, 0.56);
+      border-radius: 0.2em;
+      color: black;
+      padding: 0.15em;
+      padding-top: 20px;
+    }
+  }
+  .card {
+    margin-top: 1%;
+    max-width: 29%;
+    min-width: 350px;
+  
+    img {
+      max-height: 600px;
+    }
   }
 }

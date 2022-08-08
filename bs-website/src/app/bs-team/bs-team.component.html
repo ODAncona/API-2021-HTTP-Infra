@@ -8,11 +8,13 @@
   </p>
 </div>
 
-<div class="team-photo">
-  <div *ngFor="let w of workers" class="worker">
-    <img class="worker-photo" src="{{ w.image }}" alt="{{ w.function }}" />
-    <p class="worker-description">
-      {{ w.firstname }},{{ w.lastname }}: {{ w.function }}
-    </p>
-  </div>
+<div class="team">
+  <mat-card *ngFor="let w of workers" class="team-card">
+    <img mat-card-image src="{{ w.image }}" alt="{{ w.function }}" />
+    <mat-card-content>
+      <p>
+        {{ w.firstname }}, {{ w.lastname }}: {{ w.function }}
+      </p>
+    </mat-card-content>
+  </mat-card>
 </div>

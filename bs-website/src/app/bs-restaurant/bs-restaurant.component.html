@@ -6,7 +6,7 @@
 
 <div class="display-menu">
   <h1 class="sectionTitle">A la carte</h1>
-  <pdf-viewer *ngIf="carteMenu.pdf; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+  <pdf-viewer *ngIf="carteMenu; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noCarteMenu>
     <h2 style="text-align:center;">We don't provide a la carte menu yet.</h2>
   </ng-template>
@@ -14,7 +14,7 @@
 
 <div class="display-menu">
   <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Halfboard</h1>
-  <pdf-viewer *ngIf="halfboard.pdf; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+  <pdf-viewer *ngIf="halfboard; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noHalfboard>
     <h2 style="text-align:center;">The halfboard is only available on demand</h2>
   </ng-template>
@@ -22,7 +22,7 @@
 
 <div class="display-menu">
   <h1 class="sectionTitle" i18n="restaurant-title | Demi-Pension title">Banquet Menus</h1>
-  <pdf-viewer *ngIf="banquet.pdf; else noBanquet" [src]="banquet.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
+  <pdf-viewer *ngIf="banquet; else noBanquet" [src]="banquet.pdf" [render-text]="true" [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noBanquet>
     <h2 style="text-align:center;">No Banquets for now</h2>
   </ng-template>
