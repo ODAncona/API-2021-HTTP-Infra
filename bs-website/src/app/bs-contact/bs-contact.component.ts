@@ -41,7 +41,7 @@ export class BsContactComponent {
       (result) => this._snackBar.open(result, 'close'),
       (error) =>
         this._snackBar.open(
-          $localize `Unable to send contact informations, please send us an email directly to info@beausite.ch`,
+          $localize `Unable to send contact informations, please send us an email directly to info@hotelbeausite.ch`,
           $localize `close`
         )
     );
