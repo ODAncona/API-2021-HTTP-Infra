@@ -1,0 +1,72 @@
+<mat-toolbar class="toolbar">
+  <div class="btn-group">
+    <button
+      mat-button
+      style="width: 25%"
+      color="warning"
+      (click)="createMember()"
+    >
+      Add
+    </button>
+    <button
+      mat-button
+      style="width: 25%"
+      color="warning"
+      (click)="deleteMembers()"
+    >
+      Delete
+    </button>
+    <button mat-button style="width: 25%" (click)="updateMembers()">
+      Save
+    </button>
+    <button mat-button style="width: 25%" id="allButton" (click)="selectAll()">
+      Select All
+    </button>
+    <button
+      mat-button
+      style="width: 4%"
+      id="allButton"
+      (click)="getAllTeamMembers()"
+    >
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="members">
+  <ng-container *ngFor="let member of members">
+    <div
+      class="card"
+      *ngIf="member.displayed"
+      (click)="member.selected = !member.selected"
+    >
+      <div>
+        <h2>Firstname</h2>
+        <input matInput [(ngModel)]="member.firstname" />
+      </div>
+      <div>
+        <h2>Lastname</h2>
+        <input matInput [(ngModel)]="member.lastname" />
+      </div>
+      <div>
+        <h2>Function</h2>
+        <input matInput [(ngModel)]="member.function" />
+      </div>
+
+      <!-- File Input !-->
+      <div class="img" [formGroup]="member.fileForm">
+        <div class="container">
+          <h2>Image</h2>
+          <mat-form-field>
+            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png" (change)="member.image=''">
+              <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+            </ngx-mat-file-input>
+          </mat-form-field>
+        </div>
+        <img src="{{member.image}}">
+      </div>
+
+      <mat-checkbox class="checkbox" [checked]="member.selected"></mat-checkbox>
+    </div>
+  </ng-container>
+</div>

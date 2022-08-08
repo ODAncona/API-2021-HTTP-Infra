@@ -10,7 +10,9 @@
 
 <div class="team-photo">
   <div *ngFor="let w of workers" class="worker">
-    <img class="worker-photo" src="{{ w.url }}" alt="{{ w.description }}" />
-    <p class="worker-description">{{ w.name }},{{ w.work }}</p>
+    <img class="worker-photo" src="{{ w.image }}" alt="{{ w.function }}" />
+    <p class="worker-description">
+      {{ w.firstname }},{{ w.lastname }}: {{ w.function }}
+    </p>
   </div>
 </div>

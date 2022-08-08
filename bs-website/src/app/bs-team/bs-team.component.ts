@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from '../interface';
+import { TeamService } from '../team.service';
 
 @Component({
   selector: 'app-bs-team',
@@ -6,64 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bs-team.component.scss'],
 })
 export class BsTeamComponent implements OnInit {
-  workers: any[] = [
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Doble_clasica.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Doble_Superior.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/fitness_machines.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_BARRA.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Classic.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Decoracion.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_DestacadoH.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/rooms/rooms_premium1.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-    {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Terraza2.jpg',
-      description: 'Description incroyable',
-      name: 'Hans Peter',
-      work: 'gastgeber',
-    },
-  ];
+  workers: Member[] = [];
+  constructor(private teamService: TeamService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.getAllTeamMembers();
+  }
 
-  ngOnInit(): void {}
+  /**
+   * Retrieves all workers from database
+   */
+  getAllTeamMembers() {
+    this.teamService.getAllMembers().subscribe((members) => {
+      this.workers = members.reverse();
+    });
+  }
 }

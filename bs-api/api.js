@@ -10,6 +10,7 @@ const reviewRoute = require('./route/review-route');
 const restaurantRoute = require('./route/restaurant-route');
 const promotionRoute = require('./route/promotion-route');
 const mailRoute = require('./route/mail-route');
+const teamRoute = require('./route/team-route');
 const api = express();
 
 api.use((req, res, next) => {
@@ -33,6 +34,7 @@ api.use('/review', reviewRoute);
 api.use('/restaurant', restaurantRoute);
 api.use('/promotion', promotionRoute);
 api.use('/mail', mailRoute);
+api.use('/team', teamRoute);
 
 
 module.exports = api;

@@ -86,6 +86,17 @@ export interface Room {
 }
 
 /**
+ * This interface describe a Team member
+ */
+export interface Member {
+  firstname: string;
+  lastname: string;
+  function: string;
+  image: string;
+  _id?: string;
+}
+
+/**
  * This interface describes a service. It can have an angular material icon
  */
 export interface Service {

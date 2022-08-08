@@ -42,6 +42,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { MenusComponent } from './menus/menus.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MenusComponent } from './menus/menus.component';
     ReviewsComponent,
     StatisticsComponent,
     MenusComponent,
+    TeamComponent,
   ],
   imports: [
     AppRoutingModule,

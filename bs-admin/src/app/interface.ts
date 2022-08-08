@@ -75,6 +75,17 @@ export interface Menu {
   fileForm?: any;
 }
 
+export interface Member {
+  firstname: string;
+  lastname: string;
+  function: string;
+  image: string;
+  _id?: string;
+  selected?: boolean;
+  displayed?: boolean;
+  fileForm?: any;
+}
+
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
 //const API_URL = "http://localhost/api/"

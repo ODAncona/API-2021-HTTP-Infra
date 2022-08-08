@@ -7,6 +7,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MenusComponent } from './menus/menus.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { TeamComponent } from './team/team.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'restaurant', component: RestaurantComponent },
       { path: 'menus', component: MenusComponent },
       { path: 'reviews', component: ReviewsComponent },
+      { path: 'team', component:TeamComponent}
     ],
   },
   { path: '**', redirectTo: 'login' },
