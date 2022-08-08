@@ -39,39 +39,39 @@ export class BsPhotosComponent implements OnInit {
   galleryData: Item[] = [
     {
       url: '../../assets/images/photos/Hotel_Beau_Doble_clasica.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Doble_Superior.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/fitness_machines.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_BARRA.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_Classic.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_Decoracion.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_DestacadoH.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/rooms/rooms_premium1.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
     {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_Terraza2.jpg',
-      description: 'Description incroyable',
+      description: 'Hotel Beau-Site picture',
     },
   ];
   @Input() showCount = false;

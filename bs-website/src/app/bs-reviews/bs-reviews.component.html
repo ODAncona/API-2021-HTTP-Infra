@@ -10,10 +10,7 @@
 </div>
 <div class="review-header">
   <div class="review-header">
-    <h1
-      class="sectionTitle"
-      i18n="review-title | titre pour écrire son propre review"
-    >
+    <h1 class="sectionTitle" i18n="review-title | titre pour écrire son propre review">
       Write a review
     </h1>
     <button mat-fab color="primary" class="addReview" (click)="addReview()">
@@ -54,6 +51,6 @@
 
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
-    <a href="{{ benefit.url }}"><img div src="{{ benefit.img }}" /></a>
+    <a href="{{ benefit.url }}"><img src="{{ benefit.img }}" alt="{{ benefit.title }}" /></a>
   </div>
 </div>

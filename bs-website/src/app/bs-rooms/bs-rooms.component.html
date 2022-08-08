@@ -14,7 +14,7 @@
     >
       <ng-template *ngFor="let image of room.images" ngbSlide>
         <div class="picsum-img-wrapper">
-          <img mat-card-image src="{{ image }}" alt="Random first slide" />
+          <img mat-card-image src="{{ image }}" alt="{{room.title}} image" />
         </div>
       </ng-template>
     </ngb-carousel>
