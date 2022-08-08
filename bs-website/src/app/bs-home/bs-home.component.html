@@ -12,7 +12,7 @@
   <video autoplay loop muted>
     <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4">
   </video>
-  <h2>Welcome to Hôtel Beau-Site</h2>
+  <h2 i18n="video-overlay | invitation sur la vidéo">Welcome to Hôtel Beau-Site</h2>
 </div>
 
 <h2 class="mainTitle" i18n="home-title | Accroche principale">SPEND AN UNFORGETTABLE HOLIDAY IN A CHALET-HOTEL IN SWITZERLAND</h2>
@@ -31,7 +31,7 @@
     </mat-card-header>
     <img mat-card-image src="{{card.img}}" alt="{{card.title}}">
     <mat-card-actions>
-      <a routerLink="{{card.url}}"><button mat-stroked-button i18n="cards-btn | more button" color="accent">More informations</button></a>
+      <a routerLink="{{card.url}}"><button mat-stroked-button i18n="cards-btn | more button" color="accent" i18n="card-link | lien qui pointe dans le site">More informations</button></a>
     </mat-card-actions>
   </mat-card>
   <h2 *ngIf="!cards?.length" i18n="promotions-msg | no proms msg">No promotion are actually available.</h2>

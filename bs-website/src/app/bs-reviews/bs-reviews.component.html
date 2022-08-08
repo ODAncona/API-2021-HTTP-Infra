@@ -1,6 +1,6 @@
 <div class="text">
-  <h1 class="mainTitle">Beau-Site Reviews</h1>
-  <p>
+  <h1 class="mainTitle" i18n="review-title | title of hotel reviews">Beau-Site Reviews</h1>
+  <p i18n="review-description | descriptions des avis">
     We are pleased to receive your feedback, suggestions, and constructive
     criticism. You are welcome to share your observations with us directly
     on-site. Consequently, we can respond accordingly. Thank you very much for
@@ -10,7 +10,7 @@
 </div>
 <div class="review-header">
   <div class="review-header">
-    <h1 class="sectionTitle" i18n="review-title | titre pour écrire son propre review">
+    <h1 class="sectionTitle" i18n="review-welcome | titre pour écrire son propre review">
       Write a review
     </h1>
     <button mat-fab color="primary" class="addReview" (click)="addReview()">
@@ -18,7 +18,7 @@
     </button>
   </div>
   <div class="review-header">
-    <h1>Mean</h1>
+    <h1 i18n="review-note | Moyenne des notes des reviews">Mean</h1>
     <button mat-fab color="accent" class="grade">
       {{ average | number: "1.1-1" }}
     </button>
@@ -47,7 +47,7 @@
 
 <mat-divider></mat-divider>
 
-<h1 class="mainTitle">Or feel free to review us on</h1>
+<h1 class="mainTitle" i18n="reviews-external | plus de reviews en externe(titre)">Or feel free to review us on</h1>
 
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
