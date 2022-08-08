@@ -2,7 +2,27 @@
   "_id": {
     "$oid": "61d36e5236e766f9b22b0ac0"
   },
-  "title": "Menu du jour",
+  "title": "Menu du 18-10-2022",
   "active": true,
-  "pdf": "http://localhost:1470/upload/document/Menu_1641246290792.pdf"
+  "pdf": "http://localhost:1470/upload/document/Menu_1641246290792.pdf",
+  "language": "en",
+  "category": "banquet"
+},{
+  "_id": {
+    "$oid": "62ee4cf2912362e8702d570e"
+  },
+  "title": "6 Août",
+  "active": true,
+  "pdf": "http://localhost:1470/upload/document/Menu_1641246290792.pdf",
+  "category": "halfboard",
+  "language": "en"
+},{
+  "_id": {
+    "$oid": "62ee5dc7dace7af7e4b10ce6"
+  },
+  "title": "Menu de printemps",
+  "active": true,
+  "pdf": "http://localhost:1470/upload/document/carte_1659790029802.pdf",
+  "category": "carte",
+  "language": "en"
 }]
