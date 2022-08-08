@@ -60,7 +60,7 @@ export class BsReviewsModalComponent {
       this.reviewService.createReview(this.review).subscribe();
       if (!active) {
         alert(
-          'Your review has been registered and will be checked before publication.'
+          $localize `Your review has been registered and will be checked before publication.`
         );
       }
       this.dialogRef.close();

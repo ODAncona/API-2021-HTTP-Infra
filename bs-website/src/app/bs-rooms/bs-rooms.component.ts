@@ -20,7 +20,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Parking couvert' },
       ],
       description:
-        'The Basic double rooms have a small terrace, some with a view of the mountains.',
+        $localize`The Basic double rooms have a small terrace, some with a view of the mountains.`,
       roomSize: '20',
     },
     {
@@ -40,7 +40,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'These rooms have a balcony facing the village street, with a view of the Tschentenalp.',
+        $localize`These rooms have a balcony facing the village street, with a view of the Tschentenalp.`,
       roomSize: '20',
     },
     {
@@ -60,7 +60,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.',
+        $localize`These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.`,
       roomSize: '28',
     },
     {
@@ -80,7 +80,7 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.',
+        $localize`These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.`,
       roomSize: '28',
     },
     {
@@ -100,9 +100,9 @@ export class BsRoomsComponent {
         { icon: 'home', name: 'Sèche-cheveux' },
       ],
       description:
-        'These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.',
+        $localize`These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.`,
       roomSize: '32, 39',
     },
   ];
-  constructor() {}
+  constructor() { }
 }
