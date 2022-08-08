@@ -11,7 +11,7 @@ export class BsRestaurantComponent {
   menus: Menu[] = [];
   carteMenu: any;
   halfboard: any;
-  banquet: any;
+  banquets: Menu[] = [];
   options: any[] = [
     { value: 'starter', viewValue: 'Entrées' },
     { value: 'main', viewValue: 'Plats' },
@@ -70,7 +70,7 @@ export class BsRestaurantComponent {
             this.halfboard = m;
             break;
           case 'banquet':
-            this.banquet = m;
+            this.banquets.push(m);
             break;
           default:
             break;
