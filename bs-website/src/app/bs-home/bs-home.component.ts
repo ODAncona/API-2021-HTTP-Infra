@@ -26,32 +26,32 @@ export class BsHomeComponent {
     {
       title: 'Rooms',
       url: '/rooms',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_rooms.jpg',
     },
     {
       title: 'Restaurant',
       url: '/restaurant',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_restaurant.jpg',
     },
     {
       title: 'Promotions',
       url: '/promotion',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_promotions.jpg',
     },
     {
       title: 'Wellness-Fitness',
       url: '/wellness',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_wellness_fitness.jpg',
     },
     {
       title: 'Region',
       url: '/region',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_region.jpg',
     },
     {
       title: 'Team',
       url: '/team',
-      img: '../../assets/images/photos/slide_home1.jpg',
+      img: '../../assets/images/home/home_team.jpg',
     },
   ];
 }
