@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
@@ -8,29 +8,30 @@
           <context context-type="sourcefile">node_modules/src/alert/alert.ts</context>
           <context context-type="linenumber">42,44</context>
         </context-group>
-      <target>Fermer</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
-        <source> Slide <x id="INTERPOLATION" equiv-text="switching when"/> of <x id="INTERPOLATION_1" equiv-text="e slide.    *"/> </source>
+        <source> Slide <x id="INTERPOLATION" equiv-text="switching when"/> of <x id="INTERPOLATION_1" equiv-text="e slide.
+   *"/> </source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">157,165</context>
         </context-group>
         <note priority="1" from="description">Currently selected slide number read by screen reader</note>
-      <target>Diapositive de</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
         <source>Previous</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">188,191</context>
         </context-group>
-      <target>Précédent</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
         <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">207,209</context>
         </context-group>
-      <target>Suivant</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
         <source>Select month</source>
         <context-group purpose="location">
@@ -41,7 +42,7 @@
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">41,42</context>
         </context-group>
-      <target>Sélectionnez le mois</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
         <source>Select year</source>
         <context-group purpose="location">
@@ -52,7 +53,7 @@
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">41,42</context>
         </context-group>
-      <target>Sélectionnez l'année</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
         <source>Previous month</source>
         <context-group purpose="location">
@@ -63,7 +64,7 @@
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">43,46</context>
         </context-group>
-      <target>Mois précédent</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
         <source>Next month</source>
         <context-group purpose="location">
@@ -74,175 +75,175 @@
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">43,46</context>
         </context-group>
-      <target>Mois suivant</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.first" datatype="html">
         <source>««</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>««</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
         <source>«</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>«</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
         <source>»</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>»</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.last" datatype="html">
         <source>»»</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>»»</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
         <source>First</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,226</context>
         </context-group>
-      <target>Premier</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
         <source>Previous</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,226</context>
         </context-group>
-      <target>Précédent</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
         <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>Suivant</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
         <source>Last</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">224,225</context>
         </context-group>
-      <target>Dernier</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="* The maxim"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
           <context context-type="linenumber">23,26</context>
         </context-group>
-      <target></target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
         <source>HH</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">138,140</context>
         </context-group>
-      <target>HH</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
         <source>Hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">161</context>
         </context-group>
-      <target>Heures</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
         <source>MM</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">182</context>
         </context-group>
-      <target>MM</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
         <source>Minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">198,199</context>
         </context-group>
-      <target>Minutes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
         <source>Increment hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">217,218</context>
         </context-group>
-      <target>Incrémenter heures</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
         <source>Decrement hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">238,239</context>
         </context-group>
-      <target>Décrémenter heures</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
         <source>Increment minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">262,265</context>
         </context-group>
-      <target>Incrémenter les minutes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
         <source>Decrement minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">285,287</context>
         </context-group>
-      <target>Décrémenter les minutes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
         <source>SS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target>SS</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
         <source>Seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target>Secondes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
         <source>Increment seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target>Incrémenter les secondes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
         <source>Decrement seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target>Décrémenter les secondes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
         <source><x id="INTERPOLATION"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target></target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.timepicker.AM" datatype="html">
         <source><x id="INTERPOLATION"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">295</context>
         </context-group>
-      <target></target></trans-unit>
+      </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
         <source>Close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
           <context context-type="linenumber">70,71</context>
         </context-group>
-      <target>Fermer</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4030165902723598309" datatype="html">
         <source>Enter a date range</source>
         <context-group purpose="location">
@@ -251,7 +252,7 @@
         </context-group>
         <note priority="1" from="description"> demander une date pour le checking/checkout</note>
         <note priority="1" from="meaning">date-placeholder </note>
-      <target>Entrez une plage de date</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2300583094133437823" datatype="html">
         <source>Invalid start date</source>
         <context-group purpose="location">
@@ -260,7 +261,7 @@
         </context-group>
         <note priority="1" from="description"> date invalide</note>
         <note priority="1" from="meaning">invalid-start-date </note>
-      <target>Date de check-in invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3555909085560447610" datatype="html">
         <source>Invalid end date</source>
         <context-group purpose="location">
@@ -269,7 +270,7 @@
         </context-group>
         <note priority="1" from="description"> date invalide</note>
         <note priority="1" from="meaning">invalid-end-date </note>
-      <target>Date de check-out invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5730244888110800853" datatype="html">
         <source>Book</source>
         <context-group purpose="location">
@@ -278,7 +279,7 @@
         </context-group>
         <note priority="1" from="description"> réservation sur Ezee</note>
         <note priority="1" from="meaning">book-btn </note>
-      <target>Réservation</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5108116462234265828" datatype="html">
         <source>invalid email</source>
         <context-group purpose="location">
@@ -287,7 +288,7 @@
         </context-group>
         <note priority="1" from="description"> email invalide</note>
         <note priority="1" from="meaning">invalid-email </note>
-      <target>E-mail invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2221413940161625454" datatype="html">
         <source>tell us more</source>
         <context-group purpose="location">
@@ -296,21 +297,21 @@
         </context-group>
         <note priority="1" from="description"> dites nous en plus</note>
         <note priority="1" from="meaning">invalid-size </note>
-      <target>dites nous en plus</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3204123607901326277" datatype="html">
         <source>Unable to send contact informations, please send us an email directly to info@beausite.ch</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-contact/bs-contact.component.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
-      <target>Impossible de prendre contact, veuillez nous écrire à info@hotelbeausite.ch</target></trans-unit>
+      </trans-unit>
       <trans-unit id="202442244688100878" datatype="html">
         <source>close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-contact/bs-contact.component.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
-      <target>fermer</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8129404840321772198" datatype="html">
         <source>Welcome to Hôtel Beau-Site</source>
         <context-group purpose="location">
@@ -319,7 +320,7 @@
         </context-group>
         <note priority="1" from="description"> invitation sur la vidéo</note>
         <note priority="1" from="meaning">video-overlay </note>
-      <target>Bienvenue à l'hôtel Beau-Site</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4772281754720321668" datatype="html">
         <source>SPEND AN UNFORGETTABLE HOLIDAY IN A CHALET-HOTEL IN SWITZERLAND</source>
         <context-group purpose="location">
@@ -328,7 +329,7 @@
         </context-group>
         <note priority="1" from="description"> Accroche principale</note>
         <note priority="1" from="meaning">home-title </note>
-      <target>Passez un séjour inoubliable dans un chalet en Suisse</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3570104563716195368" datatype="html">
         <source> Surrounded by the Alps , green meadows , towering cliffs and amidst the ancient tradition and genuine Swiss culture is romantic Adelboden Hotel Beau Boutique This luxury boutique hotel has 36 rooms, a beautiful restaurant with traditional cuisine and a spa and fitness area. In recent years it has become one of the best hotels in Adelboden , and even in the Bernese Oberland. The hotel offers a very special combination of traditional chalet spirit and modern comforts of a four star country house style.
 </source>
@@ -336,9 +337,9 @@
           <context context-type="sourcefile">src/app/bs-home/bs-home.component.html</context>
           <context context-type="linenumber">20,24</context>
         </context-group>
-        <note priority="1" from="description"> description de l'hôtel</note>
+        <note priority="1" from="description"> description de l&apos;hôtel</note>
         <note priority="1" from="meaning">home-description </note>
-      <target>Et c'est ce que vous propose dès aujourd'hui l'Oberland bernois Un hôtel de tradition de charme dans un environnement exceptionnel. Bienvenue dans notre chalet hôtel de charme et tradition, un hôtel avec le service et le standard d'un 4 étoiles.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6113660598642704210" datatype="html">
         <source>More informations</source>
         <context-group purpose="location">
@@ -347,7 +348,7 @@
         </context-group>
         <note priority="1" from="description"> more button</note>
         <note priority="1" from="meaning">cards-btn </note>
-      <target>Plus d'informations</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6463625134815733349" datatype="html">
         <source>No promotion are actually available.</source>
         <context-group purpose="location">
@@ -356,7 +357,7 @@
         </context-group>
         <note priority="1" from="description"> no proms msg</note>
         <note priority="1" from="meaning">promotions-msg </note>
-      <target>Aucune offre n'est actuellement disponible.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="411246840501543469" datatype="html">
         <source>Description</source>
         <context-group purpose="location">
@@ -365,7 +366,7 @@
         </context-group>
         <note priority="1" from="description"> Titre pour la descriptiond des chambres</note>
         <note priority="1" from="meaning">room-header </note>
-      <target>Description</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4548897397430657804" datatype="html">
         <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>shopping_cart<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
         <context-group purpose="location">
@@ -378,7 +379,7 @@
         </context-group>
         <note priority="1" from="description"> more button</note>
         <note priority="1" from="meaning">promotions-btn </note>
-      <target></target></trans-unit>
+      </trans-unit>
       <trans-unit id="4413320578922926573" datatype="html">
         <source> Back to promotions </source>
         <context-group purpose="location">
@@ -387,7 +388,7 @@
         </context-group>
         <note priority="1" from="description"> bouton retour</note>
         <note priority="1" from="meaning">promotions-back </note>
-      <target>Retour aux offres</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8455473345853026382" datatype="html">
         <source>Book a promotion</source>
         <context-group purpose="location">
@@ -396,7 +397,7 @@
         </context-group>
         <note priority="1" from="description"> réserver une prom</note>
         <note priority="1" from="meaning">promotion-title </note>
-      <target>Réserver une offre</target></trans-unit>
+      </trans-unit>
       <trans-unit id="210203871981166949" datatype="html">
         <source>Invalid firstname</source>
         <context-group purpose="location">
@@ -405,7 +406,7 @@
         </context-group>
         <note priority="1" from="description"> prénom invalide (taille trop petite)</note>
         <note priority="1" from="meaning">error-firstname </note>
-      <target>Prénom invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6447971192274270079" datatype="html">
         <source>Invalid lastname</source>
         <context-group purpose="location">
@@ -414,7 +415,7 @@
         </context-group>
         <note priority="1" from="description"> nom invalide (taille trop petite)</note>
         <note priority="1" from="meaning">error-lastname </note>
-      <target>Nom invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3845931353719395753" datatype="html">
         <source>Invalid email</source>
         <context-group purpose="location">
@@ -427,7 +428,7 @@
         </context-group>
         <note priority="1" from="description"> email invalide</note>
         <note priority="1" from="meaning">error-email </note>
-      <target>Email invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="7132709320177444499" datatype="html">
         <source>Choose a date</source>
         <context-group purpose="location">
@@ -436,7 +437,7 @@
         </context-group>
         <note priority="1" from="description"> choisir une date</note>
         <note priority="1" from="meaning">promotion-date </note>
-      <target>Choissisez une date</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4120991766351226843" datatype="html">
         <source>Invalid number</source>
         <context-group purpose="location">
@@ -447,9 +448,9 @@
           <context context-type="sourcefile">src/app/bs-wellness-fitness-modal/bs-wellness-fitness-modal.component.html</context>
           <context context-type="linenumber">32</context>
         </context-group>
-        <note priority="1" from="description"> numéro de téléphone ne respectant pas l'indicatif suisse</note>
+        <note priority="1" from="description"> numéro de téléphone ne respectant pas l&apos;indicatif suisse</note>
         <note priority="1" from="meaning">error-number </note>
-      <target>Numéro de téléphone invalide</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2328614633943309315" datatype="html">
         <source> More informations </source>
         <context-group purpose="location">
@@ -458,7 +459,7 @@
         </context-group>
         <note priority="1" from="description"> more button</note>
         <note priority="1" from="meaning">promotions-btn </note>
-      <target>Plus d'informations</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6267402787230270052" datatype="html">
         <source> No promotion are actually available. </source>
         <context-group purpose="location">
@@ -467,7 +468,7 @@
         </context-group>
         <note priority="1" from="description"> no proms msg</note>
         <note priority="1" from="meaning">promotions-msg </note>
-      <target>Aucune offre n'est actuellement disponible.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8471487881386607602" datatype="html">
         <source>Summer</source>
         <context-group purpose="location">
@@ -475,7 +476,7 @@
           <context context-type="linenumber">20</context>
         </context-group>
         <note priority="1" from="description">season-title</note>
-      <target>Été</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4996922266254528864" datatype="html">
         <source>Winter</source>
         <context-group purpose="location">
@@ -483,108 +484,105 @@
           <context context-type="linenumber">34</context>
         </context-group>
         <note priority="1" from="description">season-title2</note>
-      <target>Hiver</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3251595315211663111" datatype="html">
         <source>Set off on two wheels and you are quickly heading for a completely new mountain experience. Experienced professionals, practice areas, and rental equipment are available to ensure you get the best possible start. Mountain bikers and seasoned cyclists have long been riding the challenging trails and long leisurely distances in the great outdoors.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
-      <target>De la sortie en famille aux difficiles pistes de freeride, et des routes naturelles aux chemins couverts d’asphalte: les amateurs de vélo ont tous un paradis qui les attend parmi les trois vallées de l’Adelboden-Lenk-Kandersteg. C’est dans cette destination centrale de vacances que se trouvent les très célèbres circuits de VTT suisses, les «Alpine Bike», des pump tracks, mais aussi des pistes d’entraînement. En outre, toutes ces pistes vous permettront de vivre une expérience authentique en pleine nature et de profiter de panoramas inoubliables.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1388589090642796155" datatype="html">
         <source>Where better to broaden your horizons than in the Bernese Alps? The view sweeps serenely over peaks and gorges, and the longing to take big steps into the unknown increases.Planned hikes are also an option as there is no shortage of longer tours and places to stay along your chosen route.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      <target>Randonnées panoramiques, randonnées à thème, circuits, excursions en haute montage: les possibilités sont aussi diverses que nombreuses pour découvrir la région Adelboden-Lenk-Kandersteg. C’est à vous de choisir si vous souhaitez parcourir les gorges, cols et forêts en solitaire ou avec un guide local. Chaque pas sur les chemins bien balisés vous réserve un point ensoleillé ou un panorama spectaculaire.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4770062864663959268" datatype="html">
         <source>During the summer holidays open daily from 11 a.m.to 4 p.m.!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
-      <target>Jusqu'au 14 août ouvert tous les jours de 11h00 - 16h00!​
-(uniquement par beau temps)</target></trans-unit>
+      </trans-unit>
       <trans-unit id="883252849860840430" datatype="html">
         <source>Swing through the air like Tarzan, let your adrenaline rush when abseiling from a bridge, glide over the river at top speed on a cable car and, last but not least, dare a huge pendulum swing? This is what awaits you in the Adventure Park - Adelboden.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
-      <target>Se balancer dans les airs comme Tarzan, faire monter l'adrénaline en descendant en rappel d'un pont, glisser à toute vitesse sur une tyrolienne au-dessus de la rivière et, pour finir, oser un énorme virage pendulaire ? Voilà ce qui vous attend à l'Adventure Park - Adelboden.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3651824611142060051" datatype="html">
         <source>If you like action, explore the impressive alpine world with a scooter.The mile - long, varied routes are waiting to be discovered.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
-      <target>Si vous aimez l’action, explorez l’impressionnant monde alpin en trotinette. Les kilomètres de parcours variés n’attendent que d’être découverts.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6682475471876915815" datatype="html">
         <source>Paragliding in all its facets.We offer you a wide range of airy experiences, from simple adventure flights to full - day paragliding adventures.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">54</context>
         </context-group>
-      <target>Le parapente sous toutes ses facettes. Nous vous proposons un large éventail d'expériences aériennes, du simple vol d'aventure à la journée complète de parapente.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="28193807610864864" datatype="html">
         <source>Legendary architecture with panoramic views.Under the alpine sun, the water of the 50 - metre Gruebi pool glistens seductively.On the other hand, when the sky is grey, a trip to indoor swimming pools at the Sportzentrum in Frutigen is a great alternative.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">59</context>
         </context-group>
-      <target>Une architecture de légende pour un coup d’oeil panoramique: sous le soleil alpin, les eaux du vénérable bassin de 50 mètres scintillent irrésistiblement. Par temps maussade, cap sur la piscine couverte et en plein air de Frutigen.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8796943597928268753" datatype="html">
         <source>A warm welcome to our little paradise in the midst of the Kandertal mountains.The Blausee brand stands for uniqueness from start to finish.Hospitality is part of our mission so you can indulge all your senses with us.The Blausee is considered a place of power - one where you can relax and enjoy nature at its best.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
-      <target>Le Blausee doit être un lieu d’énergie dans lequel vous pouvez vous détendre et profiter de la nature sous son plus beau jour. Ce qui vous attend: un petit hôtel de luxe avec spa à l’aménagement charmant, un parc naturel digne d’un conte de fées et une cuisine distinguée par 13 points au Gault &amp; Millau qui vous fera vivre un voyage culinaire. Nous sommes également équipés pour accueillir événements et séminaires et vous proposons un cadre idéal pour votre événement.
-
-</target></trans-unit>
+      </trans-unit>
       <trans-unit id="7016003519242760083" datatype="html">
         <source> concentration, a head for heights and physical strength are all needed when you are moving in a vertical direction.However, the right equipment is just as crucial for visitors when climbing.Fortunately, the mountain guides and climbing supervisors at Adelboden - Lenk - Kandersteg have well - padded mats, deeply anchored hooks and tightly stretched ropes to hand.This allows you to practise manoeuvres and enjoy views that would otherwise only be possible for expert climbers on high alpine tours.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">69</context>
         </context-group>
-      <target>Courage, concentration, absence de vertige et force représentent de sérieux atouts pour les activités à la verticale. Cependant, la sécurité est non moins essentielle pour les personnes pratiquant l’escalade dans notre région. Heureusement, les guides de montagne et les hôtes d’Adelboden-Lenk-Kandersteg fournissent des tapis bien rembourrés, des crochets solidement ancrés et des cordes bien tendues. Vous pouvez ainsi profiter de manœuvres et de panoramas qui ne pourraient sinon être accessibles qu’aux experts de la haute montagne.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3242701190433200001" datatype="html">
         <source>Adelboden - Lenk has earned its reputation as a top ski resort over many decades.Events like the Ski World Cup at Chuenisbärgli or the professional services offered by the snowsports schools are now well - respected winter institutions.But alpine winter traditions are lived very much in the present.Specialist teams prepare the various slopes with great care each day</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
-      <target>Adelboden-Lenk a construit sa renommée de domaine skiable de premier ordre sur plusieurs décennies: des manifestations comme la Coupe du monde au Chuenisbärgli ou les prestations des écoles de sports de neige sont des institutions établies de longue date. La tradition alpine hivernale se vit également au présent: c’est ainsi que les équipes préparent quotidiennement et avec soin les différentes pistes.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2677293039190393136" datatype="html">
-        <source>"The joy is in having the time to forget time..." ... and limitless freedom to enjoy under the professional supervision of our sports instructors.It's a fantastic feeling making those first tracks in deep, freshly fallen snow. Experience a pure, natural world far from the heavy traffic on the piste and in no time the stresses of everyday life will seem miles away. Activities and prices are based on those for individual tuition.</source>
+        <source>&quot;The joy is in having the time to forget time...&quot; ... and limitless freedom to enjoy under the professional supervision of our sports instructors.It&apos;s a fantastic feeling making those first tracks in deep, freshly fallen snow. Experience a pure, natural world far from the heavy traffic on the piste and in no time the stresses of everyday life will seem miles away. Activities and prices are based on those for individual tuition.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">82</context>
         </context-group>
-      <target>La passion des pistes a de nombreux visages. La région d’Adelboden-Lenk-Kandersteg y répond pleinement: les familles, les mordus de freestyle et les adeptes des pistes de la FIS trouveront tous leur parcours préféré dans notre région.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8101124070618470969" datatype="html">
         <source>Snowshoeing is one of the many traditions, still cultivated in Adelboden. Discover peaceful and secluded corners, far away from the crowds.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">87</context>
         </context-group>
-      <target>Les randonnées à raquettes sont une des nombreuses traditions qui sont entretenues encore aujourd’hui à Adelboden. Loin de la civilisation, il permet de découvrir des coins calmes et inconnus.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="838695901114875389" datatype="html">
         <source>Immerse yourself in a world of icicles. What could be cooler than a frozen waterfall? Ice climbing, the fascinating sport in the world of waterfalls and icicles. Here we show you how to move safely in the ice. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">92</context>
         </context-group>
-      <target>Escalade de folie sur la cascade!</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8573973979006455986" datatype="html">
         <source>Please remain seated. In Adelboden, sledge runners are certainly a match for skis. Dozens of miles of trails carry riders through forests and over icing-sugar-coated meadows.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">97</context>
         </context-group>
-      <target>Restez assis! Dans Adelboden, les luges sont de sérieuses concurrentes des skis. Des dizaines de kilomètres de chemins conduisent les lugeurs à travers les forêts et les pâturages saupoudrés de blanc.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="7877733746299247420" datatype="html">
         <source>A la carte</source>
         <context-group purpose="location">
@@ -593,16 +591,16 @@
         </context-group>
         <note priority="1" from="description"> titre des menus à la carte</note>
         <note priority="1" from="meaning">carte-title </note>
-      <target>À la carte</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3853372444663649039" datatype="html">
-        <source>We don't provide a la carte menu yet.</source>
+        <source>We don&apos;t provide a la carte menu yet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-restaurant/bs-restaurant.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
         <note priority="1" from="description"> erreur</note>
         <note priority="1" from="meaning">carte-error </note>
-      <target>Nous n'avons pas encore de menu à la carte</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3248481434957182711" datatype="html">
         <source>Halfboard</source>
         <context-group purpose="location">
@@ -611,7 +609,7 @@
         </context-group>
         <note priority="1" from="description"> Demi-Pension title</note>
         <note priority="1" from="meaning">halfboard-title </note>
-      <target>Demi-pension</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8247508627295429732" datatype="html">
         <source>The halfboard is only available on demand</source>
         <context-group purpose="location">
@@ -620,7 +618,7 @@
         </context-group>
         <note priority="1" from="description"> pas de Demi-Pension</note>
         <note priority="1" from="meaning">halfboard-error </note>
-      <target>La demi-pension est disponible uniquement sur demande</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2280327980846888437" datatype="html">
         <source>Banquet Menus</source>
         <context-group purpose="location">
@@ -629,7 +627,7 @@
         </context-group>
         <note priority="1" from="description"> banquet title</note>
         <note priority="1" from="meaning">banquet-title </note>
-      <target>Menu spéciales</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4181694918420750944" datatype="html">
         <source>No Banquets for now</source>
         <context-group purpose="location">
@@ -638,7 +636,7 @@
         </context-group>
         <note priority="1" from="description"> pas de menus spéciaux</note>
         <note priority="1" from="meaning">banquet-error </note>
-      <target>Veuillez nous contacter par email pour plus d'informations</target></trans-unit>
+      </trans-unit>
       <trans-unit id="942185819697122807" datatype="html">
         <source>Reservations: 078/685 45 54</source>
         <context-group purpose="location">
@@ -647,7 +645,7 @@
         </context-group>
         <note priority="1" from="description"> réservation</note>
         <note priority="1" from="meaning">restaurant-reservation </note>
-      <target>Réservation: 078/865 45 54</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5167662382128110597" datatype="html">
         <source>Give your feedback</source>
         <context-group purpose="location">
@@ -656,7 +654,7 @@
         </context-group>
         <note priority="1" from="description"> titre donnez votre avis</note>
         <note priority="1" from="meaning">modal-title </note>
-      <target>Donnez votre avis</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1066254750805908372" datatype="html">
         <source> Firstname Lastname <x id="START_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;mat-form-field appearance=&quot;outline&quot;&gt;"/><x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input required matInput type=&quot;text&quot; formControlName=&quot;author&quot; placeholder=&quot;Nom, Prénom&quot;&gt;"/><x id="CLOSE_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;/mat-form-field&gt;"/></source>
         <context-group purpose="location">
@@ -665,25 +663,25 @@
         </context-group>
         <note priority="1" from="description"> champs nom prénom</note>
         <note priority="1" from="meaning">modal-name </note>
-      <target>Nom Prénom</target></trans-unit>
+      </trans-unit>
       <trans-unit id="9182119799463593159" datatype="html">
-        <source> Description <x id="START_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;mat-form-field appearance=&quot;outline&quot;&gt;"/><x id="START_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;textarea required matInput cdkTextareaAutosize cdkAutosizeMinRows=&quot;5&quot; i18n-placeholder=&quot;modal-placeholder | donner envie d'écrire&quot; placeholder=&quot;My sojourn at Beausite was ...&quot; formControlName=&quot;description&quot;&gt;"/><x id="CLOSE_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;/textarea&gt;"/><x id="START_TAG_MAT_ERROR" ctype="x-mat_error" equiv-text="&lt;mat-error *ngIf=&quot;reviewForm.invalid&quot;&gt;"/>please tell us more<x id="CLOSE_TAG_MAT_ERROR" ctype="x-mat_error" equiv-text="&lt;/mat-error&gt;"/><x id="CLOSE_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;/mat-form-field&gt;"/></source>
+        <source> Description <x id="START_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;mat-form-field appearance=&quot;outline&quot;&gt;"/><x id="START_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;textarea required matInput cdkTextareaAutosize cdkAutosizeMinRows=&quot;5&quot; i18n-placeholder=&quot;modal-placeholder | donner envie d&apos;écrire&quot; placeholder=&quot;My sojourn at Beausite was ...&quot; formControlName=&quot;description&quot;&gt;"/><x id="CLOSE_TAG_TEXTAREA" ctype="x-textarea" equiv-text="&lt;/textarea&gt;"/><x id="START_TAG_MAT_ERROR" ctype="x-mat_error" equiv-text="&lt;mat-error *ngIf=&quot;reviewForm.invalid&quot;&gt;"/>please tell us more<x id="CLOSE_TAG_MAT_ERROR" ctype="x-mat_error" equiv-text="&lt;/mat-error&gt;"/><x id="CLOSE_TAG_MAT_FORM_FIELD" ctype="x-mat_form_field" equiv-text="&lt;/mat-form-field&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-reviews-modal/bs-reviews-modal.component.html</context>
           <context context-type="linenumber">10,15</context>
         </context-group>
         <note priority="1" from="description"> champs description</note>
         <note priority="1" from="meaning">modal-description </note>
-      <target>Description dites nous en plus</target></trans-unit>
+      </trans-unit>
       <trans-unit id="254116259516703202" datatype="html">
         <source>My sojourn at Beausite was ...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-reviews-modal/bs-reviews-modal.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <note priority="1" from="description"> donner envie d'écrire</note>
+        <note priority="1" from="description"> donner envie d&apos;écrire</note>
         <note priority="1" from="meaning">modal-placeholder </note>
-      <target>Mon séjour au Beau-Site était...</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4431470829615880079" datatype="html">
         <source>Staff</source>
         <context-group purpose="location">
@@ -692,7 +690,7 @@
         </context-group>
         <note priority="1" from="description"> critère clean</note>
         <note priority="1" from="meaning">modal-clean </note>
-      <target>Personnel</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1431072437057323812" datatype="html">
         <source>Clean</source>
         <context-group purpose="location">
@@ -701,7 +699,7 @@
         </context-group>
         <note priority="1" from="description"> critère service</note>
         <note priority="1" from="meaning">modal-service </note>
-      <target>Propreté</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1808872613239477047" datatype="html">
         <source>Location</source>
         <context-group purpose="location">
@@ -710,7 +708,7 @@
         </context-group>
         <note priority="1" from="description"> critère comfort</note>
         <note priority="1" from="meaning">modal-comfort </note>
-      <target>Emplacement</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6289865374776049075" datatype="html">
         <source>Comfort</source>
         <context-group purpose="location">
@@ -719,7 +717,7 @@
         </context-group>
         <note priority="1" from="description"> critère spot</note>
         <note priority="1" from="meaning">modal-spot </note>
-      <target>Comfort</target></trans-unit>
+      </trans-unit>
       <trans-unit id="634732566040748782" datatype="html">
         <source>Breakfast</source>
         <context-group purpose="location">
@@ -728,7 +726,7 @@
         </context-group>
         <note priority="1" from="description"> critère amenity</note>
         <note priority="1" from="meaning">modal-amenity </note>
-      <target>Déjeuner</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8331951148774971547" datatype="html">
         <source>ValueForMoney</source>
         <context-group purpose="location">
@@ -737,7 +735,7 @@
         </context-group>
         <note priority="1" from="description"> critère breakfast</note>
         <note priority="1" from="meaning">modal-breakfast </note>
-      <target>Qualité/Prix</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3069615357227751899" datatype="html">
         <source>Service</source>
         <context-group purpose="location">
@@ -746,14 +744,14 @@
         </context-group>
         <note priority="1" from="description"> critère breakfast</note>
         <note priority="1" from="meaning">modal-breakfast </note>
-      <target>Services</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4079451511937656793" datatype="html">
         <source>Your review has been registered and will be checked before publication.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-reviews-modal/bs-reviews-modal.component.ts</context>
           <context context-type="linenumber">63</context>
         </context-group>
-      <target>Votre avis a été enregistré et sera contrôlé avant la mise en ligne</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3887781085800778570" datatype="html">
         <source>Beau-Site Reviews</source>
         <context-group purpose="location">
@@ -762,7 +760,7 @@
         </context-group>
         <note priority="1" from="description"> title of hotel reviews</note>
         <note priority="1" from="meaning">review-title </note>
-      <target>Avis du Beau-Site</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2404610824969398612" datatype="html">
         <source> We are pleased to receive your feedback, suggestions, and constructive criticism. You are welcome to share your observations with us directly on-site. Consequently, we can respond accordingly. Thank you very much for taking the time to give us feedback so that we can continuously improve. We value your opinion and welcome your suggestions. </source>
         <context-group purpose="location">
@@ -771,7 +769,7 @@
         </context-group>
         <note priority="1" from="description"> descriptions des avis</note>
         <note priority="1" from="meaning">review-description </note>
-      <target>Nous sommes heureux de recevoir vos commentaires, vos suggestions et vos critiques constructives. Vous êtes invités à nous faire part de vos observations directement sur place. Nous pourrons ainsi y répondre en conséquence. Merci beaucoup de prendre le temps de nous faire part de vos commentaires afin que nous puissions nous améliorer en permanence. Votre opinion nous importe et vos suggestions sont les bienvenues. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="846800723895307663" datatype="html">
         <source> Write a review </source>
         <context-group purpose="location">
@@ -780,7 +778,7 @@
         </context-group>
         <note priority="1" from="description"> titre pour écrire son propre review</note>
         <note priority="1" from="meaning">review-welcome </note>
-      <target>Rédigez un avis</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4699682547744540681" datatype="html">
         <source>Mean</source>
         <context-group purpose="location">
@@ -789,7 +787,7 @@
         </context-group>
         <note priority="1" from="description"> Moyenne des notes des reviews</note>
         <note priority="1" from="meaning">review-note </note>
-      <target>Moyenne</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1266407426860615240" datatype="html">
         <source>Or feel free to review us on</source>
         <context-group purpose="location">
@@ -798,7 +796,7 @@
         </context-group>
         <note priority="1" from="description"> plus de reviews en externe(titre)</note>
         <note priority="1" from="meaning">reviews-external </note>
-      <target>Notez nous sur</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1752396967771808140" datatype="html">
         <source> Services </source>
         <context-group purpose="location">
@@ -806,7 +804,7 @@
           <context context-type="linenumber">28</context>
         </context-group>
         <note priority="1" from="description">rooms-title</note>
-      <target>Services</target></trans-unit>
+      </trans-unit>
       <trans-unit id="7739509099376497743" datatype="html">
         <source> Summary </source>
         <context-group purpose="location">
@@ -814,7 +812,7 @@
           <context context-type="linenumber">29,31</context>
         </context-group>
         <note priority="1" from="description">rooms-description</note>
-      <target>Résumé</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5155735701996984878" datatype="html">
         <source> Book Now </source>
         <context-group purpose="location">
@@ -823,42 +821,42 @@
         </context-group>
         <note priority="1" from="description"> réserver mtn</note>
         <note priority="1" from="meaning">rooms-book </note>
-      <target>Réserver maintenant</target></trans-unit>
+      </trans-unit>
       <trans-unit id="2424220117203052601" datatype="html">
         <source>The Basic double rooms have a small terrace, some with a view of the mountains.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-rooms/bs-rooms.component.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
-      <target>Les chambres doubles basiques disposent d'une petite terrasse, certaines offrant une vue sur les montagnes.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5822412248666712652" datatype="html">
         <source>These rooms have a balcony facing the village street, with a view of the Tschentenalp.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-rooms/bs-rooms.component.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
-      <target>Ces chambres disposent d'un balcon donnant sur la rue du village, avec une vue sur le Tschentenalp.</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3115448678463552081" datatype="html">
         <source>These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-rooms/bs-rooms.component.ts</context>
           <context context-type="linenumber">63</context>
         </context-group>
-      <target>Ces chambres disposent d'un balcon orienté à l'est, certaines offrant une vue sur les montagnes. Elles peuvent également servir de chambres triples, avec un canapé-lit. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="7131082697752774931" datatype="html">
         <source>These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-rooms/bs-rooms.component.ts</context>
           <context context-type="linenumber">83</context>
         </context-group>
-      <target>Ces chambres ont une vue magnifique sur le panorama de la montagne Adelboden. Sur le balcon, vous pouvez profiter de la vue sur le Bunderspitz, sur le Lohnermassiv, sur le Wildstrubel et sur les chutes d'Engstligen. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="5293695842572378792" datatype="html">
         <source>These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-rooms/bs-rooms.component.ts</context>
           <context context-type="linenumber">103</context>
         </context-group>
-      <target>Ces chambres conviennent parfaitement aux familles. Elles disposent d'une galerie avec un lit double et sont idéales pour quatre personnes. Le balcon est orienté vers le nord, vers la rue du village, avec une vue sur le Tschentenalp. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="4096503854028511070" datatype="html">
         <source>Team</source>
         <context-group purpose="location">
@@ -867,16 +865,16 @@
         </context-group>
         <note priority="1" from="description"> titre de la page</note>
         <note priority="1" from="meaning">team-title </note>
-      <target>Équipe</target></trans-unit>
+      </trans-unit>
       <trans-unit id="7681907669302400994" datatype="html">
         <source> We are a motivated and dedicated international team looking forward to offering you an exceptional stay in our hotel and restaurant. We are happy about good-humored guests and are always ready to give our best for you. We look forward to getting to know each other soon! </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-team/bs-team.component.html</context>
           <context context-type="linenumber">3,8</context>
         </context-group>
-        <note priority="1" from="description"> description de l'équipe de l'hotel</note>
+        <note priority="1" from="description"> description de l&apos;équipe de l&apos;hotel</note>
         <note priority="1" from="meaning">title-description </note>
-      <target>Nous sommes une équipe internationale motivée et dévouée qui se réjouit de vous offrir un séjour exceptionnel dans notre hôtel/restaurant. Nous sommes heureux d'accueillir des clients heureux et sommes toujours prêts à donner le meilleur de nous-mêmes pour vous. Nous nous réjouissons de faire votre connaissance bientôt ! </target></trans-unit>
+      </trans-unit>
       <trans-unit id="3224392347860389939" datatype="html">
         <source>A Fitness for Adelboden</source>
         <context-group purpose="location">
@@ -885,7 +883,7 @@
         </context-group>
         <note priority="1" from="description"> Titre de la page</note>
         <note priority="1" from="meaning">fit-title </note>
-      <target>Un Fitness pour Adelboden</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1867988534610403843" datatype="html">
         <source> Offers </source>
         <context-group purpose="location">
@@ -894,7 +892,7 @@
         </context-group>
         <note priority="1" from="description"> titre des offres</note>
         <note priority="1" from="meaning">fit-offers </note>
-      <target>Offres</target></trans-unit>
+      </trans-unit>
       <trans-unit id="1218862459226677953" datatype="html">
         <source> Choose the plan that fits your needs. </source>
         <context-group purpose="location">
@@ -902,7 +900,7 @@
           <context context-type="linenumber">13,15</context>
         </context-group>
         <note priority="1" from="description">fit-offers-descriptions</note>
-      <target>Choisissez le plan qui correspond à vos besoins. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="1724115949521530675" datatype="html">
         <source> Suscribe / Renew </source>
         <context-group purpose="location">
@@ -911,7 +909,7 @@
         </context-group>
         <note priority="1" from="description"> commander une offre</note>
         <note priority="1" from="meaning">fit-suscribe </note>
-      <target>Inscription / renouvellement</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8216985437460052595" datatype="html">
         <source>Benefits</source>
         <context-group purpose="location">
@@ -920,28 +918,28 @@
         </context-group>
         <note priority="1" from="description"> titre des avantages</note>
         <note priority="1" from="meaning">fit-benefits </note>
-      <target>Avantages</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6307287148573302421" datatype="html">
         <source>Suspend your subscription for free (from 7 to 90 days/year)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
-      <target> Suspendre gratuitement votre abonnement (de 7 à 90 jours/an) </target></trans-unit>
+      </trans-unit>
       <trans-unit id="3436818058466289813" datatype="html">
         <source>Special reduction with guest card. 15 CHF instead of 20 CHF</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
-      <target>Réduction spéciale avec la carte d'hôte. 15 CHF au lieu de 20 CHF</target></trans-unit>
+      </trans-unit>
       <trans-unit id="486464860072973912" datatype="html">
         <source>Are you recommanding us? Get a free month for each new subscriber</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
-      <target>Vous nous recommandez ? Recevez un mois gratuit pour chaque nouvel abonné</target></trans-unit>
+      </trans-unit>
       <trans-unit id="9143460168155712248" datatype="html">
         <source>Spa</source>
         <context-group purpose="location">
@@ -950,7 +948,7 @@
         </context-group>
         <note priority="1" from="description"> Sanitas per Aquam titre</note>
         <note priority="1" from="meaning">spa-title </note>
-      <target>Spa</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5520910793863945096" datatype="html">
         <source> Enjoy various offers in our container wellness oasis. Our spa has a sauna, a sanarium, a steam bath, an infrared sauna and a spacious relaxation room with a wonderful mountain view where you can relax. </source>
         <context-group purpose="location">
@@ -958,7 +956,7 @@
           <context context-type="linenumber">4,8</context>
         </context-group>
         <note priority="1" from="description">spa-description</note>
-      <target>Profitez de diverses offres dans notre oasis de bien-être conteneurisé. Notre spa dispose d'un sauna, d'un sanarium, d'un bain de vapeur, d'un sauna infrarouge et d'une salle de relaxation spacieuse avec une vue magnifique sur les montagnes où vous pourrez vous détendre. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="4207289696486044581" datatype="html">
         <source>Outdoor Wellness</source>
         <context-group purpose="location">
@@ -966,7 +964,7 @@
           <context context-type="linenumber">18</context>
         </context-group>
         <note priority="1" from="description">out-title</note>
-      <target>Espace Extérieur</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6466050722797254013" datatype="html">
         <source> Take a sauna in our cosy barrel sauna, which is located in the outdoor area. After a dip in the cold water pool or the cold water shower, you can enjoy the peace and quiet in the adjacent relaxation room. </source>
         <context-group purpose="location">
@@ -975,7 +973,7 @@
         </context-group>
         <note priority="1" from="description"> description du spa extérieur</note>
         <note priority="1" from="meaning">out-description </note>
-      <target>Prenez un sauna dans notre confortable tonneau, qui est situé dans la zone extérieure. Après un plongeon dans la piscine ou une douche d'eau froide, vous pourrez profiter du calme et de la tranquillité dans la salle de relaxation adjacente. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="219930945440506105" datatype="html">
         <source>Massages</source>
         <context-group purpose="location">
@@ -983,7 +981,7 @@
           <context context-type="linenumber">27</context>
         </context-group>
         <note priority="1" from="description">massage-title</note>
-      <target>Massages</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4429353004893182897" datatype="html">
         <source> Book a soothing massage and let our masseuses pamper you. Book the appointment early enough, so that it also works out safely with us. </source>
         <context-group purpose="location">
@@ -991,7 +989,7 @@
           <context context-type="linenumber">28,31</context>
         </context-group>
         <note priority="1" from="description">massage-description</note>
-      <target>Réservez un massage apaisant et laissez nos masseuses vous dorloter. Réservez le rendez-vous suffisamment tôt, pour qu'il soit également possible de le faire en toute sécurité chez nous. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="1810229238527785697" datatype="html">
         <source>Lounge room</source>
         <context-group purpose="location">
@@ -999,7 +997,7 @@
           <context context-type="linenumber">47</context>
         </context-group>
         <note priority="1" from="description">chill-title</note>
-      <target>Chambre de repos</target></trans-unit>
+      </trans-unit>
       <trans-unit id="5579998552467129441" datatype="html">
         <source> In the spacious relaxation room you can relax, read a book or enjoy the view of the wonderful Adelboden mountain panorama. </source>
         <context-group purpose="location">
@@ -1007,56 +1005,56 @@
           <context context-type="linenumber">48,51</context>
         </context-group>
         <note priority="1" from="description">chill-description</note>
-      <target>Dans la salle de détente spacieuse, vous pouvez vous détendre, lire un livre ou profiter de la vue sur le magnifique panorama des montagnes d'Adelboden. </target></trans-unit>
+      </trans-unit>
       <trans-unit id="8255890773387923004" datatype="html">
         <source>Back Massage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
-      <target>Massage du dos</target></trans-unit>
+      </trans-unit>
       <trans-unit id="4963131542600453152" datatype="html">
         <source>Full Body Massage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
-      <target>Massage corporel complet</target></trans-unit>
+      </trans-unit>
       <trans-unit id="6929356094618385579" datatype="html">
         <source>Head &amp; Face Massage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
-      <target>Massage du visage</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3234857503208038026" datatype="html">
         <source>Hot Stone Massage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
-      <target>Massage aux pierres chaudes</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3081955859401906413" datatype="html">
         <source>Foot Massage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
-      <target>Massage des pieds</target></trans-unit>
+      </trans-unit>
       <trans-unit id="8247431271129759952" datatype="html">
         <source>Foot Massage + Peeling + Mask</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      <target>Massage des pieds + peeling + masque</target></trans-unit>
+      </trans-unit>
       <trans-unit id="779218359349363707" datatype="html">
         <source>Lymphatic Drainage: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-wellness/bs-wellness-wellness.component.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
-      <target>Drainage lymphatique</target></trans-unit>
+      </trans-unit>
       <trans-unit id="9080527698762323244" datatype="html">
         <source>Wellness</source>
         <context-group purpose="location">
@@ -1064,7 +1062,7 @@
           <context context-type="linenumber">4</context>
         </context-group>
         <note priority="1" from="description">wellness-title</note>
-      <target>Espace bien-être</target></trans-unit>
+      </trans-unit>
       <trans-unit id="3022170119855890978" datatype="html">
         <source>Fitness</source>
         <context-group purpose="location">
@@ -1072,7 +1070,7 @@
           <context context-type="linenumber">9</context>
         </context-group>
         <note priority="1" from="description">Fitness-title</note>
-      <target>Fitness</target></trans-unit>
+      </trans-unit>
     </body>
   </file>
 </xliff>
