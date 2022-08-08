@@ -8,9 +8,10 @@
 .network {
   display: flex;
   flex-direction: row;
+  img {
+    width: 48px;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
-i {
-  margin-left: 1em;
-  margin-right: 1em;
-}
