@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
   UntypedFormGroup,
-  UntypedFormControl,
-  Validators,
+  UntypedFormControl
 } from '@angular/forms';
 
 @Component({

@@ -4,7 +4,7 @@ import { forkJoin } from 'rxjs';
 import { RestaurantService } from '../restaurant.service';
 import { Meal, Language, MAX_SIZE } from '../interface';
 import { MaxSizeValidator } from '@angular-material-components/file-input';
-import cloneDeep from 'lodash/cloneDeep';
+import { cloneDeep } from 'lodash';
 
 @Component({
   selector: 'app-restaurant',

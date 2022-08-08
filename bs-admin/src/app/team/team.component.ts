@@ -4,7 +4,7 @@ import { forkJoin } from 'rxjs';
 import { TeamService } from '../team.service';
 import { Member, MAX_SIZE } from '../interface';
 import { MaxSizeValidator } from '@angular-material-components/file-input';
-import cloneDeep from 'lodash/cloneDeep';
+import { cloneDeep } from 'lodash';
 
 @Component({
   selector: 'app-team',

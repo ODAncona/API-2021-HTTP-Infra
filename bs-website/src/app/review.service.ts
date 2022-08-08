@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Review } from './interface';
 import { API_URL } from './interface';
@@ -33,7 +32,7 @@ export class ReviewService {
    * @returns an observable of the response with the Menu[] body
    */
   getAllReviews() {
-    return this.http.get<any>(this.apiUrl, this.httpOptions);
+    return this.http.get<Review[]>(this.apiUrl, this.httpOptions);
   }
 
   /**
