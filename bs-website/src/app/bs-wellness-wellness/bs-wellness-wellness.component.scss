@@ -8,17 +8,15 @@
 }
 
 .container {
-  padding: .3em;
+  padding: 0;
   min-width: 500px;
   display: flex;
-  justify-content: center;
   align-content: center;
   align-items: center;
   flex-basis: 50%;
   color: white;
   flex-flow: column;
   justify-content: center;
-  width: 100%;
 }
 
 .title {
