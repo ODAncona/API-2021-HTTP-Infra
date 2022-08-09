@@ -4,6 +4,19 @@
   "newProjectRoot": "projects",
   "projects": {
     "bs-website": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr-CH": {
+            "translation": "src/locale/beausite.fr.xlf",
+            "baseHref": "fr/"
+          },
+          "de-CH": {
+            "translation": "src/locale/beausite.de.xlf",
+            "baseHref": "de/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +52,7 @@
               "pdfjs-dist/es5/build/pdf",
               "pdfjs-dist/es5/web/pdf_viewer",
               "moment"
-           ]
+            ]
           },
           "configurations": {
             "production": {
