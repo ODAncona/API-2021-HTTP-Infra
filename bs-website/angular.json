@@ -9,11 +9,11 @@
         "locales": {
           "fr-CH": {
             "translation": "src/locale/beausite.fr.xlf",
-            "baseHref": "fr/"
+            "baseHref": ""
           },
           "de-CH": {
             "translation": "src/locale/beausite.de.xlf",
-            "baseHref": "de/"
+            "baseHref": ""
           }
         }
       },

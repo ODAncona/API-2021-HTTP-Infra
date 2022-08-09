@@ -1,7 +1,7 @@
 <ngb-carousel *ngIf="images" class="carousel">
-  <ng-template ngbSlide *ngFor="let image of images" >
+  <ng-template ngbSlide *ngFor="let image of images">
     <div class="picsum-img-wrapper">
-      <img src="{{image}}" alt="Hotel Beau-Site teaser">
+      <img src="{{image}}" alt="Hotel Beau-Site Diaporama">
     </div>
   </ng-template>
 </ngb-carousel>
@@ -15,12 +15,11 @@
   <h2 i18n="video-overlay | invitation sur la vidéo">Welcome to Hôtel Beau-Site</h2>
 </div>
 
-<h2 class="mainTitle" i18n="home-title | Accroche principale">SPEND AN UNFORGETTABLE HOLIDAY IN A CHALET-HOTEL IN SWITZERLAND</h2>
+<h2 class="mainTitle" i18n="home-title | Accroche principale">Spend an unforgettable holiday in our Chalet-Hotel in the
+  midst of the Bernese Alps.</h2>
 
 <mat-card i18n="home-description | description de l'hôtel" class="description">
-  Surrounded by the Alps , green meadows , towering cliffs and amidst the ancient tradition and genuine Swiss culture is romantic Adelboden Hotel Beau Boutique This luxury boutique hotel has 36 rooms, a beautiful restaurant with traditional cuisine
-  and a spa and fitness area.
-  In recent years it has become one of the best hotels in Adelboden , and even in the Bernese Oberland. The hotel offers a very special combination of traditional chalet spirit and modern comforts of a four star country house style.
+  TO DO
 </mat-card>
 
 <div class="cards">
@@ -31,9 +30,8 @@
     </mat-card-header>
     <img mat-card-image src="{{card.img}}" alt="{{card.title}}">
     <mat-card-actions>
-      <a routerLink="{{card.url}}"><button mat-stroked-button i18n="cards-btn | more button" color="accent" i18n="card-link | lien qui pointe dans le site">More informations</button></a>
+      <a routerLink="{{card.url}}"><button mat-stroked-button i18n="cards-btn | more button" color="primary">See
+          more</button></a>
     </mat-card-actions>
   </mat-card>
-  <h2 *ngIf="!cards?.length" i18n="promotions-msg | no proms msg">No promotion are actually available.</h2>
 </div>
-

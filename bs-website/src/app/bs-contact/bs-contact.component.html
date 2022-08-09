@@ -1,18 +1,21 @@
-<h1 class="mainTitle">Contact</h1>
+<h1 class="sectionTitle">Contact us</h1>
+<p class="text">Feel free to contact us for any special request or question.</p>
 
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
-  <div class="contact">
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="name" placeholder="Name">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="email" formControlName="email" placeholder="Email">
-      <mat-error *ngIf="contactForm.invalid" i18n="invalid-email | email invalide">invalid email</mat-error>
-    </mat-form-field>
-  </div>
+
+  <mat-form-field appearance="standard">
+    <input required matInput type="text" formControlName="name" placeholder="Your name">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <input required matInput type="email" formControlName="email" placeholder="Your email">
+    <mat-error *ngIf="contactForm.invalid" i18n="invalid-email | email invalide">invalid email</mat-error>
+  </mat-form-field>
+
   <mat-form-field appearance="fill" class="textarea">
-    <textarea required matInput formControlName="content" placeholder="Ex. It makes me feel..."></textarea>
-    <mat-error *ngIf="contactForm.invalid" i18n="invalid-size | dites nous en plus">tell us more</mat-error>
+    <textarea required matInput formControlName="content"
+      placeholder="Ex. We would like to make a reservation for our marriage anniversary..."></textarea>
+    <mat-error *ngIf="contactForm.invalid" i18n="invalid-size | dites nous en plus">Please tell us more about your
+      request</mat-error>
   </mat-form-field>
 
   <button mat-fab color="primary" aria-label="Submit review" [disabled]="!contactForm.valid">
@@ -20,5 +23,11 @@
   </button>
 </form>
 
-<h2 class="mainTitle">Map</h2>
+<h2 class="sectionTitle">Where to find us</h2>
+<p class="text">
+  As you enter the village, turn right in front of the post office, drive straight for 100 meters. You'll find our
+  establishment before the curve on your right.
+</p>
+<h3 class="address">Dorfstrasse 5</h3>
+<h3 class="address">3715 Adelboden</h3>
 <img src="../../assets/images/contact/map.webp" alt="Beau-Site Hotel located in Adelboden map." style="width:100%">

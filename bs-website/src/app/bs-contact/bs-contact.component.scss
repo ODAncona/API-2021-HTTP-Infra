@@ -1,23 +1,41 @@
 .form {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-}
-
-.contact {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+  column-gap: 50px;
+  margin-bottom: 5%;
+  background-color: rgba($color: #492d06, $alpha: .2);
+  border-radius: 1em;
   justify-content: space-around;
-  align-items: center;
+  padding: 5px;
 }
 
-.input {
-  width: 100%;
+.text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 90%;
+}
+
+button {
+  min-width: 75px;
+  min-height: 50px;
+}
+
+.address {
+  font-size: large;
+  text-align: center;
 }
 
 .textarea {
-  width: 100%;
+  min-width: 350px;
+  width: 96%;
 }
 
 img {
-  transform: scaleY(.8);
+  //transform: scaleY(.8);
+  height: fit-content;
 }

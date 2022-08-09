@@ -24,34 +24,40 @@ export class BsHomeComponent {
 
   cards: any[] = [
     {
-      title: 'Rooms',
+      title: $localize`Rooms`,
       url: '/rooms',
       img: '../../assets/images/home/card_rooms.webp',
+      description: $localize`Discover`
     },
     {
-      title: 'Restaurant',
+      title: $localize`Restaurant`,
       url: '/restaurant',
       img: '../../assets/images/home/card_restaurant.webp',
+      description: $localize`Delight yourself`
     },
     {
-      title: 'Promotions',
+      title: $localize`Promotions`,
       url: '/promotion',
       img: '../../assets/images/home/card_promotions.webp',
+      description: $localize`Discover `
     },
     {
-      title: 'Wellness-Fitness',
+      title: $localize`Fitness & Wellness`,
       url: '/wellness',
       img: '../../assets/images/home/card_wellness_fitness.webp',
+      description: $localize`Come and relax`
     },
     {
-      title: 'Region',
+      title: $localize`Region`,
       url: '/region',
       img: '../../assets/images/home/card_region.webp',
+      description: $localize``
     },
     {
-      title: 'Team',
+      title: $localize`Team`,
       url: '/team',
       img: '../../assets/images/home/card_team.webp',
+      description: $localize``
     },
   ];
 }

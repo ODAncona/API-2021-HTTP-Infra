@@ -1,8 +1,8 @@
 <div *ngIf="promotion; else noPromotion">
   <mat-card>
     <div>
-      <h1 class="mainTitle">{{ promotion.title | uppercase }}</h1>
-      <h2 class="sectionTitle">{{ promotion.subtitle | titlecase }}</h2>
+      <h1 class="">{{ promotion.title | uppercase }}</h1>
+      <h2 class="">{{ promotion.subtitle | titlecase }}</h2>
     </div>
     <img mat-card-image src="{{ promotion.image }}" alt="{{ promotion.title}} promotion" />
     <mat-card-subtitle i18n="room-header | Titre pour la descriptiond des chambres">Description</mat-card-subtitle>
