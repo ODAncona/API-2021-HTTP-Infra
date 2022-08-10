@@ -1,11 +1,12 @@
 .reservation {
   background-color: rgba($color: #492d06, $alpha: .2);
+  //background-color: rgba(100, 28, 34, 0.3);
   border-radius: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 14%;
+  gap: 12%;
   align-items: center;
   margin: .4em;
   padding: 1em;
@@ -13,6 +14,8 @@
   .datepicker {
     margin:.1em;
     transform: scale(1);
+    font-size: auto;
+    min-width: 300px;
   }
 
   .book-btn {

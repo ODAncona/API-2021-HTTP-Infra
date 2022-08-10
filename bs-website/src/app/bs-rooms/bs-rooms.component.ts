@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Room } from '../interface';
 @Component({
   selector: 'app-bs-rooms',
@@ -8,101 +9,112 @@ import { Room } from '../interface';
 export class BsRoomsComponent {
   rooms: Room[] = [
     {
-      title: 'Basic Double Room',
+      title: 'Comfortable Double Room',
       images: [
-        '../../assets/images/photos/rooms/rooms_standard1.jpg',
-        '../../assets/images/photos/rooms/rooms_standard2.jpg',
-        '../../assets/images/photos/rooms/rooms_standard3.jpg',
+        '../../assets/images/rooms/comfortable_1.jpg',
+        '../../assets/images/rooms/comfortable_2.jpg',
       ],
       services: [
-        { icon: 'home', name: 'Bar-Cafétéria' },
-        { icon: 'home', name: 'Conciergerie' },
-        { icon: 'home', name: 'Parking couvert' },
+        { name: 'Bar-Cafétéria' },
+        { name: 'Conciergerie' },
+        { name: 'Parking couvert' },
       ],
-      description:
-        $localize`The Basic double rooms have a small terrace, some with a view of the mountains.`,
+      description: $localize`The Comfortable double rooms have a small terrace, some with a view of the mountains.`,
       roomSize: '20',
     },
     {
-      title: 'Classic Double Room',
+      title: 'Cozy Double Room',
       images: [
-        '../../assets/images/photos/rooms/rooms_classic1.jpg',
-        '../../assets/images/photos/rooms/rooms_classic2.jpg',
-        '../../assets/images/photos/rooms/rooms_classic3.jpg',
+        '../../assets/images/rooms/cozy_1.jpg',
+        '../../assets/images/rooms/cozy_2.jpg',
       ],
       services: [
-        { icon: 'home', name: 'Télévision' },
-        { icon: 'home', name: 'Bureau de change' },
-        { icon: 'home', name: 'Consigne bagages' },
-        { icon: 'home', name: 'Restaurant' },
-        { icon: 'home', name: 'Connexion Internet' },
-        { icon: 'home', name: 'Coffre-fort' },
-        { icon: 'home', name: 'Sèche-cheveux' },
+        { name: 'Télévision' },
+        { name: 'Bureau de change' },
+        { name: 'Consigne bagages' },
+        { name: 'Restaurant' },
+        { name: 'Connexion Internet' },
+        { name: 'Coffre-fort' },
+        { name: 'Sèche-cheveux' },
       ],
-      description:
-        $localize`These rooms have a balcony facing the village street, with a view of the Tschentenalp.`,
+      description: $localize`These rooms have a balcony facing the village street, with a view of the Tschentenalp.`,
       roomSize: '20',
     },
     {
       title: 'Superior Double Room',
       images: [
-        '../../assets/images/photos/rooms/rooms_superior1.jpg',
-        '../../assets/images/photos/rooms/rooms_superior2.jpg',
-        '../../assets/images/photos/rooms/rooms_superior3.jpg',
+        '../../assets/images/rooms/superior_1.jpg',
+        '../../assets/images/rooms/superior_2.jpg',
+        '../../assets/images/rooms/superior_3.jpg',
       ],
       services: [
-        { icon: 'home', name: 'Télévision' },
-        { icon: 'home', name: 'Bureau de change' },
-        { icon: 'home', name: 'Consigne bagages' },
-        { icon: 'home', name: 'Restaurant' },
-        { icon: 'home', name: 'Connexion Internet' },
-        { icon: 'home', name: 'Coffre-fort' },
-        { icon: 'home', name: 'Sèche-cheveux' },
+        { name: 'Télévision' },
+        { name: 'Bureau de change' },
+        { name: 'Consigne bagages' },
+        { name: 'Restaurant' },
+        { name: 'Connexion Internet' },
+        { name: 'Coffre-fort' },
+        { name: 'Sèche-cheveux' },
       ],
-      description:
-        $localize`These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.`,
+      description: $localize`These rooms have a balcony facing east, some with a view of the mountains. They are also suitable as triple rooms, with a sofa bed.`,
       roomSize: '28',
     },
     {
       title: 'Premium Double Room',
       images: [
-        '../../assets/images/photos/rooms/rooms_premium1.jpg',
-        '../../assets/images/photos/rooms/rooms_premium2.jpg',
-        '../../assets/images/photos/rooms/rooms_premium3.jpg',
+        '../../assets/images/rooms/premium_1.jpg',
+        '../../assets/images/rooms/premium_2.jpg',
+        '../../assets/images/rooms/premium_3.jpg',
+        '../../assets/images/rooms/premium_4.jpg',
+        '../../assets/images/rooms/premium_5.jpg',
+        '../../assets/images/rooms/premium_6.jpg',
+        '../../assets/images/rooms/premium_7.jpg',
+        '../../assets/images/rooms/premium_8.jpg',
+        '../../assets/images/rooms/premium_9.jpg',
       ],
       services: [
-        { icon: 'home', name: 'Télévision' },
-        { icon: 'home', name: 'Bureau de change' },
-        { icon: 'home', name: 'Consigne bagages' },
-        { icon: 'home', name: 'Restaurant' },
-        { icon: 'home', name: 'Connexion Internet' },
-        { icon: 'home', name: 'Coffre-fort' },
-        { icon: 'home', name: 'Sèche-cheveux' },
+        { name: 'Télévision' },
+        { name: 'Bureau de change' },
+        { name: 'Consigne bagages' },
+        { name: 'Restaurant' },
+        { name: 'Connexion Internet' },
+        { name: 'Coffre-fort' },
+        { name: 'Sèche-cheveux' },
       ],
-      description:
-        $localize`These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.`,
+      description: $localize`These rooms have a wonderful view of the Adelboden mountain panorama. On the balcony you can enjoy the view to the Bunderspitz over the Lohnermassiv to the Wildstrubel and the Engstligen Falls.`,
       roomSize: '28',
     },
     {
       title: 'Junior Suite',
       images: [
-        '../../assets/images/photos/rooms/rooms_junior_suite1.jpg',
-        '../../assets/images/photos/rooms/rooms_junior_suite2.jpg',
-        '../../assets/images/photos/rooms/rooms_junior_suite3.jpg',
+        '../../assets/images/rooms/junior_1.jpg',
+        '../../assets/images/rooms/junior_2.jpg',
+        '../../assets/images/rooms/junior_3.jpg',
+        '../../assets/images/rooms/junior_4.jpg',
+        '../../assets/images/rooms/junior_5.jpg',
+        '../../assets/images/rooms/junior_6.jpg',
+        '../../assets/images/rooms/junior_7.jpg',
       ],
       services: [
-        { icon: 'home', name: 'Télévision' },
-        { icon: 'home', name: 'Bureau de change' },
-        { icon: 'home', name: 'Consigne bagages' },
-        { icon: 'home', name: 'Restaurant' },
-        { icon: 'home', name: 'Connexion Internet' },
-        { icon: 'home', name: 'Coffre-fort' },
-        { icon: 'home', name: 'Sèche-cheveux' },
+        { name: 'Télévision' },
+        { name: 'Bureau de change' },
+        { name: 'Consigne bagages' },
+        { name: 'Restaurant' },
+        { name: 'Connexion Internet' },
+        { name: 'Coffre-fort' },
+        { name: 'Sèche-cheveux' },
       ],
-      description:
-        $localize`These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.`,
+      description: $localize`These rooms are very suitable for families. They have a gallery with a double bed and are ideal for four people. The balcony faces north towards the village street with a view of the Tschentenalp.`,
       roomSize: '32, 39',
     },
   ];
-  constructor() { }
+  constructor(config: NgbCarouselConfig) {
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
+    config.interval = 1000;
+    config.wrap = true;
+    config.keyboard = true;
+    config.pauseOnHover = true;
+    config.animation = false;
+  }
 }

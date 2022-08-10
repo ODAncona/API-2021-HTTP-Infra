@@ -8,7 +8,10 @@
 
 .room-card {
   margin: 1em;
-  width: 80%;
+  width: 90%;
+  background-color: rgba(100, 28, 34, 0.3);
+  //background-color: rgba($color: #492d06, $alpha: .2);
+
 }
 
 .service {
@@ -27,17 +30,15 @@
   margin: 2%;
 }
 
-i {
-  margin-right: 3%;
-  font-size: 2rem;
-}
-
 .description-detail {
   margin: 1em;
 }
 
 img {
-  max-height: 700px;
+  max-height: 600px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 

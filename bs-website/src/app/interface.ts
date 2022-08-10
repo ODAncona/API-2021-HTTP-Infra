@@ -80,7 +80,7 @@ export interface Review {
 export interface Room {
   title: string;
   images: string[];
-  services: Service[];
+  services: any[];
   description: string;
   roomSize: string;
 }
@@ -94,14 +94,6 @@ export interface Member {
   function: string;
   image: string;
   _id?: string;
-}
-
-/**
- * This interface describes a service. It can have an angular material icon
- */
-export interface Service {
-  icon: string;
-  name: string;
 }
 
 /**
