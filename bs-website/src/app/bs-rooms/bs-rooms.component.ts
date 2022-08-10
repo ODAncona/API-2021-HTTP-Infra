@@ -10,10 +10,7 @@ export class BsRoomsComponent {
   rooms: Room[] = [
     {
       title: 'Comfortable Double Room',
-      images: [
-        '../../assets/images/rooms/comfortable_1.jpg',
-        '../../assets/images/rooms/comfortable_2.jpg',
-      ],
+      images: ['../../assets/images/rooms/comfortable_1.webp'],
       services: [
         { name: 'Bar-Cafétéria' },
         { name: 'Conciergerie' },
@@ -25,8 +22,8 @@ export class BsRoomsComponent {
     {
       title: 'Cozy Double Room',
       images: [
-        '../../assets/images/rooms/cozy_1.jpg',
-        '../../assets/images/rooms/cozy_2.jpg',
+        '../../assets/images/rooms/cozy_1.webp',
+        '../../assets/images/rooms/cozy_2.webp',
       ],
       services: [
         { name: 'Télévision' },
@@ -43,9 +40,9 @@ export class BsRoomsComponent {
     {
       title: 'Superior Double Room',
       images: [
-        '../../assets/images/rooms/superior_1.jpg',
-        '../../assets/images/rooms/superior_2.jpg',
-        '../../assets/images/rooms/superior_3.jpg',
+        '../../assets/images/rooms/superior_1.webp',
+        '../../assets/images/rooms/superior_2.webp',
+        '../../assets/images/rooms/superior_3.webp',
       ],
       services: [
         { name: 'Télévision' },
@@ -62,15 +59,14 @@ export class BsRoomsComponent {
     {
       title: 'Premium Double Room',
       images: [
-        '../../assets/images/rooms/premium_1.jpg',
-        '../../assets/images/rooms/premium_2.jpg',
-        '../../assets/images/rooms/premium_3.jpg',
-        '../../assets/images/rooms/premium_4.jpg',
-        '../../assets/images/rooms/premium_5.jpg',
-        '../../assets/images/rooms/premium_6.jpg',
-        '../../assets/images/rooms/premium_7.jpg',
-        '../../assets/images/rooms/premium_8.jpg',
-        '../../assets/images/rooms/premium_9.jpg',
+        '../../assets/images/rooms/premium_1.webp',
+        '../../assets/images/rooms/premium_2.webp',
+        '../../assets/images/rooms/premium_3.webp',
+        '../../assets/images/rooms/premium_4.webp',
+        '../../assets/images/rooms/premium_5.webp',
+        '../../assets/images/rooms/premium_6.webp',
+        '../../assets/images/rooms/premium_7.webp',
+        '../../assets/images/rooms/premium_8.webp',
       ],
       services: [
         { name: 'Télévision' },
@@ -87,13 +83,13 @@ export class BsRoomsComponent {
     {
       title: 'Junior Suite',
       images: [
-        '../../assets/images/rooms/junior_1.jpg',
-        '../../assets/images/rooms/junior_2.jpg',
-        '../../assets/images/rooms/junior_3.jpg',
-        '../../assets/images/rooms/junior_4.jpg',
-        '../../assets/images/rooms/junior_5.jpg',
-        '../../assets/images/rooms/junior_6.jpg',
-        '../../assets/images/rooms/junior_7.jpg',
+        '../../assets/images/rooms/junior_1.webp',
+        '../../assets/images/rooms/junior_2.webp',
+        '../../assets/images/rooms/junior_3.webp',
+        '../../assets/images/rooms/junior_4.webp',
+        '../../assets/images/rooms/junior_5.webp',
+        '../../assets/images/rooms/junior_6.webp',
+        '../../assets/images/rooms/junior_7.webp',
       ],
       services: [
         { name: 'Télévision' },
