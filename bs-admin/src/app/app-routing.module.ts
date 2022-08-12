@@ -11,7 +11,6 @@ import { TeamComponent } from './team/team.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: NavComponent,
@@ -22,10 +21,10 @@ const routes: Routes = [
       { path: 'restaurant', component: RestaurantComponent },
       { path: 'menus', component: MenusComponent },
       { path: 'reviews', component: ReviewsComponent },
-      { path: 'team', component:TeamComponent}
+      { path: 'team', component: TeamComponent },
     ],
   },
-  { path: '**', redirectTo: 'login' },
+  { path: '**', component: LoginComponent },
 ];
 
 @NgModule({
