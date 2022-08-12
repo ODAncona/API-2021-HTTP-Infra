@@ -4,10 +4,10 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  width: 98%;
+  width: 60%;
   column-gap: 50px;
   margin-bottom: 5%;
-  background-color: rgba($color: #492d06, $alpha: .2);
+  //background-color: rgba($color: #492d06, $alpha: .2);
   border-radius: 1em;
   justify-content: space-around;
   padding: 5px;
@@ -17,7 +17,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
-  width: 90%;
+  width: 60%;
 }
 
 button {
@@ -38,4 +38,9 @@ button {
 img {
   //transform: scaleY(.8);
   height: fit-content;
+}
+
+.sectionTitle {
+  margin-top:1em;
+  margin-bottom: .3em;
 }
