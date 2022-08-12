@@ -12,7 +12,6 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/statistics', pathMatch: 'full' },
   {
     path: '',
     component: NavComponent,
