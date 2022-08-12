@@ -46,10 +46,6 @@ export class BsPhotosComponent implements OnInit {
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/fitness_machines.jpg',
-      description: 'Hotel Beau-Site picture',
-    },
-    {
       url: '../../assets/images/photos/Hotel_Beau_Suiza_BARRA.jpg',
       description: 'Hotel Beau-Site picture',
     },

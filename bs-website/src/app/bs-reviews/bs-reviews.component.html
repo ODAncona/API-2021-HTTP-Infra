@@ -1,5 +1,7 @@
+<h1 class="mainTitle" i18n="review-title | title of hotel reviews">
+  Beau-Site Reviews
+</h1>
 <div class="text">
-  <h1 class="mainTitle" i18n="review-title | title of hotel reviews">Beau-Site Reviews</h1>
   <p i18n="review-description | descriptions des avis">
     We are pleased to receive your feedback, suggestions, and constructive
     criticism. You are welcome to share your observations with us directly
@@ -8,9 +10,13 @@
     value your opinion and welcome your suggestions.
   </p>
 </div>
+
 <div class="review-header">
   <div class="review-header">
-    <h1 class="sectionTitle" i18n="review-welcome | titre pour écrire son propre review">
+    <h1
+      class="sectionTitle"
+      i18n="review-welcome | titre pour écrire son propre review"
+    >
       Write a review
     </h1>
     <button mat-fab color="primary" class="addReview" (click)="addReview()">
@@ -24,33 +30,43 @@
     </button>
   </div>
 </div>
-<mat-card class="rating-card" *ngFor="let review of reviews">
-  <mat-card-header>
-    <mat-card-title>{{ review.author }}</mat-card-title>
-    <mat-card-subtitle>{{ review.date | date: "short" }}</mat-card-subtitle>
-    <button mat-fab color="accent" class="grade">
-      {{ averageRating(review.rating) | number: "1.1-1" }}
-    </button>
-  </mat-card-header>
-  <mat-divider></mat-divider>
-  <div class="rating">
-    <div class="rating-item" *ngFor="let r of review.rating | keyvalue">
-      <p>{{ r.key }}</p>
-      <p class="rating-number">{{ r.value }}/10</p>
+
+<div class="rating">
+  <mat-card class="rating-card" *ngFor="let review of reviews">
+    <mat-card-header>
+      <mat-card-title>{{ review.author }}</mat-card-title>
+      <mat-card-subtitle>{{ review.date | date: "short" }}</mat-card-subtitle>
+      <button mat-fab color="accent" class="grade">
+        {{ averageRating(review.rating) | number: "1.1-1" }}
+      </button>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <div class="rating">
+      <div class="rating-item" *ngFor="let r of review.rating | keyvalue">
+        <p>{{ r.key }}</p>
+        <p class="rating-number">{{ r.value }}/10</p>
+      </div>
     </div>
-  </div>
-  <mat-divider></mat-divider>
-  <mat-card-content>
-    <p>{{ review.description }}</p>
-  </mat-card-content>
-</mat-card>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p>{{ review.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
 
 <mat-divider></mat-divider>
 
-<h1 class="mainTitle" i18n="reviews-external | plus de reviews en externe(titre)">Or feel free to review us on</h1>
+<h1
+  class="sectionTitle"
+  i18n="reviews-external | plus de reviews en externe(titre)"
+>
+  Or feel free to review us on
+</h1>
 
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
-    <a href="{{ benefit.url }}"><img src="{{ benefit.img }}" alt="{{ benefit.title }}" /></a>
+    <a href="{{ benefit.url }}"
+      ><img src="{{ benefit.img }}" alt="{{ benefit.title }}"
+    /></a>
   </div>
 </div>

@@ -11,7 +11,6 @@
   width: 44%;
   //background-color: rgba(100, 28, 34, 0.3);
   //background-color: rgba($color: #492d06, $alpha: .2);
-
 }
 
 .service {
@@ -21,6 +20,14 @@
   justify-content: flex-start;
   margin-top: 1%;
   width: 50%;
+}
+
+button {
+ margin-top: 10px;
+ margin-left: auto;
+ margin-right:auto;
+ text-align: center;
+ width: 100%;
 }
 
 .services {
@@ -46,5 +53,11 @@ img {
   .room-card {
     margin: 1em;
     width: auto;
+  }
+  img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
   }
 }

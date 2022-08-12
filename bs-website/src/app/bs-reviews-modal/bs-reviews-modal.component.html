@@ -1,37 +1,111 @@
-<h1 class="mainTitle" i18n="modal-title | titre donnez votre avis">Give your feedback</h1>
-<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="reviewForm">
-  <div class="text">
-    <label i18n="modal-name | champs nom prénom">
-      Firstname Lastname
-      <mat-form-field appearance="outline">
-        <input required matInput type="text" formControlName="author" placeholder="Nom, Prénom">
-      </mat-form-field>
+<h1 mat-dialog-title i18n="modal-title | titre donnez votre avis">
+  Give your feedback
+</h1>
+<mat-dialog-content>
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="reviewForm">
+    <div class="text">
+      <label i18n="modal-name | champs nom prénom">
+        Firstname Lastname
+        <mat-form-field appearance="outline">
+          <input
+            required
+            matInput
+            type="text"
+            formControlName="author"
+            placeholder="Nom, Prénom"
+          />
+        </mat-form-field>
+      </label>
+      <label i18n="modal-description | champs description">
+        Description
+        <mat-form-field appearance="outline">
+          <textarea
+            required
+            matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="5"
+            i18n-placeholder="modal-placeholder | donner envie d'écrire"
+            placeholder="My sojourn at Beau-Site was ..."
+            formControlName="description"
+          ></textarea>
+          <mat-error *ngIf="reviewForm.invalid">please tell us more</mat-error>
+        </mat-form-field>
+      </label>
+    </div>
+
+    <label class="score" formGroupName="rating">
+      <p i18n="modal-clean | critère clean">Staff</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Staff"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-service | critère service">Clean</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Clean"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-comfort | critère comfort">Location</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Location"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-spot | critère spot">Comfort</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Comfort"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-amenity | critère amenity">Breakfast</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Breakfast"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-breakfast | critère breakfast">ValueForMoney</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="ValueForMoney"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
+      <p i18n="modal-breakfast | critère breakfast">Service</p>
+      <mat-slider
+        required
+        thumbLabel
+        formControlName="Service"
+        min="1"
+        max="10"
+        step="1"
+      ></mat-slider>
     </label>
-    <label i18n="modal-description | champs description">
-      Description
-      <mat-form-field appearance="outline">
-        <textarea required matInput cdkTextareaAutosize cdkAutosizeMinRows="5" i18n-placeholder="modal-placeholder | donner envie d'écrire" placeholder="My sojourn at Beau-Site was ..." formControlName="description"></textarea>
-        <mat-error *ngIf="reviewForm.invalid">please tell us more</mat-error>
-      </mat-form-field>
-    </label>
-  </div>
-  <label class="score" formGroupName="rating">
-    <p i18n="modal-clean | critère clean">Staff</p>
-    <mat-slider required thumbLabel formControlName="Staff" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-service | critère service">Clean</p>
-    <mat-slider required thumbLabel formControlName="Clean" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-comfort | critère comfort">Location</p>
-    <mat-slider required thumbLabel formControlName="Location" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-spot | critère spot">Comfort</p>
-    <mat-slider required thumbLabel formControlName="Comfort" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-amenity | critère amenity">Breakfast</p>
-    <mat-slider required thumbLabel formControlName="Breakfast" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-breakfast | critère breakfast">ValueForMoney</p>
-    <mat-slider required thumbLabel formControlName="ValueForMoney" min="1" max="10" step="1"></mat-slider>
-    <p i18n="modal-breakfast | critère breakfast">Service</p>
-    <mat-slider required thumbLabel formControlName="Service" min="1" max="10" step="1"></mat-slider>
-  </label>
-  <button mat-fab color="primary" aria-label="Submit review" [disabled]="!reviewForm.valid">
-    <mat-icon>input</mat-icon>
-  </button>
-</form>
+
+    <button
+      mat-fab
+      color="primary"
+      aria-label="Submit review"
+      [disabled]="!reviewForm.valid"
+    >
+      <mat-icon>input</mat-icon>
+    </button>
+  </form>
+</mat-dialog-content>

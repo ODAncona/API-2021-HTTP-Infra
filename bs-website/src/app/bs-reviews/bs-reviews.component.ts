@@ -38,7 +38,11 @@ export class BsReviewsComponent {
    * Open the dialog for writing a review
    */
   addReview() {
-    let dialogRef = this.dialog.open(BsReviewsModalComponent, { data: 'test' });
+    let dialogRef = this.dialog.open(BsReviewsModalComponent, {
+      data: 'test',
+      width: '80%',
+      height:'auto'
+    });
     dialogRef.afterClosed().subscribe(() => {
       window.location.reload();
     });
