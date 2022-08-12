@@ -1,26 +1,57 @@
 <div *ngIf="promotion; else noPromotion">
   <mat-card>
-    <div>
-      <h1 class="">{{ promotion.title | uppercase }}</h1>
-      <h2 class="">{{ promotion.subtitle | titlecase }}</h2>
-    </div>
-    <img mat-card-image src="{{ promotion.image }}" alt="{{ promotion.title}} promotion" />
-    <mat-card-subtitle i18n="room-header | Titre pour la descriptiond des chambres">Description</mat-card-subtitle>
+    <mat-card-header>
+      <mat-card-title>{{ promotion.title | uppercase }}</mat-card-title>
+      <mat-card-subtitle>{{
+        promotion.subtitle | titlecase
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ promotion.image }}"
+      alt="{{ promotion.title }} promotion"
+    />
+    <mat-card-subtitle
+      i18n="room-header | Titre pour la descriptiond des chambres"
+      >Description</mat-card-subtitle
+    >
     <mat-card-content>
-      <p>{{ promotion.description }}</p>
+      <p *ngIf="promotion.description">{{ promotion.description }}</p>
+      <mat-card-subtitle *ngIf="promotion.pdf"
+        >Details & Informations</mat-card-subtitle
+      >
+      <div class="pdf">
+        <pdf-viewer
+          [src]="promotion.pdf"
+          [render-text]="true"
+          [original-size]="true"
+          [fit-to-page]="true"
+          [show-borders]="true"
+          [show-all]="false"
+        >
+        </pdf-viewer>
+      </div>
     </mat-card-content>
-    <mat-card-subtitle>Details & Informations</mat-card-subtitle>
-    <div class="pdf" *ngIf="promotion.pdf">
-      <pdf-viewer [src]="promotion.pdf" [render-text]="true" [original-size]="true" [fit-to-page]="true"
-        [show-borders]="true" [show-all]="false">
-      </pdf-viewer>
-    </div>
     <mat-card-actions>
-      <button mat-raised-button color="accent" (click)="book()" class="bookButton">
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="book()"
+        class="bookButton"
+      >
         Book
       </button>
-      <a *ngIf="promotion.voucher" href="{{ promotion.voucher }}" target="_blank">
-        <button mat-stroked-button i18n="promotions-btn | more button" color="primary" class="bookButton">
+      <a
+        *ngIf="promotion.voucher"
+        href="{{ promotion.voucher }}"
+        target="_blank"
+      >
+        <button
+          mat-stroked-button
+          i18n="promotions-btn | more button"
+          color="primary"
+          class="bookButton"
+        >
           <mat-icon>shopping_cart</mat-icon>
         </button>
       </a>
@@ -30,6 +61,8 @@
 <ng-template #noPromotion>
   <h2>This promotion doesn't exist.</h2>
 </ng-template>
-<a routerLink="/promotions"><button mat-button i18n="promotions-back | bouton retour">
+<a routerLink="/promotions"
+  ><button mat-button i18n="promotions-back | bouton retour">
     Back to promotions
-  </button></a>
+  </button></a
+>

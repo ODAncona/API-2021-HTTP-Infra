@@ -10,11 +10,10 @@
 
 <div class="team">
   <mat-card *ngFor="let w of workers" class="team-card">
+    <mat-card-header>
+      <mat-card-title>{{ w.firstname }}, {{ w.lastname }}</mat-card-title>
+      <mat-card-subtitle>{{ w.function }}</mat-card-subtitle>
+    </mat-card-header>
     <img mat-card-image src="{{ w.image }}" alt="{{ w.function }}" />
-    <mat-card-content>
-      <p>
-        {{ w.firstname }}, {{ w.lastname }}: {{ w.function }}
-      </p>
-    </mat-card-content>
   </mat-card>
 </div>

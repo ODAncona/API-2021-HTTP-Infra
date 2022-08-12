@@ -1,7 +1,7 @@
 <ngb-carousel *ngIf="images" class="carousel">
   <ng-template ngbSlide *ngFor="let image of images">
     <div class="picsum-img-wrapper">
-      <img src="{{image}}" alt="Hotel Beau-Site Diaporama">
+      <img src="{{ image }}" alt="Hotel Beau-Site Diaporama" />
     </div>
   </ng-template>
 </ngb-carousel>
@@ -10,28 +10,37 @@
 
 <div class="dream">
   <video autoplay loop muted>
-    <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4">
+    <source src="../../assets/vidéos/restaurant.mp4" type="video/mp4" />
   </video>
-  <h2 i18n="video-overlay | invitation sur la vidéo">Welcome to Hôtel Beau-Site</h2>
+  <h2 i18n="video-overlay | invitation sur la vidéo">
+    Welcome to Hôtel Beau-Site
+  </h2>
 </div>
 
-<h2 class="mainTitle" i18n="home-title | Accroche principale">Spend an unforgettable holiday in our Chalet-Hotel in the
-  midst of the Bernese Alps.</h2>
+<h2 class="mainTitle" i18n="home-title | Accroche principale">
+  Spend an unforgettable holiday in our Chalet-Hotel in the midst of the Bernese
+  Alps.
+</h2>
 
 <mat-card i18n="home-description | description de l'hôtel" class="description">
-  TO DO
+  A warm welcome! We look forward to meeting you in person very soon. You are
+  welcome to discover more about our hotel and the Adelboden region. If you
+  cannot find all the information you are looking for, we will be happy to give
+  you information by telephone (033 673 88 88). We are a highly motivated team
+  who will do everything in our reach to ensure your unforgettable stay. So, see
+  you soon in Adelboden! Your team from the Beau-Site
 </mat-card>
 
 <div class="cards">
-  <mat-card class="card" *ngFor="let card of cards">
-    <mat-card-header>
-      <mat-card-title>{{card.title | uppercase}}</mat-card-title>
-      <mat-card-subtitle>{{card.subtitle | lowercase}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{card.img}}" alt="{{card.title}}">
-    <mat-card-actions>
-      <a routerLink="{{card.url}}"><button mat-stroked-button i18n="cards-btn | more button" color="primary">See
-          more</button></a>
-    </mat-card-actions>
-  </mat-card>
+  <ng-container *ngFor="let card of cards">
+    <mat-card class="card" routerLink="{{ card.url }}">
+      <mat-card-header>
+        <mat-card-title>{{ card.title | uppercase }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ card.img }}" alt="{{ card.title }}" />
+      <mat-card-content>
+        {{ card.description }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
 </div>

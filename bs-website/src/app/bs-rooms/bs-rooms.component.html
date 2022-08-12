@@ -1,7 +1,6 @@
 <div class="rooms">
   <mat-card class="room-card" *ngFor="let room of rooms">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ room.title | uppercase }}</mat-card-title>
     </mat-card-header>
 
@@ -14,7 +13,7 @@
     >
       <ng-template *ngFor="let image of room.images" ngbSlide>
         <div class="picsum-img-wrapper">
-          <img mat-card-image src="{{ image }}" alt="{{room.title}} image" />
+          <img mat-card-image src="{{ image }}" alt="{{ room.title }} image" />
         </div>
       </ng-template>
     </ngb-carousel>

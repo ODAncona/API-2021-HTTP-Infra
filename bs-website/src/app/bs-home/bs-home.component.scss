@@ -71,7 +71,7 @@ mat-card {
   }
   .dream {
     height: 35%;
-    h2{
+    h2 {
       position: absolute;
       z-index: 1;
       top: 12%;
@@ -98,9 +98,9 @@ mat-card {
 }
 
 .card {
-  margin-top: 1%;
-  max-width: 29%;
+  max-width: 28%;
   min-width: 400px;
+  cursor: pointer;
 
   img {
     max-height: 600px;
@@ -109,13 +109,9 @@ mat-card {
 }
 
 @media (max-width: 465px) {
-  .flex-item-left,
-  .flex-item-right {
-    flex: 100%;
-  }
   .dream {
     height: 25%;
-    h2{
+    h2 {
       position: absolute;
       z-index: 1;
       top: 12%;
@@ -133,12 +129,6 @@ mat-card {
     }
   }
   .card {
-    margin-top: 1%;
-    max-width: 29%;
     min-width: 350px;
-  
-    img {
-      max-height: 600px;
-    }
   }
 }

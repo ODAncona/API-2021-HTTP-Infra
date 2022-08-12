@@ -1,15 +1,15 @@
 .rooms {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
 }
 
 .room-card {
   margin: 1em;
-  width: 90%;
-  background-color: rgba(100, 28, 34, 0.3);
+  width: 44%;
+  //background-color: rgba(100, 28, 34, 0.3);
   //background-color: rgba($color: #492d06, $alpha: .2);
 
 }
@@ -35,7 +35,7 @@
 }
 
 img {
-  max-height: 600px;
+  max-height: 400px;
   width: auto;
   margin-left: auto;
   margin-right: auto;

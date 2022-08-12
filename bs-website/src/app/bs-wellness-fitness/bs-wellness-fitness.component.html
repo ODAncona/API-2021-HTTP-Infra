@@ -1,36 +1,45 @@
 <div class="wrapper">
-  
   <div class="dream">
     <video autoplay loop>
       <source src="../../../assets/vidéos/fitness.mp4" type="video/mp4" />
     </video>
   </div>
 
-  <h1 class="fitTitle" i18n="fit-title | Titre de la page">A Fitness for Adelboden</h1>
-  <mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title i18n="fit-offers | titre des offres"> Offers </mat-panel-title>
-      <mat-panel-description i18n="fit-offers-descriptions">
-        Choose the plan that fits your needs.
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div class="offers">
-      <div class="offer" *ngFor="let o of offers">
-        <p>{{ o.description }}</p>
-        <p>{{ o.price }}.-</p>
+  <h1 class="fitTitle" i18n="fit-title | Titre de la page">
+    A Fitness for Adelboden
+  </h1>
+
+  <div class="panel">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n="fit-offers | titre des offres">
+          Offers
+        </mat-panel-title>
+        <mat-panel-description i18n="fit-offers-descriptions">
+          Choose the plan that fits your needs.
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="offers">
+        <div class="offer" *ngFor="let o of offers">
+          <p>{{ o.description }}</p>
+          <p>{{ o.price }}.-</p>
+        </div>
       </div>
-    </div>
-    <button
-      mat-raised-button
-      color="accent"
-      class="orderButton"
-      (click)="orderSubscription()"
-      i18n="fit-suscribe | commander une offre"
-    >
-      Suscribe / Renew
-    </button>
-  </mat-expansion-panel>
-  <h1 class="fitSubtitle" i18n="fit-benefits | titre des avantages">Benefits</h1>
+      <button
+        mat-raised-button
+        color="accent"
+        class="orderButton"
+        (click)="orderSubscription()"
+        i18n="fit-suscribe | commander une offre"
+      >
+        Suscribe / Renew
+      </button>
+    </mat-expansion-panel>
+  </div>
+
+  <h1 class="fitSubtitle" i18n="fit-benefits | titre des avantages">
+    Benefits
+  </h1>
   <div class="benefits">
     <mat-card class="benefit-card" *ngFor="let benefit of benefits">
       <mat-card-header>
