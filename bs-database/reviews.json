@@ -10,42 +10,10 @@
     "amenity": 3,
     "breakfast": 8
   },
-  "active": false,
+  "active": true,
   "description": "Ceci est un article à garder car j'ai passé du temps dessus. J'ai adoré faire du bob dans cet endroit magnifique.",
   "author": "Irène D'Ancona",
-  "date": "3/9/2020"
-},{
-  "_id": {
-    "$oid": "5f51fb088345741e80c63115"
-  },
-  "rating": {
-    "clean": 9,
-    "service": 9,
-    "comfort": 10,
-    "spot": 10,
-    "amenity": 6,
-    "breakfast": 10
-  },
-  "active": true,
-  "description": "Je me suis toujours demandé pourquoi je ne monterai pas plus souvent à l'hôtel BeauSite. l'endroit est si bucolique. J'adore le schnaps des campagnes qu'ils servent dans les égouts juste à côté",
-  "author": "Géraldine Cuennet",
-  "date": "4/9/2020"
-},{
-  "_id": {
-    "$oid": "611bfe308032f102784bed61"
-  },
-  "rating": {
-    "clean": 8,
-    "service": 10,
-    "comfort": 10,
-    "spot": 10,
-    "amenity": 9,
-    "breakfast": 10
-  },
-  "active": true,
-  "description": "C'était un séjour très agréable. J'ai adoré promener Tara",
-  "author": "Hanna Luniakina",
-  "date": "17/8/2021"
+  "date": "1639165530806"
 },{
   "_id": {
     "$oid": "611e924e93b9d05b7ceba4f8"
@@ -58,10 +26,10 @@
     "amenity": 5,
     "breakfast": 7
   },
-  "active": false,
+  "active": true,
   "description": "J'ai vraiment trouvé la forêt à Adelboden féérique. J'ai presque envie de me détendre mon arc.",
   "author": "Miya Anderson",
-  "date": "19/8/2021"
+  "date": "1659865530806"
 },{
   "_id": {
     "$oid": "61226902fce619831008578d"
@@ -77,5 +45,72 @@
   "active": true,
   "description": "Hey everyone! I have just returned from Hotel Beausite in Adelboden, spending 4 days with my wife and the kids. But after I fucked the janitor and the masseuse and also the owner's dog, my wife absolutely want to divorce. Beside of that, I would rate 10/10 this Hotel. Peace and love.\n\n",
   "author": "Daniel Gronokh",
-  "date": "22/8/2021"
+  "date": "1359165530806"
+},{
+  "_id": {
+    "$oid": "61d47675f2b09e368532f94c"
+  },
+  "rating": {
+    "clean": 8,
+    "service": 6,
+    "comfort": 8,
+    "spot": 8,
+    "amenity": 8,
+    "breakfast": 10
+  },
+  "active": true,
+  "description": "LKes chaussettes de l'archjiduchesse sont-elles sèches?",
+  "author": "Toto P",
+  "date": "1653165530806"
+},{
+  "_id": {
+    "$oid": "62eadee876faaf560d26d8ea"
+  },
+  "rating": {
+    "Staff": 8,
+    "Clean": 7,
+    "Location": 8,
+    "Comfort": 8,
+    "Breakfast": 7,
+    "ValueForMoney": 7,
+    "Service": 9
+  },
+  "active": true,
+  "description": "C'était un séjour très agréable. J'ai adoré promener Tara",
+  "author": "Hanna Luniakina",
+  "date": "1659559656436"
+},{
+  "_id": {
+    "$oid": "62eae03276faaf560d26d8fa"
+  },
+  "rating": {
+    "Staff": 5,
+    "Clean": 7,
+    "Location": 6,
+    "Comfort": 8,
+    "Breakfast": 6,
+    "ValueForMoney": 8,
+    "Service": 6
+  },
+  "active": true,
+  "description": "Je me suis toujours demandé pourquoi je ne monterai pas plus souvent à l'hôtel BeauSite. l'endroit est si bucolique. J'adore le schnaps des campagnes qu'ils servent dans les égouts juste à côté",
+  "author": "Géraldine Cuennet",
+  "date": "1659559986413"
+},{
+  "_id": {
+    "$oid": "62eb6a3276faaf560d26d909"
+  },
+  "rating": {
+    "Staff": 10,
+    "Clean": 6,
+    "Location": 9,
+    "Comfort": 7,
+    "Breakfast": 6,
+    "ValueForMoney": 10,
+    "Service": 10
+  },
+  "active": true,
+  "description": "Je me suis rendu compte à quel point la montagne c'est génial! Les hôtes étaient très sympas et j'ai adoré me promener à l'hôtel des Alpes.",
+  "author": "Olivier D'Ancona",
+  "date": "1659595314143"
 }]
