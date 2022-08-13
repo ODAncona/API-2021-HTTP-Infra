@@ -6,8 +6,11 @@
   </div>
 
   <h1 class="fitTitle" i18n="fit-title | Titre de la page">
-    A Fitness for Adelboden
+    Your Fitness Studio in Adelboden
   </h1>
+
+  <p class="text">Equipped with a wide selection of strength and cardio machines, the Fitness Studio Hotel Beau-Site has everything
+    you need to stay in shape!</p>
 
   <div class="panel">
     <mat-expansion-panel>
@@ -15,7 +18,7 @@
         <mat-panel-title i18n="fit-offers | titre des offres">
           Offers
         </mat-panel-title>
-        <mat-panel-description i18n="fit-offers-descriptions">
+        <mat-panel-description i18n="fit-offers-descriptions" class="offer-title">
           Choose the plan that fits your needs.
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -25,13 +28,8 @@
           <p>{{ o.price }}.-</p>
         </div>
       </div>
-      <button
-        mat-raised-button
-        color="accent"
-        class="orderButton"
-        (click)="orderSubscription()"
-        i18n="fit-suscribe | commander une offre"
-      >
+      <button mat-raised-button color="accent" class="orderButton" (click)="orderSubscription()"
+        i18n="fit-suscribe | commander une offre">
         Suscribe / Renew
       </button>
     </mat-expansion-panel>
@@ -50,5 +48,6 @@
       </mat-card-content>
     </mat-card>
   </div>
+  <p class="conditions" i18n="promotions-conditions | terms apply">* Terms apply, contact us for more information</p>
   <mat-divider></mat-divider>
 </div>

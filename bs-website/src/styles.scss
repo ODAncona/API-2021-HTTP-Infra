@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre Baskerville:wght@400;700&display=swap");
 body,
 html {
   height: 100%;
@@ -8,7 +9,8 @@ html {
 .mainTitle {
   color: black;
   font-size: 2em;
-  font-family: Roboto;
+  font-family: 'Libre Baskerville';
+  //font-family: Roboto;
   text-align: center;
   margin: 2em;
 }
@@ -16,7 +18,7 @@ html {
 .sectionTitle {
   color: black;
   font-size: 2em;
-  font-family: Roboto;
+  font-family: 'Libre Baskerville';
   text-align: center;
   margin: 1em;
 }

@@ -32,7 +32,8 @@ mat-card {
     z-index: 1;
     top: 30%;
     left: 20%;
-    font-family: cursive;
+    font-family: "HighAlpine";
+    src: url("../../assets/fonts/HighAlpine.otf") format("opentype");
     width: 60%;
     font-weight: 400;
     text-shadow: 1em;

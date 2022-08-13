@@ -9,17 +9,16 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class BsWellnessFitnessComponent {
   benefits: any[] = [
-    { title: "Suspension", description: $localize`Suspend your subscription for free (from 7 to 90 days/year)` },
-    { title: "Reduction", description: $localize`Special reduction with guest card. 15 CHF instead of 20 CHF` },
-    { title: "Sponsorship", description: $localize`Are you recommanding us? Get a free month for each new subscriber` },
+    { title: "Take a free break", description: $localize`Going on a holiday? No problem, you can take a break from our gym for free (annual subscriptions, 7 to 90 days per year) *` },
+    { title: "Discount", description: $localize`Special discount with the Adelboden Guest Card, CHF 15 instead of CHF 20 per entry.` },
+    { title: "Referral", description: $localize`Refer a friend and get a free month for each new subscriber! *` },
   ];
   offers: any[] = [
-    { description: "1 month", price: "110" },
-    { description: "3 months", price: "300" },
-    { description: "6 months", price: "450" },
-    { description: "12 months", price: "550" },
-    { description: "Renew 12 months", price: "490" },
-    { description: "Sauna access", price: "150" },
+    { description: $localize`1 month`, price: "110" },
+    { description: $localize`3 months`, price: "300" },
+    { description: $localize`6 months`, price: "450" },
+    { description: $localize`12 months`, price: "550" },
+    { description: $localize`12 months renewal`, price: "490" }
   ];
 
   constructor(public dialog: MatDialog) { }

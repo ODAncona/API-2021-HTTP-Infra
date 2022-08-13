@@ -27,37 +27,37 @@ export class BsHomeComponent {
       title: $localize`Rooms`,
       url: '/rooms',
       img: '../../assets/images/home/card_rooms.webp',
-      description: $localize`Feel at home`
+      description: $localize`Feel at home.`
     },
     {
       title: $localize`Restaurant`,
       url: '/restaurant',
       img: '../../assets/images/home/card_restaurant.webp',
-      description: $localize`Delight yourself`
+      description: $localize`Delight yourself.`
     },
     {
       title: $localize`Promotions`,
       url: '/promotions',
       img: '../../assets/images/home/card_promotions.webp',
-      description: $localize`Discover the best`
+      description: $localize`Benefits from our offers.`
     },
     {
-      title: $localize`Fitness & Wellness`,
+      title: $localize`Wellness & Fitness`,
       url: '/wellness',
       img: '../../assets/images/home/card_wellness_fitness.webp',
-      description: $localize`Relax yourself`
+      description: $localize`Awaken your senses.`
     },
     {
       title: $localize`Region`,
       url: '/region',
       img: '../../assets/images/home/card_region.webp',
-      description: $localize`Experience Bernese Alps`
+      description: $localize`Discover the Bernese Oberland.`
     },
     {
       title: $localize`Team`,
       url: '/team',
       img: '../../assets/images/home/card_team.webp',
-      description: $localize`Meet our team`
+      description: $localize`Meet our team.`
     },
   ];
 }

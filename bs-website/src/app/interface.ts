@@ -113,8 +113,10 @@ export interface Mail {
 const API_URL = 'http://localhost:1470/';
 
 /* This constant refers to the email address of admin */
-const BS_EMAIL = 'olivier_dancona@hotmail.com'
+const BS_EMAIL = 'olivier_dancona@hotmail.com';
 //const BS_EMAIL = 'info@beausite.ch'
+
+const BS_PHONE = '+41 (0)33 673 82 82';
 
 
 export { API_URL, BS_EMAIL };

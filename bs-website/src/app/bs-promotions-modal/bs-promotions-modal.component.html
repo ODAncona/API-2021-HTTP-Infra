@@ -1,4 +1,4 @@
-<h1 i18n="promotion-title | réserver une prom">Book a promotion</h1>
+<h1 i18n="promotion-title | réserver une prom" i18n="title">Book a promotion</h1>
 <form [formGroup]="promotionForm" (ngSubmit)="onSubmit()" class="form">
   <div class="contact">
     <mat-form-field appearance="standard">
@@ -12,7 +12,7 @@
         lastname</mat-error>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <mat-select required matInput formControlName="participant" placeholder="Number of participant">
+      <mat-select required matInput formControlName="participant" placeholder="Number of participants">
         <mat-option *ngFor="let i of [1,2,3,4,5,6]" [value]="i">{{i}}</mat-option>
       </mat-select>
     </mat-form-field>
@@ -21,13 +21,13 @@
       <mat-error *ngIf="promotionForm.invalid" i18n="error-email | email invalide">Invalid email</mat-error>
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label i18n="promotion-date | choisir une date">Choose a date</mat-label>
+      <mat-label i18n="promotion-date | choisir une date">Pick a date</mat-label>
       <input matInput [matDatepicker]="picker" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input matInput type="text" formControlName="telephone" placeholder="Telephone">
+      <input matInput type="text" formControlName="telephone" placeholder="Phone Nr.">
       <mat-hint>+41xxyyyzzzz</mat-hint>
       <mat-error *ngIf="promotionForm.invalid" i18n="error-number | numéro de téléphone ne respectant pas l'indicatif suisse">Invalid number</mat-error>
     </mat-form-field>

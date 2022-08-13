@@ -1,11 +1,4 @@
-<h1 class="mainTitle">Discover the Region</h1>
-<div class="benefits">
-  <div class="benefit-card" *ngFor="let benefit of benefits">
-    <h2 class="text">{{ benefit.title }}</h2>
-    <a href="{{ benefit.url }}"><img div src="{{ benefit.img }}" alt="{{ benefit.title}}" /></a>
-  </div>
-</div>
-
+<h1 class="mainTitle">Discover the Bernese Oberland.</h1>
 <mat-divider></mat-divider>
 
 <div class="season">
@@ -39,5 +32,14 @@
     <p>
       {{ a.description }}
     </p>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="benefits">
+  <div class="benefit-card" *ngFor="let benefit of benefits">
+    <h2 class="text">{{ benefit.title }}</h2>
+    <a href="{{ benefit.url }}"><img div src="{{ benefit.img }}" alt="{{ benefit.title}}" /></a>
   </div>
 </div>

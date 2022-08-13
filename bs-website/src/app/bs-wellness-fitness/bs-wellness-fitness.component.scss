@@ -16,6 +16,15 @@
   margin-right: auto;
 }
 
+.text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
 .wrapper {
   background-color: rgba(248, 219, 51, 0.9);
 }
@@ -31,10 +40,19 @@
 
 .fitSubtitle {
   font-size: 3.4em;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.06em;
+  line-height: 1em;
   text-align: center;
   margin: 5% 1em 1em;
 }
 
+.offer-title {
+  width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .offers {
   display: flex;
   flex-direction: column;
@@ -66,7 +84,13 @@
 
 .benefit-card {
   margin-top: 1%;
+  margin-left: 10px;
   width: 31%;
   //max-width: 400px;
   min-width: 300px;
+}
+
+.conditions {
+  margin: 3.4%;
+  margin-bottom: 1%;
 }

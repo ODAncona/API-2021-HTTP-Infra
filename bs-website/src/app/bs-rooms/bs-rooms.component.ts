@@ -9,7 +9,7 @@ import { Room } from '../interface';
 export class BsRoomsComponent {
   rooms: Room[] = [
     {
-      title: 'Comfortable Double Room',
+      title: $localize`Comfortable Double Room - Panoramic View & Terrasse`,
       images: ['../../assets/images/rooms/comfortable_1.webp'],
       services: [
         { name: 'Bar-Cafétéria' },
@@ -20,7 +20,7 @@ export class BsRoomsComponent {
       roomSize: '20',
     },
     {
-      title: 'Cozy Double Room',
+      title: $localize`Cozy Double Room`,
       images: [
         '../../assets/images/rooms/cozy_1.webp',
         '../../assets/images/rooms/cozy_2.webp',
@@ -38,7 +38,7 @@ export class BsRoomsComponent {
       roomSize: '20',
     },
     {
-      title: 'Superior Double Room',
+      title: $localize`Superior Double Room`,
       images: [
         '../../assets/images/rooms/superior_1.webp',
         '../../assets/images/rooms/superior_2.webp',
@@ -57,7 +57,7 @@ export class BsRoomsComponent {
       roomSize: '28',
     },
     {
-      title: 'Premium Double Room',
+      title: $localize`Premium Double Room - Panoramic View`,
       images: [
         '../../assets/images/rooms/premium_1.webp',
         '../../assets/images/rooms/premium_2.webp',
@@ -81,7 +81,8 @@ export class BsRoomsComponent {
       roomSize: '28',
     },
     {
-      title: 'Junior Suite',
+      title: $localize`Junior Suite - Panoramic View / Village Side
+      `,
       images: [
         '../../assets/images/rooms/junior_1.webp',
         '../../assets/images/rooms/junior_2.webp',
@@ -107,7 +108,7 @@ export class BsRoomsComponent {
   constructor(config: NgbCarouselConfig) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
-    config.interval = 1000;
+    config.interval = 2000;
     config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = true;

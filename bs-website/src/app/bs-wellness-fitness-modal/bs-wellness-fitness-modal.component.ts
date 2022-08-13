@@ -32,12 +32,11 @@ export class BsWellnessFitnessModalComponent {
     telephone: new UntypedFormControl('', [Validators.required]),
   });
   offers: any[] = [
-    { description: '1 month', price: '110' },
-    { description: '3 months', price: '300' },
-    { description: '6 months', price: '450' },
-    { description: '12 months', price: '550' },
-    { description: 'Renew 12 months', price: '510' },
-    { description: 'Sauna access', price: '150' },
+    { description: $localize`1 month`, price: "110" },
+    { description: $localize`3 months`, price: "300" },
+    { description: $localize`6 months`, price: "450" },
+    { description: $localize`12 months`, price: "550" },
+    { description: $localize`12 months renewal`, price: "490" },
   ];
 
   constructor(

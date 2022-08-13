@@ -24,11 +24,11 @@ export class BsReviewsModalComponent {
     ]),
     rating: new UntypedFormGroup({
       Staff: new UntypedFormControl(7, this.toCheck),
-      Clean: new UntypedFormControl(7, this.toCheck),
+      Cleanliness: new UntypedFormControl(7, this.toCheck),
       Location: new UntypedFormControl(7, this.toCheck),
       Comfort: new UntypedFormControl(7, this.toCheck),
       Breakfast: new UntypedFormControl(7, this.toCheck),
-      ValueForMoney: new UntypedFormControl(7, this.toCheck),
+      Value: new UntypedFormControl(7, this.toCheck),
       Service: new UntypedFormControl(7, this.toCheck),
     }),
   });

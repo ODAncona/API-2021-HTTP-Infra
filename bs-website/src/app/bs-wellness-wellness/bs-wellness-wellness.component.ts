@@ -17,6 +17,6 @@ export class BsWellnessWellnessComponent {
       name: $localize`Foot Massage + Peeling + Mask`,
       price: '60min 130.-',
     },
-    { name: $localize`Lymphatic Drainage: `, price: '30min 60.- // 60min 110.-' },
+    { name: $localize`Manual Lymphatic Drainage: `, price: '30min 60.- // 60min 110.-' },
   ];
 }

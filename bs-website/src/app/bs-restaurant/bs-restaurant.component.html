@@ -5,20 +5,22 @@
 </div>
 
 <div class="display-menu">
-  <h1 class="sectionTitle" i18n="carte-title | titre des menus à la carte">A la carte</h1>
-  <pdf-viewer *ngIf="carteMenu; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [original-size]="false" [zoom-scale]="'page-width'"
-    style="display:block;"></pdf-viewer>
+  <h1 class="sectionTitle" i18n="carte-title | titre des menus à la carte">À La Carte</h1>
+  <pdf-viewer *ngIf="carteMenu; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [original-size]="false"
+    [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noCarteMenu>
-    <h2 style="text-align:center;" i18n="carte-error | erreur">We don't provide a la carte menu yet.</h2>
+    <h2 style="text-align:center;" i18n="carte-error | erreur">Our à la carte selection will be available again during the next season.
+    </h2>
   </ng-template>
 </div>
 
 <div class="display-menu">
-  <h1 class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Halfboard</h1>
-  <pdf-viewer *ngIf="halfboard; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [original-size]="false" [zoom-scale]="'page-width'"
-    style="display:block;"></pdf-viewer>
+  <h1 class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Today's Halfboard Menu</h1>
+  <pdf-viewer *ngIf="halfboard; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [original-size]="false"
+    [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noHalfboard>
-    <h2 style="text-align:center;" i18n="halfboard-error | pas de Demi-Pension">The halfboard is only available on demand</h2>
+    <h2 style="text-align:center;" i18n="halfboard-error | pas de Demi-Pension">At the moment, we offer Halfboard only
+      on request.</h2>
   </ng-template>
 </div>
 
@@ -32,7 +34,9 @@
     </ng-container>
   </div>
   <ng-template #noBanquet>
-    <h2 style="text-align:center;" i18n="banquet-error | pas de menus spéciaux">No Banquets for now</h2>
+    <h2 style="text-align:center;" i18n="banquet-error | pas de menus spéciaux">At the moment, we offer Banquets only
+      on request.
+    </h2>
   </ng-template>
 </div>
 
@@ -93,5 +97,5 @@
 -->
 
 <div class="book">
-  <h1 class="sectionTitle" i18n="restaurant-reservation | réservation">Reservations: 078/685 45 54</h1>
+  <h1 class="sectionTitle" i18n="restaurant-reservation | réservation">Reservations: +41 (0)33 673 82 82 </h1>
 </div>

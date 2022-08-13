@@ -8,13 +8,13 @@
   </mat-selection-list>
   <div class="contact">
     <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="firstname" placeholder="Firstname">
+      <input required matInput type="text" formControlName="firstname" placeholder="First Name">
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="lastname" placeholder="Lastname">
+      <input required matInput type="text" formControlName="lastname" placeholder="Surname">
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="birthdate" placeholder="Birthdate">
+      <input required matInput type="text" formControlName="birthdate" placeholder="Birth Date">
     </mat-form-field>
     <mat-form-field appearance="standard">
       <input required matInput type="text" formControlName="address" placeholder="Address">
@@ -27,7 +27,7 @@
       <mat-error *ngIf="fitnessForm.invalid" i18n="error-email | email non standard">Invalid email</mat-error>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input matInput type="text" formControlName="telephone" placeholder="Telephone">
+      <input matInput type="text" formControlName="telephone" placeholder="Phone Number">
       <mat-hint>+41xxyyyzzzz</mat-hint>
       <mat-error *ngIf="fitnessForm.invalid" i18n="error-number | numéro invalide">Invalid number</mat-error>
     </mat-form-field>

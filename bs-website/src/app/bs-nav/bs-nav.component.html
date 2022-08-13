@@ -1,36 +1,38 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$) ? 'over' : 'push'">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$) ? 'over' : 'push'">
     <mat-toolbar>
-      Hôtel Beau-Site
-      <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo" style="height:80%; margin: 10px;" />
+      Hotel Beau-Site
+      <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo"
+        style="height:80%; margin: 10px;" />
     </mat-toolbar>
     <mat-nav-list *ngFor="let nav of navs" (click)="handleClick(nav)">
       <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
     </mat-nav-list>
   </mat-sidenav>
-  
+
   <mat-sidenav-content id="sidenav">
-    <mat-toolbar color="primary">
-      <div class="toolbar">
-        <div>
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-          </button>
-          <span>{{activeLink | titlecase}}</span>
-        </div>
-        <a href="/home" class="logo">
-          <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo" style="height:80%; margin: 10px;" />
-        </a>
-        <mat-form-field appearance="outline" class="ils" id="ils">
-          <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
-            <mat-option [value]="l.code" *ngFor="let l of localesList">
-              <p>
-                {{l.label}}
-              </p>
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+    <mat-toolbar color="primary" class="toolbar">
+      <div>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>{{activeLink | titlecase}}</span>
       </div>
+      <a href="/home" class="logo">
+        <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo"
+          style="height:80%; margin: 10px;" />
+      </a>
+      <mat-form-field appearance="outline" class="ils" id="ils">
+        <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
+          <mat-option [value]="l.code" *ngFor="let l of localesList">
+            <p>
+              {{l.label}}
+            </p>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
     </mat-toolbar>
 
     <!-- Application -->

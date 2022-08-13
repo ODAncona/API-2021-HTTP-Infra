@@ -18,11 +18,11 @@ export class BsNavComponent {
     { link: 'promotions', name: 'Promotions' },
     { link: 'restaurant', name: 'Restaurant' },
     { link: 'photos', name: 'Photos' },
-    { link: 'wellness', name: 'Wellness - Fitness' },
+    { link: 'wellness', name: 'Wellness & Fitness' },
     { link: 'reviews', name: 'Reviews' },
     { link: 'team', name: 'Team' },
     { link: 'region', name: 'Region' },
-    { link: 'contact', name: 'Contact - Map' }
+    { link: 'contact', name: 'Contact & Map' }
   ];
   selectedLocale: any = 'en';
   localesList: Locale[] = [

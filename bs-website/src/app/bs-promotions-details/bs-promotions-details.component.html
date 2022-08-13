@@ -4,54 +4,30 @@
       <mat-card-title>{{ promotion.title | uppercase }}</mat-card-title>
       <mat-card-subtitle>{{
         promotion.subtitle | titlecase
-      }}</mat-card-subtitle>
+        }}</mat-card-subtitle>
     </mat-card-header>
-    <img
-      mat-card-image
-      src="{{ promotion.image }}"
-      alt="{{ promotion.title }} promotion"
-    />
-    <mat-card-subtitle
-      i18n="room-header | Titre pour la descriptiond des chambres"
-      >Description</mat-card-subtitle
-    >
+    <img mat-card-image src="{{ promotion.image }}" alt="{{ promotion.title }} promotion" />
+
     <mat-card-content>
+      <mat-card-subtitle i18n="room-header | Titre pour la descriptiond des chambres">Description</mat-card-subtitle>
       <p *ngIf="promotion.description">{{ promotion.description }}</p>
-      <mat-card-subtitle *ngIf="promotion.pdf"
-        >Details & Informations</mat-card-subtitle
-      >
+      <mat-card-subtitle *ngIf="promotion.pdf" i18n="promotion-details | details">Details & Informations
+      </mat-card-subtitle>
       <div class="pdf">
-        <pdf-viewer
-          [src]="promotion.pdf"
-          [render-text]="true"
-          [original-size]="true"
-          [fit-to-page]="true"
-          [show-borders]="true"
-          [show-all]="false"
-        >
+        <pdf-viewer [src]="promotion.pdf" [render-text]="true" [original-size]="true" [fit-to-page]="true"
+          [show-borders]="true" [show-all]="false">
         </pdf-viewer>
       </div>
     </mat-card-content>
+
     <mat-card-actions>
-      <button
-        mat-raised-button
-        color="accent"
-        (click)="book()"
-        class="bookButton"
-      >
-        Book
+      <button mat-raised-button color="accent" (click)="book()" class="bookButton" i18n="book-btn |book with us">
+        Book with us
       </button>
-      <a
-        *ngIf="promotion.voucher"
-        href="{{ promotion.voucher }}"
-        target="_blank"
-      >
-        <button
-          mat-stroked-button
-          i18n="promotions-btn | more button"
-          color="primary"
-          class="bookButton"
-        >
+      <a *ngIf="promotion.voucher" href="{{ promotion.voucher }}" target="_blank">
+        <button mat-stroked-button i18n="promotions-btn | more button" color="primary" class="bookButton"
+          i18n=" book-eguma | book external">
+          Gift a voucher // Book a ticket
           <mat-icon>shopping_cart</mat-icon>
         </button>
       </a>
@@ -59,10 +35,9 @@
   </mat-card>
 </div>
 <ng-template #noPromotion>
-  <h2>This promotion doesn't exist.</h2>
+  <h2 i18n="promotion-error | promotion dont exists">Oops! You're looking for a deal that doesn't exist.
+  </h2>
 </ng-template>
-<a routerLink="/promotions"
-  ><button mat-button i18n="promotions-back | bouton retour">
+<a routerLink="/promotions" class="special-btn"><button mat-button i18n="promotions-back | bouton retour">
     Back to promotions
-  </button></a
->
+  </button></a>

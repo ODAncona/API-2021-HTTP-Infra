@@ -4,38 +4,27 @@
       <mat-card-title>{{ promotion.title | uppercase }}</mat-card-title>
       <mat-card-subtitle>{{
         promotion.subtitle | lowercase
-      }}</mat-card-subtitle>
+        }}</mat-card-subtitle>
     </mat-card-header>
-    <img
-      mat-card-image
-      routerLink="{{ promotion._id }}"
-      src="{{ promotion.image }}"
-      alt="{{ promotion.title }} promotion"
-    />
+    <img mat-card-image routerLink="{{ promotion._id }}" src="{{ promotion.image }}"
+      alt="{{ promotion.title }} promotion" />
     <mat-card-content>
       <p>{{ promotion.description }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <a routerLink="{{ promotion._id }}"
-        ><button
-          mat-stroked-button
-          i18n="promotions-btn | more button"
-          color="primary"
-        >
+      <a routerLink="{{ promotion._id }}"><button mat-stroked-button i18n="promotions-btn | more button"
+          color="primary">
           More informations
-        </button></a
-      >
-      <a
-        *ngIf="promotion.voucher"
-        href="{{ promotion.voucher }}"
-        target="_blank"
-        ><button mat-stroked-button color="accent">
+        </button></a>
+      <a *ngIf="promotion.voucher" href="{{ promotion.voucher }}" target="_blank">
+        <button mat-stroked-button color="accent">
+          Gift a voucher // Book a ticket
           <mat-icon>shopping_cart</mat-icon>
-        </button></a
-      >
+        </button>
+      </a>
     </mat-card-actions>
   </mat-card>
   <h2 *ngIf="!promotions?.length" i18n="promotions-msg | no proms msg">
-    No promotion are actually available.
+    We're crafting new deals for you to enjoy!
   </h2>
 </div>
