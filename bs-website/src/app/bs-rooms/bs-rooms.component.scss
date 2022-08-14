@@ -13,21 +13,21 @@
   //background-color: rgba($color: #492d06, $alpha: .2);
 }
 
-.service {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  margin-top: 1%;
-  width: 50%;
-}
-
-button {
-  margin-top: 10px;
+img {
+  max-height: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  overflow: hidden;
+  object-fit: cover;
+  background-color: rgba($color: #492d06, $alpha: .2);
+}
+
+.show-more {
   width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 75px;
 }
 
 .services {
@@ -37,16 +37,25 @@ button {
   margin: 2%;
 }
 
+.service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 1%;
+  width: 50%;
+}
+
 .description-detail {
   margin: 1em;
 }
 
-img {
-  max-height: 400px;
-  width: auto;
+button {
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 1400px) {
