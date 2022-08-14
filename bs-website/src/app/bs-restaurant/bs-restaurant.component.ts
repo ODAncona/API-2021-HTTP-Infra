@@ -59,7 +59,7 @@ export class BsRestaurantComponent {
    * Retrieves all menus from database.
    */
   getAllMenus() {
-    this.restaurantService.getAllMenus().subscribe((menus) => {
+    this.restaurantService.getAllActiveMenus().subscribe((menus) => {
       this.menus = menus.reverse();
       this.menus.forEach((m) => {       
         switch (m.category) {
