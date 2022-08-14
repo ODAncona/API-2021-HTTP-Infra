@@ -4,7 +4,7 @@
     <mat-toolbar>
       Hotel Beau-Site
       <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo"
-        style="height:80%; margin: 10px;" />
+        style="height:80%; margin-left: 15px;" />
     </mat-toolbar>
     <mat-nav-list *ngFor="let nav of navs" (click)="handleClick(nav)">
       <a mat-list-item routerLink="{{nav.link}}">{{nav.name | titlecase}}</a>
@@ -23,7 +23,7 @@
         <img src="../../../assets/images/logo/beausite_logo.png" alt="Hôtel Beausite Logo"
           style="height:80%; margin: 10px;" />
       </a>
-      <mat-form-field appearance="outline" class="ils" id="ils">
+      <mat-form-field appearance="outline" class="ils">
         <mat-select [(value)]="selectedLocale" (selectionChange)="handleIls()">
           <mat-option [value]="l.code" *ngFor="let l of localesList">
             <p>

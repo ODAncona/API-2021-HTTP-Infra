@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 215px;
+  padding-right: 10px
 }
 
 .sidenav .mat-toolbar {
@@ -39,12 +39,6 @@ span {
   //background-color: rgba(255,255,255,0.8);
 }
 
-.ils {
-  max-width: 138px;
-  margin: 1em;
-  height: 110%;
-}
-
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   height: 80px;
@@ -57,4 +51,12 @@ span {
   .ils {
     margin: 0.2em;
   }
+}
+
+
+.ils {
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 150px;
+
 }

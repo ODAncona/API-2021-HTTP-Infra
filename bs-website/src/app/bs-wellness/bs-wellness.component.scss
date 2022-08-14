@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
+$dream: 'Satisfy';
+@import url("https://fonts.googleapis.com/css2?family=" +$dream+":wght@400;700&display=swap");
+
 .well {
   display: flex;
   width: 100%;
@@ -10,6 +15,8 @@
 }
 
 .wellness {
+  font-family: 'Satisfy';
+  font-size: 3em;
   width: 50%;
   background-image: url("../../assets/images/wellness/wellness_repos.webp");
   background-size: 100% 100%;
@@ -17,6 +24,8 @@
 }
 
 .fitness {
+  font-family: 'Oswald';
+  font-size: 3em;
   width: 50%;
   background-image: url("../../assets/images/wellness/fitness_machines.webp");
   background-size: 100% 100%;
@@ -26,7 +35,7 @@
 .overlay {
   background-color: rgba(0,0,0,0.7);
   width: 100%;
-  margin: 1em;
+  margin: .6em;
 }
 
 .title {

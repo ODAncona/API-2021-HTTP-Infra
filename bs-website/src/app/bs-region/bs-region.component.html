@@ -1,4 +1,4 @@
-<h1 class="mainTitle">Discover the Bernese Oberland.</h1>
+<div class="mainTitle">Discover the Bernese Oberland.</div>
 <mat-divider></mat-divider>
 
 <div class="season">
@@ -10,10 +10,10 @@
       <h2>Summer</h2>
     </div>
   -->
-  <h1 i18n="season-title">Summer</h1>
+  <h2 i18n="season-title">Summer</h2>
   <div class="activites" *ngFor="let a of summer">
     <a href="{{ a.link }}" target="_blank">
-      <h2>{{ a.title }}</h2>
+      <h3>{{ a.title }}</h3>
     </a>
     <p>
       {{ a.description }}
@@ -24,10 +24,10 @@
 <mat-divider></mat-divider>
 
 <div class="season">
-  <h1 i18n="season-title2">Winter</h1>
+  <h2 i18n="season-title2">Winter</h2>
   <div class="activites" *ngFor="let a of winter">
     <a href="{{ a.link }}" target="_blank">
-      <h2>{{ a.title }}</h2>
+      <h3>{{ a.title }}</h3>
     </a>
     <p>
       {{ a.description }}
@@ -40,7 +40,7 @@
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
     <a href="{{ benefit.url }}">
-      <h2 class="text">{{ benefit.title }}</h2>
+      <h3 class="text">{{ benefit.title }}</h3>
       <img div src="{{ benefit.img }}" alt="{{ benefit.title}}" />
     </a>
   </div>

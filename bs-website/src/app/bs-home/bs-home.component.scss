@@ -1,12 +1,11 @@
 $var: 'Great Vibes';
 $var: 'Rochester';
-$var: 'Satisfy';
-$var: 'Leckerli One';
-$var: 'Allura';
 $var: 'Cinzel Decorative';
-$var: 'Nothing You Could Do';
-$var: 'Reenie Beanie';
+$var: 'Allura';
+$var: 'Satisfy';
 $var: 'Pacifico';
+$var: 'Reenie Beanie';
+$var: 'Leckerli One';
 $var: 'Yesteryear';
 
 $var: 'Great Vibes';
@@ -48,21 +47,21 @@ mat-card {
   h2 {
     position: absolute;
     z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
     top: 30%;
-    left: 20%;
     font-family: $var;
-    width: 60%;
-    font-weight: 400;
+    width: 65%;
     text-shadow: 1em;
     text-align: center;
-    font-size: 3em;
+    font-size: 3.8em;
     line-height: 1em;
     background-color: rgba(255, 255, 255, 0.56);
     border-radius: 0.2em;
     color: black;
-    padding: 0.15em;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0.1em;
+    padding-top: 18px;
+    padding-bottom: 10px;
   }
 }
 
@@ -84,31 +83,27 @@ mat-card {
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-
-  .flex-item-left,
-  .flex-item-right {
-    flex: 100%;
-  }
-
   .dream {
     height: 35%;
 
     h2 {
       position: absolute;
       z-index: 1;
-      top: 12%;
-      left: 20%;
-      font-family: cursive;
-      width: 60%;
+      left: 50%;
+      transform: translate(-50%);
+      top: 10%;
+      font-family: $var;
+      width: 70%;
       text-shadow: 1em;
       text-align: center;
-      font-size: 4em;
+      font-size: 2em;
       line-height: 1em;
       background-color: rgba(255, 255, 255, 0.56);
       border-radius: 0.2em;
       color: black;
-      padding: 0.15em;
-      padding-top: 20px;
+      padding: 0.1em;
+      padding-top: 18px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -132,29 +127,8 @@ mat-card {
   background-color: rgba(255, 255, 255, 0.56);
 }
 
-@media (max-width: 465px) {
+@media (max-width: 400px) {
   .dream {
-    height: 25%;
-
-    h2 {
-      position: absolute;
-      z-index: 1;
-      top: 12%;
-      left: 20%;
-      font-family: cursive;
-      width: 60%;
-      text-align: center;
-      font-size: 3em;
-      line-height: 1em;
-      background-color: rgba(255, 255, 255, 0.56);
-      border-radius: 0.2em;
-      color: black;
-      padding: 0.15em;
-      padding-top: 20px;
-    }
-  }
-
-  .card {
-    min-width: 350px;
+    height: 18%;
   }
 }

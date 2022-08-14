@@ -5,7 +5,7 @@
 </div>
 
 <div class="display-menu">
-  <h1 class="sectionTitle" i18n="carte-title | titre des menus à la carte">À La Carte</h1>
+  <div class="sectionTitle" i18n="carte-title | titre des menus à la carte">À La Carte</div>
   <pdf-viewer *ngIf="carteMenu; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [original-size]="false"
     [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noCarteMenu>
@@ -15,7 +15,7 @@
 </div>
 
 <div class="display-menu">
-  <h1 class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Today's Halfboard Menu</h1>
+  <div class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Today's Halfboard Menu</div>
   <pdf-viewer *ngIf="halfboard; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [original-size]="false"
     [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noHalfboard>
@@ -25,7 +25,7 @@
 </div>
 
 <div class="display-menu">
-  <h1 class="sectionTitle" i18n="banquet-title | banquet title">Banquet Menus</h1>
+  <div class="sectionTitle" i18n="banquet-title | banquet title">Banquet Menus</div>
   <div *ngIf="banquets?.length; else noBanquet">
     <ng-container *ngFor="let b of banquets">
       <h2>{{ b.title }}</h2>
