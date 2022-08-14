@@ -10,7 +10,7 @@ export class BsRegionComponent implements OnInit {
     {
       title: 'MySwitzerland.com',
       url: 'https://www.myswitzerland.com/en-ch/destinations/adelboden/',
-      img: '../../assets/images/photos/home_mountain.jpg',
+      img: '../../assets/images/photos/home_village.jpg',
     },
     {
       title: 'Adelboden.ch',
