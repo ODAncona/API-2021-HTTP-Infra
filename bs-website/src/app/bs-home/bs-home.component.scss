@@ -1,3 +1,19 @@
+$var: 'Great Vibes';
+$var: 'Rochester';
+$var: 'Satisfy';
+$var: 'Leckerli One';
+$var: 'Allura';
+$var: 'Cinzel Decorative';
+$var: 'Nothing You Could Do';
+$var: 'Reenie Beanie';
+$var: 'Pacifico';
+$var: 'Yesteryear';
+
+$var: 'Great Vibes';
+
+
+@import url("https://fonts.googleapis.com/css2?family=" +$var+":wght@400;700&display=swap");
+
 ngb-carousel {
   max-height: 80%;
   overflow: hidden;
@@ -22,18 +38,19 @@ mat-card {
   position: relative;
   height: 85%;
   overflow: hidden;
+
   video {
     position: relative;
     z-index: 0;
     width: 100%;
   }
+
   h2 {
     position: absolute;
     z-index: 1;
     top: 30%;
     left: 20%;
-    font-family: "HighAlpine";
-    src: url("../../assets/fonts/HighAlpine.otf") format("opentype");
+    font-family: $var;
     width: 60%;
     font-weight: 400;
     text-shadow: 1em;
@@ -64,14 +81,18 @@ mat-card {
   align-items: center;
   flex-basis: 40%;
 }
+
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
+
   .flex-item-left,
   .flex-item-right {
     flex: 100%;
   }
+
   .dream {
     height: 35%;
+
     h2 {
       position: absolute;
       z-index: 1;
@@ -107,12 +128,14 @@ mat-card {
   img {
     max-height: 600px;
   }
+
   background-color: rgba(255, 255, 255, 0.56);
 }
 
 @media (max-width: 465px) {
   .dream {
     height: 25%;
+
     h2 {
       position: absolute;
       z-index: 1;
@@ -130,6 +153,7 @@ mat-card {
       padding-top: 20px;
     }
   }
+
   .card {
     min-width: 350px;
   }
