@@ -1,18 +1,21 @@
-<h1 i18n="promotion-title | réserver une prom" i18n="title">Book a promotion</h1>
+<h1 i18n="promModal-title | réserver une prom" i18n="title">Book a promotion</h1>
 <form [formGroup]="promotionForm" (ngSubmit)="onSubmit()" class="form">
   <div class="contact">
     <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="firstname" placeholder="Firstname*">
+      <input required matInput type="text" formControlName="firstname" placeholder="Firstname*"
+        i18n-placeholder="Firstname* placeholder">
       <mat-error *ngIf="promotionForm.invalid" i18n="error-firstname | prénom invalide (taille trop petite)">Invalid
         firstname</mat-error>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="lastname" placeholder="Lastname*">
+      <input required matInput type="text" formControlName="lastname" placeholder="Lastname*"
+        i18n-placeholder="Lastname* placeholder">
       <mat-error *ngIf="promotionForm.invalid" i18n="error-lastname | nom invalide (taille trop petite)">Invalid
         lastname</mat-error>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <mat-select required matInput formControlName="participant" placeholder="Number of participants">
+      <mat-select required matInput formControlName="participant" placeholder="Number of participants"
+        i18n-placeholder="Number of participants placeholder">
         <mat-option *ngFor="let i of [1,2,3,4,5,6]" [value]="i">{{i}}</mat-option>
       </mat-select>
     </mat-form-field>
@@ -27,9 +30,10 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input matInput type="text" formControlName="telephone" placeholder="Phone Nr.">
+      <input matInput type="text" formControlName="telephone" placeholder="Phone Nr." i18n-placeholder="Phone placeholder">
       <mat-hint>+41xxyyyzzzz</mat-hint>
-      <mat-error *ngIf="promotionForm.invalid" i18n="error-number | numéro de téléphone ne respectant pas l'indicatif suisse">Invalid number</mat-error>
+      <mat-error *ngIf="promotionForm.invalid"
+        i18n="error-number | numéro de téléphone ne respectant pas l'indicatif suisse">Invalid number</mat-error>
     </mat-form-field>
   </div>
 
