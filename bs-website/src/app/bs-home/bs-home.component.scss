@@ -1,17 +1,4 @@
-$var: 'Great Vibes';
-$var: 'Rochester';
-$var: 'Cinzel Decorative';
-$var: 'Allura';
-$var: 'Satisfy';
-$var: 'Pacifico';
-$var: 'Reenie Beanie';
-$var: 'Leckerli One';
-$var: 'Yesteryear';
-
-$var: 'Great Vibes';
-
-
-@import url("https://fonts.googleapis.com/css2?family=" +$var+":wght@400;700&display=swap");
+@import 'https://fonts.googleapis.com/css2?family=Great Vibes:wght@400;700&display=swap';
 
 ngb-carousel {
   max-height: 80%;
@@ -50,7 +37,7 @@ mat-card {
     left: 50%;
     transform: translate(-50%);
     top: 30%;
-    font-family: $var;
+    font-family: 'Great Vibes';
     width: 65%;
     text-shadow: 1em;
     text-align: center;
@@ -92,7 +79,7 @@ mat-card {
       left: 50%;
       transform: translate(-50%);
       top: 10%;
-      font-family: $var;
+      font-family: 'Great Vibes';
       width: 70%;
       text-shadow: 1em;
       text-align: center;

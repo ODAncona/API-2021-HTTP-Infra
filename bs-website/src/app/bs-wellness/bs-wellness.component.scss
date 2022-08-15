@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
-
-$dream: 'Satisfy';
-@import url("https://fonts.googleapis.com/css2?family=" +$dream+":wght@400;700&display=swap");
+@import 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Satisfy:wght@400;700&display=swap';
 
 .well {
   display: flex;
@@ -18,7 +16,7 @@ $dream: 'Satisfy';
   font-family: 'Satisfy';
   font-size: 3em;
   width: 50%;
-  background-image: url("../../assets/images/wellness/wellness_repos.webp");
+  background-image: url('../../assets/images/wellness/wellness_repos.webp');
   background-size: 100% 100%;
   display: flex;
 }
@@ -27,7 +25,7 @@ $dream: 'Satisfy';
   font-family: 'Oswald';
   font-size: 3em;
   width: 50%;
-  background-image: url("../../assets/images/wellness/fitness_machines.webp");
+  background-image: url('../../assets/images/wellness/fitness_machines.webp');
   background-size: 100% 100%;
   display: flex;
 }
@@ -46,8 +44,13 @@ $dream: 'Satisfy';
   position: relative;
 }
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .well {
     height: 200px;
+  }
+
+  .fitness,
+  .wellness {
+    font-size: 1.3em;
   }
 }
