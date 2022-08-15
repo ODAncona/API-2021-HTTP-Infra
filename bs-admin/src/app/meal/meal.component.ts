@@ -7,11 +7,11 @@ import { MaxSizeValidator } from '@angular-material-components/file-input';
 import { cloneDeep } from 'lodash';
 
 @Component({
-  selector: 'app-restaurant',
-  templateUrl: './restaurant.component.html',
-  styleUrls: ['./restaurant.component.scss'],
+  selector: 'app-meal',
+  templateUrl: './meal.component.html',
+  styleUrls: ['./meal.component.scss'],
 })
-export class RestaurantComponent implements OnInit {
+export class MealComponent implements OnInit {
   category: string | undefined;
   language: string | undefined;
   languages: Language[] = [

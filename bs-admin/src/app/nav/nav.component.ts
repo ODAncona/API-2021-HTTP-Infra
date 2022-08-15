@@ -15,8 +15,7 @@ export class NavComponent implements OnInit {
   navs = [
     { link: '/statistics', name: 'Statistiques' },
     { link: '/promotions', name: 'Promotions' },
-    { link: '/restaurant', name: 'Restaurant-meals' },
-    { link: '/menus', name: 'Restaurant-menus'},
+    { link: '/menus', name: 'Menus'},
     { link: '/reviews', name: 'Reviews' },
     { link: '/team', name: 'Team'}
   ];

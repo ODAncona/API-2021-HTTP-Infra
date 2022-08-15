@@ -20,7 +20,7 @@
 
 <div class="promotions">
   <ng-container *ngFor="let promotion of promotions">
-    <div class="card" *ngIf="promotion.displayed" (click)="promotion.selected = !promotion.selected;">
+    <div class="card" *ngIf="promotion.displayed" >
       <div>
         <h2>Title</h2>
         <input matInput [(ngModel)]="promotion.title" [ngModelOptions]="{standalone: true}" />

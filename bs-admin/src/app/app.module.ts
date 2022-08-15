@@ -38,7 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { PromotionsComponent } from './promotions/promotions.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
+import { MealComponent } from './meal/meal.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { MenusComponent } from './menus/menus.component';
@@ -50,7 +50,7 @@ import { TeamComponent } from './team/team.component';
     LoginComponent,
     NavComponent,
     PromotionsComponent,
-    RestaurantComponent,
+    MealComponent,
     ReviewsComponent,
     StatisticsComponent,
     MenusComponent,

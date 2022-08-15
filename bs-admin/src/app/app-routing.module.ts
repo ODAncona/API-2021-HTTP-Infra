@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { StatisticsComponent } from './statistics/statistics.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
+import { MealComponent } from './meal/meal.component';
 import { MenusComponent } from './menus/menus.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { TeamComponent } from './team/team.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
     children: [
       { path: 'statistics', component: StatisticsComponent },
       { path: 'promotions', component: PromotionsComponent },
-      { path: 'restaurant', component: RestaurantComponent },
+      { path: 'meal', component: MealComponent },
       { path: 'menus', component: MenusComponent },
       { path: 'reviews', component: ReviewsComponent },
       { path: 'team', component: TeamComponent },
