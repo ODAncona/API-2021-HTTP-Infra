@@ -47,16 +47,30 @@ span {
   padding-right: 10px;
 }
 
-@media (max-width: 800px) {
-  .ils {
-    margin: 0.2em;
-  }
-}
-
-
 .ils {
   margin-top: 20px;
   margin-right: 10px;
   width: 150px;
+}
 
+.side-ils {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin: 1em;
+}
+
+@media (max-width: 550px) {
+  mat-icon {
+    margin-left: .8em;
+    transform: scale(1.5);
+  }
+
+  .ils {
+    visibility: hidden;
+  }
+
+  span {
+    visibility: hidden;
+  }
 }
