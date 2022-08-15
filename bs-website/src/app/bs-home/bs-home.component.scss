@@ -104,7 +104,7 @@ mat-card {
 .card {
   margin: 15px;
   max-width: 28%;
-  min-width: 330px;
+  min-width: 310px;
   cursor: pointer;
 
   img {
@@ -116,6 +116,10 @@ mat-card {
 
 @media (max-width: 400px) {
   .dream {
-    height: 20%;
+    height: 23%;
+
+    h2 {
+      width: 80%;
+    }
   }
 }

@@ -1,8 +1,6 @@
-import { Component} from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 import { Locale } from '../interface';
 
 @Component({
@@ -10,7 +8,9 @@ import { Locale } from '../interface';
   templateUrl: './bs-nav.component.html',
   styleUrls: ['./bs-nav.component.scss'],
 })
-export class BsNavComponent {
+export class BsNavComponent implements OnDestroy {
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
   activeLink: string = 'Menu';
   navs = [
     { link: 'home', name: 'Home' },
@@ -24,7 +24,7 @@ export class BsNavComponent {
     { link: 'region', name: 'Region' },
     { link: 'contact', name: 'Contact & Map' }
   ];
-  selectedLocale: any = 'en';
+  selectedLocale: any = 'de';
   localesList: Locale[] = [
     { code: 'de', label: 'Deutsch' },
     { code: 'en', label: 'English' },
@@ -34,17 +34,15 @@ export class BsNavComponent {
     { code: 'ar', label: 'العربية' },
   ];
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
-    );
-
   constructor(
-    private breakpointObserver: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher
   ) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+
     this.activeLink = this.navs.filter(
       (nav) => nav.link === this.router.url.slice(1).split('/')[0]
     )[0].name;
@@ -52,6 +50,10 @@ export class BsNavComponent {
     if (localStorage.getItem('locale')) {
       this.selectedLocale = localStorage.getItem('locale');
     }
+  }
+  
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   /**
