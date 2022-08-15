@@ -10,10 +10,6 @@ ngb-carousel {
   }
 }
 
-mat-card {
-  margin: 2em;
-}
-
 .description {
   font-size: 1em;
   text-align: justify;
@@ -22,12 +18,12 @@ mat-card {
 
 .dream {
   position: relative;
-  height: 85%;
   overflow: hidden;
 
   video {
-    position: relative;
-    z-index: 0;
+    display: block;
+    object-fit: fill;
+    object-position: center;
     width: 100%;
   }
 
@@ -71,8 +67,6 @@ mat-card {
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
   .dream {
-    height: 35%;
-
     h2 {
       position: absolute;
       z-index: 1;
@@ -116,8 +110,6 @@ mat-card {
 
 @media (max-width: 400px) {
   .dream {
-    height: 23%;
-
     h2 {
       width: 80%;
     }
