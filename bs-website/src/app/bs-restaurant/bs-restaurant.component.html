@@ -5,27 +5,31 @@
 </div>
 
 <div class="display-menu">
-  <div class="sectionTitle" i18n="carte-title | titre des menus à la carte">À La Carte</div>
+  <h2 class="sectionTitle" i18n="carte-title | titre des menus à la carte">À La Carte</h2>
   <pdf-viewer *ngIf="carteMenu; else noCarteMenu" [src]="carteMenu.pdf" [render-text]="true" [original-size]="false"
     [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noCarteMenu>
-    <h2 style="text-align:center;" i18n="carte-error | erreur">Our à la carte selection will be available again during the next season.
+    <h2 style="text-align:center;" i18n="carte-error | erreur">
+      Our à la carte selection will be available again during
+      the next season.
     </h2>
   </ng-template>
 </div>
 
 <div class="display-menu">
-  <div class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Today's Halfboard Menu</div>
+  <h2 class="sectionTitle" i18n="halfboard-title | Demi-Pension title">Today's Halfboard Menu</h2>
   <pdf-viewer *ngIf="halfboard; else noHalfboard" [src]="halfboard.pdf" [render-text]="true" [original-size]="false"
     [zoom-scale]="'page-width'" style="display:block;"></pdf-viewer>
   <ng-template #noHalfboard>
-    <h2 style="text-align:center;" i18n="halfboard-error | pas de Demi-Pension">At the moment, we offer Halfboard only
-      on request.</h2>
+    <h2 style="text-align:center;" i18n="halfboard-error | pas de Demi-Pension">
+      At the moment, we offer Halfboard only
+      on request.
+    </h2>
   </ng-template>
 </div>
 
 <div class="display-menu">
-  <div class="sectionTitle" i18n="banquet-title | banquet title">Banquet Menus</div>
+  <h2 class="sectionTitle" i18n="banquet-title | banquet title">Banquet Menus</h2>
   <div *ngIf="banquets?.length; else noBanquet">
     <ng-container *ngFor="let b of banquets">
       <h2>{{ b.title }}</h2>
@@ -34,7 +38,8 @@
     </ng-container>
   </div>
   <ng-template #noBanquet>
-    <h2 style="text-align:center;" i18n="banquet-error | pas de menus spéciaux">At the moment, we offer Banquets only
+    <h2 style="text-align:center;" i18n="banquet-error | pas de menus spéciaux">
+      At the moment, we offer Banquets only
       on request.
     </h2>
   </ng-template>

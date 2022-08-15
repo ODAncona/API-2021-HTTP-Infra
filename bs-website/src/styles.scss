@@ -7,18 +7,18 @@ html {
 
 .mainTitle {
   color: black;
-  font-size: 2em;
+  font-size: 2em !important;
   text-align: center;
-  margin: 2em;
-  line-height: 1.3em;
+  margin: 2em !important;
+  line-height: 1.3em !important;
 }
 
 .sectionTitle {
   color: black;
-  font-size: 2em;
+  font-size: 2em !important;
   text-align: center;
-  margin: 1em;
-  line-height: 1.1em;
+  margin: 1em !important;
+  line-height: 1.1em !important;
 }
 
 /* Importing Bootstrap SCSS file. */

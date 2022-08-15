@@ -1,10 +1,11 @@
-<div class="sectionTitle">Feel free to contact us</div>
+<h1 class="sectionTitle">Feel free to contact us</h1>
 
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
 
   <mat-form-field appearance="standard">
     <input required matInput type="text" formControlName="name" placeholder="Your name">
   </mat-form-field>
+  
   <mat-form-field appearance="standard">
     <input required matInput type="email" formControlName="email" placeholder="Your email">
     <mat-error *ngIf="contactForm.invalid" i18n="invalid-email | email invalide">invalid email</mat-error>
@@ -22,7 +23,7 @@
   </button>
 </form>
 
-<div class="sectionTitle">Where to find us</div>
+<h2 class="sectionTitle">Where to find us</h2>
 <br>
 <p class="text">
   As you enter the village, turn right in front of the post office, drive straight for 100 meters. You'll find our

@@ -1,6 +1,7 @@
-<div class="mainTitle" i18n="review-title | title of hotel reviews">
+<h1 class="mainTitle" i18n="review-title | title of hotel reviews">
   Reviews us
-</div>
+</h1>
+
 <div class="text">
   <p i18n="review-description | descriptions des avis">
     We are always happy to receive your feedback, suggestions, and constructive criticism. You're welcome to share your
@@ -11,15 +12,18 @@
 
 <div class="review-header">
   <div class="review-header">
-    <h1 class="sectionTitle" i18n="review-welcome | titre pour écrire son propre review">
+    <h2 class="sectionTitle" i18n="review-welcome | titre pour écrire son propre review">
       Write a review
-    </h1>
+    </h2>
     <button mat-fab color="primary" class="addReview" (click)="addReview()">
       <mat-icon>add</mat-icon>
     </button>
   </div>
+
   <div class="review-header">
-    <h1 class="sectionTitle" i18n="review-note | Moyenne des notes des reviews">Average Score</h1>
+    <h2 class="sectionTitle" i18n="review-note | Moyenne des notes des reviews">
+      Average Score
+    </h2>
     <button mat-fab color="accent" class="grade">
       {{ average | number: "1.1-1" }}
     </button>
@@ -51,9 +55,9 @@
 
 <mat-divider></mat-divider>
 
-<h1 class="sectionTitle" i18n="reviews-external | plus de reviews en externe(titre)">
+<h2 class="sectionTitle" i18n="reviews-external | plus de reviews en externe(titre)">
   Or feel free to review us on
-</h1>
+</h2>
 
 <div class="benefits">
   <div class="benefit-card" *ngFor="let benefit of benefits">
