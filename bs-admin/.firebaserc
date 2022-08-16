@@ -5,17 +5,8 @@
   "targets": {
     "beausite-adelboden": {
       "hosting": {
-        "bs-website": [
+        "bs-admin": [
           "beausite-adelboden"
-        ],
-        "en": [
-          "beausite-en"
-        ],
-        "fr": [
-          "beausite-fr"
-        ],
-        "de": [
-          "beausite-de"
         ]
       }
     }
