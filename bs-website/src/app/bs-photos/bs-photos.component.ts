@@ -70,7 +70,6 @@ export class BsPhotosComponent implements OnInit {
       description: 'Hotel Beau-Site picture',
     },
   ];
-  @Input() showCount = false;
 
   previewImage = false;
   showMask = false;

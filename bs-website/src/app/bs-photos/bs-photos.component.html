@@ -9,9 +9,6 @@
     </div>
   </div>
   <div *ngIf="showMask" class="lightbox" @animation2>
-    <span *ngIf="showCount" class="count">
-      {{ currentIndex + 1 }}/{{ totalImageCount }}
-    </span>
     <button  class="close-btn">
       <mat-icon *ngIf="previewImage" class="btn-close"  (click)="onClosePreview()">close</mat-icon>
     </button>
