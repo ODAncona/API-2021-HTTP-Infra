@@ -81,7 +81,7 @@ import { BsRegionComponent } from './bs-region/bs-region.component';
     BsRegionComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,

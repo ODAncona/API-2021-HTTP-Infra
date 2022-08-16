@@ -44,6 +44,21 @@
           "destination": "/index.html"
         }
       ]
+    },
+    {
+      "target": "demo",
+      "public": "dist/bs-website",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ]
 }
