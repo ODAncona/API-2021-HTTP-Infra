@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BsReviewsModalComponent } from './bs-reviews-modal.component';
 
@@ -6,12 +6,12 @@ describe('BsReviewsModalComponent', () => {
   let component: BsReviewsModalComponent;
   let fixture: ComponentFixture<BsReviewsModalComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-      declarations: [ BsReviewsModalComponent ]
+      declarations: [BsReviewsModalComponent]
     })
-    .compileComponents();
-  }));
+      .compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BsReviewsModalComponent);
