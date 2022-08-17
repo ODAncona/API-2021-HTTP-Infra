@@ -17,30 +17,34 @@ import { BsRegionComponent } from './bs-region/bs-region.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "/home" },
-  { path: "", component: BsNavComponent, children: [
-    { path: "home", component: BsHomeComponent },
-    { path: "contact", component: BsContactComponent },
-    { path: "photos", component: BsPhotosComponent },
-    { path: "promotions", component: BsPromotionsComponent },
-    { path: 'promotions/:title', component: BsPromotionsDetailsComponent },
-    { path: "rooms", component: BsRoomsComponent },
-    { path: "restaurant", component: BsRestaurantComponent },
-    { path: "wellness", component: BsWellnessComponent, children:[
-        { path: "fitness", component: BsWellnessFitnessComponent },
-        { path: "wellness", component: BsWellnessWellnessComponent },
-      ] },
-    { path: "reviews", component: BsReviewsComponent },
-    { path: "team", component: BsTeamComponent },
-    { path: "region", component: BsRegionComponent },
+  {
+    path: "", component: BsNavComponent, children: [
+      { path: "home", component: BsHomeComponent },
+      { path: "contact", component: BsContactComponent },
+      { path: "photos", component: BsPhotosComponent },
+      { path: "promotions", component: BsPromotionsComponent },
+      { path: 'promotions/:title', component: BsPromotionsDetailsComponent },
+      { path: "rooms", component: BsRoomsComponent },
+      { path: "restaurant", component: BsRestaurantComponent },
+      {
+        path: "wellness", component: BsWellnessComponent, children: [
+          { path: "fitness", component: BsWellnessFitnessComponent },
+          { path: "wellness", component: BsWellnessWellnessComponent },
+        ]
+      },
+      { path: "reviews", component: BsReviewsComponent },
+      { path: "team", component: BsTeamComponent },
+      { path: "region", component: BsRegionComponent },
 
-  ] },
+    ]
+  },
   { path: "**", redirectTo: "/home" },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

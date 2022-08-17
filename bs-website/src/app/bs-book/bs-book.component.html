@@ -1,11 +1,8 @@
 <div class="reservation">
   <mat-form-field appearance="fill" class="datepicker">
-    <mat-label i18n="date-placeholder | demander une date pour le checking/checkout">Please enter a date range</mat-label>
-    <mat-date-range-input
-      [formGroup]="range"
-      [rangePicker]="picker"
-      color="accent"
-    >
+    <mat-label i18n="date-placeholder | demander une date pour le checking/checkout">Please enter a date range
+    </mat-label>
+    <mat-date-range-input [formGroup]="range" [rangePicker]="picker" color="accent">
       <input matStartDate formControlName="start" placeholder="Check-in" />
       <input matEndDate formControlName="end" placeholder="Check-out" />
     </mat-date-range-input>
@@ -13,25 +10,13 @@
     <mat-date-range-picker touchUi #picker></mat-date-range-picker>
 
     <mat-error *ngIf="range.controls['start'].hasError('matStartDateInvalid')"
-    i18n="invalid-start-date | date invalide">Invalid check-in date</mat-error
-    >
-    <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')"
-    i18n="invalid-end-date | date invalide">Invalid check-out date</mat-error
-    >
+      i18n="invalid-start-date | date invalide">Invalid check-in date</mat-error>
+    <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')" i18n="invalid-end-date | date invalide">
+      Invalid check-out date</mat-error>
   </mat-form-field>
-  <a href="{{bookingLink}}" target="_blank"
-    ><button mat-raised-button color="primary" class="book-btn" i18n="book-btn | réservation sur Ezee">Book Now</button></a
-  >
+  
+  <form name="_resBBBox" action="https://live.ipms247.com/booking/book-rooms-hotelbeausite" method="post">
+    <a href="{{bookingLink}}" target="_blank"><button mat-raised-button color="primary" class="book-btn"
+        i18n="book-btn | réservation sur Ezee">Book Now</button></a>
+  </form>
 </div>
-
-<link href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_bookingbox.css" rel="stylesheet" type="text/css" />
-<link href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_datepicker.css" rel="stylesheet" type="text/css" />
-<script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/jquery-a.l.d.js" type="text/javascript"></script>
-<script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/jquery-ui.js" type="text/javascript"></script>
-<script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/common.js" type="text/javascript"></script>
-<script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/resui_resbookingbox.js" type="text/javascript"></script>
-<form name="_resBBBox" action="https://live.ipms247.com/booking/book-rooms-hotelbeausite" method="post">
-<div class="bb_resbox" id="bb_resBookingBox">
-</div>
-</form>
-

@@ -28,7 +28,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
-/* EXTERN MODULES */
+/* EXTERNAL MODULES */
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
