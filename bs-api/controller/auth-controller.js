@@ -1,7 +1,8 @@
+require('dotenv').config();
 const User = require("../data-schematic/user-schematic");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const secret = require("../secret");
+
 
 exports.login = (req, res) => {
   User.findOne({
@@ -27,7 +28,7 @@ exports.login = (req, res) => {
               {
                 userId: usr._id,
               },
-              secret,
+              process.env.JWT_SECRET,
               {
                 expiresIn: "24h",
               }
@@ -77,7 +78,7 @@ exports.signupAdmin = (req, res) => {
 
 exports.verifyToken = (req, res) => {
   try {
-    verifiedJwt = jwt.verify(req.params.token, secret);
+    verifiedJwt = jwt.verify(req.params.token, process.env.JWT_SECRET);
     let userId = verifiedJwt.userId;
     User.findOne({
       _id: userId,
@@ -98,7 +99,7 @@ exports.verifyToken = (req, res) => {
 exports.updatePassword = (req, res) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
-    const decodedToken = jwt.verify(token, secret);
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
     const userId = decodedToken.userId;
     console.log(userId);
     bcrypt

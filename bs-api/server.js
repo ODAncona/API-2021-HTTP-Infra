@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('https');
 const api = require('./api');
 
 const normalizePort = val => {
@@ -36,7 +36,7 @@ const errorHandler = error => {
   }
 };
 
-const server = http.createServer(api);
+const server = https.createServer(api);
 
 server.on('error', errorHandler);
 server.on('listening', () => {

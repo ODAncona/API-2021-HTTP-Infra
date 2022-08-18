@@ -1,14 +1,14 @@
+require('dotenv').config();
 const User = require('../data-schematic/user-schematic');
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const secret = require('../secret');
 
-exports.getUserFromToken = (req, res, next) => {
-  verifiedJwt = jwt.verify(req.params.token, secret);
+
+exports.getUserFromToken = (req, res) => {
+  verifiedJwt = jwt.verify(req.params.token, process.env.JWT_SECRET);
   let userId = verifiedJwt.userId;
   User.findOne({
-      _id: userId
-    })
+    _id: userId
+  })
     .then(
       user => res.status(200).json(user)
     )
