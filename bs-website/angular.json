@@ -168,7 +168,17 @@
           "options": {
             "guessRoutes": false,
             "routes": [
-              "/region"
+              "/home",
+              "/rooms",
+              "/promotions",
+              "/photos",
+              "/wellness",
+              "/wellness/wellness",
+              "/wellness/fitness",
+              "/reviews",
+              "/team",
+              "/region",
+              "/contact"
             ]
           },
           "configurations": {

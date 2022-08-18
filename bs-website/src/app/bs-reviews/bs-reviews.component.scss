@@ -59,13 +59,13 @@
   //height: fit-content;
   p {
     margin: 0;
+    word-wrap: break-word;
   }
 }
 
 .grade {
   margin-bottom: 1%;
   margin-right: 3%;
-  clickable: false;
 }
 
 .rating-item {

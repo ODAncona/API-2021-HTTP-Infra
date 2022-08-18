@@ -110,7 +110,10 @@ export interface Mail {
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
 //const API_URL = "http://localhost/api/"
-const API_URL = 'http://localhost:1470/';
+//const API_URL = 'http://localhost:1470/';
+//const API_URL = 'http://178.128.123.90:1470/';
+const API_URL = "http://67.207.74.150:1470/";
+
 
 /* This constant refers to the email address of admin */
 const BS_EMAIL = 'olivier_dancona@hotmail.com';

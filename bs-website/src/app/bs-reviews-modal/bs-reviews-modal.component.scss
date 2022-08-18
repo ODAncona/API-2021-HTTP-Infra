@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .reviewForm {
   display: flex;
   flex-direction: row;
@@ -6,15 +12,8 @@
   justify-content: space-evenly;
 }
 
-.score {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 80%;
-  max-width: 350px;
-}
-
 label {
+  margin: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -24,8 +23,10 @@ label {
   max-width: 600px;
 }
 
-.header {
+.score {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 350px;
 }
