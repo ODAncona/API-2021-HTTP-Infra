@@ -6,7 +6,7 @@
     "beausite-adelboden": {
       "hosting": {
         "bs-admin": [
-          "beausite-adelboden"
+          "beausite-admin"
         ]
       }
     }

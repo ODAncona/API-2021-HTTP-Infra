@@ -1,19 +1,10 @@
 <mat-toolbar class="toolbar">
+  <p>My team</p>
   <div class="btn-group">
-    <button
-      mat-button
-      style="width: 25%"
-      color="warning"
-      (click)="createMember()"
-    >
+    <button mat-button style="width: 25%" color="warning" (click)="createMember()">
       Add
     </button>
-    <button
-      mat-button
-      style="width: 25%"
-      color="warning"
-      (click)="deleteMembers()"
-    >
+    <button mat-button style="width: 25%" color="warning" (click)="deleteMembers()">
       Delete
     </button>
     <button mat-button style="width: 25%" (click)="updateMembers()">
@@ -22,12 +13,7 @@
     <button mat-button style="width: 25%" id="allButton" (click)="selectAll()">
       Select All
     </button>
-    <button
-      mat-button
-      style="width: 4%"
-      id="allButton"
-      (click)="getAllTeamMembers()"
-    >
+    <button mat-button style="width: 4%" id="allButton" (click)="getAllTeamMembers()">
       <mat-icon>refresh</mat-icon>
     </button>
   </div>
@@ -35,11 +21,7 @@
 
 <div class="members">
   <ng-container *ngFor="let member of members">
-    <div
-      class="card"
-      *ngIf="member.displayed"
-      (click)="member.selected = !member.selected"
-    >
+    <div class="card" *ngIf="member.displayed" (click)="member.selected = !member.selected">
       <div>
         <h2>Firstname</h2>
         <input matInput [(ngModel)]="member.firstname" />
@@ -58,7 +40,8 @@
         <div class="container">
           <h2>Image</h2>
           <mat-form-field>
-            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png" (change)="member.image=''">
+            <ngx-mat-file-input formControlName="image" [multiple]="false" accept="image/webp, image/jpeg, image/png"
+              (change)="member.image=''">
               <mat-icon ngxMatFileInputIcon>folder</mat-icon>
             </ngx-mat-file-input>
           </mat-form-field>
