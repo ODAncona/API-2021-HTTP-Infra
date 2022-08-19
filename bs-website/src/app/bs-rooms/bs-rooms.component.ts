@@ -49,7 +49,7 @@ export class BsRoomsComponent {
         { name: this.s.southTerrace },
       ],
       description: $localize`Our Comfortable Double rooms feature a small terrace with a partial view on the mountains.`,
-      roomSize: '20'
+      roomSize: '20',
     },
     {
       title: $localize`Cosy Double Room`,
