@@ -37,7 +37,7 @@ export class BsPromotionsModalComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private mailService: MailService,
     private _snackBar: MatSnackBar
-  ) {}
+  ) { }
 
   /**
    * Send a mail with customer informations to confirm the reservation

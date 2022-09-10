@@ -27,7 +27,7 @@ export class BsWellnessFitnessComponent {
    * Open the dialog box to order a fitness subscription.
    */
   orderSubscription() {
-    let dialogRef = this.dialog.open(BsWellnessFitnessModalComponent, { data: "test" });
+    let dialogRef = this.dialog.open(BsWellnessFitnessModalComponent, { data: "test", height: 'auto' });
     dialogRef.afterClosed().subscribe();
   }
 

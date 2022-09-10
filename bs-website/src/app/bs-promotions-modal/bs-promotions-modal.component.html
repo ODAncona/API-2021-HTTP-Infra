@@ -1,6 +1,6 @@
-<h1 i18n="promModal-title | réserver une prom" i18n="title">Book a promotion</h1>
-<form [formGroup]="promotionForm" (ngSubmit)="onSubmit()" class="form">
-  <div class="contact">
+<mat-dialog-content>
+  <h1 i18n="promModal-title | réserver une prom" i18n="title">Book a promotion</h1>
+  <form [formGroup]="promotionForm" (ngSubmit)="onSubmit()" class="form">
     <mat-form-field appearance="standard">
       <input required matInput type="text" formControlName="firstname" placeholder="Firstname*"
         i18n-placeholder="Firstname* placeholder">
@@ -30,15 +30,16 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field appearance="standard">
-      <input matInput type="text" formControlName="telephone" placeholder="Phone Nr." i18n-placeholder="Phone placeholder">
+      <input matInput type="text" formControlName="telephone" placeholder="Phone Nr."
+        i18n-placeholder="Phone placeholder">
       <mat-hint>+41xxyyyzzzz</mat-hint>
       <mat-error *ngIf="promotionForm.invalid"
         i18n="error-number | numéro de téléphone ne respectant pas l'indicatif suisse">Invalid number</mat-error>
     </mat-form-field>
-  </div>
 
-  <button mat-raised-button color="warning" aria-label="Submit review" class="orderButton"
-    [disabled]="!promotionForm.valid">
-    <mat-icon>input</mat-icon>
-  </button>
-</form>
+    <button mat-raised-button color="warning" aria-label="Submit review" class="orderButton"
+      [disabled]="!promotionForm.valid">
+      <mat-icon>input</mat-icon>
+    </button>
+  </form>
+</mat-dialog-content>

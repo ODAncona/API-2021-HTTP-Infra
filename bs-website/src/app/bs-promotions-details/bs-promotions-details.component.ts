@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./bs-promotions-details.component.scss'],
 })
 export class BsPromotionsDetailsComponent {
-  pdfSrc: any = 'df';
+  pdfSrc: any = '';
   promotion?: Promotion;
   constructor(
     private promotionService: PromotionService,

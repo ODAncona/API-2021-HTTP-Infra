@@ -1,46 +1,48 @@
-<h1 i18n="fitModal-title"> Order a subscription </h1>
-<form [formGroup]="fitnessForm" (ngSubmit)="onSubmit()" class="form">
-  <mat-selection-list formControlName="offers">
-    <mat-list-option *ngFor="let offer of offers" [value]="offers">
-      {{offer.description}}
-      {{offer.price}}CHF
-    </mat-list-option>
-  </mat-selection-list>
-  <div class="contact">
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="firstname" placeholder="First Name"
-        i18n-placeholder="Firstname placeholder">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="lastname" placeholder="Surname"
-        i18n-placeholder="Surname placeholder">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="birthdate" placeholder="Birth Date"
-        i18n-placeholder="Birth Date placeholder">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="address" placeholder="Address"
-        i18n-placeholder="Address placeholder">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="text" formControlName="city" placeholder="City"
-        i18n-placeholder="City placeholder">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input required matInput type="email" formControlName="email" placeholder="Email">
-      <mat-error *ngIf="fitnessForm.invalid" i18n="error-email | email non standard">Invalid email</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-      <input matInput type="text" formControlName="telephone" placeholder="Phone Number"
-        i18n-placeholder="Phone placeholder">
-      <mat-hint>+41xxyyyzzzz</mat-hint>
-      <mat-error *ngIf="fitnessForm.invalid" i18n="error-number | numéro invalide">Invalid number</mat-error>
-    </mat-form-field>
-  </div>
+<mat-dialog-content>
+  <h1 i18n="fitModal-title"> Order a subscription </h1>
+  <form [formGroup]="fitnessForm" (ngSubmit)="onSubmit()">
+    <mat-selection-list formControlName="offers">
+      <mat-list-option *ngFor="let offer of offers" [value]="offers">
+        {{offer.description}}
+        {{offer.price}}CHF
+      </mat-list-option>
+    </mat-selection-list>
+    <div class="contact">
+      <mat-form-field appearance="standard">
+        <input required matInput type="text" formControlName="firstname" placeholder="First Name"
+          i18n-placeholder="Firstname placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input required matInput type="text" formControlName="lastname" placeholder="Surname"
+          i18n-placeholder="Surname placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input required matInput type="text" formControlName="birthdate" placeholder="Birth Date"
+          i18n-placeholder="Birth Date placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input required matInput type="text" formControlName="address" placeholder="Address"
+          i18n-placeholder="Address placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input required matInput type="text" formControlName="city" placeholder="City"
+          i18n-placeholder="City placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input required matInput type="email" formControlName="email" placeholder="Email">
+        <mat-error *ngIf="fitnessForm.invalid" i18n="error-email | email non standard">Invalid email</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <input matInput type="text" formControlName="telephone" placeholder="Phone Number"
+          i18n-placeholder="Phone placeholder">
+        <mat-hint>+41xxyyyzzzz</mat-hint>
+        <mat-error *ngIf="fitnessForm.invalid" i18n="error-number | numéro invalide">Invalid number</mat-error>
+      </mat-form-field>
+    </div>
 
-  <button mat-raised-button color="warning" aria-label="Submit review" class="orderButton"
-    [disabled]="!fitnessForm.valid">
-    <mat-icon>input</mat-icon>
-  </button>
-</form>
+    <button mat-raised-button color="warning" aria-label="Submit review" class="orderButton"
+      [disabled]="!fitnessForm.valid">
+      <mat-icon>input</mat-icon>
+    </button>
+  </form>
+</mat-dialog-content>
