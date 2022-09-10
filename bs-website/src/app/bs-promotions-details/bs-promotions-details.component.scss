@@ -3,8 +3,8 @@ mat-card {
 }
 
 pdf-viewer {
-  display: flex;
-  justify-content: center;
+  display: block;
+  height: 80vh;
 }
 
 .bookButton {
@@ -18,9 +18,11 @@ mat-card-content {
 mat-card-actions {
   margin-left: 3px;
 }
+
 a {
   margin-bottom: 3px;
 }
+
 .special-btn {
   position: relative;
   font-size: 3em;

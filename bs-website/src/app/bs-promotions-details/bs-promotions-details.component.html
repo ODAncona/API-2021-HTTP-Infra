@@ -13,11 +13,9 @@
       <p *ngIf="promotion.description">{{ promotion.description }}</p>
       <mat-card-subtitle *ngIf="promotion.pdf" i18n="promotion-details | details">Details & Informations
       </mat-card-subtitle>
-      <div class="pdf">
-        <pdf-viewer [src]="promotion.pdf" [render-text]="true" [original-size]="true" [fit-to-page]="true"
-          [show-borders]="true" [show-all]="false">
-        </pdf-viewer>
-      </div>
+      <pdf-viewer [src]="promotion.pdf" [render-text]="true" [original-size]="true" [fit-to-page]="true" [show-borders]="true"
+        [show-all]="false">
+      </pdf-viewer>
     </mat-card-content>
 
     <mat-card-actions>

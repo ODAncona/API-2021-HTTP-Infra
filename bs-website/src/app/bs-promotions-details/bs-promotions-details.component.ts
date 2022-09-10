@@ -11,13 +11,14 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./bs-promotions-details.component.scss'],
 })
 export class BsPromotionsDetailsComponent {
+  pdfSrc: any = 'df';
   promotion?: Promotion;
   constructor(
     private promotionService: PromotionService,
     private route: ActivatedRoute,
     public dialog: MatDialog
   ) {
-    this.getAPromotion();
+    this.getAPromotion();    
   }
 
   /**
