@@ -9,9 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class BsWellnessFitnessComponent {
   benefits: any[] = [
-    { title: "Take a free break", description: $localize`Going on a holiday? No problem, you can take a break from our gym for free (annual subscriptions, 7 to 90 days per year) *` },
-    { title: "Discount", description: $localize`Special discount with the Adelboden Guest Card, CHF 15 instead of CHF 20 per entry.` },
-    { title: "Referral", description: $localize`Refer a friend and get a free month for each new subscriber! *` },
+    { title: $localize`Take a free break`, description: $localize`Going on a holiday? No problem, you can take a break from our gym for free (annual subscriptions, 7 to 90 days per year) *` },
+    { title: $localize`Discount`, description: $localize`Special discount with the Adelboden Guest Card, CHF 15 instead of CHF 20 per entry.` },
+    { title: $localize`Referral`, description: $localize`Refer a friend and get a free month for each new subscriber! *` },
   ];
   offers: any[] = [
     { description: $localize`1 month`, price: "110" },

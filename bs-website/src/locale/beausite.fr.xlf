@@ -1332,7 +1332,7 @@ C’est un sentiment fantastique de tracer le premier sillage dans la poudreuse 
       </trans-unit>
       <trans-unit id="4704380549876938464" datatype="html">
         <source> We are a highly motivated international team looking forward to offer you an exceptional stay in our hotel and restaurant. We&apos;re happy to share a good moment with our guests, therefore we put our best effort daily to make each moment count for you. We&apos;re looking forward to meet you soon! </source>
-        <target>Nous sommes une équipe internationale hautement motivée, prête à rendre votre séjour inoubliable. Nous sommes heureux de partager un bon moment avec nos invités, c&apos;est pourquoi nous offrons notre meilleur effort au quotidien pour que chaque moment compte pour vous. Nous nous réjouissons de vous recontrer!</target>
+        <target>Nous sommes une équipe internationale hautement motivée, prête à rendre votre séjour inoubliable. Nous sommes heureux de partager un bon moment avec nos invités, c&apos;est pourquoi nous offrons notre meilleur effort au quotidien pour que chaque moment compte pour vous. Nous nous réjouissons de vous rencontrer!</target>
         <note priority="1" from="description">description de l&apos;équipe de l&apos;hotel</note>
         <note priority="1" from="meaning">title-description </note>
         <context-group purpose="location">
@@ -1522,6 +1522,14 @@ C’est un sentiment fantastique de tracer le premier sillage dans la poudreuse 
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7605226049546724192" datatype="html">
+        <source>Take a free break</source>
+        <target>Besoin d'une pause?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1023656658288785112" datatype="html">
         <source>Going on a holiday? No problem, you can take a break from our gym for free (annual subscriptions, 7 to 90 days per year) *</source>
         <target>Vous partez en vacances? Pas de problème, vous pouvez prendre une pose gratuitement (uniquement pour abonnements annuels, 7 à 90 jours par an) *</target>
@@ -1530,12 +1538,28 @@ C’est un sentiment fantastique de tracer le premier sillage dans la poudreuse 
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4808411315981120788" datatype="html">
+        <source>Discount</source>
+        <target>Rabais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7523473701862560947" datatype="html">
         <source>Special discount with the Adelboden Guest Card, CHF 15 instead of CHF 20 per entry.</source>
         <target>Rabais spécial avec la carte d&apos;hôte Adelbdoen, CHF 15 au lieu de CHF 20 par entrée.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
           <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3608157212817170852" datatype="html">
+        <source>Referral</source>
+        <target>Parrainez un ami</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5041358354360482015" datatype="html">

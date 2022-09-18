@@ -10,17 +10,17 @@ export class BsRegionComponent implements OnInit {
     {
       title: 'MySwitzerland.com',
       url: 'https://www.myswitzerland.com/en-ch/destinations/adelboden/',
-      img: '../../assets/images/photos/home_village.jpg',
+      img: '../../assets/images/region/myswitzerland.webp',
     },
     {
       title: 'Adelboden.ch',
       url: 'https://adelboden.ch/de/',
-      img: '../../assets/images/photos/home_village.jpg',
+      img: '../../assets/images/region/adelboden.webp',
     },
     {
       title: 'Meine-Berge.ch',
       url: 'https://meine-berge.ch/en/',
-      img: '../../assets/images/photos/home_village.jpg',
+      img: '../../assets/images/region/meinberge.webp',
     },
   ];
   summer: any[] = [

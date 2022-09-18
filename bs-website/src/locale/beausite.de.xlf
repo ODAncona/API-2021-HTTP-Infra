@@ -1524,6 +1524,14 @@ Es ist ein fantastisches Gefühl die erste Spur in einen frischen Tiefschneehang
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7605226049546724192" datatype="html">
+        <source>Take a free break</source>
+        <target>Urlaubspause</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1023656658288785112" datatype="html">
         <source>Going on a holiday? No problem, you can take a break from our gym for free (annual subscriptions, 7 to 90 days per year) *</source>
         <target>Fahren Sie in den Urlaub? Kein Problem, Sie können kostenlos Ihr Fitness Abo pausieren (Jahresabonnements, 7 bis 90 Tage pro Jahr) *</target>
@@ -1532,12 +1540,28 @@ Es ist ein fantastisches Gefühl die erste Spur in einen frischen Tiefschneehang
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4808411315981120788" datatype="html">
+        <source>Discount</source>
+        <target>Gästekarterabatt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7523473701862560947" datatype="html">
         <source>Special discount with the Adelboden Guest Card, CHF 15 instead of CHF 20 per entry.</source>
         <target>Spezialrabatt mit der Adelbodner Gästekarte, CHF 15 statt CHF 20 pro Eintritt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
           <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3608157212817170852" datatype="html">
+        <source>Referral</source>
+        <target>Empfehlungsprogramm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-wellness-fitness/bs-wellness-fitness.component.ts</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5041358354360482015" datatype="html">

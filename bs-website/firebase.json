@@ -17,7 +17,7 @@
     },
     {
       "target": "fr",
-      "public": "dist/bs-website/browser/de",
+      "public": "dist/bs-website/browser/fr",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -32,7 +32,7 @@
     },
     {
       "target": "de",
-      "public": "dist/bs-website/browser/fr",
+      "public": "dist/bs-website/browser/de",
       "ignore": [
         "firebase.json",
         "**/.*",
