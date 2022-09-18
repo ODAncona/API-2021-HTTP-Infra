@@ -1,10 +1,10 @@
-<div class="reservation">
+<form class="reservation">
   <mat-form-field appearance="fill" class="datepicker">
     <mat-label i18n="date-placeholder | demander une date pour le checking/checkout">Please enter a date range
     </mat-label>
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker" color="accent">
-      <input matStartDate formControlName="start" placeholder="Check-in" />
-      <input matEndDate formControlName="end" placeholder="Check-out" />
+      <input matStartDate formControlName="start" placeholder="Check-in" (dateInput)="updateURL()"/>
+      <input matEndDate formControlName="end" placeholder="Check-out" (dateInput)="updateURL()"/>
     </mat-date-range-input>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker touchUi #picker></mat-date-range-picker>
@@ -14,9 +14,7 @@
     <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')" i18n="invalid-end-date | date invalide">
       Invalid check-out date</mat-error>
   </mat-form-field>
-  
-  <form name="_resBBBox" action="https://live.ipms247.com/booking/book-rooms-hotelbeausite" method="post">
-    <a href="{{bookingLink}}" target="_blank"><button mat-raised-button color="primary" class="book-btn"
-        i18n="book-btn | réservation sur Ezee">Book Now</button></a>
-  </form>
-</div>
+
+  <a href="{{bookingLink}}" target="_blank" btn btn-primary i18n="book-now | réserver maintenant">Book now</a>
+  <button (click)="updateURL()" mat-raised-button color="primary" class="book-btn" i18n="book-btn | réservation sur Ezee">Book Now</button>
+</form>

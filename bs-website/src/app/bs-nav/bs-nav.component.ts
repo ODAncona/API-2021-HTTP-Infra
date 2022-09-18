@@ -29,9 +29,9 @@ export class BsNavComponent implements OnDestroy {
     { code: 'de', label: 'Deutsch' },
     { code: 'en', label: 'English' },
     { code: 'fr', label: 'Français' },
-    { code: 'it', label: 'Italiano' },
-    { code: 'zh', label: '中文' },
-    { code: 'ar', label: 'العربية' },
+    //{ code: 'it', label: 'Italiano' },
+    //{ code: 'zh', label: '中文' },
+   //{ code: 'ar', label: 'العربية' },
   ];
 
   constructor(
