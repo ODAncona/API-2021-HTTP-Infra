@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BS_PHONE } from '../interface';
 
 @Component({
   selector: 'app-bs-footer',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./bs-footer.component.scss'],
 })
 export class BsFooterComponent {
+  phone = BS_PHONE;
   constructor() {}
 }

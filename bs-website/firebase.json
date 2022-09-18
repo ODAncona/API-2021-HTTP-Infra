@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "en",
-      "public": "dist/bs-website/en-US",
+      "public": "dist/bs-website/browser/en",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -17,7 +17,7 @@
     },
     {
       "target": "fr",
-      "public": "dist/bs-website/de-CH",
+      "public": "dist/bs-website/browser/de",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -32,7 +32,7 @@
     },
     {
       "target": "de",
-      "public": "dist/bs-website/fr-CH",
+      "public": "dist/bs-website/browser/fr",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -44,7 +44,9 @@
           "destination": "/index.html"
         }
       ]
-    },
+    }
+  ],
+  "maSauvegardePersoDeParam": [
     {
       "target": "demo",
       "public": "dist/bs-website",

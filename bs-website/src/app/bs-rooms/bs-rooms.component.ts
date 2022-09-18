@@ -13,7 +13,7 @@ export class BsRoomsComponent {
     bathSplippers: $localize`Bath Slippers`,
     shower: $localize`Shower`,
     bathArticle: $localize`Bathing Articles`,
-    airdryer: $localize`Airdryer`,
+    airdryer: $localize`Hairdryer`,
     safe: $localize`Safe`,
     minibar: $localize`Minibar`,
     tea: $localize`Tea with Kettle`,

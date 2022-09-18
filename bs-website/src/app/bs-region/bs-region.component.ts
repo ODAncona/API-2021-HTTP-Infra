@@ -66,7 +66,7 @@ export class BsRegionComponent implements OnInit {
     },
     {
       title: 'CLIMBING AND VIA FERRATA',
-      description: $localize` concentration, a head for heights and physical strength are all needed when you are moving in a vertical direction.However, the right equipment is just as crucial for visitors when climbing.Fortunately, the mountain guides and climbing supervisors at Adelboden - Lenk - Kandersteg have well - padded mats, deeply anchored hooks and tightly stretched ropes to hand.This allows you to practise manoeuvres and enjoy views that would otherwise only be possible for expert climbers on high alpine tours.`,
+      description: $localize`Courage, concentration, a head for heights and physical strength are all needed when you are moving in a vertical direction.However, the right equipment is just as crucial for visitors when climbing.Fortunately, the mountain guides and climbing supervisors at Adelboden - Lenk - Kandersteg have well - padded mats, deeply anchored hooks and tightly stretched ropes to hand.This allows you to practise manoeuvres and enjoy views that would otherwise only be possible for expert climbers on high alpine tours.`,
       link: 'https://meine-berge.ch/en/climbing-via-ferrata'
     }
   ];

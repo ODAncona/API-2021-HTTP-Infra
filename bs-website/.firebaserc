@@ -1,21 +1,34 @@
 {
   "projects": {
-    "default": "beausite-adelboden"
+    "default": "bs-adelboden"
   },
   "targets": {
     "beausite-adelboden": {
       "hosting": {
         "en": [
-          "beausite-en"
+          "en-beausite"
         ],
         "fr": [
-          "beausite-fr"
+          "fr-beausite"
         ],
         "de": [
-          "beausite-de"
+          "de-beausite"
         ],
         "demo": [
-          "beausite-adelboden"
+          "bs-adelboden"
+        ]
+      }
+    },
+    "bs-adelboden": {
+      "hosting": {
+        "en": [
+          "en-beausite"
+        ],
+        "fr": [
+          "fr-beausite"
+        ],
+        "de": [
+          "de-beausite"
         ]
       }
     }

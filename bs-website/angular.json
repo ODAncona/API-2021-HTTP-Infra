@@ -5,13 +5,13 @@
   "projects": {
     "bs-website": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en",
         "locales": {
-          "fr-CH": {
+          "fr": {
             "translation": "src/locale/beausite.fr.xlf",
             "baseHref": ""
           },
-          "de-CH": {
+          "de": {
             "translation": "src/locale/beausite.de.xlf",
             "baseHref": ""
           }
@@ -131,11 +131,16 @@
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss",
             "externalDependencies": [
-              "canvas", "navigator"
+              "canvas",
+              "navigator"
             ]
           },
           "configurations": {
             "production": {
+              "optimization": {
+                "scripts": true,
+                "styles": true
+              },
               "outputHashing": "media",
               "fileReplacements": [
                 {

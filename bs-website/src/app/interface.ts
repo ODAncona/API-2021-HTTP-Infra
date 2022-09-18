@@ -110,16 +110,16 @@ export interface Mail {
 //const API_URL = "bs-api:1470/api/"
 //const API_URL = "http://localhost:1470/api/"
 //const API_URL = "http://localhost/api/"
-const API_URL = 'http://localhost:1470/';
+//const API_URL = 'http://localhost:1470/';
 //const API_URL = 'http://178.128.123.90:1470/';
-//const API_URL = "http://67.207.74.150:1470/";
+const API_URL = "http://67.207.74.150:1470/";
 
 
 /* This constant refers to the email address of admin */
-const BS_EMAIL = 'olivier_dancona@hotmail.com';
-//const BS_EMAIL = 'info@beausite.ch'
+//const BS_EMAIL = 'olivier_dancona@hotmail.com';
+const BS_EMAIL = 'info@beausite.ch'
 
 const BS_PHONE = '+41 (0)33 673 82 82';
 
 
-export { API_URL, BS_EMAIL };
+export { API_URL, BS_EMAIL, BS_PHONE };

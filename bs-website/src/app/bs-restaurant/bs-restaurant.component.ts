@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
-import { Meal, Menu } from '../interface';
+import { Meal, Menu, BS_PHONE } from '../interface';
 
 @Component({
   selector: 'app-bs-restaurant',
@@ -8,6 +8,7 @@ import { Meal, Menu } from '../interface';
   styleUrls: ['./bs-restaurant.component.scss'],
 })
 export class BsRestaurantComponent {
+  phone: string = BS_PHONE;
   menus: Menu[] = [];
   carteMenu: any;
   halfboard: any;
