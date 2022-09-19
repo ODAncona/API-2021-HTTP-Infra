@@ -38,37 +38,137 @@ interface Item {
 export class BsPhotosComponent implements OnInit {
   galleryData: Item[] = [
     {
-      url: '../../assets/images/photos/Hotel_Beau_Doble_clasica.jpg',
+      url: '../../assets/images/photos/photo1.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Doble_Superior.jpg',
+      url: '../../assets/images/photos/photo2.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_BARRA.jpg',
+      url: '../../assets/images/photos/photo3.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Classic.jpg',
+      url: '../../assets/images/photos/photo4.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Decoracion.jpg',
+      url: '../../assets/images/photos/photo5.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_DestacadoH.jpg',
+      url: '../../assets/images/photos/photo6.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/rooms/rooms_premium1.jpg',
+      url: '../../assets/images/photos/photo7.webp',
       description: 'Hotel Beau-Site picture',
     },
     {
-      url: '../../assets/images/photos/Hotel_Beau_Suiza_Terraza2.jpg',
+      url: '../../assets/images/photos/photo8.webp',
       description: 'Hotel Beau-Site picture',
     },
+    {
+      url: '../../assets/images/photos/photo9.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo10.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo11.webp',
+
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo12.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo13.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo14.webp',
+
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+
+
+      url: '../../assets/images/photos/photo15.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo16.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo17.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo18.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo19.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo20.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo21.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo22.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo23.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo24.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo25.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo26.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo27.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo28.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo29.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo30.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo31.webp',
+      description: 'Hotel Beau-Site picture',
+    },
+    {
+      url: '../../assets/images/photos/photo32.webp',
+      description: 'Hotel Beau-Site picture',
+    }
   ];
 
   previewImage = false;
@@ -78,7 +178,7 @@ export class BsPhotosComponent implements OnInit {
   controls = true;
   totalImageCount = 0;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.totalImageCount = this.galleryData.length;

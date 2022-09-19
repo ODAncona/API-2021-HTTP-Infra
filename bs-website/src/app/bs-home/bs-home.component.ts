@@ -9,8 +9,11 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class BsHomeComponent {
   images = [
-    '../../assets/images/photos/slide_home1.jpg',
-    '../../assets/images/photos/Hotel_Beau_Suiza_SlideHome1.jpg',
+    '../../assets/images/home/slider1.webp',
+    '../../assets/images/home/slider2.webp',
+    '../../assets/images/home/slider3.webp',
+    '../../assets/images/home/slider4.webp',
+    '../../assets/images/home/slider5.webp',
   ];
 
   constructor(config: NgbCarouselConfig) {
