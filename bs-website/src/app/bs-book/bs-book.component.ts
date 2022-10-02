@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  UntypedFormGroup,
-  UntypedFormControl
-} from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-bs-book',
@@ -14,16 +12,20 @@ export class BsBookComponent {
     start: new UntypedFormControl(),
     end: new UntypedFormControl(),
   });
-  bookingLink: string = 'https://live.ipms247.com/booking/book-rooms-hotelbeausite';
-  constructor() { }
+  bookingLink: string =
+    'https://live.ipms247.com/booking/book-rooms-hotelbeausite';
+  eZ_chkin: string = moment().format('DD-MM-YYYY');
+  eZ_chkout: string = moment().add(1, 'days').format('DD-MM-YYYY');
+  Locale: string = 'en';
 
-  updateURL() {
-    const bookingLink = 'https://live.ipms247.com/booking/book-rooms-hotelbeausite';
-    const eZ_chkin = this.range.value?.start.format('DD-MM-YYYY');
-    const eZ_chkout = this.range.value?.end.format('DD-MM-YYYY');
-    const ArtDt = this.range.value.start.format('DD-MM-YYYY');
-    const calformat = 'dd-mm-yy';
-    this.bookingLink = bookingLink + "?eZ_chkin=" + eZ_chkin + "&eZ_chkout=" + eZ_chkout + "&calformat=" + calformat + "&ArtDt=" + ArtDt;
-    console.log(this.bookingLink);
+  constructor() {
+    if (localStorage.getItem('locale')) {
+      this.Locale = localStorage.getItem('locale')!;
+    }
+  }
+
+  updateData() {
+    this.eZ_chkin = this.range.value?.start.format('DD-MM-YYYY');
+    this.eZ_chkout = this.range.value?.end.format('DD-MM-YYYY');
   }
 }
