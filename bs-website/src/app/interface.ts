@@ -121,5 +121,9 @@ const BS_EMAIL = 'info@beausite.ch'
 
 const BS_PHONE = '+41 (0)33 673 82 82';
 
+const BS_INSTAGRAM = 'https://www.instagram.com/beau.site/';
+const BS_FACEBOOK = 'https://www.facebook.com/profile.php?id=100086016645773';
+const BS_GOOGLE = 'https://www.google.es/maps?q=Hotel+Beau-Site+-+Boutique+Chalet+Adelboden+-+Suiza&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiQv6D01NnKAhUJVz4KHdfyC8UQ_AUIBygB';
 
-export { API_URL, BS_EMAIL, BS_PHONE };
+
+export { API_URL, BS_EMAIL, BS_PHONE, BS_INSTAGRAM, BS_FACEBOOK, BS_GOOGLE };

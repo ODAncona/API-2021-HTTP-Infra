@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BS_PHONE } from '../interface';
+import { BS_PHONE, BS_INSTAGRAM, BS_FACEBOOK, BS_GOOGLE } from '../interface';
 
 @Component({
   selector: 'app-bs-footer',
@@ -8,5 +8,8 @@ import { BS_PHONE } from '../interface';
 })
 export class BsFooterComponent {
   phone = BS_PHONE;
+  instagramLink = BS_INSTAGRAM;
+  facebookLink = BS_FACEBOOK;
+  googleLink = BS_GOOGLE;
   constructor() {}
 }
