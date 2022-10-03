@@ -305,15 +305,15 @@
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6081323586149323263" datatype="html">
-        <source>Book Now</source>
+      <trans-unit id="5187923688227754516" datatype="html">
+        <source> Book Now </source>
         <target>Réserver</target>
-        <note priority="1" from="description">réservation sur Ezee</note>
-        <note priority="1" from="meaning">book-btn </note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-book/bs-book.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">58,60</context>
         </context-group>
+        <note priority="1" from="description"> réservation sur Ezee</note>
+        <note priority="1" from="meaning">book-btn </note>
       </trans-unit>
       <trans-unit id="5108116462234265828" datatype="html">
         <source>invalid email</source>
@@ -1378,7 +1378,7 @@ C’est un sentiment fantastique de tracer le premier sillage dans la poudreuse 
       </trans-unit>
       <trans-unit id="6304432362546770951" datatype="html">
         <source>Address</source>
-        <target>Addresse</target>
+        <target>Adresse</target>
         <note priority="1" from="description">Address placeholder</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-wellness-fitness-modal/bs-wellness-fitness-modal.component.html</context>
