@@ -6,7 +6,17 @@
     "beausite-adelboden": {
       "hosting": {
         "bs-admin": [
-          "beausite-admin"
+          "admin-beausite"
+        ],
+        "cd": [
+          ".."
+        ]
+      }
+    },
+    "131239275029": {
+      "hosting": {
+        "bs-admin": [
+          "admin-beausite"
         ]
       }
     }

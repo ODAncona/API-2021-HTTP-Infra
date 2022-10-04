@@ -715,7 +715,7 @@
       </trans-unit>
       <trans-unit id="3651824611142060051" datatype="html">
         <source>If you like action, explore the impressive alpine world with a scooter.The mile - long, varied routes are waiting to be discovered.</source>
-        <target>Si vous aimez l’action, explorez l’impressionnant monde alpin en scooter. Les kilomètres de parcours variés n’attendent que d’être découverts.</target>
+        <target>Si vous aimez l’action, explorez l’impressionnant monde alpin en trotinette. Les kilomètres de parcours variés n’attendent que d’être découverts.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">49</context>

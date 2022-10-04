@@ -90,7 +90,9 @@ export interface Member {
 //const API_URL = "http://localhost/api/"
 //const API_URL = 'http://localhost:1470/';
 //const API_URL = 'http://178.128.123.90:1470/';
-const API_URL = 'http://67.207.74.150:1470/';
+//const API_URL = 'http://67.207.74.150:1470/';
+const API_URL = "https://api.hotelbeausite.ch/"
+
 const MAX_SIZE = 2; //Mo
 
 
