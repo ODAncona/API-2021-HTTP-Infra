@@ -4,6 +4,7 @@ const cors = require('cors');
 const database = require('./database/database');
 const path = require('path');
 
+
 const authRoute = require('./route/auth-route');
 const serverRoute = require('./route/server-route');
 const reviewRoute = require('./route/review-route');
@@ -19,7 +20,6 @@ api.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
 });
-//api.use(bodyParser.urlencoded());
 api.use(express.json({
   limit: '50mb'
 }));
