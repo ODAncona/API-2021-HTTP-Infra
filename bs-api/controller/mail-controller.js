@@ -10,6 +10,17 @@ exports.sendMail = (req, res) => {
       pass: "baderi3y",
     },
   });
+
+  /**
+   * @param {string} mail - The email object who look like this:
+   * {
+   *  from: "", // sender address
+   *  to: "", // list of receivers
+   *  subject: "", // Subject line
+   *  text: "", // plain text body
+   *  html: "" // html body
+   * }
+   */
   transporter.sendMail(req.body)
     .then(
       () => res.status(200).json("Your email has been sent. Confirmation will follow.")
