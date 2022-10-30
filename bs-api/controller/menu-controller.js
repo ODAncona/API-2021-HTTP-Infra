@@ -9,7 +9,8 @@ exports.createMenu = (req, res) => {
 
   // If req contains file
   if (req.file) {
-    payload.pdf = req.protocol + "://" + req.get("host") + "/" + req.file.path;
+    payload.pdf = "https://" + req.get("host") + "/" + req.file.path;
+    //payload.pdf = req.protocol + "://" + req.get("host") + "/" + req.file.path;
   }
 
   // Save to database
@@ -59,8 +60,8 @@ exports.updateMenu = (req, res) => {
 
   // If req contains files
   if (req.file) {
-    payload.pdf =
-      req.protocol + "://" + req.get("host") + "/" + req.file.path;
+    payload.pdf = "https://" + req.get("host") + "/" + req.file.path;
+    //payload.pdf = req.protocol + "://" + req.get("host") + "/" + req.file.path;
   }
   // Update database
   Menu.findByIdAndUpdate(payload._id, payload)
@@ -81,8 +82,8 @@ exports.createMeal = (req, res) => {
 
   // If req contains files
   if (req.file) {
-    payload.image =
-      req.protocol + "://" + req.get("host") + "/" + req.file.path;
+    payload.image = "https://" + req.get("host") + "/" + req.file.path;
+    //payload.image = req.protocol + "://" + req.get("host") + "/" + req.file.path;
   }
 
   // Save to database
@@ -107,8 +108,8 @@ exports.updateMeal = (req, res) => {
 
   // If req contains files
   if (req.file) {
-    payload.image =
-      req.protocol + "://" + req.get("host") + "/" + req.file.path;
+    payload.image = "https://" + req.get("host") + "/" + req.file.path;
+    //payload.image = req.protocol + "://" + req.get("host") + "/" + req.file.path;
   }
   // Update database
   Meal.findByIdAndUpdate(payload._id, payload)

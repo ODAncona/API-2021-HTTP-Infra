@@ -8,17 +8,19 @@ exports.createPromotion = (req, res) => {
   // If req contains files
   if (req.files) {
     if (req.files['pdf']) {
-      payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+      //payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+      payload.pdf = "https://" + req.get('host') + "/" + req.files['pdf'][0].path;
     }
     if (req.files['image']) {
-      payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+      //payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+      payload.image = "https://" + req.get('host') + "/" + req.files['image'][0].path;
     }
   }
 
   // Save to database
   let promotion = new Promotion({
-      ...payload
-    }).save()
+    ...payload
+  }).save()
     .then(() => res.status(201).json("Success"))
     .catch((error) => res.status(500).json("Failure: " + error))
 }
@@ -43,10 +45,12 @@ exports.updatePromotion = (req, res) => {
   // If req contains files
   if (req.files) {
     if (req.files['pdf']) {
-      payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+      //payload.pdf = req.protocol + "://" + req.get('host') + "/" + req.files['pdf'][0].path;
+      payload.pdf = "https://" + req.get('host') + "/" + req.files['pdf'][0].path;
     }
     if (req.files['image']) {
-      payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+      //payload.image = req.protocol + "://" + req.get('host') + "/" + req.files['image'][0].path;
+      payload.image = "https://" + req.get('host') + "/" + req.files['image'][0].path;
     }
   }
 

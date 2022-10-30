@@ -66,12 +66,8 @@ exports.updateMember = (req, res) => {
   // If req contains files
   if (req.files) {
     if (req.files["image"]) {
-      payload.image =
-        req.protocol +
-        "://" +
-        req.get("host") +
-        "/" +
-        req.files["image"][0].path;
+      //payload.image = req.protocol + "://" + req.get("host") + "/" + req.files["image"][0].path;
+      payload.image = "https://" + req.get("host") + "/" + req.files["image"][0].path;
     }
   }
 
