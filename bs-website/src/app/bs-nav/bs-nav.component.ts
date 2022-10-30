@@ -13,16 +13,16 @@ export class BsNavComponent implements OnDestroy {
   private _mobileQueryListener: () => void;
   activeLink: string = 'Menu';
   navs = [
-    { link: 'home', name: 'Home' },
-    { link: 'rooms', name: 'Rooms' },
-    { link: 'promotions', name: 'Promotions' },
-    { link: 'restaurant', name: 'Restaurant' },
-    { link: 'photos', name: 'Photos' },
-    { link: 'wellness', name: 'Wellness & Fitness' },
-    { link: 'reviews', name: 'Reviews' },
-    { link: 'team', name: 'Team' },
-    { link: 'region', name: 'Region' },
-    { link: 'contact', name: 'Contact & Map' }
+    { link: 'home', name: $localize`Home` },
+    { link: 'rooms', name: $localize`Rooms` },
+    { link: 'promotions', name: $localize`Promotions` },
+    { link: 'restaurant', name: $localize`Restaurant` },
+    { link: 'photos', name: $localize`Photos` },
+    { link: 'wellness', name: $localize`Wellness & Fitness` },
+    { link: 'reviews', name: $localize`Reviews` },
+    { link: 'team', name: $localize`Team` },
+    { link: 'region', name: $localize`Region` },
+    { link: 'contact', name: $localize`Contact & Map` }
   ];
   selectedLocale: any = 'de';
   localesList: Locale[] = [

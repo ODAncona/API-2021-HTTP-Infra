@@ -1,4 +1,4 @@
-<h1 class="mainTitle">Discover the Bernese Oberland.</h1>
+<h1 class="mainTitle" i18n="title | titre de la page">Discover the Bernese Oberland.</h1>
 <mat-divider></mat-divider>
 
 <div class="season">
@@ -10,7 +10,7 @@
       <h2>Summer</h2>
     </div>
   -->
-  <h2 i18n="season-title">Summer</h2>
+  <h2 i18n="season-title | été">Summer</h2>
   <div class="activites" *ngFor="let a of summer">
     <a href="{{ a.link }}" target="_blank">
       <h3>{{ a.title }}</h3>
@@ -24,7 +24,7 @@
 <mat-divider></mat-divider>
 
 <div class="season">
-  <h2 i18n="season-title2">Winter</h2>
+  <h2 i18n="season-title2 | hiver">Winter</h2>
   <div class="activites" *ngFor="let a of winter">
     <a href="{{ a.link }}" target="_blank">
       <h3>{{ a.title }}</h3>

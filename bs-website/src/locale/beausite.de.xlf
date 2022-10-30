@@ -461,8 +461,18 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
         <target>Entdecken Sie das Berner Oberland. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-home/bs-home.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">57</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="6416723279289590402" datatype="html">
+        <source>Discover the Bernese Oberland.</source>
+        <target>Entdecken Sie das Berner Oberland. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> titre de la page</note>
+        <note priority="1" from="meaning">title </note>
       </trans-unit>
       <trans-unit id="3724068243287682962" datatype="html">
         <source>Team</source>
@@ -478,6 +488,38 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-home/bs-home.component.ts</context>
           <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Startseite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-nav/bs-nav.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8405309693308875139" datatype="html">
+        <source>Photos</source>
+        <target>Photos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-nav/bs-nav.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9029286143304711365" datatype="html">
+        <source>Reviews</source>
+        <target>Rezensionen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-nav/bs-nav.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="912638804570625615" datatype="html">
+        <source>Contact &amp; Map</source>
+        <target>Kontakt &amp; Karte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-nav/bs-nav.component.ts</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="411246840501543469" datatype="html">
@@ -664,22 +706,32 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
           <context context-type="linenumber">27,29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8471487881386607602" datatype="html">
+      <trans-unit id="6012354866786804276" datatype="html">
         <source>Summer</source>
         <target>Sommer</target>
-        <note priority="1" from="description">season-title</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
+        <note priority="1" from="description"> été</note>
+        <note priority="1" from="meaning">season-title </note>
       </trans-unit>
-      <trans-unit id="4996922266254528864" datatype="html">
+      <trans-unit id="2704860754180991313" datatype="html">
         <source>Winter</source>
         <target>Winter</target>
-        <note priority="1" from="description">season-title2</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.html</context>
           <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description"> hiver</note>
+        <note priority="1" from="meaning">season-title2 </note>
+      </trans-unit>
+      <trans-unit id="4270504086930362822" datatype="html">
+        <source>BIKING</source>
+        <target>Velo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3251595315211663111" datatype="html">
@@ -690,12 +742,28 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6406336287354602837" datatype="html">
+        <source>HIKING</source>
+        <target>Wandern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1388589090642796155" datatype="html">
         <source>Where better to broaden your horizons than in the Bernese Alps? The view sweeps serenely over peaks and gorges, and the longing to take big steps into the unknown increases.Planned hikes are also an option as there is no shortage of longer tours and places to stay along your chosen route.</source>
         <target>Kalkkiesel unter den Sohlen, Bergmassive vor den Augen: Grosses beginnt in der Destination mit dem nächsten Schritt. Wobei es nicht immer gleich der Gipfelsturm sein muss – die vielseitigen Wanderwege des Oberlands umfassen auch Spaziergänge am Talgrund sowie spannende Passübergänge.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2084608829970686631" datatype="html">
+        <source>TRAMPOLINE</source>
+        <target>Trampolin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4770062864663959268" datatype="html">
@@ -706,6 +774,14 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6727877723722943371" datatype="html">
+        <source>AVENTURE PARK</source>
+        <target>Adventure Park</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="883252849860840430" datatype="html">
         <source>Swing through the air like Tarzan, let your adrenaline rush when abseiling from a bridge, glide over the river at top speed on a cable car and, last but not least, dare a huge pendulum swing? This is what awaits you in the Adventure Park - Adelboden.</source>
         <target>Wie Tarzan durch die Lüfte schwingen, beim Abseilen von einer Brücke den Adrenalinspiegel in die Höhe steigen lassen, mit Höchstgeschwindigkeit auf einer Seilbahn über den Fluss gleiten und zu guter Letzt einen riesigen Pendelschwung wagen? Dies erwartet euch im Adventure Park - Adelboden. Oder möchtest du lieber mit Jane etwas Feines auf den Grill legen, am Flussbett auf Entdeckungsreise gehen, Steinmännchen bauen, Ruhe und Entspannung erfahren oder einfach die Seele baumeln lassen? Auch dies erwartet dich im Adventure Park - Adelboden.</target>
@@ -714,12 +790,28 @@ Wir sind ein hochmotiviertes Team, welches alles daran setzt, Ihnen einen unverg
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3997495676215511598" datatype="html">
+        <source>SCOOTERS</source>
+        <target>Trotinette</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3651824611142060051" datatype="html">
         <source>If you like action, explore the impressive alpine world with a scooter.The mile - long, varied routes are waiting to be discovered.</source>
         <target>Wer es actionreich mag, erkundet die imposanten Alpenwelt mit dem Trottinett. Die kilometerlangen, abwechslungsreichen Strecken warten darauf, entdeckt zu werden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5231476130997595650" datatype="html">
+        <source>PARAGLIDING</source>
+        <target>Gleitschirmfliegen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6682475471876915815" datatype="html">
@@ -731,12 +823,28 @@ Wir bieten Dir vom einfachen Erlebnisflug bis zum ganztägigen Gleitschirm-Abent
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7560031494857567681" datatype="html">
+        <source>SWIMMING</source>
+        <target>Schwimmbad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="28193807610864864" datatype="html">
         <source>Legendary architecture with panoramic views.Under the alpine sun, the water of the 50 - metre Gruebi pool glistens seductively.On the other hand, when the sky is grey, a trip to indoor swimming pools at the Sportzentrum in Frutigen is a great alternative.</source>
         <target>Legendäre Architektur mit Panorama-Blick: Unter der alpinen Sonne glitzern die 50-Meter-Becken des altehrwürdigen Gruebi-Bads verführerisch. Bei grauem Himmel lohnt sich dagegen auch mal ein Ausflug Richtung Hallen- und Freibad Frutigen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8991714155853373424" datatype="html">
+        <source>BLAUSEE</source>
+        <target>Blausee</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8796943597928268753" datatype="html">
@@ -747,6 +855,14 @@ Wir bieten Dir vom einfachen Erlebnisflug bis zum ganztägigen Gleitschirm-Abent
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="1350779719727223568" datatype="html">
+        <source>CLIMBING AND VIA FERRATA</source>
+        <target>Klettern und Via Ferrata</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4175294585203636080" datatype="html">
         <source>Courage, concentration, a head for heights and physical strength are all needed when you are moving in a vertical direction.However, the right equipment is just as crucial for visitors when climbing.Fortunately, the mountain guides and climbing supervisors at Adelboden - Lenk - Kandersteg have well - padded mats, deeply anchored hooks and tightly stretched ropes to hand.This allows you to practise manoeuvres and enjoy views that would otherwise only be possible for expert climbers on high alpine tours.</source>
         <target>Mut, Konzentration, Schwindelfreiheit und Kraft sind in der Vertikalen sicher nicht verkehrt. Eine gute Sicherung ist für Besucher in der Destination aber ebenso wichtig beim Klettern. Gut, haben die Bergführer und Gastgeber von Adelboden-Lenk-Kandersteg für gut gepolsterte Matten, tief verankerte Haken und straff gespannte Seile gesorgt. So lassen sich Manöver und Aussichten geniessen, die sonst nur für Cracks auf hochalpinen Touren infrage kämen.</target>
@@ -755,12 +871,28 @@ Wir bieten Dir vom einfachen Erlebnisflug bis zum ganztägigen Gleitschirm-Abent
           <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2101579145259457749" datatype="html">
+        <source>SKI &amp; SNOWBOARD</source>
+        <target>Ski &amp; Snowboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3242701190433200001" datatype="html">
         <source>Adelboden - Lenk has earned its reputation as a top ski resort over many decades.Events like the Ski World Cup at Chuenisbärgli or the professional services offered by the snowsports schools are now well - respected winter institutions.But alpine winter traditions are lived very much in the present.Specialist teams prepare the various slopes with great care each day</source>
         <target>Seinen Ruf als Top-Skigebiet hat sich Adelboden-Lenk in vielen Jahrzehnten erarbeitet: Längst haben sich Events wie der Weltcup am Chuenisbärgli oder der professionelle Service der Schneesportschulen als bekannte Institutionen etabliert. Doch gelebt wird die alpine Winter-Tradition in der Gegenwart: So präparieren die Teams die unterschiedlichen Pisten täglich neu und mit viel Sorgfalt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7840284933754227619" datatype="html">
+        <source>FREERIDE</source>
+        <target>Freeride</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2677293039190393136" datatype="html">
@@ -773,6 +905,14 @@ Es ist ein fantastisches Gefühl die erste Spur in einen frischen Tiefschneehang
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="1545740940257672575" datatype="html">
+        <source>SNOWSHOEING</source>
+        <target>Schneeschuhwandern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8101124070618470969" datatype="html">
         <source>Snowshoeing is one of the many traditions, still cultivated in Adelboden. Discover peaceful and secluded corners, far away from the crowds.</source>
         <target>Verschneite Wiesen, märchenhafte Wälder und die markanten Gipfel des Engstligtals: Dies ist die richtige Kulisse für traditionelles Schneeschuhwandern. Egal ob im Pulver auf Tschenten, Höchst, Engstligen- oder Elsigenalp – auf den mit Wegweisern markierten und mit Aussichtspunkten gespickten Trails können Anfänger wie Routiniers und Individualisten wie Gruppen noch die stillen und unbekannten Naturperlen des Berner Oberlands entdecken.</target>
@@ -781,12 +921,28 @@ Es ist ein fantastisches Gefühl die erste Spur in einen frischen Tiefschneehang
           <context context-type="linenumber">87</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4512424822534951822" datatype="html">
+        <source>ICE CLIMBING</source>
+        <target>Eisklettern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="838695901114875389" datatype="html">
         <source>Immerse yourself in a world of icicles. What could be cooler than a frozen waterfall? Ice climbing, the fascinating sport in the world of waterfalls and icicles. Here we show you how to move safely in the ice. </source>
         <target>Eintauchen in eine Welt voller Eiszapfen. Was gibt es cooleres als ein gefrorener Wasserfall? Eisklettern, der faszinierende Sport in der Welt der Wasserfälle und Eiszapfen. Hier zeigen wir euch, wie man sich sicher im Eis bewegt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
           <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5179576555584311364" datatype="html">
+        <source>SLEDGING</source>
+        <target>Schlitteln</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bs-region/bs-region.component.ts</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8573973979006455986" datatype="html">
